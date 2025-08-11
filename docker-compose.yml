@@ -23,7 +23,7 @@ services:
       - SPRING_NEO4J_AUTHENTICATION_USERNAME=${NEO4J_USERNAME}
       - SPRING_NEO4J_AUTHENTICATION_PASSWORD=${NEO4J_PASSWORD}
 
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/langLearnerDB
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/fluentLift
       - SPRING_DATASOURCE_USERNAME=${POSTGRES_USERNAME}
       - SPRING_DATASOURCE_PASSWORD=${POSTGRES_PASSWORD}
 
@@ -33,7 +33,7 @@ services:
   postgres:
     image: postgres:17.5
     environment:
-      POSTGRES_DB: langLearnerDB
+      POSTGRES_DB: fluentLift
       POSTGRES_USER: ${POSTGRES_USERNAME}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     ports:

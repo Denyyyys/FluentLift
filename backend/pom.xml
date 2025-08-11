@@ -10,9 +10,9 @@
 		<!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.denyyyys</groupId>
-	<artifactId>langLearner</artifactId>
+	<artifactId>fluentLift</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Language Learner application</name>
+	<name>fluentLift</name>
 	<description>This is my thesis work for Warsaw University Of Technology</description>
 	<url/>
 	<licenses>
