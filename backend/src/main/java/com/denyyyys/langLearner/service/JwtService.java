@@ -24,8 +24,9 @@ public class JwtService {
     @Value("${security.jwt.expiration}")
     private Long jwtExpiration;
 
-    public String generateToken(String email) { // Use email as username
+    public String generateToken(Long userId, String email) { // Use email as username
         Map<String, Object> claims = new HashMap<>();
+        claims.put("userId", userId);
         return createToken(claims, email);
     }
 
@@ -46,6 +47,10 @@ public class JwtService {
 
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
+    }
+
+    public Long extractUserId(String token) {
+        return extractClaim(token, claims -> claims.get("userId", Long.class));
     }
 
     public Date extractExpiration(String token) {

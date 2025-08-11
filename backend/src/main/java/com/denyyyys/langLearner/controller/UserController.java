@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.denyyyys.langLearner.model.common.dto.request.AuthRequestDto;
-import com.denyyyys.langLearner.model.common.dto.request.UserRegistrationRequestDto;
+import com.denyyyys.langLearner.model.postgres.dto.request.UserRegistrationRequestDto;
+import com.denyyyys.langLearner.model.postgres.entity.AppUser;
+import com.denyyyys.langLearner.repo.postgres.AppUserRepository;
 import com.denyyyys.langLearner.service.AppUserService;
 import com.denyyyys.langLearner.service.JwtService;
 
@@ -23,6 +25,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class UserController {
     private final AppUserService appUserService;
+    private final AppUserRepository appUserRepository;
 
     private final JwtService jwtService;
 
@@ -46,7 +49,11 @@ public class UserController {
                         authRequest.getPassword()));
 
         if (authentication.isAuthenticated()) {
-            String token = jwtService.generateToken(authRequest.getEmail());
+            String email = authRequest.getEmail();
+            AppUser user = appUserRepository.findByEmail(email)
+                    .orElseThrow(() -> new UsernameNotFoundException("User was not found with provided email"));
+
+            String token = jwtService.generateToken(user.getId(), email);
             return ResponseEntity.ok(token);
 
         } else {
