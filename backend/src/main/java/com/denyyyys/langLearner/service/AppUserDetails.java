@@ -15,7 +15,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class AppUserDetails implements UserDetails {
-
+    private Long id;
     private String username; // Changed from 'name' to 'email' for clarity
     private String password;
     private List<GrantedAuthority> authorities;

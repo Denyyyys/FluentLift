@@ -9,9 +9,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.denyyyys.langLearner.exceptions.UserAlreadyExistsException;
-import com.denyyyys.langLearner.model.common.dto.request.UserRegistrationRequestDto;
-import com.denyyyys.langLearner.model.common.mapper.AppUserMapper;
+import com.denyyyys.langLearner.model.postgres.dto.request.UserRegistrationRequestDto;
 import com.denyyyys.langLearner.model.postgres.entity.AppUser;
+import com.denyyyys.langLearner.model.postgres.mapper.AppUserMapper;
 import com.denyyyys.langLearner.repo.postgres.AppUserRepository;
 
 import lombok.RequiredArgsConstructor;
