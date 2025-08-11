@@ -1,6 +1,6 @@
-package com.denyyyys.langLearner.model.common.mapper;
+package com.denyyyys.langLearner.model.postgres.mapper;
 
-import com.denyyyys.langLearner.model.common.dto.request.UserRegistrationRequestDto;
+import com.denyyyys.langLearner.model.postgres.dto.request.UserRegistrationRequestDto;
 import com.denyyyys.langLearner.model.postgres.entity.AppUser;
 
 public class AppUserMapper {

@@ -1,4 +1,4 @@
-package com.denyyyys.langLearner.model.common.dto.request;
+package com.denyyyys.langLearner.model.postgres.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
