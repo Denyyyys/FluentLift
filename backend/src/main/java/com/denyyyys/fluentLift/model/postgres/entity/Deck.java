@@ -41,15 +41,16 @@ public class Deck {
     private String name;
 
     // Creator user
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(optional = false)
+    // @JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
     @JoinColumn(name = "creator_id", nullable = false)
     private AppUser creator;
 
     @Column(nullable = false)
     private boolean isArchived = false;
 
-    private String targetLanguage; // optional
-    private String learningLanguage; // optional
+    private String targetLanguage;
+    private String learningLanguage;
 
     @CreationTimestamp
     @Column(nullable = false, updatable = false)
@@ -59,7 +60,7 @@ public class Deck {
     @Column(nullable = false)
     private Instant updatedAt;
 
-    @OneToMany(mappedBy = "deck", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "deck", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference
     private List<Card> cards;
 

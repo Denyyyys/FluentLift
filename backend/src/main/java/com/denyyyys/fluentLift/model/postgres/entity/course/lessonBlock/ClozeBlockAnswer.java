@@ -1,6 +1,4 @@
-package com.denyyyys.fluentLift.model.postgres.entity;
-
-import java.time.Instant;
+package com.denyyyys.fluentLift.model.postgres.entity.course.lessonBlock;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
@@ -21,35 +19,22 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Card {
+public class ClozeBlockAnswer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false)
-    private String frontText;
+    private String key;
 
     @Column(nullable = false)
-    private String backText;
+    private String expected;
 
     @Column(nullable = false)
-    private boolean isArchived = false;
+    private Boolean caseSensitive;
 
-    // @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @ManyToOne(optional = false)
-    @JoinColumn(name = "deck_id", nullable = false)
+    @JoinColumn(name = "cloze_id", nullable = false)
     @JsonBackReference
-    private Deck deck;
-
-    @Column(nullable = false)
-    private Instant nextReviewDate = Instant.now();
-
-    @Column
-    private Instant firstReviewDate;
-
-    @Column(nullable = false)
-    private int intervalDays = 1;
-
-    @Column(nullable = false)
-    private int consecutiveCorrect = 0;
+    private ClozeBlock cloze;
 }

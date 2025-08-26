@@ -1,6 +1,4 @@
-package com.denyyyys.fluentLift.model.postgres.entity;
-
-import java.time.Instant;
+package com.denyyyys.fluentLift.model.postgres.entity.course.lessonBlock;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
@@ -21,35 +19,19 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Card {
+public class MultipleChoiceOption {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false)
-    private String frontText;
+    private String text;
 
     @Column(nullable = false)
-    private String backText;
+    private Boolean isCorrect;
 
-    @Column(nullable = false)
-    private boolean isArchived = false;
-
-    // @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @ManyToOne(optional = false)
-    @JoinColumn(name = "deck_id", nullable = false)
+    @JoinColumn(name = "multiple_choice_id", nullable = false)
     @JsonBackReference
-    private Deck deck;
-
-    @Column(nullable = false)
-    private Instant nextReviewDate = Instant.now();
-
-    @Column
-    private Instant firstReviewDate;
-
-    @Column(nullable = false)
-    private int intervalDays = 1;
-
-    @Column(nullable = false)
-    private int consecutiveCorrect = 0;
+    private MultipleChoiceBlock multipleChoiceBlock;
 }
