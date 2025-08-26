@@ -1,35 +1,65 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import SignupPage from "./pages/auth/SignupPage"
+import LoginPage from "./pages/auth/LoginPage"
+import { RequireAuth } from "./components/auth/RequireAuth"
+import ProfilePage from "./pages/profile/ProfilePage"
+import MyDecksPage from "./pages/decks/MyDecksPage"
+import { Navbar } from "./components/common/Navbar"
+import DeckStudyPage2 from "./pages/decks/DeckStudyPage"
+import MyCoursesPage from "./pages/courses/MyCoursesPage"
+import CreateCoursePage from "./pages/courses/CreateCoursePage"
 
 function App() {
-  const [count, setCount] = useState(0)
+  return <BrowserRouter>
+    <Navbar />
+    <div className="app-container">
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      <Routes>
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+        <Route
+          path="/profile"
+          element={
+            <RequireAuth>
+              <ProfilePage />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/profile/decks/"
+          element={
+            <RequireAuth>
+              <MyDecksPage />
+            </RequireAuth>
+          }
+        />
+
+        <Route path="/profile/decks/:deckId/study" element={
+          <RequireAuth>
+            <DeckStudyPage2 />
+          </RequireAuth>
+        } />
+
+        <Route
+          path="/profile/courses/"
+          element={
+            <RequireAuth>
+              <MyCoursesPage />
+            </RequireAuth>
+          }
+        />
+
+        <Route
+          path="/profile/courses/new"
+          element={
+            <RequireAuth>
+              <CreateCoursePage />
+            </RequireAuth>
+          }
+        />
+      </Routes>
+    </div>
+  </BrowserRouter>
 }
 
 export default App

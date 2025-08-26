@@ -1,0 +1,302 @@
+:root {
+  --clr-primary-100: #e6efef;
+  --clr-primary-200: #b9dddf;
+  --clr-primary-300: #8bbfc2;
+  --clr-primary-400: #83adaf;
+  --clr-primary-500: #6a9c9e;
+  --clr-primary-600: #518c8e;
+  --clr-primary-700: #387b7e;
+  --clr-primary-800: #1f6b6e;
+  --clr-primary-900: #065a5e;
+
+  --clr-primary-text: var(--clr-primary-800);
+
+  --clr-primary-navbar-dark: var(--clr-primary-600);
+  --clr-primary-navbar-light: var(--clr-primary-300);
+
+  --clr-primary-card-background: var(--clr-primary-400);
+
+
+  --clr-primary-btn: --clr-primary-800;
+  --clr-primary-btn-text: #ffffff;
+
+  --clr-background-body: #E3FDFD;
+
+  --clr-green: #53cb7b;
+  --clr-light-green: #5FFFC2;
+  --clr-dark-green: #149463;
+  --clr-light-blue: rgba(22, 169, 178, 1) 0%;
+  --clr-lighter-blue: rgb(35, 194, 202) 0%;
+  --clr-stripped-1: #C5EDF1;
+  --clr-stripped-2: #A9E8EF;
+  
+  --clr-secondary-btn-light: #48b8e9;
+  --clr-secondary-btn-dark: #247fa6;
+  --clr-red: #E23C40;
+  --clr-light-red: #FFB9BA;
+
+  --layout-max-width: 1200px;
+
+  --layout-padding-x: 1.5rem;
+
+  --navbar-padding-y: 1.5rem;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+body {
+  background-color: var(--clr-background-body);
+  color: var(--clr-primary-text);
+  padding-top: 102px;
+}
+
+/* NAVBAR START */
+.navbar-container {
+  background: RGBA(22, 169, 178, 80);
+  background: linear-gradient(90deg, rgba(22, 169, 178, 1) 0%, rgba(177, 230, 233, 1) 54%, rgba(22, 169, 178, 1) 100%);
+  padding-top: var(--navbar-padding-y);
+  padding-bottom: var(--navbar-padding-y);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+
+}
+
+.navbar {
+  max-width: var(--layout-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--layout-padding-x);
+  padding-right: var(--layout-padding-x);
+  font-weight: 600;
+
+}
+
+.navbar-brand {
+  color: var(--clr-primary-text);
+  letter-spacing: 0.04em;
+  font-weight: 900;
+}
+
+.navbar-right {
+  display: flex;
+  column-gap: 23px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  color: var(--clr-primary-700);
+
+}
+
+.nav-link-btn {
+  color: var(--clr-primary-700);
+}
+
+.dropdown:hover .dropdown-menu {
+  /* display: block; */
+  margin-top: 0;
+  /* optional: remove small gap */
+}
+
+/* NAVBAR END */
+
+/* CONTAINERS START */
+.app-container {
+  padding-left: var(--layout-padding-x);
+  padding-right: var(--layout-padding-x);
+  max-width: var(--layout-max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-decks-header-container {
+  margin-bottom: 1em;
+}
+
+.deck-card:hover {
+  cursor: pointer;
+}
+
+.card-container {
+  background-color: var(--clr-primary-200);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  min-height: 500px;
+  text-align: center;
+  -webkit-box-shadow: -20px 17px 37px -20px rgba(66, 68, 90, 1);
+  -moz-box-shadow: -20px 17px 37px -20px rgba(66, 68, 90, 1);
+  box-shadow: -20px 17px 37px -20px rgba(66, 68, 90, 1);
+  color: var(--clr-primary-900);
+  height: 100%;
+}
+
+.card-top {
+  flex: 1;
+}
+
+.profile-courses-container {
+  color: var(--clr-primary-800);
+}
+
+.new-course-header {
+  border-bottom: 1px solid var(--clr-primary-900);
+}
+
+.new-course-container {
+  min-height: calc(100vh - 102px);
+}
+
+.units-container > div:nth-child(odd){
+  background-color: var(--clr-stripped-1);
+}
+
+.units-container > div:nth-child(even){
+  background-color: var(--clr-stripped-2);
+}
+
+.lessons-container > div:nth-child(odd){
+  background-color: var(--clr-stripped-1);
+}
+
+.lessons-container > div:nth-child(even){
+  background-color: var(--clr-stripped-2);
+}
+
+/* CONTAINERS END*/
+
+
+.search-deck-input {
+  min-width: 300px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: var(--clr-primary-200);
+  opacity: 0.6;
+  padding: 5px 10px 5px 10px;
+  border: 1px solid black;
+  border-right: none;
+}
+
+.search-deck-icon-btn {
+  background-color: var(--clr-primary-200);
+  opacity: 0.6;
+  padding: 5px 10px 5px 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 1px solid black;
+  border-left: none;
+}
+
+.search-btn {
+  background-color: transparent;
+  border: none;
+}
+
+.empty-btn {
+  color: inherit;
+}
+
+.sort-by-btn,
+.sort-by-btn:hover {
+  border: 1px solid black;
+}
+
+.btn-shaddow{ 
+-webkit-box-shadow: -9px 14px 33px -14px rgba(66, 68, 90, 1);
+-moz-box-shadow: -9px 14px 33px -14px rgba(66, 68, 90, 1);
+box-shadow: -9px 14px 33px -14px rgba(66, 68, 90, 1);
+}
+
+.btn-success {
+  background-color: var(--clr-green) !important;
+  color: white;
+  border-radius: 7px;
+  border: 1px solid var(--clr-green) !important;
+}
+
+.btn-success:hover {
+  background-color: var(--clr-dark-green) !important;
+  border: 1px solid var(--clr-dark-green) !important;
+}
+
+.btn-primary {
+  background-color: var(--clr-primary-700) !important;
+  border: 1px solid var(--clr-primary-700) !important;
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+  background-color: var(--clr-primary-900) !important;
+  border: 1px solid var(--clr-primary-900) !important;
+}
+
+
+.btn-secondary {
+  background-color: var(--clr-secondary-btn-light) !important;
+  border: 1px solid var(--clr-secondary-btn-light) !important;
+}
+
+.btn-secondary:hover,
+.btn-secondary:active {
+  background-color: var(--clr-secondary-btn-dark) !important;
+  border: 1px solid var(--clr-secondary-btn-dark) !important;
+}
+
+
+.toggle-btn {
+  background-color: transparent;
+  border: none;
+}
+
+.button-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.min-w-120px {
+  min-width: 120px;
+}
+
+/* BUTTONS END*/
+
+.icon {
+  color: var(--clr-primary-700);
+}
+
+.icon-white {
+  color: white;
+}
+
+.dropdown-menu {
+  background-color: rgba(177, 230, 233, 1);
+
+}
+
+.centered-paragraph {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.table {
+
+  --bs-table-bg: var(--clr-light-blue);
+  --bs-table-color: var(--clr-primary-text);
+  --bs-table-color-state: var(--clr-primary-text);
+  --bs-border-width: 0px;
+
+}
+
+.clickable:hover {
+  cursor: pointer;
+}
