@@ -1,7 +1,14 @@
 package com.denyyyys.fluentLift.model.postgres.mapper;
 
+import java.util.List;
+
 import com.denyyyys.fluentLift.model.postgres.dto.DeckCreateDto;
 import com.denyyyys.fluentLift.model.postgres.dto.DeckUpdateDto;
+import com.denyyyys.fluentLift.model.postgres.dto.response.CardOwnerResponseDto;
+import com.denyyyys.fluentLift.model.postgres.dto.response.CardVisitorResponseDto;
+import com.denyyyys.fluentLift.model.postgres.dto.response.DeckCreatorDto;
+import com.denyyyys.fluentLift.model.postgres.dto.response.DeckOwnerResponseDto;
+import com.denyyyys.fluentLift.model.postgres.dto.response.DeckVisitorResponseDto;
 import com.denyyyys.fluentLift.model.postgres.entity.AppUser;
 import com.denyyyys.fluentLift.model.postgres.entity.Deck;
 
@@ -25,5 +32,38 @@ public class DeckMapper {
         entity.setLearningLanguage(dto.getLearningLanguage());
 
         entity.setTargetLanguage(dto.getTargetLanguage());
+    }
+
+    public static DeckOwnerResponseDto toDeckOwnerResponseDto(Deck deckEntity, List<CardOwnerResponseDto> cardsDto,
+            DeckCreatorDto creatorDto) {
+        DeckOwnerResponseDto dto = new DeckOwnerResponseDto();
+
+        dto.setId(deckEntity.getId());
+        dto.setName(deckEntity.getName());
+        dto.setCreator(creatorDto);
+        dto.setArchived(deckEntity.isArchived());
+        dto.setTargetLanguage(deckEntity.getTargetLanguage());
+        dto.setLearningLanguage(deckEntity.getLearningLanguage());
+        dto.setCards(cardsDto);
+        dto.setPublic(deckEntity.isPublic());
+
+        return dto;
+    }
+
+    public static DeckVisitorResponseDto toDeckVisitorResponseDto(Deck deckEntity,
+            List<CardVisitorResponseDto> cardsDto,
+            DeckCreatorDto creatorDto) {
+        DeckVisitorResponseDto dto = new DeckVisitorResponseDto();
+
+        dto.setId(deckEntity.getId());
+        dto.setName(deckEntity.getName());
+        dto.setCreator(creatorDto);
+        dto.setArchived(deckEntity.isArchived());
+        dto.setTargetLanguage(deckEntity.getTargetLanguage());
+        dto.setLearningLanguage(deckEntity.getLearningLanguage());
+        dto.setCards(cardsDto);
+        dto.setPublic(deckEntity.isPublic());
+
+        return dto;
     }
 }
