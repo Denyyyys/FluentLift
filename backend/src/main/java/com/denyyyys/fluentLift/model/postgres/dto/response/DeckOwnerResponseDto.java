@@ -1,9 +1,7 @@
-package com.denyyyys.fluentLift.model.postgres.dto;
+package com.denyyyys.fluentLift.model.postgres.dto.response;
 
 import java.util.List;
 
-import jakarta.validation.Valid;
-import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,12 +11,15 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class DeckCreateDto {
-    @NotBlank(message = "Name of deck cannot be empty")
+public class DeckOwnerResponseDto {
+    private Long id;
     private String name;
-
+    private DeckCreatorDto creator;
+    private boolean archived;
     private String targetLanguage;
     private String learningLanguage;
+    private boolean isPublic;
 
-    private @Valid List<CardCreateDto> cards;
+    private List<CardOwnerResponseDto> cards;
+
 }
