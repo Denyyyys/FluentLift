@@ -38,7 +38,8 @@ public class UserController {
 
     @PostMapping("/addNewUser")
     public String addNewUser(@RequestBody UserRegistrationRequestDto userRegistrationRequest) {
-        return appUserService.addUser(userRegistrationRequest);
+        AppUser user = appUserService.addUser(userRegistrationRequest);
+        return jwtService.generateToken(user.getId(), user.getName(), user.getEmail());
     }
 
     // Removed the role checks here as they are already managed in SecurityConfig
@@ -53,7 +54,7 @@ public class UserController {
             AppUser user = appUserRepository.findByEmail(email)
                     .orElseThrow(() -> new UsernameNotFoundException("User was not found with provided email"));
 
-            String token = jwtService.generateToken(user.getId(), email);
+            String token = jwtService.generateToken(user.getId(), user.getName(), email);
             return ResponseEntity.ok(token);
 
         } else {

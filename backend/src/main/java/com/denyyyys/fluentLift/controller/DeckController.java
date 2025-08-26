@@ -35,12 +35,13 @@ public class DeckController {
     // private
 
     @GetMapping
-    public ResponseEntity<List<Deck>> getDecks(@AuthenticationPrincipal UserDetails user,
+    public ResponseEntity<List<?>> getDecks(@AuthenticationPrincipal UserDetails user,
             @RequestParam(required = false) String creatorEmail) {
-        return ResponseEntity.ok()
-                .body(deckService.getAccessibleDecksByCreatorEmail(
-                        (creatorEmail == null || creatorEmail.isEmpty()) ? user.getUsername() : creatorEmail,
-                        user.getUsername()));
+        if (creatorEmail == null || creatorEmail.isEmpty() || user.getUsername().equals(creatorEmail)) {
+            return ResponseEntity.ok().body(deckService.getDecksDtoOwnedBy(user.getUsername()));
+        }
+
+        return ResponseEntity.ok().body(deckService.getDecksDtoVisibleToPublic(creatorEmail));
     }
 
     @GetMapping("/{deckId}")

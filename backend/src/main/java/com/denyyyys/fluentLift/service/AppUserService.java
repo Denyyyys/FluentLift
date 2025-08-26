@@ -35,15 +35,14 @@ public class AppUserService implements UserDetailsService {
         return new AppUserDetails(user);
     }
 
-    public String addUser(UserRegistrationRequestDto userInfo) {
+    public AppUser addUser(UserRegistrationRequestDto userInfo) {
         repository.findByEmail(userInfo.getEmail()).ifPresent((appUser) -> {
             throw new UserAlreadyExistsException();
         });
 
         userInfo.setPassword(encoder.encode(userInfo.getPassword()));
         AppUser user = AppUserMapper.toEntity(userInfo);
-        repository.save(user);
-        return "User added successfully!";
+        return repository.save(user);
     }
 
 }
