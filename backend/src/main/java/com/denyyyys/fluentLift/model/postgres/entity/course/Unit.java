@@ -42,6 +42,9 @@ public class Unit {
     @Column(columnDefinition = "TEXT")
     private String overview;
 
+    @Column(nullable = false)
+    private Integer unitNumber;
+
     @OneToMany(mappedBy = "unit", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference
     private List<Lesson> lessons = new ArrayList<>();

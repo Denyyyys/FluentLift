@@ -17,6 +17,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class LessonCreateDto {
+
     private String title;
 
     @NotNull

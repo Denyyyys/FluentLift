@@ -2,9 +2,12 @@ package com.denyyyys.fluentLift.model.postgres.entity.course.lessonBlock;
 
 import com.denyyyys.fluentLift.model.postgres.entity.course.Lesson;
 import com.denyyyys.fluentLift.model.postgres.enums.TextBlockType;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -28,12 +31,14 @@ public class TextBlock {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "lesson_id", nullable = false)
+    @JsonBackReference
     private Lesson lesson;
 
     @Column(nullable = false)
-    private int position;
+    private int blockNumber;
 
     @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
     private TextBlockType type;
 
     @Column(nullable = false)

@@ -3,6 +3,7 @@ package com.denyyyys.fluentLift.model.postgres.entity.course.lessonBlock;
 import java.util.List;
 
 import com.denyyyys.fluentLift.model.postgres.entity.course.Lesson;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.CascadeType;
@@ -32,10 +33,11 @@ public class MultipleChoiceBlock {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "lesson_id", nullable = false)
+    @JsonBackReference
     private Lesson lesson;
 
     @Column(nullable = false)
-    private int position;
+    private int blockNumber;
 
     @Column(nullable = false)
     private String question;

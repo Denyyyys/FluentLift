@@ -13,7 +13,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class MultipleChoiceBlockDto extends LessonBlockCreateDto {
+public class MultipleChoiceBlockCreateDto extends LessonBlockCreateDto {
     @NotBlank
     private String question;
 

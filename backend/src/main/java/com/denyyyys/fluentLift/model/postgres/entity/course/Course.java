@@ -3,6 +3,7 @@ package com.denyyyys.fluentLift.model.postgres.entity.course;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.denyyyys.fluentLift.model.postgres.entity.AppUser;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.CascadeType;
@@ -12,6 +13,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -28,6 +31,10 @@ public class Course {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "creator_id", nullable = false)
+    private AppUser creator;
+
     @Column(nullable = false)
     private String title;
 
@@ -35,7 +42,7 @@ public class Course {
     private String description;
 
     @ElementCollection
-    @Column(columnDefinition = "TEXT")
+    @Column(columnDefinition = "TEXT", name = "goal")
     private List<String> goals = new ArrayList<>();
 
     @Column(nullable = false)
