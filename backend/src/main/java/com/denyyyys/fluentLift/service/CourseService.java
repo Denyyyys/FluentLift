@@ -1,5 +1,7 @@
 package com.denyyyys.fluentLift.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -28,5 +30,9 @@ public class CourseService {
 
         courseRepository.save(course);
         return course;
+    }
+
+    public List<Course> getCourses() {
+        return courseRepository.findAll();
     }
 }
