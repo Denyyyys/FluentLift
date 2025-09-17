@@ -11,23 +11,24 @@ export enum BlockType {
 export interface BaseBlock {
     id: string;
     type: BlockType;
+    blockNumber: number;
 }
 
 export interface BigHeadingBlock extends BaseBlock {
     type: BlockType.Text;
-    textType: BlockType.BigHeading;
+    textBlockType: BlockType.BigHeading;
     text: string;
 }
 
 export interface SmallHeadingBlock extends BaseBlock {
     type: BlockType.Text;
-    textType: BlockType.SmallHeading;
+    textBlockType: BlockType.SmallHeading;
     text: string;
 }
 
 export interface ParagraphBlock extends BaseBlock {
     type: BlockType.Text;
-    textType: BlockType.ParagraphBlock;
+    textBlockType: BlockType.ParagraphBlock;
     text: string;
 }
 
@@ -76,6 +77,7 @@ export type LessonBlock =
 export interface Lesson {
     id: string;
     title: string;
+    lessonNumber: number;
     blocks: LessonBlock[];
 }
 
@@ -83,6 +85,7 @@ export interface CourseUnit {
     id: string;
     title: string;
     overview: string;
+    unitNumber: number;
     lessons: Lesson[];
 }
 
