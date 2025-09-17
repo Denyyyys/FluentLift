@@ -15,7 +15,7 @@ interface LessonBlockEditorProps {
 function Lesson({ block, blockNumber, removeCurrentBlock, updateBlock }: LessonBlockEditorProps) {
     switch (block.type) {
         case BlockType.Text:
-            switch (block.textType) {
+            switch (block.textBlockType) {
                 case BlockType.BigHeading:
                     return <BigHeading block={block} blockNumber={blockNumber} removeCurrentBlock={removeCurrentBlock} updateBlock={updateBlock} />
                 case BlockType.SmallHeading:

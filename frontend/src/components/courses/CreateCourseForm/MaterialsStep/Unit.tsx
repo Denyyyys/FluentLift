@@ -22,6 +22,7 @@ type UnitProps = {
 
 
 function Unit({ unit, updateUnit, openedUnitId, setOpenedUnitId, unitNumber, removeCurrentUnit, openedLessonId, setOpenedLessonId }: UnitProps) {
+    const [totalLessonNumber, setTotalLessonNumber] = useState(0);
     const [overview, setOverview] = useState(unit.overview);
     const [title, setTitle] = useState(unit.title);
 
@@ -35,9 +36,10 @@ function Unit({ unit, updateUnit, openedUnitId, setOpenedUnitId, unitNumber, rem
     };
 
     const addLesson = () => {
-        const newLesson = { id: uuid(), title: "", blocks: [] } satisfies LessonType;
+        const newLesson = { id: uuid(), title: "", blocks: [], lessonNumber: totalLessonNumber + 1 } satisfies LessonType;
         const updatedUnit = { ...unit, lessons: [...unit.lessons, newLesson] };
         updateUnit(updatedUnit);
+        setTotalLessonNumber(prev => prev += 1)
     };
 
     const updateLesson = (updatedLesson: LessonType) => {

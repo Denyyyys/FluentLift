@@ -37,9 +37,10 @@ function Cloze({ block, updateBlock, blockNumber, removeCurrentBlock }: BlockPro
             <div className="mb-2">
                 <label htmlFor={`cloze-${blockNumber}-question`} className="form-label">Task Question</label>
                 <input
-                    type="text"
-                    className="form-control"
                     id={`cloze-${blockNumber}-question`}
+                    type="text"
+                    value={block.question}
+                    className="form-control"
                     placeholder='Fill the gaps'
                     onChange={(e) => updateBlock({ ...block, question: e.target.value })}
                 />

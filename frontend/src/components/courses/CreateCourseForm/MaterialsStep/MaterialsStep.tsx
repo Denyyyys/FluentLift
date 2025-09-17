@@ -6,6 +6,7 @@ import { BsParagraph } from "react-icons/bs";
 import { RiInputField } from "react-icons/ri";
 import { RiListCheck3 } from "react-icons/ri";
 import Unit from "./Unit";
+import { useState } from "react";
 
 type CourseMaterialsProps = {
     course: Course;
@@ -17,6 +18,7 @@ type CourseMaterialsProps = {
 }
 
 function MaterialsStep({ course, setCourse, openedUnitId, setOpenedUnitId, openedLessonId, setOpenedLessonId }: CourseMaterialsProps) {
+    const [totalUnitNumber, setTotalUnitNumber] = useState(0);
 
     const updateUnit = (updatedUnit: CourseUnit) => {
         setCourse({ ...course, units: course.units.map(u => u.id === updatedUnit.id ? updatedUnit : u) });
@@ -24,8 +26,9 @@ function MaterialsStep({ course, setCourse, openedUnitId, setOpenedUnitId, opene
 
     const addUnit = () => {
         const newUnitId = uuid();
-        setCourse(prev => ({ ...prev, units: [...prev.units, { id: newUnitId, lessons: [], overview: "", title: "" }] }))
+        setCourse(prev => ({ ...prev, units: [...prev.units, { id: newUnitId, lessons: [], overview: "", title: "", unitNumber: totalUnitNumber + 1 }] }))
         setOpenedUnitId(newUnitId);
+        setTotalUnitNumber(prev => prev += 1)
     }
 
     const removeUnit = (id: string) => {
@@ -41,6 +44,8 @@ function MaterialsStep({ course, setCourse, openedUnitId, setOpenedUnitId, opene
         if (openedUnit) {
             const openedLesson = openedUnit.lessons.find(lesson => lesson.id === openedLessonId);
             if (openedLesson) {
+                const newBlockNumber = openedLesson.blocks.length + 1;
+                newBlock.blockNumber = newBlockNumber;
                 const updatedLesson: Lesson = {
                     ...openedLesson,
                     blocks: [...openedLesson.blocks, newBlock],
@@ -67,20 +72,23 @@ function MaterialsStep({ course, setCourse, openedUnitId, setOpenedUnitId, opene
                     <button className="col btn btn-secondary flex-fill" onClick={() => addBlock({
                         id: uuid(),
                         type: BlockType.Text,
-                        textType: BlockType.BigHeading,
-                        text: ""
+                        textBlockType: BlockType.BigHeading,
+                        text: "",
+                        blockNumber: -1
                     } satisfies BigHeadingBlock)}><LuHeading1 /> Big Heading</button>
                     <button className="col btn btn-secondary flex-fill" onClick={() => addBlock({
                         id: uuid(),
                         type: BlockType.Text,
-                        textType: BlockType.SmallHeading,
-                        text: ""
+                        textBlockType: BlockType.SmallHeading,
+                        text: "",
+                        blockNumber: -1
                     } satisfies SmallHeadingBlock)}><LuHeading2 /> Small Heading</button>
                     <button className="col btn btn-secondary flex-fill" onClick={() => addBlock({
                         id: uuid(),
                         type: BlockType.Text,
-                        textType: BlockType.ParagraphBlock,
-                        text: ""
+                        textBlockType: BlockType.ParagraphBlock,
+                        text: "",
+                        blockNumber: -1
                     } satisfies ParagraphBlock)}><BsParagraph /> Paragraph</button>
                 </div>
                 <h4 className="mb-2">Tasks</h4>
@@ -90,14 +98,16 @@ function MaterialsStep({ course, setCourse, openedUnitId, setOpenedUnitId, opene
                         answers: [],
                         question: "",
                         template: "",
-                        type: BlockType.Cloze
+                        type: BlockType.Cloze,
+                        blockNumber: -1
                     } satisfies ClozeBlock)}><RiInputField /> Cloze</button>
                     {/* <button className="btn btn-secondary flex-fill"><FaExpandArrowsAlt /> Matching</button> */}
                     <button className="btn btn-secondary flex-fill" onClick={() => addBlock({
                         id: uuid(),
                         question: "",
                         choices: [],
-                        type: BlockType.MultipleChoice
+                        type: BlockType.MultipleChoice,
+                        blockNumber: -1
                     } satisfies MultipleChoiceBlock)}> <RiListCheck3 /> Multiple Choice</button>
                 </div>
             </div>
