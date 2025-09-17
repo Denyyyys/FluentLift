@@ -18,7 +18,7 @@ import com.denyyyys.fluentLift.service.DeckService;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("/api/cards")
+@RequestMapping("/api/v1/cards")
 @RequiredArgsConstructor
 public class CardController {
     private final DeckService deckService;
