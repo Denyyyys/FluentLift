@@ -12,6 +12,9 @@ import com.denyyyys.fluentLift.model.postgres.dto.request.course.lessonBlock.Les
 import com.denyyyys.fluentLift.model.postgres.dto.request.course.lessonBlock.MultipleChoiceBlockCreateDto;
 import com.denyyyys.fluentLift.model.postgres.dto.request.course.lessonBlock.MultipleChoiceOptionDto;
 import com.denyyyys.fluentLift.model.postgres.dto.request.course.lessonBlock.TextBlockCreateDto;
+import com.denyyyys.fluentLift.model.postgres.dto.response.CourseCreatorDto;
+import com.denyyyys.fluentLift.model.postgres.dto.response.CourseResponseDto;
+import com.denyyyys.fluentLift.model.postgres.entity.AppUser;
 import com.denyyyys.fluentLift.model.postgres.entity.course.Course;
 import com.denyyyys.fluentLift.model.postgres.entity.course.Lesson;
 import com.denyyyys.fluentLift.model.postgres.entity.course.Unit;
@@ -22,6 +25,26 @@ import com.denyyyys.fluentLift.model.postgres.entity.course.lessonBlock.Multiple
 import com.denyyyys.fluentLift.model.postgres.entity.course.lessonBlock.TextBlock;
 
 public class CourseMapper {
+    public static CourseResponseDto toResponseDto(Course course) {
+        CourseResponseDto responseDto = new CourseResponseDto();
+        responseDto.setId(course.getId());
+
+        AppUser creator = course.getCreator();
+        CourseCreatorDto creatorDto = new CourseCreatorDto(creator.getId(), creator.getName(), creator.getEmail());
+        responseDto.setCreator(creatorDto);
+
+        responseDto.setTitle(course.getTitle());
+        responseDto.setDescription(course.getDescription());
+        responseDto.setGoals(course.getGoals());
+        responseDto.setPrerequisiteLevel(course.getPrerequisiteLevel());
+        responseDto.setOutcomeLevel(course.getOutcomeLevel());
+        responseDto.setBaseLanguage(course.getBaseLanguage());
+        responseDto.setTargetLanguage(course.getTargetLanguage());
+        responseDto.setUnits(course.getUnits());
+
+        return responseDto;
+    }
+
     public static Course toEntity(CourseCreateDto courseDto) {
         Course course = new Course();
         course.setTitle(courseDto.getTitle());
