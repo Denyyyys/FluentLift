@@ -116,6 +116,7 @@ function InfoStep({ course, setCourse }: CourseSettingsProps) {
                             value={newGoal}
                             onChange={(e) => setNewGoal(e.target.value)}
                             onKeyDown={handleGoalEnter}
+                            onBlur={handleAddGoal}
                         />
                         <button type="button" className="btn btn-primary mt-1" onClick={handleAddGoal}>
                             Add Goal
