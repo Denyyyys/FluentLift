@@ -23,7 +23,7 @@ function CreateCoursePage() {
         // console.log(JSON.parse(JSON.stringify(course, null, 2)));
         try {
             const response = await axios.post(
-                "http://localhost:8080/api/courses",
+                "http://localhost:8080/api/v1/courses",
                 course,
                 {
                     headers: {

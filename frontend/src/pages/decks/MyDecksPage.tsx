@@ -18,7 +18,7 @@ function MyDecksPage() {
 
     useEffect(() => {
         axios
-            .get("http://localhost:8080/api/decks", {
+            .get("http://localhost:8080/api/v1/decks", {
                 headers: {
                     Authorization: "Bearer " + token,
                 },

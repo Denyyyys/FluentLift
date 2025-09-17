@@ -22,7 +22,7 @@ function DeckStudyPage() {
     const fetchDeck = async () => {
         try {
             setLoadingDeck(true);
-            const response = await axios.get<DeckOwnerResponseDto>(`http://localhost:8080/api/decks/${deckId}`, {
+            const response = await axios.get<DeckOwnerResponseDto>(`http://localhost:8080/api/v1/decks/${deckId}`, {
                 headers: {
                     "Authorization": `Bearer ${token}`
                 }
@@ -186,7 +186,7 @@ async function updateCardProgress(token: string | null, card: CardOwnerResponseD
     }
     try {
         await axios.put(
-            `http://localhost:8080/api/cards/${card.id}/progress`,
+            `http://localhost:8080/api/v1/cards/${card.id}/progress`,
             { knewIt },
             {
                 headers: {
