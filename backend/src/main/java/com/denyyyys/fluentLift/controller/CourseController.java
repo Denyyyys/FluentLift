@@ -39,4 +39,9 @@ public class CourseController {
         return ResponseEntity.ok().body(courseService.getCourses());
     }
 
+    @GetMapping("/me/created")
+    public ResponseEntity<List<CourseResponseDto>> getCreatedByMeCourses(@AuthenticationPrincipal UserDetails user) {
+        return ResponseEntity.ok().body(courseService.getCreatedByMeCourses(user.getUsername()));
+    }
+
 }

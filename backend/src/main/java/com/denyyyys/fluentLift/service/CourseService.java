@@ -40,4 +40,13 @@ public class CourseService {
 
         return coursesResponse;
     }
+
+    public List<CourseResponseDto> getCreatedByMeCourses(String creatorEmail) {
+        List<Course> courses = courseRepository.findAllByCreatorEmail(creatorEmail);
+        List<CourseResponseDto> coursesResponse = courses.stream().map(course -> CourseMapper.toResponseDto(course))
+                .toList();
+
+        return coursesResponse;
+    }
+
 }
