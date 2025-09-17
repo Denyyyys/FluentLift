@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.denyyyys.fluentLift.model.postgres.dto.request.course.CourseCreateDto;
+import com.denyyyys.fluentLift.model.postgres.dto.response.CourseResponseDto;
 import com.denyyyys.fluentLift.model.postgres.entity.course.Course;
 import com.denyyyys.fluentLift.service.CourseService;
 
@@ -34,7 +35,7 @@ public class CourseController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Course>> getCourses() {
+    public ResponseEntity<List<CourseResponseDto>> getCourses() {
         return ResponseEntity.ok().body(courseService.getCourses());
     }
 
