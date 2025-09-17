@@ -21,7 +21,7 @@ import com.denyyyys.fluentLift.service.JwtService;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/api/v1/auth")
 @RequiredArgsConstructor
 public class UserController {
     private final AppUserService appUserService;
