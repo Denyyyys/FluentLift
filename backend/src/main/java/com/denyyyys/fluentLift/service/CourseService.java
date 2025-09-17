@@ -7,6 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.denyyyys.fluentLift.exceptions.ResourceNotFound;
 import com.denyyyys.fluentLift.model.postgres.dto.request.course.CourseCreateDto;
+import com.denyyyys.fluentLift.model.postgres.dto.response.CourseResponseDto;
 import com.denyyyys.fluentLift.model.postgres.entity.AppUser;
 import com.denyyyys.fluentLift.model.postgres.entity.course.Course;
 import com.denyyyys.fluentLift.model.postgres.mapper.CourseMapper;
@@ -32,7 +33,11 @@ public class CourseService {
         return course;
     }
 
-    public List<Course> getCourses() {
-        return courseRepository.findAll();
+    public List<CourseResponseDto> getCourses() {
+        List<Course> courses = courseRepository.findAll();
+        List<CourseResponseDto> coursesResponse = courses.stream().map(course -> CourseMapper.toResponseDto(course))
+                .toList();
+
+        return coursesResponse;
     }
 }
