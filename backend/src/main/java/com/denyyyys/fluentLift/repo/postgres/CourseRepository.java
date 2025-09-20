@@ -7,5 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.denyyyys.fluentLift.model.postgres.entity.course.Course;
 
 public interface CourseRepository extends JpaRepository<Course, Long> {
-    List<Course> findAllByCreatorEmail(String email);
+    List<Course> findAllByCreator_Email(String email);
 }
