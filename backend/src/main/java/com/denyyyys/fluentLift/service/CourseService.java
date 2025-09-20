@@ -49,6 +49,13 @@ public class CourseService {
         return coursesResponse;
     }
 
+    public CourseResponseDto getCourse(Long courseId) {
+        Course course = courseRepository.findById(courseId).orElseThrow(() -> new ResourceNotFound("Course not found"));
+        CourseResponseDto coursesResponse = CourseMapper.toResponseDto(course);
+
+        return coursesResponse;
+    }
+
     public List<CourseResponseDto> getCreatedByMeCourses(String creatorEmail) {
         List<Course> courses = courseRepository.findAllByCreator_Email(creatorEmail);
         List<CourseResponseDto> coursesResponse = courses.stream().map(course -> CourseMapper.toResponseDto(course))

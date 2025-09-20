@@ -41,6 +41,12 @@ public class CourseController {
         return ResponseEntity.ok().body(courseService.getCourses());
     }
 
+    @GetMapping("/{courseId}")
+    public ResponseEntity<CourseResponseDto> getCourse(@PathVariable Long courseId) {
+        return ResponseEntity.ok().body(courseService.getCourse(courseId));
+
+    }
+
     @GetMapping("/me/created")
     public ResponseEntity<List<CourseResponseDto>> getCreatedByMeCourses(@AuthenticationPrincipal UserDetails user) {
         return ResponseEntity.ok().body(courseService.getCreatedByMeCourses(user.getUsername()));
