@@ -53,11 +53,9 @@ public class CourseController {
         return ResponseEntity.status(HttpStatus.CREATED).body(responseDto);
     }
 
-    // @GetMapping("/me/enrolled")
-    // public ResponseEntity<List<CourseResponseDto>>
-    // getEnrolledCourses(@AuthenticationPrincipal UserDetails user) {
-    // return
-    // ResponseEntity.ok().body(courseService.getEnrolledCourses(user.getUsername()));
-    // }
+    @GetMapping("/me/enrolled")
+    public ResponseEntity<List<CourseResponseDto>> getEnrolledCourses(@AuthenticationPrincipal UserDetails user) {
+        return ResponseEntity.ok().body(courseService.getEnrolledCourses(user.getUsername()));
+    }
 
 }

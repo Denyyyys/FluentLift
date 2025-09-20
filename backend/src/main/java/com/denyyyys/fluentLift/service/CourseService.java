@@ -82,13 +82,16 @@ public class CourseService {
         return UserCourseEnrollmentMapper.toResponseDto(enrollment, "enrolled");
     }
 
-    // public List<CourseResponseDto> getEnrolledCourses(String userEmail) {
-    // List<Course> courses = courseRepository.findAllByCreatorEmail(creatorEmail);
-    // List<CourseResponseDto> coursesResponse = courses.stream().map(course ->
-    // CourseMapper.toResponseDto(course))
-    // .toList();
+    public List<CourseResponseDto> getEnrolledCourses(String userEmail) {
+        AppUser user = appUserRepository.findByEmail(userEmail)
+                .orElseThrow(() -> new ResourceNotFound("User not found"));
 
-    // return coursesResponse;
-    // }
+        List<Course> courses = enrollmentRepository.findCoursesByUserId(user.getId());
+
+        List<CourseResponseDto> coursesResponse = courses.stream().map(course -> CourseMapper.toResponseDto(course))
+                .toList();
+
+        return coursesResponse;
+    }
 
 }
