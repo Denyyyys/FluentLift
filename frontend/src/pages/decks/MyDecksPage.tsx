@@ -6,6 +6,7 @@ import { BsToggleOn } from "react-icons/bs";
 import type { DeckOwnerResponseDto } from "../../types/deck";
 import axios from "axios";
 import DeckCardList from "../../components/decks/DeckCardList";
+import { BACKEND_BASE_URL } from "../../constants";
 
 
 function MyDecksPage() {
@@ -18,7 +19,7 @@ function MyDecksPage() {
 
     useEffect(() => {
         axios
-            .get("http://localhost:8080/api/v1/decks", {
+            .get(`${BACKEND_BASE_URL}/decks`, {
                 headers: {
                     Authorization: "Bearer " + token,
                 },

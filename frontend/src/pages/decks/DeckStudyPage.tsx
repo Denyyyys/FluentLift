@@ -7,6 +7,7 @@ import { sortByNextReviewDate } from "../../utils/utils";
 import type { CardOwnerResponseDto } from "../../types/card";
 import { BsToggleOff } from "react-icons/bs";
 import { BsToggleOn } from "react-icons/bs";
+import { BACKEND_BASE_URL } from "../../constants";
 
 function DeckStudyPage() {
     const { deckId } = useParams<{ deckId: string }>();
@@ -22,7 +23,7 @@ function DeckStudyPage() {
     const fetchDeck = async () => {
         try {
             setLoadingDeck(true);
-            const response = await axios.get<DeckOwnerResponseDto>(`http://localhost:8080/api/v1/decks/${deckId}`, {
+            const response = await axios.get<DeckOwnerResponseDto>(`${BACKEND_BASE_URL}/decks/${deckId}`, {
                 headers: {
                     "Authorization": `Bearer ${token}`
                 }
@@ -186,7 +187,7 @@ async function updateCardProgress(token: string | null, card: CardOwnerResponseD
     }
     try {
         await axios.put(
-            `http://localhost:8080/api/v1/cards/${card.id}/progress`,
+            `${BACKEND_BASE_URL}/cards/${card.id}/progress`,
             { knewIt },
             {
                 headers: {

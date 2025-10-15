@@ -8,6 +8,7 @@ import type { Course } from "../../types/course";
 import { v4 as uuid } from "uuid";
 import { useAuth } from "../../context/AuthContext";
 import axios from "axios";
+import { BACKEND_BASE_URL } from "../../constants";
 
 function CreateCoursePage() {
     const navigate = useNavigate();
@@ -23,7 +24,7 @@ function CreateCoursePage() {
         // console.log(JSON.parse(JSON.stringify(course, null, 2)));
         try {
             const response = await axios.post(
-                "http://localhost:8080/api/v1/courses",
+                `${BACKEND_BASE_URL}/courses`,
                 course,
                 {
                     headers: {

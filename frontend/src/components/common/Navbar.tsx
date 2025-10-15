@@ -3,8 +3,10 @@ import { FaCircleQuestion } from "react-icons/fa6";
 import { FaUser } from "react-icons/fa";
 import { SiBookstack } from "react-icons/si";
 import { TbCardsFilled } from "react-icons/tb";
+import { useAuth } from "../../context/AuthContext";
 
 export function Navbar() {
+    const { userName } = useAuth()
     return (
         <div className="navbar-container fixed-top">
             <nav className="navbar ">
@@ -33,7 +35,7 @@ export function Navbar() {
                             <Link to="/decks/" className="dropdown-item"> Browse</Link>
                         </ul>
                     </div>
-                    <Link to="/profile" className="nav-link"><FaUser /> Profile</Link>
+                    <Link to="/profile" className="nav-link"><FaUser /> Profile. Hello, {userName}</Link>
                 </div>
             </nav>
         </div>
