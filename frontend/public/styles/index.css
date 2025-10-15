@@ -157,20 +157,23 @@ body {
   min-height: calc(100vh - 102px);
 }
 
-.units-container > div:nth-child(odd){
+.lessons-container > div:nth-child(odd), 
+.unit-row-container:nth-child(odd),
+.units-container > div:nth-child(odd),
+.stripped-container > div:nth-child(odd){
   background-color: var(--clr-stripped-1);
 }
 
-.units-container > div:nth-child(even){
+.lessons-container > div:nth-child(even), 
+.unit-row-container:nth-child(even),
+.units-container > div:nth-child(even),
+.stripped-container > div:nth-child(even){
   background-color: var(--clr-stripped-2);
 }
 
-.lessons-container > div:nth-child(odd){
-  background-color: var(--clr-stripped-1);
-}
-
-.lessons-container > div:nth-child(even){
+.lesson-study-content-container {
   background-color: var(--clr-stripped-2);
+  border-radius: 10px;
 }
 
 /* CONTAINERS END*/
@@ -299,4 +302,8 @@ box-shadow: -9px 14px 33px -14px rgba(66, 68, 90, 1);
 
 .clickable:hover {
   cursor: pointer;
+}
+
+.progress, .progress-stacked  {
+  --bs-progress-bg: var(--clr-primary-300);
 }
