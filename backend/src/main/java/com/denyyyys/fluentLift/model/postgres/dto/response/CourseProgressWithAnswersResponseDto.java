@@ -1,21 +1,22 @@
 package com.denyyyys.fluentLift.model.postgres.dto.response;
 
-import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Builder
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserCourseEnrollmentResponseDto {
-    private Long userId;
+public class CourseProgressWithAnswersResponseDto {
     private Long courseId;
-    private String enrolledStatus;
-    private LocalDateTime enrolledAt;
+    private Long userId;
+
+    private Integer progress;
+
+    private List<UnitProgressWithAnswersResponseDto> unitProgresses = new ArrayList<>();
 }

@@ -4,11 +4,11 @@ import com.denyyyys.fluentLift.model.postgres.dto.response.UserCourseEnrollmentR
 import com.denyyyys.fluentLift.model.postgres.entity.course.UserCourseEnrollment;
 
 public class UserCourseEnrollmentMapper {
-    public static UserCourseEnrollmentResponseDto toResponseDto(UserCourseEnrollment entity, String status) {
+    public static UserCourseEnrollmentResponseDto toResponseDto(UserCourseEnrollment entity) {
         return new UserCourseEnrollmentResponseDto(
                 entity.getUser().getId(),
                 entity.getCourse().getId(),
-                entity.getEnrolledAt(),
-                status);
+                entity.getStatus(),
+                entity.getEnrolledAt());
     }
 }

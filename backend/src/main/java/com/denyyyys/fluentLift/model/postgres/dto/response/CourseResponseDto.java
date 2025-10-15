@@ -5,7 +5,6 @@ import java.util.List;
 
 import com.denyyyys.fluentLift.model.postgres.entity.course.Unit;
 
-import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,7 +19,6 @@ public class CourseResponseDto {
 
     private CourseCreatorDto creator;
 
-    @Column(nullable = false)
     private String title;
 
     private String description;

@@ -39,10 +39,17 @@ public class UserCourseEnrollment {
     @Column(nullable = false)
     private LocalDateTime enrolledAt;
 
+    @Column(nullable = false)
+    private String status;
+
     @PrePersist
     protected void onCreate() {
         if (enrolledAt == null) {
             enrolledAt = LocalDateTime.now();
+        }
+
+        if (status == null) {
+            status = "enrolled";
         }
     }
 }
