@@ -7,6 +7,7 @@ interface AuthContextType {
     token: string | null;
     email: string | null;
     userName: string | null;
+    userId: number | null;
     isLoggedIn: boolean;
     loading: boolean;
     login: (token: string) => void;
@@ -20,6 +21,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     const [token, setToken] = useState<string | null>(null);
     const [email, setEmail] = useState<string | null>(null);
     const [userName, setUserName] = useState<string | null>(null);
+    const [userId, setUserId] = useState<number | null>(null);
     const [loading, setLoading] = useState(true);
     console.log("console log from functiion: AuthContext.tsx - AuthProvider is called");
     const setUserFromToken = (token: string | null) => {
@@ -27,6 +29,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
             setEmail(null);
             setUserName(null);
             setToken(null);
+            setUserId(null);
             return;
         }
         try {
@@ -34,11 +37,13 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
             setEmail(decoded.sub);
             setUserName(decoded.userName || null);
             setToken(token);
+            setUserId(decoded.userId);
         } catch (e) {
             console.log("Error while decoding JWT:", e);
             setEmail(null);
             setUserName(null);
             setToken(null);
+            setUserId(null);
         }
     };
 
@@ -61,12 +66,13 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         setEmail(null);
         setUserName(null);
         setToken(null);
+        setUserId(null);
     };
 
     const isLoggedIn = !!token;
 
     return (
-        <AuthContext.Provider value={{ token, email, userName, isLoggedIn, loading, login, logout }}>
+        <AuthContext.Provider value={{ token, email, userName, isLoggedIn, loading, login, logout, userId }}>
             {children}
         </AuthContext.Provider>
     );
