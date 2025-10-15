@@ -14,6 +14,8 @@ import com.denyyyys.fluentLift.model.postgres.entity.course.UserCourseEnrollment
 public interface UserCourseEnrollmentRepository extends JpaRepository<UserCourseEnrollment, Long> {
     Optional<UserCourseEnrollment> findByCourseAndUser(Course course, AppUser user);
 
+    Optional<UserCourseEnrollment> findByCourse_IdAndUser_Id(Long courseId, Long userId);
+
     List<UserCourseEnrollment> findAllByUser(AppUser user);
 
     @Query("SELECT e.course FROM UserCourseEnrollment e WHERE e.user.id = :userId")
