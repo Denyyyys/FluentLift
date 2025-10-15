@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.denyyyys.fluentLift.model.postgres.entity.AppUser;
+import com.denyyyys.fluentLift.model.postgres.entity.course.lessonBlock.ClozeBlockAnswer;
+import com.denyyyys.fluentLift.model.postgres.entity.course.lessonBlock.MultipleChoiceBlock;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.CascadeType;
@@ -60,4 +62,20 @@ public class Course {
     @OneToMany(mappedBy = "course", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference
     private List<Unit> units = new ArrayList<>();
+
+    public List<ClozeBlockAnswer> getClozeBlockAnswers() {
+        return this.getUnits().stream()
+                .flatMap(unit -> unit.getLessons().stream()
+                        .flatMap(lesson -> lesson.getClozeBlocks().stream()
+                                .flatMap(clozeBlock -> clozeBlock.getAnswers().stream())))
+                .toList();
+    }
+
+    public List<MultipleChoiceBlock> getMultipleChoiceBlocks() {
+        return this.getUnits().stream()
+                .flatMap(unit -> unit.getLessons().stream()
+                        .flatMap(lesson -> lesson.getMultipleChoiceBlocks().stream()))
+                .toList();
+    }
+
 }
