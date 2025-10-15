@@ -1,20 +1,21 @@
-import { useParams } from "react-router-dom"
-import { BlockType, type CourseProgress, type CourseResponse, type LessonResponse, type TextBlockResponse, type UiClozeBlock, type UiClozeBlockAnswer, type UiLesson, type UiMultipleChoiceBlock, type UiMultipleChoiceOption } from "../../types/course";
+import { Link, useParams } from "react-router-dom"
+import { BlockType, type CourseProgress, type LessonResponse, type UiClozeBlock, type UiClozeBlockAnswer, type UiLesson, type UiMultipleChoiceBlock, type UiMultipleChoiceOption } from "../../types/course";
 import { useEffect, useMemo, useState } from "react";
 import axios, { HttpStatusCode } from "axios";
 import { BACKEND_BASE_URL } from "../../constants";
 import { useAuth } from "../../context/AuthContext";
-import { getLesson, getSortedBlocksForUiLesson, getUnitForLessonId, sortCourseContent } from "../../utils/utils";
+import { getLesson, getSortedBlocksForUiLesson, getUnitForLessonId, useCourse } from "../../utils/utils";
 import LessonBlockSwitch from "../../components/courses/LessonBlockSwitch";
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 
 function StudyLessonPage() {
     const { courseId, lessonId } = useParams();
+
+    const { course } = useCourse();
     const [courseProgress, setCourseProgress] = useState<CourseProgress | null>();
-    const [course, setCourse] = useState<CourseResponse | null>(null);
     const [uiLesson, setUiLesson] = useState<UiLesson | null>(null);
-    const [loadingCourse, setLoadingCourse] = useState(true);
+    const [loadingCourseProgress, setLoadingCourseProgress] = useState(true);
     const [savingProgress, setSavingProgress] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const { token } = useAuth();
@@ -23,9 +24,9 @@ function StudyLessonPage() {
     const blocks = useMemo(() => (uiLesson ? getSortedBlocksForUiLesson(uiLesson) : []), [uiLesson]);
 
     useEffect(() => {
-        setLoadingCourse(true);
+        setLoadingCourseProgress(true);
         if (courseId) {
-            fetchCourse(courseId)
+            fetchCourseProgress(courseId)
         }
     }, [courseId, lessonId])
 
@@ -143,17 +144,9 @@ function StudyLessonPage() {
         })
     }
 
-    const fetchCourse = async (courseId: string) => {
+    const fetchCourseProgress = async (courseId: string) => {
         try {
-            let courseResponse = await axios.get<CourseResponse>(`${BACKEND_BASE_URL}/courses/${courseId}`, {
-                headers: {
-                    'Authorization': `Bearer ${token}`
-                }
-            });
-
-            sortCourseContent(courseResponse.data);
-            setCourse(courseResponse.data);
-            const unit = getUnitForLessonId(courseResponse.data, Number(lessonId));
+            const unit = getUnitForLessonId(course, Number(lessonId));
             const lesson = getLesson(unit, Number(lessonId));
             setUiLesson(normalizeLesson(lesson));
             const courseProgressResponse = await axios.get<CourseProgress>(`${BACKEND_BASE_URL}/courses/${courseId}/progress-with-answers`, {
@@ -166,7 +159,7 @@ function StudyLessonPage() {
         } catch (error) {
             setError(handleFetchError(error, courseId));
         } finally {
-            setLoadingCourse(false);
+            setLoadingCourseProgress(false);
         }
 
     }
@@ -185,11 +178,14 @@ function StudyLessonPage() {
         }
     }
 
+    const navigateToCourseOverview = () => {
+
+    }
     if (courseId === undefined || lessonId === undefined) {
         return <div>How did you get there?</div>
     }
 
-    if (loadingCourse) {
+    if (loadingCourseProgress) {
         return <div>Loading...</div>
     }
 
@@ -211,7 +207,10 @@ function StudyLessonPage() {
     return (
         <>
             <h1 className="mt-4">{course.title}</h1>
-            <h3 className="mt-1">Unit {unit.unitNumber}, Lesson {uiLesson.lessonNumber}</h3>
+            <div className="d-flex justify-content-between mt-1 mb-1">
+                <h3 >Unit {unit.unitNumber}, Lesson {uiLesson.lessonNumber}</h3>
+                <Link className="btn btn-shaddow min-w-120px btn-primary" to={`/courses/${courseId}`}>List Of Content</Link>
+            </div>
             <div className="lesson-study-content-container p-3">
                 {blocks.map((block, index) => <LessonBlockSwitch key={index} block={block} handleClozeAnswerChange={handleClozeAnswerChange} handleMultipleChoiceAnswerChange={handleMultipleChoiceAnswerChange} />)}
                 <div className="container-fluid d-flex justify-content-around mb-4">

@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import type { CourseResponse, UserEnrollmentResponse } from "../../types/course";
 import { useAuth } from "../../context/AuthContext";
 import { countNumberOfLessons } from "../../utils/utils";

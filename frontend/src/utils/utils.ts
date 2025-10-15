@@ -1,3 +1,4 @@
+import { useOutletContext } from "react-router-dom";
 import type { CardOwnerResponseDto } from "../types/card";
 import { type CourseResponse, type CourseUnitResponse, type LessonProgress, type LessonResponse, type MultipleChoiceBlockResponse, type UnitProgress, type TextBlockResponse, BlockType, type UiLesson, type UiClozeBlock, type UiMultipleChoiceBlock } from "../types/course";
 
@@ -62,4 +63,10 @@ export function getSortedBlocksForUiLesson(lesson: UiLesson) {
 
     blocks.sort((a, b) => a.blockNumber - b.blockNumber)
     return blocks;
-} 
+}
+
+type CourseContextType = { course: CourseResponse };
+
+export function useCourse() {
+    return useOutletContext<CourseContextType>();
+}

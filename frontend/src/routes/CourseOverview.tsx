@@ -1,26 +1,27 @@
 import { useEffect, useState } from "react";
 import axios, { HttpStatusCode } from "axios";
-import type { CourseResponse, UserEnrollmentResponse } from "../types/course";
+import type { UserEnrollmentResponse } from "../types/course";
 import { BACKEND_BASE_URL } from "../constants";
 import { useParams } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import CoursePreviewPage from "../pages/courses/CoursePreviewPage";
 import CourseContentPage from "../pages/courses/CourseContentPage";
+import { useCourse } from "../utils/utils";
 
 function CourseOverview() {
     const { courseId } = useParams<{ courseId: string }>();
-    const [course, setCourse] = useState<CourseResponse | null>(null);
+    const { course } = useCourse();
     const [userIsEnrolled, setUserIsEnrolled] = useState<boolean | null>(null);
-    const [loadingCourse, setLoadingCourse] = useState(true);
+    const [loadingEnrollment, setLoadingEnrollment] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
     const { token } = useAuth();
 
-    const handleCourseError = (error: unknown, courseId: string) => {
+    const handleEnrollmentError = (error: unknown, courseId: string) => {
         if (axios.isAxiosError(error)) {
-            console.error(`Axios Error while getting course with id ${courseId}:`, error);
+            console.error(`Axios Error while getting enrollment for course with id ${courseId}:`, error);
             if (error.status === HttpStatusCode.NotFound) {
-                return "course-not-found";
+                return "enrollment-not-found";
             } else {
                 return "axios-general-error";
             }
@@ -30,18 +31,11 @@ function CourseOverview() {
         }
     }
 
-    const fetchCourse = async (courseId: string) => {
+    const fetchEnrollment = async (courseId: string) => {
         try {
-            setLoadingCourse(true);
+            setLoadingEnrollment(true);
             setError(null);
             setUserIsEnrolled(null)
-            setCourse(null);
-            const courseResponse = await axios.get<CourseResponse>(`${BACKEND_BASE_URL}/courses/${courseId}`, {
-                headers: {
-                    'Authorization': `Bearer ${token}`
-                }
-            });
-            setCourse(courseResponse.data);
 
             const enrollmentResponse = await axios.get<UserEnrollmentResponse>(`${BACKEND_BASE_URL}/courses/${courseId}/enrollment`, {
                 headers: {
@@ -53,26 +47,26 @@ function CourseOverview() {
 
             setUserIsEnrolled(enrollmentResponse.data.enrolledStatus === "enrolled");
         } catch (error) {
-            setError(handleCourseError(error, courseId));
+            setError(handleEnrollmentError(error, courseId));
         } finally {
-            setLoadingCourse(false);
+            setLoadingEnrollment(false);
         }
     }
     useEffect(() => {
         console.log("useEffect for fetching course");
 
         if (courseId) {
-            fetchCourse(courseId);
+            fetchEnrollment(courseId);
         }
     }, [courseId])
 
-    if (loadingCourse) {
+    if (loadingEnrollment) {
         return <div>Loading...</div>
     }
 
     if (error !== null) {
         switch (error) {
-            case "course-not-found":
+            case "enrollment-not-found":
                 return <div>
                     <h2>Ooops it seems like course which you are looking for doesn't exist or was deleted or archived.</h2>
                 </div>
@@ -83,7 +77,7 @@ function CourseOverview() {
         }
     }
 
-    if (!course || userIsEnrolled === null) {
+    if (userIsEnrolled === null) {
         return <div>It should never happen actually :/</div>
     }
 
