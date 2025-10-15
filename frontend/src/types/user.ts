@@ -3,8 +3,3 @@ export interface DeckCreatorDto {
     email: string;
 }
 
-export interface CourseCreator {
-    id: string;
-    name: string;
-    email: string;
-}
