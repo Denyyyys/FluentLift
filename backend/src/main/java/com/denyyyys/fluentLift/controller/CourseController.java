@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.denyyyys.fluentLift.model.postgres.dto.request.course.CourseCreateDto;
+import com.denyyyys.fluentLift.model.postgres.dto.response.CourseProgressWithAnswersResponseDto;
 import com.denyyyys.fluentLift.model.postgres.dto.response.CourseResponseDto;
 import com.denyyyys.fluentLift.model.postgres.dto.response.UserCourseEnrollmentResponseDto;
 import com.denyyyys.fluentLift.model.postgres.entity.course.Course;
@@ -44,7 +45,6 @@ public class CourseController {
     @GetMapping("/{courseId}")
     public ResponseEntity<CourseResponseDto> getCourse(@PathVariable Long courseId) {
         return ResponseEntity.ok().body(courseService.getCourse(courseId));
-
     }
 
     @GetMapping("/me/created")
@@ -59,9 +59,26 @@ public class CourseController {
         return ResponseEntity.status(HttpStatus.CREATED).body(responseDto);
     }
 
+    @GetMapping("/{courseId}/enrollment")
+    public ResponseEntity<UserCourseEnrollmentResponseDto> getMyEnrollment(@AuthenticationPrincipal UserDetails user,
+            @PathVariable Long courseId) {
+        return ResponseEntity.ok().body(courseService.userIsEnrolled(user.getUsername(), courseId));
+
+    }
+
     @GetMapping("/me/enrolled")
     public ResponseEntity<List<CourseResponseDto>> getEnrolledCourses(@AuthenticationPrincipal UserDetails user) {
         return ResponseEntity.ok().body(courseService.getEnrolledCourses(user.getUsername()));
+    }
+
+    @GetMapping("/{courseId}/progress-with-answers")
+    public ResponseEntity<CourseProgressWithAnswersResponseDto> getProgressWithAnswers(
+            @AuthenticationPrincipal UserDetails user,
+            @PathVariable Long courseId) {
+
+        CourseProgressWithAnswersResponseDto progress = courseService.getProgressWithAnswers(user.getUsername(),
+                courseId);
+        return ResponseEntity.ok().body(progress);
     }
 
 }
