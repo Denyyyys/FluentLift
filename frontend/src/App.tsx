@@ -8,17 +8,24 @@ import { Navbar } from "./components/common/Navbar"
 import DeckStudyPage2 from "./pages/decks/DeckStudyPage"
 import MyCoursesPage from "./pages/courses/MyCoursesPage"
 import CreateCoursePage from "./pages/courses/CreateCoursePage"
-
+import AllCoursesPage from "./pages/courses/AllCoursesPage"
+import CourseOverview from "./routes/CourseOverview"
+import { ToastContainer } from 'react-toastify';
+import StudyLessonPage from "./pages/courses/StudyLessonPage"
+import CourseLayout from "./layouts/CourseLayout"
 function App() {
   return <BrowserRouter>
-    <Navbar />
+    <ToastContainer position="top-center" />
+    <RequireAuth>
+      <Navbar />
+    </RequireAuth>
     <div className="app-container">
 
       <Routes>
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route
-          path="/profile"
+          path="/profile/"
           element={
             <RequireAuth>
               <ProfilePage />
@@ -34,7 +41,7 @@ function App() {
           }
         />
 
-        <Route path="/profile/decks/:deckId/study" element={
+        <Route path="/profile/decks/:deckId/study/" element={
           <RequireAuth>
             <DeckStudyPage2 />
           </RequireAuth>
@@ -50,13 +57,33 @@ function App() {
         />
 
         <Route
-          path="/profile/courses/new"
+          path="/profile/courses/new/"
           element={
             <RequireAuth>
               <CreateCoursePage />
             </RequireAuth>
           }
         />
+
+        <Route path="/courses/"
+          element={
+            <RequireAuth>
+              <AllCoursesPage />
+            </RequireAuth>
+          }
+        />
+
+        <Route path="/courses/:courseId"
+          element={
+            <RequireAuth>
+              <CourseLayout />
+            </RequireAuth>
+          }
+        >
+          <Route index element={<CourseOverview />} />
+          <Route path="lessons/:lessonId" element={<StudyLessonPage />} />
+        </Route>
+
       </Routes>
     </div>
   </BrowserRouter>
