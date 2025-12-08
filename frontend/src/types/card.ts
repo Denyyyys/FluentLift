@@ -1,6 +1,7 @@
 
 export interface CardOwnerResponseDto {
-    id: number;
+    id: number | null;
+    tempId: string;
     frontText: string;
     backText: string;
     archived: boolean;
@@ -17,3 +18,8 @@ export interface CardVisitorResponseDto {
     archived: boolean;
 }
 
+export interface CardCreateDto {
+    id: string;
+    frontText: string;
+    backText: string;
+}
