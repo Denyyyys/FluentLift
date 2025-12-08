@@ -29,6 +29,7 @@
   --clr-lighter-blue: rgb(35, 194, 202) 0%;
   --clr-stripped-1: #C5EDF1;
   --clr-stripped-2: #A9E8EF;
+  --clr-background-secondary: #A9E8EF;
   
   --clr-secondary-btn-light: #48b8e9;
   --clr-secondary-btn-dark: #247fa6;
@@ -39,7 +40,7 @@
 
   --layout-padding-x: 1.5rem;
 
-  --navbar-padding-y: 1.5rem;
+  --navbar-padding-y: 2rem;
 
 }
 
@@ -55,7 +56,6 @@ h6 {
 body {
   background-color: var(--clr-background-body);
   color: var(--clr-primary-text);
-  padding-top: 102px;
 }
 
 /* NAVBAR START */
@@ -65,7 +65,7 @@ body {
   padding-top: var(--navbar-padding-y);
   padding-bottom: var(--navbar-padding-y);
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
-
+  margin-bottom: var(--navbar-padding-y);
 }
 
 .navbar {
@@ -149,9 +149,10 @@ body {
   color: var(--clr-primary-800);
 }
 
-.new-course-header {
+.header-with-line-bottom {
   border-bottom: 1px solid var(--clr-primary-900);
 }
+
 
 .new-course-container {
   min-height: calc(100vh - 102px);
@@ -172,8 +173,15 @@ body {
 }
 
 .lesson-study-content-container {
-  background-color: var(--clr-stripped-2);
+  background-color: var(--clr-background-secondary);
   border-radius: 10px;
+}
+
+.card-top-color {
+    height: 180px;           /* same height as typical card image */
+    background-color: var(--clr-primary-500); /* Bootstrap primary color */
+    border-top-left-radius: 0.25rem; /* match card rounded corners */
+    border-top-right-radius: 0.25rem;
 }
 
 /* CONTAINERS END*/
@@ -306,4 +314,13 @@ box-shadow: -9px 14px 33px -14px rgba(66, 68, 90, 1);
 
 .progress, .progress-stacked  {
   --bs-progress-bg: var(--clr-primary-300);
+}
+
+.authentication-form {
+  background-color: var(--clr-background-secondary);
+  width: 60%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+
 }
