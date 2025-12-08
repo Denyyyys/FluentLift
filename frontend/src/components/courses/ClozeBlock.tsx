@@ -1,17 +1,25 @@
-import type { UiClozeBlock } from "../../types/course";
+import type { UiClozeBlock, UiClozeBlockAnswer } from "../../types/course";
 
 
 type ClozeBlockProps = {
     block: UiClozeBlock;
     onAnswerChange: (answerId: number, newValue: string) => void;
+    showCorrect: boolean;
+    isChecked: boolean;
+
 }
 
-function ClozeBlock({ block, onAnswerChange }: ClozeBlockProps) {
+function ClozeBlock({ block, onAnswerChange, showCorrect, isChecked }: ClozeBlockProps) {
     const parts = block.template.split(/({{.*?}})/g);
 
+    const answerIsCorrect = (blockAnswer: UiClozeBlockAnswer) => {
+        return (blockAnswer.caseSensitive && blockAnswer.expected === blockAnswer.userAnswer) ||
+            (!blockAnswer.caseSensitive && blockAnswer.expected.toLowerCase() === blockAnswer.userAnswer.toLowerCase())
+    }
+
     return (
-        <div>
-            <h3>{block.question}</h3>
+        <div className="mb-2">
+            <h2>{block.question}</h2>
             <p>
 
                 {parts.map((part, index) => {
@@ -28,9 +36,18 @@ function ClozeBlock({ block, onAnswerChange }: ClozeBlockProps) {
                             <input
                                 key={index}
                                 type="text"
-                                value={answer.userAnswer}
+                                value={showCorrect ? answer.expected : answer.userAnswer}
+                                disabled={showCorrect}
+                                className={!showCorrect && isChecked
+                                    ? answerIsCorrect(answer) ?
+                                        "bg-success "
+                                        : "bg-danger"
+                                    : ""
+                                }
+
+
                                 onChange={(e) => onAnswerChange(answer.id, e.target.value)}
-                                className="border-b border-gray-500 px-1 mx-1 outline-none focus:border-blue-500"
+
                             />
                         );
                     }

@@ -1,4 +1,5 @@
 import { BlockType, type LessonBlock } from '../../../../../types/course';
+import UnreachableState from '../../../../common/UnreachableState';
 import BigHeading from './BigHeading';
 import Cloze from './Cloze';
 import MultipleChoice from './MultipleChoice';
@@ -22,13 +23,13 @@ function Lesson({ block, blockNumber, removeCurrentBlock, updateBlock }: LessonB
                     return <SmallHeading block={block} blockNumber={blockNumber} removeCurrentBlock={removeCurrentBlock} updateBlock={updateBlock} />
                 case BlockType.ParagraphBlock:
                     return <Paragraph block={block} blockNumber={blockNumber} removeCurrentBlock={removeCurrentBlock} updateBlock={updateBlock} />
-                default: return "hmm, it should never happen too"
+                default: return <UnreachableState />
             }
         case BlockType.Cloze:
             return <Cloze block={block} blockNumber={blockNumber} removeCurrentBlock={removeCurrentBlock} updateBlock={updateBlock} />
         case BlockType.MultipleChoice:
             return <MultipleChoice block={block} blockNumber={blockNumber} removeCurrentBlock={removeCurrentBlock} updateBlock={updateBlock} />
-        default: return "hmm, it should never happen"
+        default: return <UnreachableState />
     }
 }
 

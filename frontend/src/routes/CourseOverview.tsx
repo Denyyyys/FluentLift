@@ -6,11 +6,11 @@ import { useParams } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import CoursePreviewPage from "../pages/courses/CoursePreviewPage";
 import CourseContentPage from "../pages/courses/CourseContentPage";
-import { useCourse } from "../utils/utils";
+import LoadingSpinner from "../components/common/LoadingSpinner";
+import UnreachableState from "../components/common/UnreachableState";
 
 function CourseOverview() {
     const { courseId } = useParams<{ courseId: string }>();
-    const { course } = useCourse();
     const [userIsEnrolled, setUserIsEnrolled] = useState<boolean | null>(null);
     const [loadingEnrollment, setLoadingEnrollment] = useState(true);
     const [error, setError] = useState<string | null>(null);
@@ -61,30 +61,34 @@ function CourseOverview() {
     }, [courseId])
 
     if (loadingEnrollment) {
-        return <div>Loading...</div>
+        return <LoadingSpinner />
     }
 
     if (error !== null) {
         switch (error) {
             case "enrollment-not-found":
-                return <div>
-                    <h2>Ooops it seems like course which you are looking for doesn't exist or was deleted or archived.</h2>
-                </div>
+                return (
+                    <div>
+                        <h2>Ooops it seems like course which you are looking for doesn't exist or was deleted or archived.</h2>
+                    </div>
+                )
             default:
-                return <div>
-                    <h2>Some unexpected error happened. See console logs for more info.</h2>
-                </div>
+                return (
+                    <div>
+                        <h2>Some unexpected error happened. See console logs for more info.</h2>
+                    </div>
+                )
         }
     }
 
     if (userIsEnrolled === null) {
-        return <div>It should never happen actually :/</div>
+        return <UnreachableState />
     }
 
     if (userIsEnrolled) {
-        return <CourseContentPage course={course} />
+        return <CourseContentPage />
     } else {
-        return <CoursePreviewPage course={course} onEnroll={() => setUserIsEnrolled(true)} />
+        return <CoursePreviewPage onEnroll={() => setUserIsEnrolled(true)} />
     }
 
 }

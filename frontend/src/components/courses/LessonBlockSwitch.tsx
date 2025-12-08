@@ -7,15 +7,17 @@ type LessonBlockProps = {
     block: TextBlockResponse | UiClozeBlock | UiMultipleChoiceBlock;
     handleClozeAnswerChange: (blockId: number, answerId: number, value: string) => void;
     handleMultipleChoiceAnswerChange: (mcBlockId: number, mcOptionId: number, value: boolean) => void;
+    showCorrect: boolean;
+    isChecked: boolean;
 }
 
-function LessonBlockSwitch({ block, handleClozeAnswerChange, handleMultipleChoiceAnswerChange }: LessonBlockProps) {
+function LessonBlockSwitch({ block, handleClozeAnswerChange, handleMultipleChoiceAnswerChange, showCorrect, isChecked }: LessonBlockProps) {
     switch (block.type) {
         case BlockType.Cloze:
-            return <ClozeBlock block={block} onAnswerChange={(answerId, value) => handleClozeAnswerChange(block.id, answerId, value)}
+            return <ClozeBlock block={block} showCorrect={showCorrect} isChecked={isChecked} onAnswerChange={(answerId, value) => handleClozeAnswerChange(block.id, answerId, value)}
             />
         case BlockType.MultipleChoice:
-            return <MultipleChoice block={block} onOptionChange={(mcOptionId, value) => handleMultipleChoiceAnswerChange(block.id, mcOptionId, value)} />
+            return <MultipleChoice block={block} showCorrect={showCorrect} isChecked={isChecked} onOptionChange={(mcOptionId, value) => handleMultipleChoiceAnswerChange(block.id, mcOptionId, value)} />
         case BlockType.BigHeading:
         case BlockType.SmallHeading:
         case BlockType.ParagraphBlock:

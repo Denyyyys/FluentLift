@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import type { CourseResponse } from '../../types/course';
 import axios from 'axios';
 import { BACKEND_BASE_URL } from '../../constants';
+import LoadingSpinner from '../../components/common/LoadingSpinner';
 
 function MyCoursesPage() {
     const navigate = useNavigate();
@@ -48,7 +49,7 @@ function MyCoursesPage() {
                 <h3 className='mb-3'>
                     Created Courses
                 </h3>
-                {loadingCourses ? <p>Loading courses...</p> : <ul>
+                {loadingCourses ? <LoadingSpinner /> : <ul>
                     {createdByMeCourses.map(course => {
                         return <li>
                             <Link to={`/courses/${course.id}`}> {course.title}</Link>
@@ -64,7 +65,7 @@ function MyCoursesPage() {
                 <h3>
                     Enrolled Courses
                 </h3>
-                {loadingCourses ? <p>Loading courses...</p> : <ul>
+                {loadingCourses ? <LoadingSpinner /> : <ul>
                     {enrolledCourses.map(course => {
                         return <li>
                             <Link to={`/courses/${course.id}`}> {course.title}</Link>

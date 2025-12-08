@@ -107,7 +107,14 @@ export interface CourseCreatorResponse {
     email: string;
 }
 
-export interface CourseResponse {
+export interface UserEnrollmentResponse {
+    userId: number;
+    courseId: number;
+    enrolledStatus: string;
+    enrolledAt?: string;
+}
+
+export interface BaseCourse {
     id: number;
     creator: CourseCreatorResponse;
     title: string;
@@ -117,71 +124,109 @@ export interface CourseResponse {
     outcomeLevel: string;
     baseLanguage: string;
     targetLanguage: string;
-    units: CourseUnitResponse[];
 }
 
-export interface UserEnrollmentResponse {
-    userId: number;
-    courseId: number;
-    enrolledStatus: string;
-    enrolledAt?: string;
+export interface CourseResponse extends BaseCourse {
+    units: UnitResponse[];
 }
 
-export interface CourseUnitResponse {
+export interface BaseUnit {
     id: number;
     title: string;
     overview: string;
     unitNumber: number;
+}
+
+export interface UnitResponse extends BaseUnit {
     lessons: LessonResponse[];
 }
 
-export interface LessonResponse {
+export interface BaseLesson {
     id: number;
     title?: string;
     lessonNumber: number;
     textBlocks: TextBlockResponse[];
+}
+
+export interface LessonResponse extends BaseLesson {
     clozeBlocks: ClozeBlockResponse[];
     multipleChoiceBlocks: MultipleChoiceBlockResponse[];
 }
 
-export interface UiLesson {
-    id: number;
-    title?: string;
-    lessonNumber: number;
-    textBlocks: TextBlockResponse[];
-    clozeBlocks: UiClozeBlock[];
-    multipleChoiceBlocks: UiMultipleChoiceBlock[];
-}
-
-export interface UiClozeBlock {
+export interface BaseClozeBlock {
     id: number;
     blockNumber: number;
-    type: BlockType.Cloze;
+    // type: BlockType.Cloze;
     question: string;
     template: string;
-    answers: UiClozeBlockAnswer[];
+    // answers: BaseClozeBlockAnswer[];
 }
 
-export interface UiClozeBlockAnswer {
+export interface ClozeBlockResponse extends BaseClozeBlock {
+    answers: ClozeBlockAnswerResponse[]
+}
+
+export interface BaseClozeBlockAnswer {
     id: number;
     key: string;
     expected: string;
     caseSensitive: boolean;
-    userAnswer: string;
 }
 
-export interface UiMultipleChoiceBlock {
+export interface ClozeBlockAnswerResponse extends BaseClozeBlockAnswer { }
+
+export interface BaseMultipleChoiceBlock {
     id: number;
     blockNumber: number;
-    type: BlockType.MultipleChoice;
     question: string;
-    choiceOptions: UiMultipleChoiceOption[];
 }
 
-export interface UiMultipleChoiceOption {
+export interface MultipleChoiceBlockResponse extends BaseMultipleChoiceBlock {
+    // type: BlockType.MultipleChoice;
+    choiceOptions: MultipleChoiceOptionResponse[];
+}
+
+export interface BaseMultipleChoiceOption {
     id: number;
     text: string;
     isCorrect: boolean;
+}
+
+export interface MultipleChoiceOptionResponse extends BaseMultipleChoiceOption { }
+
+export interface UiCourse extends BaseCourse {
+    progressInfo: ProgressInfo;
+    units: UiUnit[]
+}
+
+export interface UiUnit extends BaseUnit {
+    progressInfo: ProgressInfo;
+    lessons: UiLesson[]
+}
+
+export interface UiLesson extends BaseLesson {
+    progressInfo: ProgressInfo;
+    clozeBlocks: UiClozeBlock[];
+    multipleChoiceBlocks: UiMultipleChoiceBlock[];
+}
+
+
+
+export interface UiClozeBlock extends BaseClozeBlock {
+    type: BlockType.Cloze;
+    answers: UiClozeBlockAnswer[];
+}
+
+export interface UiClozeBlockAnswer extends BaseClozeBlockAnswer {
+    userAnswer: string;
+}
+
+export interface UiMultipleChoiceBlock extends BaseMultipleChoiceBlock {
+    type: BlockType.MultipleChoice;
+    choiceOptions: UiMultipleChoiceOption[];
+}
+
+export interface UiMultipleChoiceOption extends BaseMultipleChoiceOption {
     isSelected: boolean;
 }
 
@@ -190,36 +235,6 @@ export interface TextBlockResponse {
     blockNumber: number;
     type: BlockType.BigHeading | BlockType.SmallHeading | BlockType.ParagraphBlock;
     text: string;
-}
-
-export interface ClozeBlockResponse {
-    id: number;
-    blockNumber: number;
-    // type: BlockType.Cloze;
-    question: string;
-    template: string;
-    answers: ClozeBlockResponseAnswer[];
-}
-
-export interface ClozeBlockResponseAnswer {
-    id: number;
-    key: string;
-    expected: string;
-    caseSensitive: boolean;
-}
-
-export interface MultipleChoiceBlockResponse {
-    id: number;
-    blockNumber: number;
-    // type: BlockType.MultipleChoice;
-    question: string;
-    choiceOptions: MultipleChoiceOptionResponse[];
-}
-
-export interface MultipleChoiceOptionResponse {
-    id: number;
-    text: string;
-    isCorrect: boolean;
 }
 
 export interface MultipleChoiceOptionUserResponse {
@@ -234,32 +249,61 @@ export interface BlockProps<T extends LessonBlock> {
     removeCurrentBlock: () => void;
 }
 
-export interface CourseProgress {
+export interface CourseAnswers {
     courseId: number;
     userId: number;
-    progress: number;
-    unitProgresses: UnitProgress[];
+    unitAnswers: UnitAnswers[];
 }
 
-export interface UnitProgress {
+export interface UnitAnswers {
     unitId: number;
-    progress: number;
-    lessonProgresses: LessonProgress[];
+    lessonAnswers: LessonAnswers[];
 }
 
-export interface LessonProgress {
+export interface LessonAnswers {
     lessonId: number;
-    progress: number;
-    clozeAnswers: ClozeProgress[];
-    choiceUserSelectedAnswers: MultipleChoiceProgress[];
+    clozeAnswers: ClozeBlockUserAnswer[]
+    userSelectedMcosIds: number[]
+    // multipleChoiceUserSelectedOptionIds: number[]
 }
 
-export interface ClozeProgress {
-    id: number;
+export interface ClozeBlockUserAnswer {
     clozeBlockAnswerId: number;
     userInput: string;
 }
 
-export interface MultipleChoiceProgress {
-    multipleChoiceSelectedOptionId: number;
+export interface UserAnswersRequestDto {
+    clozeAnswers: ClozeBlockUserAnswerRequestDto[];
+    multipleChoiceUserSelectedOptionIds: number[];
 }
+
+export interface ClozeBlockUserAnswerRequestDto {
+    clozeBlockAnswerId: number;
+    userInput: string;
+}
+
+export type ProgressInfo = {
+    totalBlocks: number;
+    finishedBlocks: number;
+    progress: number;
+};
+
+// export interface CourseAnswersWithProgress {
+//     courseId: number;
+//     userId: number;
+//     progress: number;
+//     unitAnswersWithProgress: UnitAnswersWithProgress[];
+// }
+
+// export interface UnitAnswersWithProgress {
+//     unitId: number;
+//     progress: number;
+//     lessonAnswersWithProgress: LessonAnswersWithProgress[];
+// }
+
+// export interface LessonAnswersWithProgress {
+//     lessonId: number;
+//     progress: number;
+//     clozeAnswers: ClozeBlockUserAnswer[];
+//     choiceUserSelectedAnswers: number[];
+// }

@@ -1,6 +1,6 @@
 import { useOutletContext } from "react-router-dom";
 import type { CardOwnerResponseDto } from "../types/card";
-import { type CourseResponse, type CourseUnitResponse, type LessonProgress, type LessonResponse, type MultipleChoiceBlockResponse, type UnitProgress, type TextBlockResponse, BlockType, type UiLesson, type UiClozeBlock, type UiMultipleChoiceBlock } from "../types/course";
+import { type CourseResponse, type LessonResponse, type MultipleChoiceBlockResponse, type TextBlockResponse, BlockType, type UiLesson, type UiClozeBlock, type UiMultipleChoiceBlock, type LessonAnswers, type ClozeBlockUserAnswer, type UiCourse } from "../types/course";
 
 export function sortByNextReviewDate(cards: CardOwnerResponseDto[]) {
     return [...cards].sort(
@@ -9,7 +9,7 @@ export function sortByNextReviewDate(cards: CardOwnerResponseDto[]) {
     );
 }
 
-export function countNumberOfLessons(course: CourseResponse) {
+export function countNumberOfLessons(course: UiCourse) {
     let totalNumber = 0;
     course.units.forEach(unit => {
         totalNumber += unit.lessons.length;
@@ -18,43 +18,39 @@ export function countNumberOfLessons(course: CourseResponse) {
     return totalNumber;
 }
 
-export function getUnitProgress(unitId: number, unitProgresses: UnitProgress[]) {
-    return unitProgresses.find(unit => unit.unitId === unitId);
+export function countProgress(totalNumberBlocks: number, totalNumberFinishedBlocks: number): number {
+    return Math.round((totalNumberFinishedBlocks / totalNumberBlocks) * 100);
 }
 
-export function getLessonProgress(lessonId: number, lessonProgresses: LessonProgress[]) {
-    return lessonProgresses.find(lesson => lesson.lessonId === lessonId);
-}
+// export function getUnitForLessonId(course: CourseResponse, lessonId: number) {
 
-export function getUnitForLessonId(course: CourseResponse, lessonId: number) {
+//     const unit = course.units.find(unit => {
+//         return unit.lessons.some(lesson => lesson.id === lessonId)
+//     });
 
-    const unit = course.units.find(unit => {
-        return unit.lessons.some(lesson => lesson.id === lessonId)
-    });
+//     if (!unit) {
+//         throw new Error(`Lesson with id ${lessonId} was not found`)
+//     }
 
-    if (!unit) {
-        throw new Error(`Lesson with id ${lessonId} was not found`)
-    }
+//     return unit;
+// }
 
-    return unit;
-}
+// export function getLesson(unit: CourseUnitResponse, lessonId: number) {
+//     const lesson = unit.lessons.find(lesson => lesson.id === lessonId);
 
-export function getLesson(unit: CourseUnitResponse, lessonId: number) {
-    const lesson = unit.lessons.find(lesson => lesson.id === lessonId);
+//     if (!lesson) {
+//         throw new Error(`Lesson with id ${lessonId} was not found`)
+//     }
 
-    if (!lesson) {
-        throw new Error(`Lesson with id ${lessonId} was not found`)
-    }
-
-    return lesson;
-}
+//     return lesson;
+// }
 
 export function sortCourseContent(course: CourseResponse) {
     course.units.sort((a, b) => a.unitNumber - b.unitNumber)
     course.units.forEach(unit => unit.lessons.sort((a, b) => a.lessonNumber - b.lessonNumber));
 }
 
-export function getSortedBlocksForUiLesson(lesson: UiLesson) {
+export function getSortedBlocksForUiLesson(lesson: UiLesson): (TextBlockResponse | UiClozeBlock | UiMultipleChoiceBlock)[] {
     const blocks: Array<TextBlockResponse | UiClozeBlock | UiMultipleChoiceBlock> = [];
 
     lesson.textBlocks.forEach(textBlock => blocks.push(textBlock));
@@ -65,8 +61,58 @@ export function getSortedBlocksForUiLesson(lesson: UiLesson) {
     return blocks;
 }
 
-type CourseContextType = { course: CourseResponse };
+export type CourseContextType = { uiCourse: UiCourse, updateLesson: (uiLesson: UiLesson) => void };
 
 export function useCourse() {
     return useOutletContext<CourseContextType>();
 }
+
+function getAdjacentLesson(course: UiCourse, currLessonNumber: number, offset: number): UiLesson | undefined {
+    for (const unit of course.units) {
+        let lesson = unit.lessons.find(lesson => lesson.lessonNumber === currLessonNumber + offset);
+        if (lesson) {
+            return lesson;
+        }
+    }
+    return undefined;
+}
+
+export function getPreviousLesson(course: UiCourse, currLessonNumber: number): UiLesson | undefined {
+    return getAdjacentLesson(course, currLessonNumber, -1);
+}
+
+export function getNextLesson(course: UiCourse, currLessonNumber: number): UiLesson | undefined {
+    return getAdjacentLesson(course, currLessonNumber, 1);
+}
+
+// export function convertUiLessonToLessonAnswers(uiLesson: UiLesson) {
+//     let lessonAnswers = {
+//         clozeAnswers: [] as ClozeBlockUserAnswer[],
+//         multipleChoiceUserSelectedOptionIds: [] as number[]
+//     } satisfies LessonAnswers;
+
+//     uiLesson.clozeBlocks.forEach(clozeBlock => {
+//         clozeBlock.answers.forEach(answer => {
+//             lessonAnswers.clozeAnswers.push({ clozeBlockAnswerId: answer.id, userInput: answer.userAnswer })
+//         })
+//     })
+
+//     uiLesson.multipleChoiceBlocks.forEach(mcBlock => {
+//         mcBlock.choiceOptions.forEach(choiceOption => {
+//             if (choiceOption.isSelected) {
+//                 lessonAnswers.multipleChoiceUserSelectedOptionIds.push(choiceOption.id)
+//             }
+//         })
+//     })
+
+//     return lessonAnswers;
+// }
+
+// export function isNextLesson(unit: CourseUnitResponse, lessonNumber: number) {
+//     return unit.lessons.some(lesson => lesson.lessonNumber > lessonNumber)
+// }
+
+
+// export function isPreviousLesson(unit: CourseUnitResponse, lessonNumber: number) {
+//     return unit.lessons.some(lesson => lesson.lessonNumber < lessonNumber)
+// }

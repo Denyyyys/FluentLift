@@ -43,7 +43,7 @@ function CreateCoursePage() {
 
     return (
         <div className='d-flex flex-column  new-course-container'>
-            <div className='new-course-header d-flex justify-content-between pb-1 mt-3 mb-3'>
+            <div className='header-with-line-bottom d-flex justify-content-between pb-1 mb-3'>
                 <h3 className="fw-semibold">
                     Create Course
                 </h3>
