@@ -7,6 +7,7 @@ import type { DeckOwnerResponseDto } from "../../types/deck";
 import axios from "axios";
 import DeckCardList from "../../components/decks/DeckCardList";
 import { BACKEND_BASE_URL } from "../../constants";
+import { Link } from "react-router-dom";
 
 
 function MyDecksPage() {
@@ -49,7 +50,7 @@ function MyDecksPage() {
                     </button>
                 </form>
                 <div className="d-flex flex-row align-items-center gap-3">
-                    <button className="btn btn-success">New</button>
+                    <Link className="btn btn-success" to="/decks/new/">New</Link>
                     <div className="dropdown">
                         <button className="btn dropdown-toggle sort-by-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Sort By

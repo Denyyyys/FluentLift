@@ -8,6 +8,7 @@ import type { CardOwnerResponseDto } from "../../types/card";
 import { BsToggleOff } from "react-icons/bs";
 import { BsToggleOn } from "react-icons/bs";
 import { BACKEND_BASE_URL } from "../../constants";
+import LoadingSpinner from "../../components/common/LoadingSpinner";
 
 function DeckStudyPage() {
     const { deckId } = useParams<{ deckId: string }>();
@@ -58,7 +59,7 @@ function DeckStudyPage() {
     }, [index, mode, activeCards, reviewCards]);
 
     if (loadingDeck) {
-        return <p>Loading Deck...</p>
+        return <LoadingSpinner />
     }
 
     if (deck === undefined) {
@@ -134,7 +135,7 @@ function DeckStudyPage() {
                 <div className="card-top">
                     {activeCards?.length >= 0 && reviewCards?.length === 0 && mode === "review" &&
                         <h5 className="pt-5 centered-paragraph">Congartulations, learning is finished! Please come back later, when it's time to study or continue learning by enabling "Random Cards" mode.</h5>}
-                    <h1 className="pt-5">{cardIsFlipped ? currentCard?.frontText : currentCard?.backText}</h1>
+                    <h1 className="pt-5">{cardIsFlipped ? currentCard?.backText : currentCard?.frontText}</h1>
 
                 </div>
                 <div>
