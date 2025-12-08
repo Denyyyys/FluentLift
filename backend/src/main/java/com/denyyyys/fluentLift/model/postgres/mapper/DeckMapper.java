@@ -18,9 +18,9 @@ public class DeckMapper {
 
         deck.setName(dto.getName());
         deck.setTargetLanguage(dto.getTargetLanguage());
-        deck.setLearningLanguage(dto.getLearningLanguage());
+        deck.setBaseLanguage(dto.getBaseLanguage());
         deck.setCreator(creator);
-
+        deck.setPublic(dto.getIsPublic());
         return deck;
     }
 
@@ -29,7 +29,7 @@ public class DeckMapper {
             entity.setName(dto.getName());
         }
 
-        entity.setLearningLanguage(dto.getLearningLanguage());
+        entity.setBaseLanguage(dto.getBaseLanguage());
 
         entity.setTargetLanguage(dto.getTargetLanguage());
     }
@@ -43,7 +43,7 @@ public class DeckMapper {
         dto.setCreator(creatorDto);
         dto.setArchived(deckEntity.isArchived());
         dto.setTargetLanguage(deckEntity.getTargetLanguage());
-        dto.setLearningLanguage(deckEntity.getLearningLanguage());
+        dto.setBaseLanguage(deckEntity.getBaseLanguage());
         dto.setCards(cardsDto);
         dto.setPublic(deckEntity.isPublic());
 
@@ -60,7 +60,7 @@ public class DeckMapper {
         dto.setCreator(creatorDto);
         dto.setArchived(deckEntity.isArchived());
         dto.setTargetLanguage(deckEntity.getTargetLanguage());
-        dto.setLearningLanguage(deckEntity.getLearningLanguage());
+        dto.setBaseLanguage(deckEntity.getBaseLanguage());
         dto.setCards(cardsDto);
         dto.setPublic(deckEntity.isPublic());
 

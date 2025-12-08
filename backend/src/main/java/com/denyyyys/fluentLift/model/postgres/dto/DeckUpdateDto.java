@@ -13,5 +13,5 @@ public class DeckUpdateDto {
     private String name;
 
     private String targetLanguage;
-    private String learningLanguage;
+    private String baseLanguage;
 }

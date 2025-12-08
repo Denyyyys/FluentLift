@@ -50,7 +50,7 @@ public class Deck {
     private boolean isArchived = false;
 
     private String targetLanguage;
-    private String learningLanguage;
+    private String baseLanguage;
 
     @CreationTimestamp
     @Column(nullable = false, updatable = false)

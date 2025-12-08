@@ -18,7 +18,7 @@ public class DeckCreateDto {
     private String name;
 
     private String targetLanguage;
-    private String learningLanguage;
-
+    private String baseLanguage;
+    private Boolean isPublic;
     private @Valid List<CardCreateDto> cards;
 }

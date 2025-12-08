@@ -17,7 +17,7 @@ public class DeckVisitorResponseDto {
     private DeckCreatorDto creator;
     private boolean archived;
     private String targetLanguage;
-    private String learningLanguage;
+    private String baseLanguage;
     private boolean isPublic;
 
     private List<CardVisitorResponseDto> cards;

@@ -15,7 +15,6 @@ import com.denyyyys.fluentLift.exceptions.ResourceNotFound;
 import com.denyyyys.fluentLift.model.postgres.dto.CardCreateDto;
 import com.denyyyys.fluentLift.model.postgres.dto.CardUpdateDto;
 import com.denyyyys.fluentLift.model.postgres.dto.DeckCreateDto;
-import com.denyyyys.fluentLift.model.postgres.dto.DeckUpdateDto;
 import com.denyyyys.fluentLift.model.postgres.dto.response.CardOwnerResponseDto;
 import com.denyyyys.fluentLift.model.postgres.dto.response.CardVisitorResponseDto;
 import com.denyyyys.fluentLift.model.postgres.dto.response.DeckCreatorDto;
@@ -125,11 +124,31 @@ public class DeckService {
         return decksDto.stream().filter((deck) -> deck.isPublic()).toList();
     }
 
-    @Transactional
-    public Deck updateDeck(DeckUpdateDto deckDto, Long deckId, String userEmail) {
-        Deck deck = this.getWritableDeck(deckId, userEmail);
+    // @Transactional
+    // public Deck updateDeck(DeckUpdateDto deckDto, Long deckId, String userEmail)
+    // {
+    // Deck deck = this.getWritableDeck(deckId, userEmail);
 
-        DeckMapper.updateEntityFromDto(deckDto, deck);
+    // DeckMapper.updateEntityFromDto(deckDto, deck);
+
+    // try {
+    // deck.setUpdatedAt(Instant.now());
+    // return deckRepository.save(deck);
+    // } catch (DataIntegrityViolationException ex) {
+    // Throwable rootCause = ex.getRootCause();
+    // if (rootCause != null && rootCause.getMessage() != null
+    // && rootCause.getMessage().contains("uk_deck_creatorid_name")) {
+    // throw new DuplicateResourceException("You already have deck with that name.
+    // Please rename it");
+    // }
+    // throw ex;
+    // }
+    // }
+
+    @Transactional
+    public Deck updateDeck(Deck deck, Long deckId, String userEmail) {
+        AppUser user = appUserRepository.findByEmail(userEmail)
+                .orElseThrow(() -> new ResourceNotFound("User not found"));
 
         try {
             deck.setUpdatedAt(Instant.now());

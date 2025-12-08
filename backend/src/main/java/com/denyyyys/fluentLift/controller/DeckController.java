@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.denyyyys.fluentLift.model.postgres.dto.CardCreateDto;
 import com.denyyyys.fluentLift.model.postgres.dto.CardUpdateDto;
 import com.denyyyys.fluentLift.model.postgres.dto.DeckCreateDto;
-import com.denyyyys.fluentLift.model.postgres.dto.DeckUpdateDto;
 import com.denyyyys.fluentLift.model.postgres.entity.Card;
 import com.denyyyys.fluentLift.model.postgres.entity.Deck;
 import com.denyyyys.fluentLift.service.DeckService;
@@ -58,11 +57,22 @@ public class DeckController {
         return ResponseEntity.status(HttpStatus.CREATED).body(newDeck);
     }
 
+    // @PutMapping("/{deckId}")
+    // public ResponseEntity<Deck> updateDeck(@AuthenticationPrincipal UserDetails
+    // user, @PathVariable Long deckId,
+    // @Valid @RequestBody DeckUpdateDto deckDto) {
+
+    // Deck updatedDeck = deckService.updateDeck(deckDto, deckId,
+    // user.getUsername());
+    // return ResponseEntity.ok().body(updatedDeck);
+    // }
+
     @PutMapping("/{deckId}")
     public ResponseEntity<Deck> updateDeck(@AuthenticationPrincipal UserDetails user, @PathVariable Long deckId,
-            @Valid @RequestBody DeckUpdateDto deckDto) {
+            @Valid @RequestBody Deck deckDto) {
 
-        Deck updatedDeck = deckService.updateDeck(deckDto, deckId, user.getUsername());
+        Deck updatedDeck = deckService.updateDeck(deckDto, deckId,
+                user.getUsername());
         return ResponseEntity.ok().body(updatedDeck);
     }
 
