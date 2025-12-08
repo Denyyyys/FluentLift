@@ -9,6 +9,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class MultipleChoiceUserProgressWithAnswersResponseDto {
-    private Long multipleChoiceSelectedOptionId;
+public class ClozeBlockUserAnswersResponseDto {
+    private Long clozeBlockAnswerId;
+    private String userInput;
 }

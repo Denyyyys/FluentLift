@@ -10,12 +10,14 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.denyyyys.fluentLift.model.postgres.dto.request.UserAnswersRequestDto;
 import com.denyyyys.fluentLift.model.postgres.dto.request.course.CourseCreateDto;
-import com.denyyyys.fluentLift.model.postgres.dto.response.CourseProgressWithAnswersResponseDto;
+import com.denyyyys.fluentLift.model.postgres.dto.response.CourseAnswersResponseDto;
 import com.denyyyys.fluentLift.model.postgres.dto.response.CourseResponseDto;
 import com.denyyyys.fluentLift.model.postgres.dto.response.UserCourseEnrollmentResponseDto;
 import com.denyyyys.fluentLift.model.postgres.entity.course.Course;
@@ -71,14 +73,21 @@ public class CourseController {
         return ResponseEntity.ok().body(courseService.getEnrolledCourses(user.getUsername()));
     }
 
-    @GetMapping("/{courseId}/progress-with-answers")
-    public ResponseEntity<CourseProgressWithAnswersResponseDto> getProgressWithAnswers(
+    @GetMapping("/{courseId}/user-answers")
+    public ResponseEntity<CourseAnswersResponseDto> getUserAnswers(
             @AuthenticationPrincipal UserDetails user,
             @PathVariable Long courseId) {
 
-        CourseProgressWithAnswersResponseDto progress = courseService.getProgressWithAnswers(user.getUsername(),
+        CourseAnswersResponseDto progress = courseService.getProgressWithAnswers(user.getUsername(),
                 courseId);
         return ResponseEntity.ok().body(progress);
+    }
+
+    @PutMapping("/{courseId}/lessons/{lessonId}/user-answers")
+    public ResponseEntity<String> saveUserAnswers(@AuthenticationPrincipal UserDetails user,
+            @RequestBody UserAnswersRequestDto userAnswers, @PathVariable Long lessonId) {
+        return ResponseEntity.status(HttpStatus.OK)
+                .body(courseService.saveUserAnswers(user.getUsername(), userAnswers, lessonId));
     }
 
 }

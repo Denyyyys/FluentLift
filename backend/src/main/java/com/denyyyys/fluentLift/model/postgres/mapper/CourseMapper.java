@@ -2,7 +2,9 @@ package com.denyyyys.fluentLift.model.postgres.mapper;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
+import com.denyyyys.fluentLift.model.postgres.dto.request.ClozeBlockUserAnswerRequestDto;
 import com.denyyyys.fluentLift.model.postgres.dto.request.course.CourseCreateDto;
 import com.denyyyys.fluentLift.model.postgres.dto.request.course.LessonCreateDto;
 import com.denyyyys.fluentLift.model.postgres.dto.request.course.UnitCreateDto;
@@ -12,16 +14,23 @@ import com.denyyyys.fluentLift.model.postgres.dto.request.course.lessonBlock.Les
 import com.denyyyys.fluentLift.model.postgres.dto.request.course.lessonBlock.MultipleChoiceBlockCreateDto;
 import com.denyyyys.fluentLift.model.postgres.dto.request.course.lessonBlock.MultipleChoiceOptionDto;
 import com.denyyyys.fluentLift.model.postgres.dto.request.course.lessonBlock.TextBlockCreateDto;
+import com.denyyyys.fluentLift.model.postgres.dto.response.ClozeBlockUserAnswersResponseDto;
+import com.denyyyys.fluentLift.model.postgres.dto.response.CourseAnswersResponseDto;
 import com.denyyyys.fluentLift.model.postgres.dto.response.CourseCreatorDto;
 import com.denyyyys.fluentLift.model.postgres.dto.response.CourseResponseDto;
+import com.denyyyys.fluentLift.model.postgres.dto.response.LessonAnswersResponseDto;
+import com.denyyyys.fluentLift.model.postgres.dto.response.UnitAnswersResponseDto;
 import com.denyyyys.fluentLift.model.postgres.entity.AppUser;
 import com.denyyyys.fluentLift.model.postgres.entity.course.Course;
 import com.denyyyys.fluentLift.model.postgres.entity.course.Lesson;
 import com.denyyyys.fluentLift.model.postgres.entity.course.Unit;
 import com.denyyyys.fluentLift.model.postgres.entity.course.lessonBlock.ClozeBlock;
 import com.denyyyys.fluentLift.model.postgres.entity.course.lessonBlock.ClozeBlockAnswer;
+import com.denyyyys.fluentLift.model.postgres.entity.course.lessonBlock.ClozeBlockUserAnswer;
 import com.denyyyys.fluentLift.model.postgres.entity.course.lessonBlock.MultipleChoiceBlock;
 import com.denyyyys.fluentLift.model.postgres.entity.course.lessonBlock.MultipleChoiceOption;
+import com.denyyyys.fluentLift.model.postgres.entity.course.lessonBlock.MultipleChoiceUserSelectedAnswer;
+import com.denyyyys.fluentLift.model.postgres.entity.course.lessonBlock.MultipleChoiceUserSelectedAnswerId;
 import com.denyyyys.fluentLift.model.postgres.entity.course.lessonBlock.TextBlock;
 
 public class CourseMapper {
@@ -173,4 +182,81 @@ public class CourseMapper {
 
         return option;
     }
+
+    public static List<ClozeBlockUserAnswer> toClozeAnswersEntity(List<ClozeBlockUserAnswerRequestDto> dto,
+            AppUser user) {
+        List<ClozeBlockUserAnswer> clozeAnswers = new ArrayList<>();
+
+        dto.stream().forEach(clozeAnswerDto -> {
+            ClozeBlockUserAnswer answer = new ClozeBlockUserAnswer();
+            answer.setUser(user);
+            answer.setUserInput(clozeAnswerDto.getUserInput());
+            answer.setClozeBlockAnswer(new ClozeBlockAnswer());
+            answer.getClozeBlockAnswer().setId(clozeAnswerDto.getClozeBlockAnswerId());
+            clozeAnswers.add(answer);
+        });
+
+        return clozeAnswers;
+    }
+
+    public static List<MultipleChoiceUserSelectedAnswer> toMultipleChoiceAnswersEntity(
+            List<MultipleChoiceOption> selectedOptions,
+            AppUser user) {
+        List<MultipleChoiceUserSelectedAnswer> options = new ArrayList<>();
+
+        selectedOptions.stream().forEach(selectedOption -> {
+            MultipleChoiceUserSelectedAnswer selectedAnswer = new MultipleChoiceUserSelectedAnswer();
+            selectedAnswer.setUser(user);
+            selectedAnswer.setMultipleChoiceOption(selectedOption);
+            selectedAnswer.setId(new MultipleChoiceUserSelectedAnswerId(user.getId(), selectedOption.getId()));
+            options.add(selectedAnswer);
+        });
+        return options;
+    }
+
+    public static CourseAnswersResponseDto toCourseAnswersResponseDto(Course course, AppUser user,
+            Map<Long, List<ClozeBlockUserAnswer>> clozeUserAnswersByLessonId,
+            Map<Long, List<Long>> userSelectedMcosIdsByLessonId) {
+        CourseAnswersResponseDto courseResponseDto = new CourseAnswersResponseDto();
+        courseResponseDto.setUserId(user.getId());
+        courseResponseDto.setCourseId(course.getId());
+
+        courseResponseDto.setUnitAnswers(
+                course.getUnits().stream().map(unit -> toUnitAnswersResponseDto(unit, clozeUserAnswersByLessonId,
+                        userSelectedMcosIdsByLessonId)).toList());
+        return courseResponseDto;
+    }
+
+    public static UnitAnswersResponseDto toUnitAnswersResponseDto(Unit unit,
+            Map<Long, List<ClozeBlockUserAnswer>> clozeUserAnswersByLessonId,
+            Map<Long, List<Long>> userSelectedMcosIdsByLessonId) {
+        UnitAnswersResponseDto unitResponseDto = new UnitAnswersResponseDto();
+        unitResponseDto.setUnitId(unit.getId());
+        unitResponseDto.setLessonAnswers(
+                unit.getLessons().stream().map(lesson -> toLessonAnswersResponseDto(lesson, clozeUserAnswersByLessonId,
+                        userSelectedMcosIdsByLessonId)).toList());
+
+        return unitResponseDto;
+    }
+
+    public static LessonAnswersResponseDto toLessonAnswersResponseDto(Lesson lesson,
+            Map<Long, List<ClozeBlockUserAnswer>> clozeUserAnswersByLessonId,
+            Map<Long, List<Long>> userSelectedMcosIdsByLessonId) {
+        LessonAnswersResponseDto lessonResponseDto = new LessonAnswersResponseDto();
+        lessonResponseDto.setLessonId(lesson.getId());
+
+        lessonResponseDto.setClozeAnswers(clozeUserAnswersByLessonId.getOrDefault(lesson.getId(), List.of()).stream()
+                .map(clozeBlockUserAnswer -> toClozeBlockUserAnswersResponseDto(clozeBlockUserAnswer)).toList());
+
+        lessonResponseDto.setUserSelectedMcosIds(userSelectedMcosIdsByLessonId.getOrDefault(lesson.getId(), List.of()));
+
+        return lessonResponseDto;
+    }
+
+    public static ClozeBlockUserAnswersResponseDto toClozeBlockUserAnswersResponseDto(
+            ClozeBlockUserAnswer clozeBlockUserAnswer) {
+        return new ClozeBlockUserAnswersResponseDto(clozeBlockUserAnswer.getClozeBlockAnswer().getId(),
+                clozeBlockUserAnswer.getUserInput());
+    }
+
 }

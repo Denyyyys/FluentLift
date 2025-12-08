@@ -12,9 +12,9 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class UnitProgressWithAnswersResponseDto {
-    private Long unitId;
-    private Integer progress;
-    private List<LessonProgressWithAnswersResponseDto> lessonProgresses = new ArrayList<>();
+public class LessonAnswersResponseDto {
+    private Long lessonId;
+    private List<ClozeBlockUserAnswersResponseDto> clozeAnswers = new ArrayList<>();
 
+    private List<Long> userSelectedMcosIds = new ArrayList<>();
 }
