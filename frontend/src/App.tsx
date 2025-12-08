@@ -1,24 +1,34 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { BrowserRouter, createBrowserRouter, createRoutesFromElements, Route, RouterProvider, Routes } from "react-router-dom"
 import SignupPage from "./pages/auth/SignupPage"
 import LoginPage from "./pages/auth/LoginPage"
 import { RequireAuth } from "./components/auth/RequireAuth"
 import ProfilePage from "./pages/profile/ProfilePage"
 import MyDecksPage from "./pages/decks/MyDecksPage"
 import { Navbar } from "./components/common/Navbar"
-import DeckStudyPage2 from "./pages/decks/DeckStudyPage"
+import DeckStudyPage from "./pages/decks/DeckStudyPage"
 import MyCoursesPage from "./pages/courses/MyCoursesPage"
 import CreateCoursePage from "./pages/courses/CreateCoursePage"
 import AllCoursesPage from "./pages/courses/AllCoursesPage"
 import CourseOverview from "./routes/CourseOverview"
 import { ToastContainer } from 'react-toastify';
-import StudyLessonPage from "./pages/courses/StudyLessonPage"
+// import StudyLessonPage from "./pages/courses/StudyLessonPage"
 import CourseLayout from "./layouts/CourseLayout"
+import RouteNotFound from "./pages/common/RouteNotFound"
+import StudyLessonPage from "./pages/courses/StudyLessonPage"
+import TempPage from "./pages/common/TempPage"
+import TempErrorPage from "./pages/common/TempErrorPage"
+import { NotFoundError, NotFoundName } from "./errors"
+import TempPageNestedComponent from "./pages/common/TempPageNestedComponent"
+import CreateDeckPage from "./pages/decks/CreateDeckPage"
+import EditDeckPage from "./pages/decks/EditDeckPage"
+// import StudyLessonPage from "./pages/courses/StudyLessonPage"
+
 function App() {
   return <BrowserRouter>
     <ToastContainer position="top-center" />
-    <RequireAuth>
-      <Navbar />
-    </RequireAuth>
+    {/* <RequireAuth> */}
+    <Navbar />
+    {/* </RequireAuth> */}
     <div className="app-container">
 
       <Routes>
@@ -41,9 +51,24 @@ function App() {
           }
         />
 
+        <Route
+          path="/decks/new/"
+          element={
+            <RequireAuth>
+              <CreateDeckPage />
+            </RequireAuth>
+          }
+        />
+
         <Route path="/profile/decks/:deckId/study/" element={
           <RequireAuth>
-            <DeckStudyPage2 />
+            <DeckStudyPage />
+          </RequireAuth>
+        } />
+
+        <Route path="/profile/decks/:deckId/settings/" element={
+          <RequireAuth>
+            <EditDeckPage />
           </RequireAuth>
         } />
 
@@ -84,9 +109,17 @@ function App() {
           <Route path="lessons/:lessonId" element={<StudyLessonPage />} />
         </Route>
 
+        <Route
+          path="test"
+          element={<TempPage />}
+        />
+
+        <Route path="*" element={<RequireAuth><RouteNotFound /></RequireAuth>} />
       </Routes>
     </div>
   </BrowserRouter>
+
+
 }
 
 export default App
