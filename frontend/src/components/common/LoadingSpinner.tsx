@@ -1,8 +1,6 @@
-import React from 'react'
-
 function LoadingSpinner() {
     return (
-        <div>LoadingSpinner</div>
+        <div>Loading...</div>
     )
 }
 
