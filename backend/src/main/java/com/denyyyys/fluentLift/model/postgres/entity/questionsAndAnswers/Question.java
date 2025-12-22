@@ -44,7 +44,7 @@ public class Question {
     private String baseLanguage;
 
     // who asked the question
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id", nullable = false)
     private AppUser author;
 
