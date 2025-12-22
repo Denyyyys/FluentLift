@@ -1,6 +1,7 @@
 package com.denyyyys.fluentLift.model.postgres.mapper;
 
 import com.denyyyys.fluentLift.model.postgres.dto.request.UserRegistrationRequestDto;
+import com.denyyyys.fluentLift.model.postgres.dto.response.AppUserResponseDto;
 import com.denyyyys.fluentLift.model.postgres.dto.response.DeckCreatorDto;
 import com.denyyyys.fluentLift.model.postgres.entity.AppUser;
 
@@ -18,6 +19,16 @@ public class AppUserMapper {
         DeckCreatorDto dto = new DeckCreatorDto();
         dto.setEmail(user.getEmail());
         dto.setName(user.getName());
+        return dto;
+    }
+
+    public static AppUserResponseDto toDto(AppUser user) {
+        AppUserResponseDto dto = new AppUserResponseDto();
+
+        dto.setEmail(user.getEmail());
+        dto.setId(user.getId());
+        dto.setName(user.getName());
+
         return dto;
     }
 }
