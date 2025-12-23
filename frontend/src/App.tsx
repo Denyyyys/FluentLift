@@ -15,12 +15,10 @@ import { ToastContainer } from 'react-toastify';
 import CourseLayout from "./layouts/CourseLayout"
 import RouteNotFound from "./pages/common/RouteNotFound"
 import StudyLessonPage from "./pages/courses/StudyLessonPage"
-import TempPage from "./pages/common/TempPage"
-import TempErrorPage from "./pages/common/TempErrorPage"
 import { NotFoundError, NotFoundName } from "./errors"
-import TempPageNestedComponent from "./pages/common/TempPageNestedComponent"
 import CreateDeckPage from "./pages/decks/CreateDeckPage"
 import EditDeckPage from "./pages/decks/EditDeckPage"
+import AllQuestionsPage from "./pages/questionsAndAnswers/AllQuestionsPage"
 // import StudyLessonPage from "./pages/courses/StudyLessonPage"
 
 function App() {
@@ -98,6 +96,20 @@ function App() {
           }
         />
 
+        <Route path="/questions/"
+          element={
+            <RequireAuth>
+              <AllQuestionsPage />
+            </RequireAuth>
+          }
+        />
+
+        <Route path="/questions/:questionId" element={
+          <RequireAuth>
+            <QuestionPage />
+          </RequireAuth>
+        } />
+
         <Route path="/courses/:courseId"
           element={
             <RequireAuth>
@@ -109,10 +121,7 @@ function App() {
           <Route path="lessons/:lessonId" element={<StudyLessonPage />} />
         </Route>
 
-        <Route
-          path="test"
-          element={<TempPage />}
-        />
+
 
         <Route path="*" element={<RequireAuth><RouteNotFound /></RequireAuth>} />
       </Routes>
