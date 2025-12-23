@@ -18,7 +18,7 @@ import com.denyyyys.fluentLift.config.Constants;
 import com.denyyyys.fluentLift.model.postgres.dto.request.questionsAndAnswers.AnswerCreateRequestDto;
 import com.denyyyys.fluentLift.model.postgres.dto.request.questionsAndAnswers.QuestionCreateRequestDto;
 import com.denyyyys.fluentLift.model.postgres.dto.request.questionsAndAnswers.VoteRequestDto;
-import com.denyyyys.fluentLift.model.postgres.dto.response.questionsAndAnswers.QuestionResponseDto;
+import com.denyyyys.fluentLift.model.postgres.dto.response.questionsAndAnswers.QuestionPageResponseDto;
 import com.denyyyys.fluentLift.model.postgres.dto.response.questionsAndAnswers.QuestionWithAnswersDto;
 import com.denyyyys.fluentLift.service.QuestionsAndAnswersService;
 
@@ -48,15 +48,18 @@ public class QuestionsAndAnswersController {
     }
 
     @GetMapping("/questions")
-    public ResponseEntity<List<QuestionResponseDto>> getAllQuestions(
+    public ResponseEntity<QuestionPageResponseDto> getAllQuestions(
             @AuthenticationPrincipal UserDetails user,
-            @RequestParam(defaultValue = "false") boolean isSolved,
+            @RequestParam(required = false) Boolean isSolved,
+            @RequestParam(defaultValue = "") String query,
+            @RequestParam(required = false) List<String> tags,
             @RequestParam(defaultValue = Constants.DEFAULT_SORT_QUESTIONS_BY) String sortBy,
             @RequestParam(defaultValue = "1") int page,
             @RequestParam(defaultValue = "" + Constants.DEFAULT_PAGE_SIZE) int size) {
 
         return ResponseEntity.status(HttpStatus.OK)
-                .body(quesionsAndAnswersService.getAllQuestions(isSolved, sortBy, page, size, user.getUsername()));
+                .body(quesionsAndAnswersService.getAllQuestions(isSolved, query, tags, sortBy, page, size,
+                        user.getUsername()));
     }
 
     @GetMapping("/questions/{questionId}")

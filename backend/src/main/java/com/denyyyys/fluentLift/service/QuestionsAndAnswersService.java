@@ -2,6 +2,7 @@ package com.denyyyys.fluentLift.service;
 
 import java.util.List;
 
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -13,6 +14,7 @@ import com.denyyyys.fluentLift.config.Constants;
 import com.denyyyys.fluentLift.exceptions.ResourceNotFound;
 import com.denyyyys.fluentLift.model.postgres.dto.request.questionsAndAnswers.AnswerCreateRequestDto;
 import com.denyyyys.fluentLift.model.postgres.dto.request.questionsAndAnswers.QuestionCreateRequestDto;
+import com.denyyyys.fluentLift.model.postgres.dto.response.questionsAndAnswers.QuestionPageResponseDto;
 import com.denyyyys.fluentLift.model.postgres.dto.response.questionsAndAnswers.QuestionResponseDto;
 import com.denyyyys.fluentLift.model.postgres.dto.response.questionsAndAnswers.QuestionWithAnswersDto;
 import com.denyyyys.fluentLift.model.postgres.entity.AppUser;
@@ -48,10 +50,18 @@ public class QuestionsAndAnswersService {
         answerRepository.save(answer);
     }
 
-    public List<QuestionResponseDto> getAllQuestions(boolean isSolved, String sortBy, int page, int size,
+    public QuestionPageResponseDto getAllQuestions(Boolean isSolved, String query, List<String> tags, String sortBy,
+            int page, int size,
             String userEmail) {
-        AppUser user = appUserRepository.findByEmail(userEmail)
+        appUserRepository.findByEmail(userEmail)
                 .orElseThrow(() -> new ResourceNotFound("User not found"));
+
+        if (query == null) {
+            query = "";
+        }
+
+        query.trim();
+        tags = (tags == null || tags.isEmpty()) ? null : tags;
 
         String sortField = switch (sortBy) {
             case "upvotes" -> Constants.SORT_QUESTIONS_BY_UPVOTES;
@@ -59,23 +69,31 @@ public class QuestionsAndAnswersService {
             default -> Constants.DEFAULT_SORT_QUESTIONS_BY;
         };
 
-        if (size > Constants.MAX_PAGE_SIZE) {
-            size = Constants.MAX_PAGE_SIZE;
-        }
+        size = Math.min(size, Constants.MAX_PAGE_SIZE);
+        page = Math.max(page, 1);
 
-        if (page <= 0) {
-            size = 0;
-        }
-
-        // page - 1, since in Pageable it starts from 0, but in this API from 1
         Pageable pageable = PageRequest.of(page - 1, size, Sort.by(sortField).descending());
+        int a = 3;
+        Page<Question> questionPage = questionRepository.searchQuestions(
+                query,
+                (tags == null || tags.isEmpty()) ? null : tags,
+                (tags == null || tags.isEmpty()) ? 0 : tags.size(),
+                isSolved,
+                pageable);
 
-        List<Question> questions = questionRepository.findAllBySolved(isSolved, pageable);
+        List<QuestionResponseDto> questions = questionPage.getContent()
+                .stream()
+                .map(QuestionsAndAnswersMapper::toDto)
+                .toList();
 
-        List<QuestionResponseDto> questionsResponse = questions.stream()
-                .map(question -> QuestionsAndAnswersMapper.toDto(question)).toList();
+        QuestionPageResponseDto response = new QuestionPageResponseDto();
+        response.setQuestions(questions);
+        response.setPage(questionPage.getNumber() + 1);
+        response.setSize(questionPage.getSize());
+        response.setTotalElements(questionPage.getTotalElements());
+        response.setTotalPages(questionPage.getTotalPages());
 
-        return questionsResponse;
+        return response;
     }
 
     public QuestionWithAnswersDto getQuestion(Long questionId) {
