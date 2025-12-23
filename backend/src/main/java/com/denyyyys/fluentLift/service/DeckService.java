@@ -151,6 +151,9 @@ public class DeckService {
                 .orElseThrow(() -> new ResourceNotFound("User not found"));
 
         try {
+            if (user.getId() != deck.getCreator().getId()) {
+                throw new AccessDeniedException("Only creator of deck can modify it");
+            }
             deck.setUpdatedAt(Instant.now());
             return deckRepository.save(deck);
         } catch (DataIntegrityViolationException ex) {
