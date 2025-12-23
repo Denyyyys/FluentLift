@@ -1,4 +1,4 @@
-export interface DeckCreatorDto {
+export interface AppUserResponseDto {
     id: number
     name: string;
     email: string;

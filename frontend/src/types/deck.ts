@@ -1,11 +1,11 @@
 import type { CardOwnerResponseDto, CardVisitorResponseDto, CardCreateDto } from "./card";
-import type { DeckCreatorDto } from "./user";
+import type { AppUserResponseDto } from "./user";
 
 
 export interface DeckOwnerResponseDto {
     id: number;
     name: string;
-    creator: DeckCreatorDto;
+    creator: AppUserResponseDto;
     archived: boolean;
     targetLanguage: string;
     baseLanguage: string;
@@ -18,7 +18,7 @@ export interface DeckOwnerResponseDto {
 export interface DeckVisitorResponseDto {
     id: number;
     name: string;
-    creator: DeckCreatorDto;
+    creator: AppUserResponseDto;
     archived: boolean;
     targetLanguage: string;
     baseLanguage: string;
