@@ -27,7 +27,6 @@ import com.denyyyys.fluentLift.model.postgres.mapper.UserCourseEnrollmentMapper;
 import com.denyyyys.fluentLift.repo.postgres.AppUserRepository;
 import com.denyyyys.fluentLift.repo.postgres.ClozeBlockUserAnswerRepository;
 import com.denyyyys.fluentLift.repo.postgres.CourseRepository;
-import com.denyyyys.fluentLift.repo.postgres.MultipleChoiceBlockRepository;
 import com.denyyyys.fluentLift.repo.postgres.MultipleChoiceOptionRepository;
 import com.denyyyys.fluentLift.repo.postgres.MultipleChoiceUserSelectedAnswerRepository;
 import com.denyyyys.fluentLift.repo.postgres.UserCourseEnrollmentRepository;
@@ -39,166 +38,167 @@ import lombok.RequiredArgsConstructor;
 @Service
 @RequiredArgsConstructor
 public class CourseService {
-    private final CourseRepository courseRepository;
-    private final UserCourseEnrollmentRepository enrollmentRepository;
-    private final ClozeBlockUserAnswerRepository clozeBlockUserAnswerRepository;
-    private final MultipleChoiceBlockRepository multipleChoiceBlockRepository;
-    private final MultipleChoiceUserSelectedAnswerRepository multipleChoiceUserSelectedAnswerRepository;
-    private final MultipleChoiceOptionRepository multipleChoiceOptionRepository;
-    private final AppUserRepository appUserRepository;
+        private final CourseRepository courseRepository;
+        private final UserCourseEnrollmentRepository enrollmentRepository;
+        private final ClozeBlockUserAnswerRepository clozeBlockUserAnswerRepository;
+        // private final MultipleChoiceBlockRepository multipleChoiceBlockRepository;
+        private final MultipleChoiceUserSelectedAnswerRepository multipleChoiceUserSelectedAnswerRepository;
+        private final MultipleChoiceOptionRepository multipleChoiceOptionRepository;
+        private final AppUserRepository appUserRepository;
 
-    @Transactional
-    public Course createCourse(CourseCreateDto dto, String creatorEmail) {
-        Course course = CourseMapper.toEntity(dto);
-        AppUser creator = appUserRepository.findByEmail(creatorEmail)
-                .orElseThrow(() -> new ResourceNotFound("Creator not found"));
-        course.setCreator(creator);
+        @Transactional
+        public Course createCourse(CourseCreateDto dto, String creatorEmail) {
+                Course course = CourseMapper.toEntity(dto);
+                AppUser creator = appUserRepository.findByEmail(creatorEmail)
+                                .orElseThrow(() -> new ResourceNotFound("Creator not found"));
+                course.setCreator(creator);
 
-        courseRepository.save(course);
-        return course;
-    }
-
-    public List<CourseResponseDto> getCourses() {
-        List<Course> courses = courseRepository.findAll();
-        List<CourseResponseDto> coursesResponse = courses.stream()
-                .map(course -> CourseMapper.toResponseDto(course))
-                .toList();
-
-        return coursesResponse;
-    }
-
-    public CourseResponseDto getCourse(Long courseId) {
-        Course course = courseRepository.findById(courseId)
-                .orElseThrow(() -> new ResourceNotFound("Course not found"));
-        CourseResponseDto coursesResponse = CourseMapper.toResponseDto(course);
-
-        return coursesResponse;
-    }
-
-    public List<CourseResponseDto> getCreatedByMeCourses(String creatorEmail) {
-        List<Course> courses = courseRepository.findAllByCreator_Email(creatorEmail);
-        List<CourseResponseDto> coursesResponse = courses.stream()
-                .map(course -> CourseMapper.toResponseDto(course))
-                .toList();
-
-        return coursesResponse;
-    }
-
-    public UserCourseEnrollmentResponseDto enroll(String userEmail, Long courseId) {
-        AppUser user = appUserRepository.findByEmail(userEmail)
-                .orElseThrow(() -> new ResourceNotFound("User not found"));
-
-        Course course = courseRepository.findById(courseId)
-                .orElseThrow(() -> new ResourceNotFound("Course not found"));
-
-        if (user.getId().equals(course.getCreator().getId())) {
-            throw new ForbiddenActionException("Course creator cannot enroll in their own course.");
+                courseRepository.save(course);
+                return course;
         }
 
-        Optional<UserCourseEnrollment> enrollmentFromRepo = enrollmentRepository.findByCourseAndUser(course,
-                user);
+        public List<CourseResponseDto> getCourses() {
+                List<Course> courses = courseRepository.findAll();
+                List<CourseResponseDto> coursesResponse = courses.stream()
+                                .map(course -> CourseMapper.toResponseDto(course))
+                                .toList();
 
-        if (enrollmentFromRepo.isPresent()) {
-            throw new ResourceAlreadyExistsException("Enrollment for provided user already exists");
+                return coursesResponse;
         }
 
-        UserCourseEnrollment enrollment = new UserCourseEnrollment();
+        public CourseResponseDto getCourse(Long courseId) {
+                Course course = courseRepository.findById(courseId)
+                                .orElseThrow(() -> new ResourceNotFound("Course not found"));
+                CourseResponseDto coursesResponse = CourseMapper.toResponseDto(course);
 
-        enrollment.setCourse(course);
-        enrollment.setUser(user);
-        enrollment = enrollmentRepository.save(enrollment);
-
-        return UserCourseEnrollmentMapper.toResponseDto(enrollment);
-    }
-
-    public List<CourseResponseDto> getEnrolledCourses(String userEmail) {
-        AppUser user = appUserRepository.findByEmail(userEmail)
-                .orElseThrow(() -> new ResourceNotFound("User not found"));
-
-        List<Course> courses = enrollmentRepository.findCoursesByUserId(user.getId());
-
-        List<CourseResponseDto> coursesResponse = courses.stream()
-                .map(course -> CourseMapper.toResponseDto(course))
-                .toList();
-
-        return coursesResponse;
-    }
-
-    public UserCourseEnrollmentResponseDto userIsEnrolled(String userEmail, Long courseId) {
-        AppUser user = appUserRepository.findByEmail(userEmail)
-                .orElseThrow(() -> new ResourceNotFound("User not found"));
-
-        Optional<UserCourseEnrollment> enrollment = enrollmentRepository.findByCourse_IdAndUser_Id(courseId,
-                user.getId());
-
-        if (enrollment.isPresent()) {
-            return UserCourseEnrollmentMapper.toResponseDto(enrollment.get());
+                return coursesResponse;
         }
 
-        return UserCourseEnrollmentResponseDto.builder().userId(user.getId()).courseId(courseId)
-                .enrolledAt(null).enrolledStatus("not enrolled").build();
+        public List<CourseResponseDto> getCreatedByMeCourses(String creatorEmail) {
+                List<Course> courses = courseRepository.findAllByCreator_Email(creatorEmail);
+                List<CourseResponseDto> coursesResponse = courses.stream()
+                                .map(course -> CourseMapper.toResponseDto(course))
+                                .toList();
 
-    }
+                return coursesResponse;
+        }
 
-    @Getter
-    @AllArgsConstructor
-    private class CoursePartProgressInfo {
-        private int totalNumberOfBlocks;
-        private int finishedNumberOfBlocks;
-    }
+        public UserCourseEnrollmentResponseDto enroll(String userEmail, Long courseId) {
+                AppUser user = appUserRepository.findByEmail(userEmail)
+                                .orElseThrow(() -> new ResourceNotFound("User not found"));
 
-    public CourseAnswersResponseDto getProgressWithAnswers(String userEmail, Long courseId) {
-        AppUser user = appUserRepository.findByEmail(userEmail)
-                .orElseThrow(() -> new ResourceNotFound("User not found"));
+                Course course = courseRepository.findById(courseId)
+                                .orElseThrow(() -> new ResourceNotFound("Course not found"));
 
-        Course course = courseRepository.findById(courseId)
-                .orElseThrow(() -> new ResourceNotFound("Course not found"));
+                if (user.getId().equals(course.getCreator().getId())) {
+                        throw new ForbiddenActionException("Course creator cannot enroll in their own course.");
+                }
 
-        List<ClozeBlockUserAnswer> clozeUserAnswers = clozeBlockUserAnswerRepository
-                .findAllByUserIdAndCourseId(user.getId(), courseId);
+                Optional<UserCourseEnrollment> enrollmentFromRepo = enrollmentRepository.findByCourseAndUser(course,
+                                user);
 
-        Map<Long, List<ClozeBlockUserAnswer>> userClozeAnswersByLessonId = clozeUserAnswers.stream()
-                .collect(Collectors.groupingBy(
-                        answer -> answer.getClozeBlockAnswer().getCloze().getLesson().getId()));
+                if (enrollmentFromRepo.isPresent()) {
+                        throw new ResourceAlreadyExistsException("Enrollment for provided user already exists");
+                }
 
-        List<MultipleChoiceUserSelectedAnswer> userSelectedMultipleChoiceOptions = multipleChoiceUserSelectedAnswerRepository
-                .findMultipleChoiceOptionIdsForUserIdAndCourseId(user.getId(), courseId);
+                UserCourseEnrollment enrollment = new UserCourseEnrollment();
 
-        Map<Long, List<Long>> userSelectedMcosIdsByLessonId = userSelectedMultipleChoiceOptions
-                .stream()
-                .collect(Collectors.groupingBy(
-                        mco -> mco.getMultipleChoiceOption().getMultipleChoiceBlock().getLesson().getId(),
-                        Collectors.mapping(
-                                mco -> mco.getMultipleChoiceOption().getId(),
-                                Collectors.toList())));
+                enrollment.setCourse(course);
+                enrollment.setUser(user);
+                enrollment = enrollmentRepository.save(enrollment);
 
-        CourseAnswersResponseDto response = CourseMapper.toCourseAnswersResponseDto(course, user,
-                userClozeAnswersByLessonId,
-                userSelectedMcosIdsByLessonId);
+                return UserCourseEnrollmentMapper.toResponseDto(enrollment);
+        }
 
-        return response;
-    }
+        public List<CourseResponseDto> getEnrolledCourses(String userEmail) {
+                AppUser user = appUserRepository.findByEmail(userEmail)
+                                .orElseThrow(() -> new ResourceNotFound("User not found"));
 
-    @Transactional
-    public String saveUserAnswers(String userEmail, UserAnswersRequestDto userAnswers, Long lessonId) {
-        AppUser user = appUserRepository.findByEmail(userEmail)
-                .orElseThrow(() -> new ResourceNotFound("User not found"));
+                List<Course> courses = enrollmentRepository.findCoursesByUserId(user.getId());
 
-        List<ClozeBlockUserAnswer> clozeUserAnswers = CourseMapper
-                .toClozeAnswersEntity(userAnswers.getClozeAnswers(), user);
+                List<CourseResponseDto> coursesResponse = courses.stream()
+                                .map(course -> CourseMapper.toResponseDto(course))
+                                .toList();
 
-        List<MultipleChoiceOption> choiceOptions = multipleChoiceOptionRepository
-                .findAllByIdIn(userAnswers.getMultipleChoiceUserSelectedOptionIds());
-        List<MultipleChoiceUserSelectedAnswer> mcUserAnswers = CourseMapper.toMultipleChoiceAnswersEntity(
-                choiceOptions, user);
+                return coursesResponse;
+        }
 
-        clozeBlockUserAnswerRepository.deleteAllByUserAndClozeBlockAnswer_Cloze_LessonId(user, lessonId);
-        clozeBlockUserAnswerRepository.saveAll(clozeUserAnswers);
+        public UserCourseEnrollmentResponseDto userIsEnrolled(String userEmail, Long courseId) {
+                AppUser user = appUserRepository.findByEmail(userEmail)
+                                .orElseThrow(() -> new ResourceNotFound("User not found"));
 
-        multipleChoiceUserSelectedAnswerRepository.deleteAllByUserIdAndLessonId(user.getId(), lessonId);
-        multipleChoiceUserSelectedAnswerRepository.saveAll(mcUserAnswers);
+                Optional<UserCourseEnrollment> enrollment = enrollmentRepository.findByCourse_IdAndUser_Id(courseId,
+                                user.getId());
 
-        return "saved";
-    }
+                if (enrollment.isPresent()) {
+                        return UserCourseEnrollmentMapper.toResponseDto(enrollment.get());
+                }
+
+                return UserCourseEnrollmentResponseDto.builder().userId(user.getId()).courseId(courseId)
+                                .enrolledAt(null).enrolledStatus("not enrolled").build();
+
+        }
+
+        @Getter
+        @AllArgsConstructor
+        private class CoursePartProgressInfo {
+                private int totalNumberOfBlocks;
+                private int finishedNumberOfBlocks;
+        }
+
+        public CourseAnswersResponseDto getProgressWithAnswers(String userEmail, Long courseId) {
+                AppUser user = appUserRepository.findByEmail(userEmail)
+                                .orElseThrow(() -> new ResourceNotFound("User not found"));
+
+                Course course = courseRepository.findById(courseId)
+                                .orElseThrow(() -> new ResourceNotFound("Course not found"));
+
+                List<ClozeBlockUserAnswer> clozeUserAnswers = clozeBlockUserAnswerRepository
+                                .findAllByUserIdAndCourseId(user.getId(), courseId);
+
+                Map<Long, List<ClozeBlockUserAnswer>> userClozeAnswersByLessonId = clozeUserAnswers.stream()
+                                .collect(Collectors.groupingBy(
+                                                answer -> answer.getClozeBlockAnswer().getCloze().getLesson().getId()));
+
+                List<MultipleChoiceUserSelectedAnswer> userSelectedMultipleChoiceOptions = multipleChoiceUserSelectedAnswerRepository
+                                .findMultipleChoiceOptionIdsForUserIdAndCourseId(user.getId(), courseId);
+
+                Map<Long, List<Long>> userSelectedMcosIdsByLessonId = userSelectedMultipleChoiceOptions
+                                .stream()
+                                .collect(Collectors.groupingBy(
+                                                mco -> mco.getMultipleChoiceOption().getMultipleChoiceBlock()
+                                                                .getLesson().getId(),
+                                                Collectors.mapping(
+                                                                mco -> mco.getMultipleChoiceOption().getId(),
+                                                                Collectors.toList())));
+
+                CourseAnswersResponseDto response = CourseMapper.toCourseAnswersResponseDto(course, user,
+                                userClozeAnswersByLessonId,
+                                userSelectedMcosIdsByLessonId);
+
+                return response;
+        }
+
+        @Transactional
+        public String saveUserAnswers(String userEmail, UserAnswersRequestDto userAnswers, Long lessonId) {
+                AppUser user = appUserRepository.findByEmail(userEmail)
+                                .orElseThrow(() -> new ResourceNotFound("User not found"));
+
+                List<ClozeBlockUserAnswer> clozeUserAnswers = CourseMapper
+                                .toClozeAnswersEntity(userAnswers.getClozeAnswers(), user);
+
+                List<MultipleChoiceOption> choiceOptions = multipleChoiceOptionRepository
+                                .findAllByIdIn(userAnswers.getMultipleChoiceUserSelectedOptionIds());
+                List<MultipleChoiceUserSelectedAnswer> mcUserAnswers = CourseMapper.toMultipleChoiceAnswersEntity(
+                                choiceOptions, user);
+
+                clozeBlockUserAnswerRepository.deleteAllByUserAndClozeBlockAnswer_Cloze_LessonId(user, lessonId);
+                clozeBlockUserAnswerRepository.saveAll(clozeUserAnswers);
+
+                multipleChoiceUserSelectedAnswerRepository.deleteAllByUserIdAndLessonId(user.getId(), lessonId);
+                multipleChoiceUserSelectedAnswerRepository.saveAll(mcUserAnswers);
+
+                return "saved";
+        }
 
 }
