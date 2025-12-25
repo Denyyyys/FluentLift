@@ -73,7 +73,6 @@ public class QuestionsAndAnswersService {
         page = Math.max(page, 1);
 
         Pageable pageable = PageRequest.of(page - 1, size, Sort.by(sortField).descending());
-        int a = 3;
         Page<Question> questionPage = questionRepository.searchQuestions(
                 query,
                 (tags == null || tags.isEmpty()) ? null : tags,
@@ -164,5 +163,16 @@ public class QuestionsAndAnswersService {
 
         answerToAccept.setAccepted(true);
         question.setSolved(true);
+    }
+
+    @Transactional
+    public void addView(Long questionId, String userEmail) {
+        appUserRepository.findByEmail(userEmail)
+                .orElseThrow(() -> new ResourceNotFound("User not found"));
+
+        Question question = questionRepository.findQuestionWithAllAnswers(questionId)
+                .orElseThrow(() -> new ResourceNotFound("Question not found"));
+
+        question.setViews(question.getViews() + 1);
     }
 }

@@ -88,4 +88,11 @@ public class QuestionsAndAnswersController {
         return ResponseEntity.ok("Answer accepted and question marked as solved!");
     }
 
+    @PostMapping("/questions/{questionId}/addView")
+    public ResponseEntity<Void> addView(@AuthenticationPrincipal UserDetails user, @PathVariable Long questionId) {
+        quesionsAndAnswersService.addView(questionId, user.getUsername());
+
+        return ResponseEntity.noContent().build();
+    }
+
 }
