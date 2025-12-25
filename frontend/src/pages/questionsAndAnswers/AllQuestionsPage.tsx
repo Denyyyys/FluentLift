@@ -12,6 +12,7 @@ import ErrorWrapper from "../../components/common/ErrorWrapper";
 
 function QuestionsPage() {
     const [query, setQuery] = useState("");
+    const [debouncedQuery, setDebouncedQuery] = useState("");
     const [sortBy, setSortBy] = useState("createdAt");
     const [onlySolved, setOnlySolved] = useState(false);
     const [page, setPage] = useState(1);
@@ -24,13 +25,14 @@ function QuestionsPage() {
     const [error, setError] = useState<string | null>(null);
 
     const { token } = useAuth();
+    const debounceDelayMs = 500;
 
     const loadQuestions = async () => {
         try {
             setLoadingQuestions(true);
             setError(null);
 
-            const questionsResponse = await axios.get<QuestionsPageResponseDto>(`${BACKEND_BASE_URL}/qa/questions?query=${query}&isSolved=${onlySolved}&sortBy=${sortBy}&page=${page}`, {
+            const questionsResponse = await axios.get<QuestionsPageResponseDto>(`${BACKEND_BASE_URL}/qa/questions?query=${debouncedQuery}&isSolved=${onlySolved}&sortBy=${sortBy}&page=${page}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -50,12 +52,20 @@ function QuestionsPage() {
 
     useEffect(() => {
         loadQuestions();
-    }, [sortBy, page, onlySolved]);
+    }, [debouncedQuery, sortBy, page, onlySolved]);
 
-    const handleSearch = () => {
-        setPage(1);
-        loadQuestions();
-    };
+    // const handleSearch = () => {
+    //     setPage(1);
+    //     loadQuestions();
+    // };
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            setDebouncedQuery(query);
+            setPage(1);
+        }, debounceDelayMs);
+
+        return () => clearTimeout(timeout);
+    }, [query]);
 
     return (
         <div className="container mt-4">
@@ -68,9 +78,9 @@ function QuestionsPage() {
                             value={query}
                             onChange={e => setQuery(e.target.value)}
                         />
-                        <Button variant="primary" onClick={handleSearch}>
+                        {/* <Button variant="primary" onClick={handleSearch}>
                             <FaSearch />
-                        </Button>
+                        </Button> */}
                     </div>
                 </div>
 
