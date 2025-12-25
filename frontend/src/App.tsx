@@ -19,6 +19,7 @@ import { NotFoundError, NotFoundName } from "./errors"
 import CreateDeckPage from "./pages/decks/CreateDeckPage"
 import EditDeckPage from "./pages/decks/EditDeckPage"
 import AllQuestionsPage from "./pages/questionsAndAnswers/AllQuestionsPage"
+import { SingleQuestionPage } from "./pages/questionsAndAnswers/SingleQuestionPage"
 // import StudyLessonPage from "./pages/courses/StudyLessonPage"
 
 function App() {
@@ -106,7 +107,7 @@ function App() {
 
         <Route path="/questions/:questionId" element={
           <RequireAuth>
-            <QuestionPage />
+            <SingleQuestionPage />
           </RequireAuth>
         } />
 
