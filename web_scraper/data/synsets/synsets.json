@@ -1,0 +1,4830 @@
+[
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "abandon",
+      "synonyms": [],
+      "definition": "Forsake, leave behind",
+      "examples": [
+        "We abandoned the old car in the empty parking lot",
+        "Many baby girls have been abandoned on the streets of Beijing."
+      ]
+    },
+    "PL": {
+      "lemma": "opuszczać",
+      "synonyms": [
+        "opuścić"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00082118v"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "ability",
+      "synonyms": [],
+      "definition": "The quality of being able to perform; a quality that permits or facilitates achievement or accomplishment",
+      "examples": [
+        "This phone has the ability to have its software upgraded wirelessly.",
+        "This wood has the ability to fight off insects, fungus, and mold for a considerable time."
+      ]
+    },
+    "PL": {
+      "lemma": "zdolność",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00000317n"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "able",
+      "synonyms": [],
+      "definition": "(usually followed by `to') having the necessary means or skill or know-how or authority to do something",
+      "examples": [
+        "Able to swim",
+        "She was able to program her computer",
+        "We were at last able to buy a car",
+        "Able to get a grant for the project"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00096151a"
+  },
+  {
+    "pos": "adverb",
+    "EN": {
+      "lemma": "about",
+      "synonyms": [
+        "approximately",
+        "close to",
+        "just about",
+        "some"
+      ],
+      "definition": "(of quantities) imprecise but fairly close to correct",
+      "examples": [
+        "Lasted approximately an hour",
+        "In just about a minute",
+        "He's about 30 years old",
+        "I've had about all I can stand",
+        "We meet about once a month",
+        "Some forty people came",
+        "Weighs around a hundred pounds",
+        "Roughly $3,000",
+        "Holds 3 gallons, more or less",
+        "20 or so people were at the party",
+        "In every box of matches there are approximately 40 matchsticks.",
+        "Per 100 g of chocolate there is approximately 11.6 g of saturated fat.",
+        "...approximately 60 beats per minute."
+      ]
+    },
+    "PL": {
+      "lemma": "około",
+      "synonyms": [
+        "jako tako",
+        "mniej więcej",
+        "z grubsza"
+      ],
+      "definition": "Około, w przybliżeniu",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "зо",
+      "synonyms": [
+        "ма́йже",
+        "прибли́зно"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00114073r"
+  },
+  {
+    "pos": "adverb",
+    "EN": {
+      "lemma": "above",
+      "synonyms": [
+        "supra"
+      ],
+      "definition": "At an earlier place",
+      "examples": [
+        "See above"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00114080r"
+  },
+  {
+    "pos": "adverb",
+    "EN": {
+      "lemma": "abroad",
+      "synonyms": [],
+      "definition": "To or in a foreign country",
+      "examples": [
+        "They had never travelled abroad"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00114086r"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "absolute",
+      "synonyms": [],
+      "definition": "Perfect or complete or pure",
+      "examples": [
+        "Absolute loyalty",
+        "Absolute silence",
+        "Absolute truth",
+        "Absolute alcohol",
+        "The doctrine that absolute knowledge of things is possible, an absolute principle.",
+        "Absolute rights and duties are such as pertain to man in a state of nature as contradistinguished from relative rights and duties, or such as pertain to him in his social relations."
+      ]
+    },
+    "PL": {
+      "lemma": "absolutny",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00096195a"
+  },
+  {
+    "pos": "adverb",
+    "EN": {
+      "lemma": "absolutely",
+      "synonyms": [
+        "perfectly",
+        "utterly",
+        "dead"
+      ],
+      "definition": "Completely and without qualification ; used informally as intensifiers",
+      "examples": [
+        "An absolutely magnificent painting",
+        "A perfectly idiotic idea",
+        "You're perfectly right",
+        "Utterly miserable",
+        "You can be dead sure of my innocence",
+        "Was dead tired",
+        "Dead right"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00114091r"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "academic",
+      "synonyms": [],
+      "definition": "Associated with academia or an academy",
+      "examples": [
+        "The academic curriculum",
+        "Academic gowns"
+      ]
+    },
+    "PL": {
+      "lemma": "akademicki",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "академі́чний",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00096228a"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "accept",
+      "synonyms": [
+        "consent"
+      ],
+      "definition": "Consider or hold as true",
+      "examples": [
+        "I cannot accept the dogma of this church",
+        "Accept an argument"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00082197v"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "acceptable",
+      "synonyms": [],
+      "definition": "Worthy of acceptance or satisfactory",
+      "examples": [
+        "Performances varied from acceptable to excellent",
+        "Acceptable levels of radiation",
+        "We need to find an acceptable present for Jeff."
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00096246a"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "access",
+      "synonyms": [],
+      "definition": "Obtain or retrieve from a storage device ; as of information on a computer",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00082208v"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "accident",
+      "synonyms": [],
+      "definition": "An unfortunate mishap; especially one causing damage or injury",
+      "examples": [
+        "There was a huge accident on I5 involving 15 automobiles.",
+        "My insurance went up after the second accident in three months."
+      ]
+    },
+    "PL": {
+      "lemma": "awaria",
+      "synonyms": [
+        "wypadek",
+        "incydent"
+      ],
+      "definition": "Awaria − stan niesprawności obiektu uniemożliwiający jego funkcjonowanie, występujący nagle i powodujący jego niewłaściwe działanie lub całkowite unieruchomienie.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "аварія",
+      "synonyms": [
+        "ава́рія",
+        "доро́жньо-тра́нспортна приго́да",
+        "ДТП",
+        "зі́ткнення"
+      ],
+      "definition": "Аварія",
+      "examples": []
+    },
+    "synset_id": "bn:00000690n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "accommodation",
+      "synonyms": [
+        "adjustment",
+        "fitting"
+      ],
+      "definition": "Making or becoming suitable; adjusting to circumstances",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "dostosowywanie",
+      "synonyms": [
+        "przystosowywanie"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00000706n"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "accompany",
+      "synonyms": [
+        "attach to",
+        "come with",
+        "go with"
+      ],
+      "definition": "Be present or associated with an event or entity",
+      "examples": [
+        "French fries come with the hamburger",
+        "Heart attacks are accompanied by distruction of heart tissue",
+        "Fish usually goes with white wine",
+        "This kind of vein accompanies certain arteries",
+        "Heart attacks are accompanied by destruction of heart tissue"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00082221v"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "account",
+      "synonyms": [
+        "history",
+        "chronicle",
+        "story"
+      ],
+      "definition": "A record or narrative description of past events",
+      "examples": [
+        "A history of France",
+        "He gave an inaccurate account of the plot to kill the president",
+        "The story of exposure to lead",
+        "I really enjoyed Shakespeare's tragedies more than his histories."
+      ]
+    },
+    "PL": {
+      "lemma": "kronika",
+      "synonyms": [
+        "historia"
+      ],
+      "definition": "Kronika (z gr.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Хроніка",
+      "synonyms": [
+        "літо́пис",
+        "хро́ніка"
+      ],
+      "definition": "Хро́ніка",
+      "examples": []
+    },
+    "synset_id": "bn:00000738n"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "accurate",
+      "synonyms": [
+        "exact",
+        "precise"
+      ],
+      "definition": "Conforming exactly or almost exactly to fact or to a standard or performing with total accuracy",
+      "examples": [
+        "An accurate reproduction",
+        "The accounting was accurate",
+        "Accurate measurements",
+        "An accurate scale",
+        "An accurate calculator.",
+        "An accurate measure.",
+        "Accurate knowledge."
+      ]
+    },
+    "PL": {
+      "lemma": "dokładny",
+      "synonyms": [
+        "czuły",
+        "precyzyjny"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00096292a"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "accuse",
+      "synonyms": [
+        "impeach",
+        "incriminate",
+        "criminate"
+      ],
+      "definition": "Bring an accusation against; level a charge against",
+      "examples": [
+        "The neighbors accused the man of spousal abuse"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00082249v"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "achievement",
+      "synonyms": [
+        "accomplishment"
+      ],
+      "definition": "The action of accomplishing something",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "osiągnięcie",
+      "synonyms": [
+        "dojście",
+        "dokonanie",
+        "dopięcie celu",
+        "dopięcie swego"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "дося́гнення",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00000724n"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "acknowledge",
+      "synonyms": [
+        "admit",
+        "concede"
+      ],
+      "definition": "Declare to be true or admit the existence or reality or truth of",
+      "examples": [
+        "He admitted his errors",
+        "She acknowledged that she might have forgotten",
+        "To acknowledge the being of a god."
+      ]
+    },
+    "PL": {
+      "lemma": "przyznać",
+      "synonyms": [
+        "przyznawać"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "ви́знати",
+      "synonyms": [
+        "визнава́ти",
+        "призна́ти",
+        "признава́ти"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00082267v"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "acquire",
+      "synonyms": [
+        "get",
+        "obtain",
+        "procure"
+      ],
+      "definition": "Come into the possession of something concrete or abstract",
+      "examples": [
+        "She got a lot of paintings from her uncle",
+        "They acquired a new pet",
+        "Get your results the next day",
+        "Get permission to take a few days off from work"
+      ]
+    },
+    "PL": {
+      "lemma": "uzyskać",
+      "synonyms": [
+        "wydobyć",
+        "zdobyć"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00082276v"
+  },
+  {
+    "pos": "adverb",
+    "EN": {
+      "lemma": "across",
+      "synonyms": [],
+      "definition": "To the opposite side",
+      "examples": [
+        "The football field was 300 feet across"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00114112r"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "act",
+      "synonyms": [
+        "enactment",
+        "file unit"
+      ],
+      "definition": "A legal document codifying the result of deliberations of a committee or society or legislative body",
+      "examples": [
+        "The actors' powerful enactment of the play was breathtaking.",
+        "The enactment of this law will be a great step backward for our country."
+      ]
+    },
+    "PL": {
+      "lemma": "akta",
+      "synonyms": [
+        "akt"
+      ],
+      "definition": "Akta – grupa dokumentów o podobnej treści złączona w jeden ciąg w celu łatwiejszego ich przechowywania.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "справа",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00001076n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "action",
+      "synonyms": [],
+      "definition": "Something done ( usually as opposed to something said )",
+      "examples": [
+        "There were stories of murders and other unnatural actions"
+      ]
+    },
+    "PL": {
+      "lemma": "akcja",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "дія",
+      "synonyms": [],
+      "definition": "Те, що можна зробити чи виконати",
+      "examples": []
+    },
+    "synset_id": "bn:00001127n"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "active",
+      "synonyms": [],
+      "definition": "Tending to become more severe or wider in scope",
+      "examples": [
+        "Active tuberculosis"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00096382a"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "activity",
+      "synonyms": [],
+      "definition": "Any specific behavior",
+      "examples": [
+        "They avoided all recreational activity"
+      ]
+    },
+    "PL": {
+      "lemma": "działalność",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00001172n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "actor",
+      "synonyms": [
+        "histrion",
+        "player",
+        "thespian",
+        "role player"
+      ],
+      "definition": "A theatrical performer",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "aktor",
+      "synonyms": [
+        "aktorka"
+      ],
+      "definition": "Aktor – osoba odgrywająca za pomocą szczególnego zachowania, technik cielesnych i głosowych rolę w serialu, w teatrze i w filmie.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "актор",
+      "synonyms": [],
+      "definition": "Акто́р, жін.",
+      "examples": []
+    },
+    "synset_id": "bn:00001176n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "actress",
+      "synonyms": [],
+      "definition": "A female actor",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "aktorka",
+      "synonyms": [],
+      "definition": "Osoba płci żeńskiej odgrywająca wyznaczoną rolę w filmie lub sztuce.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00001181n"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "actual",
+      "synonyms": [
+        "existent"
+      ],
+      "definition": "Presently existing in fact and not merely potential or possible",
+      "examples": [
+        "The predicted temperature and the actual temperature were markedly different",
+        "Actual and imagined conditions"
+      ]
+    },
+    "PL": {
+      "lemma": "realny",
+      "synonyms": [
+        "rzeczywisty"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00096397a"
+  },
+  {
+    "pos": "adverb",
+    "EN": {
+      "lemma": "actually",
+      "synonyms": [
+        "really",
+        "as a matter of fact",
+        "even",
+        "in fact"
+      ],
+      "definition": "In actual fact",
+      "examples": [
+        "To be nominally but not actually independent",
+        "No one actually saw the shark",
+        "Large meteorites actually come from the asteroid belt"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00114117r"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "ad",
+      "synonyms": [
+        "advertisement",
+        "advertizement",
+        "advertising",
+        "advertizing"
+      ],
+      "definition": "A public promotion of some product or service",
+      "examples": [
+        "Companies try to sell their products using advertisements in form of placards, television spots and print publications."
+      ]
+    },
+    "PL": {
+      "lemma": "reklama",
+      "synonyms": [
+        "ogłoszenie",
+        "anons",
+        "inserat"
+      ],
+      "definition": "Reklama (z łac.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Реклама",
+      "synonyms": [
+        "ано́нс",
+        "зая́ва",
+        "оголо́шення",
+        "рекла́ма"
+      ],
+      "definition": "Рекла́ма (лат.",
+      "examples": []
+    },
+    "synset_id": "bn:00001227n"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "adapt",
+      "synonyms": [
+        "accommodate",
+        "adjust",
+        "arrange",
+        "conform"
+      ],
+      "definition": "Make fit for, or change to suit a new purpose",
+      "examples": [
+        "Adapt our native cuisine to the available food resources of the new country",
+        "To adapt a story for the stage.",
+        "To adapt an old machine to a new manufacture.",
+        "To accommodate ourselves to circumstances."
+      ]
+    },
+    "PL": {
+      "lemma": "adaptować",
+      "synonyms": [
+        "akomodować",
+        "przystosować",
+        "zaadaptować"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "припасовувати",
+      "synonyms": [
+        "пристосовувати"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00082215v"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "add",
+      "synonyms": [
+        "associate",
+        "combine",
+        "join",
+        "unite"
+      ],
+      "definition": "Make an addition (to); join or combine or unite with others; increase the quality, quantity, size or scope of",
+      "examples": [
+        "We added two students to that dorm room",
+        "She added a personal note to her letter",
+        "Add insult to injury",
+        "Add some extra plates to the dinner table"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00082317v"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "addition",
+      "synonyms": [
+        "add-on",
+        "improver"
+      ],
+      "definition": "A component that is added to something to improve it",
+      "examples": [
+        "The addition of a bathroom was a major improvement",
+        "The addition of cinnamon improved the flavor"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00001276n"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "additional",
+      "synonyms": [
+        "extra"
+      ],
+      "definition": "Further or added",
+      "examples": [
+        "Called for additional troops",
+        "Need extra help",
+        "An extra pair of shoes"
+      ]
+    },
+    "PL": {
+      "lemma": "dodatkowy",
+      "synonyms": [
+        "uboczny"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00096432a"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "administration",
+      "synonyms": [
+        "disposal",
+        "administrative body",
+        "administrative organ",
+        "direction"
+      ],
+      "definition": "A method of tending to or managing the affairs of a some group of people (especially the group's business affairs)",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "administracja",
+      "synonyms": [
+        "administrowanie",
+        "gospodarowanie",
+        "menedżerowanie",
+        "organ administracji"
+      ],
+      "definition": "wyodrębniona jednostka organizacyjna aparatu państwowego pełniąca określone funkcje w dziedzinie życia społecznego",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00001422n"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "admire",
+      "synonyms": [
+        "look up to"
+      ],
+      "definition": "Feel admiration for",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00082367v"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "admit",
+      "synonyms": [
+        "acknowledge",
+        "concede"
+      ],
+      "definition": "Declare to be true or admit the existence or reality or truth of",
+      "examples": [
+        "He admitted his errors",
+        "She acknowledged that she might have forgotten",
+        "To acknowledge the being of a god."
+      ]
+    },
+    "PL": {
+      "lemma": "przyznać",
+      "synonyms": [
+        "przyznawać"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "ви́знати",
+      "synonyms": [
+        "визнава́ти",
+        "призна́ти",
+        "признава́ти"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00082267v"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "adopt",
+      "synonyms": [
+        "follow",
+        "espouse"
+      ],
+      "definition": "Choose and follow; as of theories, ideas , policies , strategies or plans",
+      "examples": [
+        "She followed the feminist movement",
+        "The candidate espouses Republican ideals"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00082379v"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "adult",
+      "synonyms": [
+        "big",
+        "full-grown",
+        "fully grown",
+        "grown"
+      ],
+      "definition": "(of animals ) fully developed",
+      "examples": [
+        "A grown woman",
+        "An adult animal"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00096515a"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "advance",
+      "synonyms": [
+        "beforehand"
+      ],
+      "definition": "Being ahead of time or need",
+      "examples": [
+        "Gave advance warning",
+        "Was beforehand with her report"
+      ]
+    },
+    "PL": {
+      "lemma": "uprzednio",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00096525a"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "address",
+      "synonyms": [
+        "computer address",
+        "reference",
+        "memory address",
+        "reference data type"
+      ],
+      "definition": "( computer science ) the code that identifies where a piece of information is stored",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "adres pamięci",
+      "synonyms": [
+        "referencja",
+        "adres",
+        "adres internetowy"
+      ],
+      "definition": "Referencja – wartość, która zawiera informacje o położeniu innej wartości w pamięci lub nośniku danych .",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Адреса",
+      "synonyms": [
+        "Посилання"
+      ],
+      "definition": "В інформатиці посилання",
+      "examples": []
+    },
+    "synset_id": "bn:00001302n"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "advanced",
+      "synonyms": [],
+      "definition": "Farther along in physical or mental development",
+      "examples": [
+        "The child's skeletal age was classified as `advanced'",
+        "Children in the advanced classes in elementary school read far above grade average"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00096527a"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "advantage",
+      "synonyms": [
+        "vantage"
+      ],
+      "definition": "The quality of having a superior or more favorable position",
+      "examples": [
+        "The experience gave him the advantage over me"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00001559n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "adventure",
+      "synonyms": [
+        "escapade",
+        "risky venture",
+        "dangerous undertaking"
+      ],
+      "definition": "A wild and exciting undertaking (not necessarily lawful )",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "przygoda",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Пригода",
+      "synonyms": [],
+      "definition": "Пригода — непередбачений, несподіваний випадок у житті; подія, яка трапилась під час подорожі, мандрівки, часто пов'язана з ризиком; нещасливий випадок: шукачі пригод, дорожньо-транспортна пригода.",
+      "examples": []
+    },
+    "synset_id": "bn:00001572n"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "advertise",
+      "synonyms": [
+        "publicize",
+        "advertize",
+        "publicise"
+      ],
+      "definition": "Call attention to",
+      "examples": [
+        "Please don't advertise the fact that he has AIDS"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00082413v"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "advertisement",
+      "synonyms": [
+        "ad",
+        "advertizement",
+        "advertising",
+        "advertizing"
+      ],
+      "definition": "A public promotion of some product or service",
+      "examples": [
+        "Companies try to sell their products using advertisements in form of placards, television spots and print publications."
+      ]
+    },
+    "PL": {
+      "lemma": "reklama",
+      "synonyms": [
+        "ogłoszenie",
+        "anons",
+        "inserat"
+      ],
+      "definition": "Reklama (z łac.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Реклама",
+      "synonyms": [
+        "ано́нс",
+        "зая́ва",
+        "оголо́шення",
+        "рекла́ма"
+      ],
+      "definition": "Рекла́ма (лат.",
+      "examples": []
+    },
+    "synset_id": "bn:00001227n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "advice",
+      "synonyms": [],
+      "definition": "A proposal for an appropriate course of action",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "rada",
+      "synonyms": [
+        "instrukcja",
+        "podpowiedź",
+        "porada",
+        "sugestia"
+      ],
+      "definition": "ocena, zaopiniowanie",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "порада",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00001592n"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "advise",
+      "synonyms": [
+        "rede",
+        "counsel"
+      ],
+      "definition": "Give advice to",
+      "examples": [
+        "The lawyer counselled me when I was accused of tax fraud",
+        "The teacher counsels troubled students",
+        "Psychiatrists, psychologists, social workers and other mental health professionals counsel clients.",
+        "The dentist advised me to brush three times a day.",
+        "The lawyer counselled his client to remain silent."
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00082415v"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "affair",
+      "synonyms": [
+        "matter",
+        "thing",
+        "concern"
+      ],
+      "definition": "A vaguely specified concern",
+      "examples": [
+        "Several matters to attend to",
+        "It is none of your affair",
+        "Things are going well"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00001734n"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "affect",
+      "synonyms": [
+        "impact",
+        "bear upon",
+        "bear on",
+        "touch on"
+      ],
+      "definition": "Have an effect upon",
+      "examples": [
+        "Will the new rules affect me?",
+        "I can make the changes, but it will impact the schedule."
+      ]
+    },
+    "PL": {
+      "lemma": "wpływać",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00082426v"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "afford",
+      "synonyms": [],
+      "definition": "Be able to spare or give up",
+      "examples": [
+        "I can't afford to spend two hours with this person"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00082441v"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "afraid",
+      "synonyms": [],
+      "definition": "Filled with fear or apprehension",
+      "examples": [
+        "Afraid even to turn his head",
+        "Suddenly looked afraid",
+        "Afraid for his life",
+        "Afraid of snakes",
+        "Afraid to ask questions",
+        "He is afraid that he will die.",
+        "He is afraid to die.",
+        "He is afraid of death."
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00096625a"
+  },
+  {
+    "pos": "adverb",
+    "EN": {
+      "lemma": "after",
+      "synonyms": [
+        "subsequently",
+        "later",
+        "afterwards",
+        "afterward"
+      ],
+      "definition": "Happening at a time subsequent to a reference time",
+      "examples": [
+        "He's going to the store but he'll be back here later",
+        "He apologized subsequently",
+        "It didn't happen until afterward",
+        "Two hours after that"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00114165r"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "afternoon",
+      "synonyms": [],
+      "definition": "The part of the day between noon and evening",
+      "examples": [
+        "He spent a quiet afternoon in the park"
+      ]
+    },
+    "PL": {
+      "lemma": "popołudnie",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "після полудня",
+      "synonyms": [
+        "Час після обіду"
+      ],
+      "definition": "Час після обіду — час доби з півдня або обіду до вечора.",
+      "examples": []
+    },
+    "synset_id": "bn:00001875n"
+  },
+  {
+    "pos": "adverb",
+    "EN": {
+      "lemma": "afterwards",
+      "synonyms": [
+        "subsequently",
+        "later",
+        "afterward",
+        "after"
+      ],
+      "definition": "Happening at a time subsequent to a reference time",
+      "examples": [
+        "He's going to the store but he'll be back here later",
+        "He apologized subsequently",
+        "It didn't happen until afterward",
+        "Two hours after that"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00114165r"
+  },
+  {
+    "pos": "adverb",
+    "EN": {
+      "lemma": "again",
+      "synonyms": [
+        "once again",
+        "once more",
+        "over again"
+      ],
+      "definition": "Anew",
+      "examples": [
+        "She tried again",
+        "They rehearsed the scene again"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00114171r"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "age",
+      "synonyms": [],
+      "definition": "How long something has existed",
+      "examples": [
+        "It was replaced because of its age"
+      ]
+    },
+    "PL": {
+      "lemma": "wiek",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00001936n"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "aged",
+      "synonyms": [
+        "elderly",
+        "older",
+        "senior"
+      ],
+      "definition": "Advanced in years; (`aged' is pronounced as two syllables)",
+      "examples": [
+        "Aged members of the society",
+        "Elderly residents could remember the construction of the first skyscraper",
+        "Senior citizen"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00096644a"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "agency",
+      "synonyms": [
+        "federal agency",
+        "government agency",
+        "bureau",
+        "office"
+      ],
+      "definition": "An administrative unit of government",
+      "examples": [
+        "The Central Intelligence Agency",
+        "The Census Bureau",
+        "Office of Management and Budget",
+        "Tennessee Valley Authority",
+        "Agency for Toxic Substances and Disease Registry.",
+        "Central Intelligence Agency.",
+        "The secretary of state's British colleague heads the Foreign and Commonwealth Office."
+      ]
+    },
+    "PL": {
+      "lemma": "agencja",
+      "synonyms": [
+        "biuro",
+        "instytucja państwowa",
+        "urząd"
+      ],
+      "definition": "pomieszczenie lub zespół budynków, w którym znajdują się instytucje, biura, kancelaria służące organom władzy publicznej",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "орган державної влади",
+      "synonyms": [
+        "Органи публічної влади",
+        "офіс"
+      ],
+      "definition": "О́ргани публі́чної вла́ди виступають владними інститутами політично організованого суспільства сучасного типу.",
+      "examples": []
+    },
+    "synset_id": "bn:00001961n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "agenda",
+      "synonyms": [
+        "docket",
+        "schedule"
+      ],
+      "definition": "A temporally organized plan for matters to be attended to",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "porządek dzienny",
+      "synonyms": [
+        "agenda"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "аге́нда",
+      "synonyms": [
+        "план",
+        "поря́док де́нний",
+        "програ́ма"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00001967n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "agent",
+      "synonyms": [],
+      "definition": "An active and efficient cause; capable of producing a certain effect",
+      "examples": [
+        "Their research uncovered new disease agents"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00001972n"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "aggressive",
+      "synonyms": [],
+      "definition": "Having or showing determination and energetic pursuit of your ends",
+      "examples": [
+        "An aggressive businessman",
+        "An aggressive basketball player",
+        "He was aggressive and imperious; positive in his convictions",
+        "Aggressive drivers",
+        "He was aggressive and imperious",
+        "Positive in his convictions"
+      ]
+    },
+    "PL": {
+      "lemma": "agresywny",
+      "synonyms": [
+        "drapieżny"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00096660a"
+  },
+  {
+    "pos": "adverb",
+    "EN": {
+      "lemma": "ago",
+      "synonyms": [],
+      "definition": "In the past",
+      "examples": [
+        "Long ago",
+        "Sixty years ago my grandfather came to the U.S."
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00114178r"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "agree",
+      "synonyms": [
+        "hold",
+        "concur",
+        "concord",
+        "assent"
+      ],
+      "definition": "Be in accord ; be in agreement",
+      "examples": [
+        "I can't agree with you!",
+        "We agreed on the terms of the settlement",
+        "I hold with those who say life is sacred",
+        "Both philosophers concord on this point"
+      ]
+    },
+    "PL": {
+      "lemma": "zgadzać się",
+      "synonyms": [],
+      "definition": "Harmonizować w opinii, wypowiedzi lub działaniu; być w zgodzie.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00082475v"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "agreement",
+      "synonyms": [
+        "understanding"
+      ],
+      "definition": "The statement ( oral or written ) of an exchange of promises",
+      "examples": [
+        "They had an agreement that they would not interfere in each other's business",
+        "There was an understanding between management and the workers"
+      ]
+    },
+    "PL": {
+      "lemma": "porozumienie",
+      "synonyms": [
+        "umowa"
+      ],
+      "definition": "Ustne lub pisemne oświadczenie wymiany obietnic.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00002086n"
+  },
+  {
+    "pos": "adverb",
+    "EN": {
+      "lemma": "ahead",
+      "synonyms": [
+        "in front",
+        "before"
+      ],
+      "definition": "At or in the front",
+      "examples": [
+        "I see the lights of a town ahead",
+        "The road ahead is foggy",
+        "Staring straight ahead",
+        "We couldn't see over the heads of the people in front",
+        "With the cross of Jesus marching on before",
+        "The island was directly ahead."
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "впере́д",
+      "synonyms": [
+        "попе́реду"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00114182r"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "aid",
+      "synonyms": [
+        "assistance",
+        "help"
+      ],
+      "definition": "A resource",
+      "examples": [
+        "Visual aids in teaching",
+        "His job was to give technical assistance over the phone"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00002154n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "aim",
+      "synonyms": [
+        "purpose",
+        "intent",
+        "intention",
+        "design"
+      ],
+      "definition": "An anticipated outcome that is intended or that guides your planned actions",
+      "examples": [
+        "His intent was to provide a new translation",
+        "Good intentions are not enough",
+        "It was created with the conscious aim of answering immediate needs",
+        "He made no secret of his designs",
+        "My number one aim in life is to make money to make my parents, siblings and kids happy.",
+        "The intention of this legislation is to boost the economy.",
+        "My intention was to marry a wealthy widow.",
+        "It’s easy to promise anything when you have no intention of fulfilling any of it."
+      ]
+    },
+    "PL": {
+      "lemma": "intencja",
+      "synonyms": [
+        "zamiar",
+        "cel",
+        "chęć",
+        "zamierzenie"
+      ],
+      "definition": "Intencja (łac.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "намір",
+      "synonyms": [
+        "інтенція"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00002178n"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "aim",
+      "synonyms": [
+        "take",
+        "train",
+        "take aim",
+        "direct"
+      ],
+      "definition": "Point or cause to go ( blows , weapons , or objects such as photographic equipment ) towards",
+      "examples": [
+        "Please don't aim at your little brother!",
+        "He trained his gun on the burglar",
+        "Don't train your camera on the women",
+        "Take a swipe at one's opponent"
+      ]
+    },
+    "PL": {
+      "lemma": "zamierzać",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00082485v"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "air",
+      "synonyms": [
+        "Earth's atmosphere",
+        "sky"
+      ],
+      "definition": "A mixture of gases (especially oxygen ) required for breathing; the stuff that the wind consists of",
+      "examples": [
+        "Air pollution",
+        "A smell of chemicals in the air",
+        "Open a window and let in some air",
+        "I need some fresh air"
+      ]
+    },
+    "PL": {
+      "lemma": "powietrze",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00002185n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "aircraft",
+      "synonyms": [
+        "aeroplane",
+        "airplane"
+      ],
+      "definition": "A vehicle that can fly",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "statek powietrzny",
+      "synonyms": [
+        "aerodyna"
+      ],
+      "definition": "Statek powietrzny – statek latający zdolny do unoszenia się w atmosferze na skutek statycznego lub aerodynamicznego oddziaływania powietrza .",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Повітряне судно",
+      "synonyms": [
+        "літак",
+        "літа́льний апара́т",
+        "пові́тря́не судно́"
+      ],
+      "definition": "Повітряне судно — літальний апарат, що підтримується в атмосфері у результаті його взаємодії з повітрям, відмінної від взаємодії з повітрям, відбитим від земної поверхні.",
+      "examples": []
+    },
+    "synset_id": "bn:00002275n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "airline",
+      "synonyms": [
+        "air hose"
+      ],
+      "definition": "A hose that carries air under pressure",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00002236n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "airport",
+      "synonyms": [
+        "airdrome",
+        "aerodrome",
+        "drome"
+      ],
+      "definition": "An airfield equipped with control tower and hangars as well as accommodations for passengers and cargo",
+      "examples": [
+        "They landed at the airdrome.",
+        "Because of this, and contrary to popular belief, British airports primarily act as giant wealth extractors, transporting our richest citizens out of the country as often as possible to take their money overseas. ― The Independent, Heathrow expansion to mainly benefit wealthy frequent fliers, research finds, 23 june 2018."
+      ]
+    },
+    "PL": {
+      "lemma": "lotnisko",
+      "synonyms": [
+        "port lotniczy",
+        "aeroport",
+        "aerodrom"
+      ],
+      "definition": "Lotnisko – wydzielony obszar na lądzie , wodzie lub innej powierzchni , w całości lub w części przeznaczony do wykonywania startów , lądowań i naziemnego lub nawodnego ruchu statków powietrznych, wraz ze znajdującymi się w jego granicach obiektami i urządzeniami budowlanymi o charakterze trwałym, wpisany do rejestru lotnisk.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Аеродром",
+      "synonyms": [
+        "Аеропорт",
+        "аеропо́рт",
+        "лето́вище"
+      ],
+      "definition": "Аеродро́м, також Лето́вище — спеціально підготовлені земельні ділянки або ділянки водної поверхні, зі спорудами й обладнанням, що забезпечують зліт, посадку, розміщення та обслуговування повітряних суден.",
+      "examples": []
+    },
+    "synset_id": "bn:00001676n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "alarm",
+      "synonyms": [
+        "dismay",
+        "consternation"
+      ],
+      "definition": "Fear resulting from the awareness of danger",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "alarm",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00002410n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "album",
+      "synonyms": [
+        "record album",
+        "studio album"
+      ],
+      "definition": "One or more recordings issued together; originally released on 12-inch phonograph records ( usually with attractive record covers ) and later on cassette audiotape and compact disc",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "album",
+      "synonyms": [
+        "album studyjny"
+      ],
+      "definition": "Album – zbiór nagrań dźwiękowych wydanych na płycie kompaktowej, płycie gramofonowej lub kasecie magnetofonowej.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Музичний альбом",
+      "synonyms": [
+        "студійний альбом"
+      ],
+      "definition": "Муз́ичний альбо́м, а́удіоальбо́м — запис або набір записів, збірка музичних композицій, випущених разом, у єдиному стандартному форматі, на носії доступному для відтворення на популярних аудіопрогравачах.",
+      "examples": []
+    },
+    "synset_id": "bn:00002488n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "alcohol",
+      "synonyms": [
+        "alcoholic drink",
+        "alcoholic beverage",
+        "intoxicant",
+        "inebriant"
+      ],
+      "definition": "A liquor or brew containing alcohol as the active agent",
+      "examples": [
+        "Alcohol (or drink) ruined him"
+      ]
+    },
+    "PL": {
+      "lemma": "napój alkoholowy",
+      "synonyms": [
+        "alkohol",
+        "coś mocniejszego",
+        "napój wyskokowy",
+        "procenty"
+      ],
+      "definition": "Napój alkoholowy",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Алкогольні напої",
+      "synonyms": [],
+      "definition": "Алкого́льні напо́ї або спиртні́ напо́ї — найчастіше рідини , які містять не менше, ніж 1,5 % етилового спирту , отриманого зі спиртової, вуглеводомісткої сировини.",
+      "examples": []
+    },
+    "synset_id": "bn:00002519n"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "alcoholic",
+      "synonyms": [],
+      "definition": "Characteristic of or containing alcohol",
+      "examples": [
+        "Alcoholic drinks"
+      ]
+    },
+    "PL": {
+      "lemma": "wyskokowy",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00096751a"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "alive",
+      "synonyms": [
+        "live"
+      ],
+      "definition": "Possessing life",
+      "examples": [
+        "The happiest person alive",
+        "The nerve is alive",
+        "Doctors are working hard to keep him alive",
+        "Burned alive",
+        "A live canary"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00096787a"
+  },
+  {
+    "pos": "adverb",
+    "EN": {
+      "lemma": "all",
+      "synonyms": [
+        "wholly",
+        "entirely",
+        "completely",
+        "totally"
+      ],
+      "definition": "To a complete degree or to the full or entire extent (`whole' is often used informally for `wholly')",
+      "examples": [
+        "He was wholly convinced",
+        "Entirely satisfied with the meal",
+        "It was completely different from what we expected",
+        "Was completely at fault",
+        "A totally new situation",
+        "The directions were all wrong",
+        "It was not altogether her fault",
+        "An altogether new approach",
+        "A whole new idea",
+        "She felt right at home",
+        "He fell right into the trap",
+        "He is completely mad.",
+        "It is entirely up to you where we go, as I’ll be happy with anywhere.",
+        "The cake hadn’t entirely been eaten, so some was saved for later.",
+        "They've totally demolished the bank on Main Street.",
+        "I ate a fish whole!",
+        "That's a whole other story."
+      ]
+    },
+    "PL": {
+      "lemma": "całkowicie",
+      "synonyms": [
+        "bez reszty",
+        "do cna",
+        "do spodu",
+        "do szczętu"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "цілко́м",
+      "synonyms": [
+        "зо́всім",
+        "по́вністю"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00114203r"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "all right",
+      "synonyms": [
+        "fine",
+        "o.k.",
+        "ok",
+        "okay"
+      ],
+      "definition": "Being satisfactory or in satisfactory condition",
+      "examples": [
+        "An all-right movie",
+        "The passengers were shaken up but are all right",
+        "Is everything all right?",
+        "Everything's fine",
+        "Things are okay",
+        "Dinner and the movies had been fine",
+        "Another minute I'd have been fine"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00096817a"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "allow",
+      "synonyms": [
+        "let",
+        "permit"
+      ],
+      "definition": "Make it possible through a specific action or lack of action for something to happen",
+      "examples": [
+        "This permits the water to rush in",
+        "This sealed door won't allow the water come into the basement",
+        "This will permit the rain to run off"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00082536v"
+  },
+  {
+    "pos": "adverb",
+    "EN": {
+      "lemma": "almost",
+      "synonyms": [
+        "about",
+        "most",
+        "nearly",
+        "near"
+      ],
+      "definition": "(of actions or states) slightly short of or not quite accomplished; all but",
+      "examples": [
+        "The job is (just) about done",
+        "The baby was almost asleep when the alarm sounded",
+        "We're almost finished",
+        "The car all but ran her down",
+        "He nearly fainted",
+        "Talked for nigh onto 2 hours",
+        "The recording is well-nigh perfect",
+        "Virtually all the parties signed the contract",
+        "I was near exhausted by the run",
+        "Most everyone agrees",
+        "He left a nearly full beer on the bar.",
+        "I nearly didn't go to work yesterday.",
+        "He was (so/very) nearly caught."
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00114079r"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "alone",
+      "synonyms": [],
+      "definition": "Isolated from others",
+      "examples": [
+        "Could be alone in a crowded room",
+        "Was alone with her thoughts",
+        "I want to be alone",
+        "Jones alone could do it."
+      ]
+    },
+    "PL": {
+      "lemma": "sierocy",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00096869a"
+  },
+  {
+    "pos": "adverb",
+    "EN": {
+      "lemma": "along",
+      "synonyms": [
+        "on"
+      ],
+      "definition": "With a forward motion",
+      "examples": [
+        "We drove along admiring the view",
+        "The horse trotted along at a steady pace",
+        "The circus traveled on to the next city",
+        "Move along",
+        "March on"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00114236r"
+  },
+  {
+    "pos": "adverb",
+    "EN": {
+      "lemma": "already",
+      "synonyms": [],
+      "definition": "Prior to a specified or implied time",
+      "examples": [
+        "She has already graduated",
+        "Much of what he said I knew already."
+      ]
+    },
+    "PL": {
+      "lemma": "już",
+      "synonyms": [],
+      "definition": "Przed określonym momentem w przeszłości, teraźniejszości lub przyszłości.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "вже́",
+      "synonyms": [
+        "раніше",
+        "уже́"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00114245r"
+  },
+  {
+    "pos": "adverb",
+    "EN": {
+      "lemma": "also",
+      "synonyms": [
+        "besides",
+        "too",
+        "likewise",
+        "as well"
+      ],
+      "definition": "In addition",
+      "examples": [
+        "He has a Mercedes, too"
+      ]
+    },
+    "PL": {
+      "lemma": "również",
+      "synonyms": [
+        "też",
+        "także"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00114246r"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "alter",
+      "synonyms": [
+        "change",
+        "modify"
+      ],
+      "definition": "Cause to change; make different; cause a transformation",
+      "examples": [
+        "The advent of the automobile may have altered the growth pattern of the city",
+        "The discussion has changed my thinking about the issue"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00082553v"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "alternative",
+      "synonyms": [
+        "alternate",
+        "substitute"
+      ],
+      "definition": "Serving or used in place of another",
+      "examples": [
+        "An alternative plan"
+      ]
+    },
+    "PL": {
+      "lemma": "alternatywny",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00096894a"
+  },
+  {
+    "pos": "adverb",
+    "EN": {
+      "lemma": "always",
+      "synonyms": [
+        "ever",
+        "e'er"
+      ],
+      "definition": "At all times; all the time and on every occasion",
+      "examples": [
+        "I will always be there to help you",
+        "Always arrives on time",
+        "There is always some pollution in the air",
+        "Ever hoping to strike it rich",
+        "Ever busy"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00114250r"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "amazed",
+      "synonyms": [
+        "astonied",
+        "astonished",
+        "astounded",
+        "stunned"
+      ],
+      "definition": "Filled with the emotional impact of overwhelming surprise or shock",
+      "examples": [
+        "An amazed audience gave the magician a standing ovation",
+        "I stood enthralled, astonished by the vastness and majesty of the cathedral",
+        "Astounded viewers wept at the pictures from the Oklahoma City bombing",
+        "Stood in stunned silence",
+        "Stunned scientists found not one but at least three viruses"
+      ]
+    },
+    "PL": {
+      "lemma": "zaskoczony",
+      "synonyms": [
+        "zdumiony"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00096924a"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "amazing",
+      "synonyms": [
+        "astonishing"
+      ],
+      "definition": "Surprising greatly",
+      "examples": [
+        "She does an amazing amount of work",
+        "The dog was capable of astonishing tricks"
+      ]
+    },
+    "PL": {
+      "lemma": "zdumiewający",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "ди́вний",
+      "synonyms": [
+        "дивови́жний",
+        "чудо́вий"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00096925a"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "ambition",
+      "synonyms": [
+        "aspiration",
+        "dream"
+      ],
+      "definition": "A cherished desire",
+      "examples": [
+        "His ambition is to own his own business",
+        "Riley has an aspiration to become a doctor.",
+        "Morgan has an aspiration of winning the game."
+      ]
+    },
+    "PL": {
+      "lemma": "ambicja",
+      "synonyms": [
+        "aspiracja",
+        "dążenie",
+        "dążność"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00003269n"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "ambitious",
+      "synonyms": [],
+      "definition": "Having a strong desire for success or achievement",
+      "examples": [
+        "An ambitious person.",
+        "Someone's ambitious nature."
+      ]
+    },
+    "PL": {
+      "lemma": "ambitny",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00096938a"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "amount",
+      "synonyms": [
+        "sum",
+        "sum of money",
+        "amount of money"
+      ],
+      "definition": "A quantity of money",
+      "examples": [
+        "He borrowed a large sum",
+        "The amount he had in cash was insufficient",
+        "A tidy sum.",
+        "The sum of forty pounds."
+      ]
+    },
+    "PL": {
+      "lemma": "grosz",
+      "synonyms": [
+        "suma"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00003601n"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "analyse",
+      "synonyms": [
+        "analyze",
+        "study",
+        "examine",
+        "canvass"
+      ],
+      "definition": "Consider in detail and subject to an analysis in order to discover essential features or meaning",
+      "examples": [
+        "Analyze a sonnet by Shakespeare",
+        "Analyze the evidence in a criminal trial",
+        "Analyze your real motives"
+      ]
+    },
+    "PL": {
+      "lemma": "przeanalizować",
+      "synonyms": [
+        "analizować",
+        "zanalizować"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "аналізува́ти",
+      "synonyms": [
+        "проаналізува́ти"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00082596v"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "analysis",
+      "synonyms": [],
+      "definition": "An investigation of the component parts of a whole and their relations in making up the whole",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "analizowanie",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00003793n"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "ancient",
+      "synonyms": [],
+      "definition": "Belonging to times long past especially of the historical period before the fall of the Western Roman Empire",
+      "examples": [
+        "Ancient history",
+        "Ancient civilizations such as those of the Etruscans and Sumerians",
+        "Ancient Greece"
+      ]
+    },
+    "PL": {
+      "lemma": "antyczny",
+      "synonyms": [
+        "klasyczny",
+        "staroklasyczny",
+        "starożytny"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00097066a"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "anger",
+      "synonyms": [
+        "choler",
+        "ire",
+        "wrath"
+      ],
+      "definition": "A strong emotion ; a feeling that is oriented toward some real or supposed grievance",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "gniew",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00004085n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "angle",
+      "synonyms": [
+        "adjacent angle",
+        "Complementary angles",
+        "supplementary angles",
+        "vertical angles"
+      ],
+      "definition": "The space between two lines or planes that intersect ; the inclination of one line to another; measured in degrees or radians",
+      "examples": [
+        "The angle between lines A and B."
+      ]
+    },
+    "PL": {
+      "lemma": "kąt",
+      "synonyms": [
+        "Kąty dopełniające się",
+        "Kąty przyległe",
+        "kąty wierzchołkowe"
+      ],
+      "definition": "Kąty przyległe – kąty mające wspólne ramię, których pozostałe ramiona dopełniają się do prostej.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Кут",
+      "synonyms": [
+        "Вертикальні кути",
+        "Комплементарні кути",
+        "Суміжні кути"
+      ],
+      "definition": "Суміжні кути — це пара кутів, які доповнюють один одного до 180 градусів.",
+      "examples": []
+    },
+    "synset_id": "bn:00004117n"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "angry",
+      "synonyms": [
+        "mad"
+      ],
+      "definition": "Feeling or showing anger",
+      "examples": [
+        "Angry at the weather",
+        "Angry customers",
+        "An angry silence",
+        "Sending angry letters to the papers",
+        "His face became angry.",
+        "An angry mob started looting the warehouse."
+      ]
+    },
+    "PL": {
+      "lemma": "zły",
+      "synonyms": [
+        "rozgniewany"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "злий",
+      "synonyms": [
+        "розгні́ваний",
+        "розсе́рджений",
+        "серди́тий",
+        "сердитий"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00097107a"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "animal",
+      "synonyms": [
+        "animate being",
+        "beast",
+        "brute",
+        "creature"
+      ],
+      "definition": "A living organism characterized by voluntary movement",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "zwierzę",
+      "synonyms": [
+        "zwierzęta",
+        "fauna",
+        "reprodukcja zwierzęca",
+        "życie zwierząt"
+      ],
+      "definition": "Zwierzęta – królestwo obejmujące wielokomórkowe organizmy cudzożywne o komórkach eukariotycznych, bez ściany komórkowej, w większości zdolne do aktywnego poruszania się.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Тварини",
+      "synonyms": [
+        "тварина",
+        "тваринa"
+      ],
+      "definition": "Твари́ни",
+      "examples": []
+    },
+    "synset_id": "bn:00004222n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "ankle",
+      "synonyms": [
+        "ankle joint",
+        "mortise joint",
+        "articulatio talocruralis",
+        "ankle bone"
+      ],
+      "definition": "A gliding joint between the distal ends of the tibia and fibula and the proximal end of the talus",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "kostka",
+      "synonyms": [
+        "staw skokowy górny"
+      ],
+      "definition": "Staw skokowy górny, staw skokowo-goleniowy",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "кі́сточка",
+      "synonyms": [
+        "щи́колотка",
+        "Кісточка",
+        "Надп'ятково-гомілковий суглоб"
+      ],
+      "definition": "Надп'ятково-гомі́лко́вий суглоб , раніше гомілковосто́пний суглоб",
+      "examples": []
+    },
+    "synset_id": "bn:00004293n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "anniversary",
+      "synonyms": [
+        "day of remembrance",
+        "decennial"
+      ],
+      "definition": "The date on which an event occurred in some previous year (or the celebration of it)",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "rocznica",
+      "synonyms": [
+        "jubileusz"
+      ],
+      "definition": "Rocznica – dzień przypadający dokładnie w rok, dwa, trzy itd.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "рiчниця",
+      "synonyms": [
+        "Роковини",
+        "річниця"
+      ],
+      "definition": "Рокови́ни, або річни́ця — календарна дата, коли закінчується рік і більше від початку якої-небудь події.",
+      "examples": []
+    },
+    "synset_id": "bn:00004339n"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "announce",
+      "synonyms": [
+        "denote",
+        "enunciate",
+        "exclaim",
+        "proclaim"
+      ],
+      "definition": "Make known; make an announcement",
+      "examples": [
+        "She denoted her feelings clearly"
+      ]
+    },
+    "PL": {
+      "lemma": "ogłosić",
+      "synonyms": [
+        "ogłaszać",
+        "oznajmiać",
+        "oznajmić"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "заяви́ти",
+      "synonyms": [
+        "заявля́ти",
+        "оголо́шувати",
+        "оголоси́ти",
+        "повідо́мити"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00082637v"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "announcement",
+      "synonyms": [
+        "proclamation",
+        "annunciation",
+        "declaration"
+      ],
+      "definition": "A formal public statement",
+      "examples": [
+        "The government made an announcement about changes in the drug war",
+        "A declaration of independence"
+      ]
+    },
+    "PL": {
+      "lemma": "odezwa",
+      "synonyms": [
+        "orędzie",
+        "proklamacja",
+        "apel"
+      ],
+      "definition": "Orędzie – uroczyste przemówienie ważnej osoby w państwie skierowane do ogółu.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Прокламація",
+      "synonyms": [
+        "проголо́шення"
+      ],
+      "definition": "Проклама́ція, Проголошення",
+      "examples": []
+    },
+    "synset_id": "bn:00004352n"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "annoy",
+      "synonyms": [
+        "rag",
+        "get to",
+        "bother",
+        "get at"
+      ],
+      "definition": "Cause annoyance in; disturb , especially by minor irritations",
+      "examples": [
+        "Mosquitoes buzzing in my ear really bothers me",
+        "It irritates me that she never closes the door after she leaves",
+        "Billy's professor was vexed by his continued failure to improve his grades.",
+        "Marc loved his sister, but when she annoyed him he wanted to switch her off.",
+        "Would it bother you if I smoked?",
+        "It really narks me when people smoke in restaurants."
+      ]
+    },
+    "PL": {
+      "lemma": "irytować",
+      "synonyms": [
+        "naprzykrzać się",
+        "niepokoić"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "турбува́ти",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00082641v"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "annoyed",
+      "synonyms": [
+        "irritated",
+        "miffed",
+        "nettled",
+        "peeved"
+      ],
+      "definition": "Aroused to impatience or anger",
+      "examples": [
+        "Made an irritated gesture",
+        "Feeling nettled from the constant teasing",
+        "Peeved about being left out",
+        "Felt really pissed at her snootiness",
+        "Riled no end by his lies",
+        "Roiled by the delay"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00097145a"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "annoying",
+      "synonyms": [
+        "bothersome",
+        "galling",
+        "irritating",
+        "nettlesome"
+      ],
+      "definition": "Causing irritation or annoyance",
+      "examples": [
+        "Tapping an annoying rhythm on his glass with his fork",
+        "Aircraft noise is particularly bothersome near the airport",
+        "Found it galling to have to ask permission",
+        "An irritating delay",
+        "Nettlesome paperwork",
+        "A pesky mosquito",
+        "Swarms of pestering gnats",
+        "A plaguey newfangled safety catch",
+        "A teasing and persistent thought annoyed him",
+        "A vexatious child",
+        "It is vexing to have to admit you are wrong",
+        "Vandals are really annoying.",
+        "My poison ivy rash is very nettlesome."
+      ]
+    },
+    "PL": {
+      "lemma": "irytujące",
+      "synonyms": [
+        "irytujący",
+        "kłopotliwy"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "дратівли́вий",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00097147a"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "annual",
+      "synonyms": [
+        "one-year"
+      ],
+      "definition": "Completing its life cycle within a year",
+      "examples": [
+        "A border of annual flowering plants"
+      ]
+    },
+    "PL": {
+      "lemma": "jednoroczny",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00097148a"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "answer",
+      "synonyms": [
+        "reply",
+        "response"
+      ],
+      "definition": "A statement (either spoken or written) that is made to reply to a question or request or criticism or accusation",
+      "examples": [
+        "I waited several days for his answer",
+        "He wrote replies to several of his critics"
+      ]
+    },
+    "PL": {
+      "lemma": "odpowiedź",
+      "synonyms": [
+        "oddźwięk",
+        "odrzeczenie",
+        "odzew",
+        "reakcja"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00004451n"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "anxious",
+      "synonyms": [
+        "dying"
+      ],
+      "definition": "Eagerly desirous",
+      "examples": [
+        "Dying to hear who won",
+        "Anxious to see the new show at the museum",
+        "All the voters were anxious to hear the election result.",
+        "He is anxious to please, so you can count on him."
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00097283a"
+  },
+  {
+    "pos": "adverb",
+    "EN": {
+      "lemma": "any",
+      "synonyms": [],
+      "definition": "To any degree or extent",
+      "examples": [
+        "It isn't any better"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00114302r"
+  },
+  {
+    "pos": "adverb",
+    "EN": {
+      "lemma": "any more",
+      "synonyms": [],
+      "definition": "From a given time onwards; longer, again.",
+      "examples": [
+        "They don't make repairable radios any more."
+      ]
+    },
+    "PL": {
+      "lemma": "już",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "бі́льше",
+      "synonyms": [
+        "вже ні"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:13613093r"
+  },
+  {
+    "pos": "adverb",
+    "EN": {
+      "lemma": "anyway",
+      "synonyms": [
+        "anyhow",
+        "anyways",
+        "in any case",
+        "at any rate"
+      ],
+      "definition": "Used to indicate that a statement explains or supports a previous statement",
+      "examples": [
+        "Anyhow, he is dead now",
+        "I think they're asleep; anyhow, they're quiet",
+        "I don't know what happened to it; anyway, it's gone",
+        "Anyway, there is another factor to consider",
+        "I don't know how it started; in any case, there was a brief scuffle",
+        "In any event, the government faced a serious protest",
+        "But at any rate he got a knighthood for it",
+        "I don't know how it started",
+        "In any case, there was a brief scuffle",
+        "I think they're asleep",
+        "Anyhow, they're quiet",
+        "I don't know what happened to it",
+        "Anyway, it's gone",
+        "Anyhow, he is dead now.",
+        "I think they’re asleep; anyhow, they’re quiet."
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00114304r"
+  },
+  {
+    "pos": "adverb",
+    "EN": {
+      "lemma": "anywhere",
+      "synonyms": [
+        "anyplace"
+      ],
+      "definition": "At or in or to any place ; (`anyplace' is used informally for `anywhere')",
+      "examples": [
+        "You can find this food anywhere"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00114306r"
+  },
+  {
+    "pos": "adverb",
+    "EN": {
+      "lemma": "apart",
+      "synonyms": [],
+      "definition": "Separated or at a distance in place or position or time",
+      "examples": [
+        "These towns are many miles apart",
+        "Stood with his legs apart",
+        "Born two years apart"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00114308r"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "apartment",
+      "synonyms": [
+        "flat"
+      ],
+      "definition": "A suite of rooms usually on one floor of an apartment house",
+      "examples": [
+        "Apartment dwellers."
+      ]
+    },
+    "PL": {
+      "lemma": "mieszkanie",
+      "synonyms": [],
+      "definition": "Mieszkanie – zespół pomieszczeń mieszkalnych i pomocniczych mający odrębne wejście, wydzielony stałymi przegrodami budowlanymi, umożliwiający stały pobyt ludzi i prowadzenie samodzielnego gospodarstwa domowego.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "квартира",
+      "synonyms": [
+        "апартаме́нт",
+        "кварти́ра"
+      ],
+      "definition": "Кварти́ра або поме́шкання — частина житлового будинку, яка вміщує кілька кімнат.",
+      "examples": []
+    },
+    "synset_id": "bn:00004836n"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "apologize",
+      "synonyms": [
+        "apologise"
+      ],
+      "definition": "Acknowledge faults or shortcomings or failing",
+      "examples": [
+        "He apologized for the many typoes",
+        "I apologized for being late"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00082679v"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "app",
+      "synonyms": [
+        "application",
+        "application program",
+        "applications programme",
+        "application software"
+      ],
+      "definition": "A program that gives a computer instructions that provide the user with tools to accomplish a task",
+      "examples": [
+        "He has tried several different word processing applications",
+        "This iPhone application can connect to most social networks."
+      ]
+    },
+    "PL": {
+      "lemma": "aplikacja",
+      "synonyms": [
+        "oprogramowanie aplikacyjne",
+        "oprogramowanie użytkowe",
+        "program komputerowy"
+      ],
+      "definition": "Oprogramowanie użytkowe, program użytkowy, aplikacja, potocznie apka – każdy samodzielny program lub element pakietu oprogramowania, który nie jest zaliczany do oprogramowania systemowego i narzędziowego.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Застосунок",
+      "synonyms": [
+        "дода́ток",
+        "застосу́нок",
+        "програ́ма"
+      ],
+      "definition": "Застосу́нок, прикладна́ програ́ма або дода́ток",
+      "examples": []
+    },
+    "synset_id": "bn:00005095n"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "apparent",
+      "synonyms": [
+        "evident",
+        "manifest",
+        "patent",
+        "plain"
+      ],
+      "definition": "Clearly revealed to the mind or the senses or judgment",
+      "examples": [
+        "The effects of the drought are apparent to anyone who sees the parched fields",
+        "Evident hostility",
+        "Manifest disapproval",
+        "Patent advantages",
+        "Made his meaning plain",
+        "It is plain that he is no reactionary",
+        "In plain view",
+        "A palpable lie"
+      ]
+    },
+    "PL": {
+      "lemma": "ewidentny",
+      "synonyms": [
+        "oczywisty"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "очеви́дний",
+      "synonyms": [
+        "я́вний"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00097350a"
+  },
+  {
+    "pos": "adverb",
+    "EN": {
+      "lemma": "apparently",
+      "synonyms": [
+        "seemingly",
+        "ostensibly",
+        "on the face of it",
+        "at first blush"
+      ],
+      "definition": "From appearances alone",
+      "examples": [
+        "Irrigation often produces bumper crops from apparently desert land",
+        "The child is seemingly healthy but the doctor is concerned",
+        "Had been ostensibly frank as to his purpose while really concealing it",
+        "On the face of it the problem seems minor",
+        "Had been ostensibly frank as to his purpose while really concealing it - Thomas Hardy"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00114318r"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "appeal",
+      "synonyms": [
+        "entreaty",
+        "prayer"
+      ],
+      "definition": "Earnest or urgent request",
+      "examples": [
+        "An entreaty to stop the fighting",
+        "An appeal for help",
+        "An appeal to the public to keep calm"
+      ]
+    },
+    "PL": {
+      "lemma": "apel",
+      "synonyms": [
+        "odezwa",
+        "wezwanie"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00005017n"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "appeal",
+      "synonyms": [],
+      "definition": "Take a court case to a higher court for review",
+      "examples": [
+        "He was found guilty but appealed immediately"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00082685v"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "appear",
+      "synonyms": [
+        "look",
+        "seem"
+      ],
+      "definition": "Give a certain impression or have a certain outward aspect",
+      "examples": [
+        "She seems to be sleeping",
+        "This appears to be a very difficult problem",
+        "This project looks fishy",
+        "They appeared like people who had not eaten or slept for a long time",
+        "He appeared quite happy with the result."
+      ]
+    },
+    "PL": {
+      "lemma": "zdawać się",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00082690v"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "appearance",
+      "synonyms": [
+        "visual aspect",
+        "visual appearance",
+        "look"
+      ],
+      "definition": "Outward or visible aspect of a person or thing",
+      "examples": [
+        "There was a strange appearance in the sky."
+      ]
+    },
+    "PL": {
+      "lemma": "aparycja",
+      "synonyms": [
+        "fizjonomia",
+        "powierzchowność",
+        "wizerunek",
+        "wygląd"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Зовнішній вигляд",
+      "synonyms": [
+        "ви́димість",
+        "з'я́висько"
+      ],
+      "definition": "Зовнішній вигляд об'єктів визначається через те яким чином вони відбивають і передають світло.",
+      "examples": []
+    },
+    "synset_id": "bn:00005023n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "apple",
+      "synonyms": [
+        "apple peel"
+      ],
+      "definition": "Fruit with red or yellow or green skin and sweet to tart crisp whitish flesh",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "jabłko",
+      "synonyms": [],
+      "definition": "Jabłko – jadalny, kulisty owoc drzew z rodzaju jabłoń Malus .",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "яблуко",
+      "synonyms": [],
+      "definition": "Яблуко — це плід яблуні, рослини з родини трояндових.",
+      "examples": []
+    },
+    "synset_id": "bn:00005054n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "application",
+      "synonyms": [
+        "practical application"
+      ],
+      "definition": "The act of bringing something to bear; using it for a particular purpose",
+      "examples": [
+        "He advocated the application of statistics to the problem",
+        "A novel application of electronics to medical diagnosis"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00005092n"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "apply",
+      "synonyms": [
+        "use",
+        "utilize",
+        "utilise",
+        "employ"
+      ],
+      "definition": "Put into service ; make work or employ for a particular purpose or for its inherent or natural purpose",
+      "examples": [
+        "Use your head!",
+        "We only use Spanish at home",
+        "I can't use this tool",
+        "Apply a magnetic field here",
+        "This thinking was applied to many projects",
+        "How do you utilize this tool?",
+        "I apply this rule to get good results",
+        "Use the plastic bags to store the food",
+        "He doesn't know how to use a computer"
+      ]
+    },
+    "PL": {
+      "lemma": "użyć",
+      "synonyms": [],
+      "definition": "Stosować jakiś obiekt, często aby osiągnąć pewien cel.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00082705v"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "appointment",
+      "synonyms": [
+        "assignment",
+        "designation",
+        "naming"
+      ],
+      "definition": "The act of putting a person into a non-elective position",
+      "examples": [
+        "The appointment had to be approved by the whole committee",
+        "His appointment was deemed suitable."
+      ]
+    },
+    "PL": {
+      "lemma": "powołanie",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00005110n"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "appreciate",
+      "synonyms": [],
+      "definition": "Recognize with gratitude ; be grateful for",
+      "examples": [
+        "I appreciate your efforts."
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00082722v"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "approach",
+      "synonyms": [
+        "attack",
+        "plan of attack"
+      ],
+      "definition": "Ideas or actions intended to deal with a problem or situation",
+      "examples": [
+        "His approach to every problem is to draw up a list of pros and cons",
+        "An attack on inflation",
+        "His plan of attack was misguided"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00005141n"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "appropriate",
+      "synonyms": [],
+      "definition": "Suitable for a particular person or place or condition etc",
+      "examples": [
+        "A book not appropriate for children",
+        "A funeral conducted the appropriate solemnity",
+        "It seems that an apology is appropriate"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00097398a"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "approval",
+      "synonyms": [
+        "blessing",
+        "approving"
+      ],
+      "definition": "The formal act of approving",
+      "examples": [
+        "He gave the project his blessing",
+        "His decision merited the approval of any sensible person"
+      ]
+    },
+    "PL": {
+      "lemma": "zaaprobowanie",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00005158n"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "approve",
+      "synonyms": [
+        "O.K.",
+        "okay",
+        "sanction"
+      ],
+      "definition": "Give sanction to",
+      "examples": [
+        "I approve of his educational policies"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00082740v"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "april",
+      "synonyms": [
+        "April",
+        "Apr"
+      ],
+      "definition": "The month following March and preceding May",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "kwiecień",
+      "synonyms": [],
+      "definition": "Kwiecień – czwarty miesiąc w roku, według kalendarza gregoriańskiego ma 30 dni.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "квітень",
+      "synonyms": [
+        "кві́тень"
+      ],
+      "definition": "Кві́тень — четвертий місяць року в юліанському та григоріанському календарях.",
+      "examples": []
+    },
+    "synset_id": "bn:00005169n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "architect",
+      "synonyms": [
+        "designer"
+      ],
+      "definition": "Someone who creates plans to be used in making something (such as buildings )",
+      "examples": [
+        "Plato made the causes of things to be matter, ideas, and an efficient architect."
+      ]
+    },
+    "PL": {
+      "lemma": "architekt",
+      "synonyms": [
+        "projektant",
+        "designer",
+        "projektantka"
+      ],
+      "definition": "Architekt – specjalista w dziedzinie projektowania i wznoszenia budowli, także inicjator i organizator czegoś..",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "архітектор",
+      "synonyms": [
+        "дизайнер",
+        "диза́йнер"
+      ],
+      "definition": "Архіте́ктор, жін.",
+      "examples": []
+    },
+    "synset_id": "bn:00005435n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "architecture",
+      "synonyms": [],
+      "definition": "An architectural product or work",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00005441n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "area",
+      "synonyms": [
+        "country"
+      ],
+      "definition": "A particular geographical region of indefinite boundary ( usually serving some special purpose or distinguished by its people or culture or geography )",
+      "examples": [
+        "It was a mountainous area",
+        "Bible country"
+      ]
+    },
+    "PL": {
+      "lemma": "pole powierzchni",
+      "synonyms": [],
+      "definition": "Pole powierzchni – miara przyporządkowująca danej figurze nieujemną liczbę w pewnym sensie charakteryzującą jej rozmiar.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Площа",
+      "synonyms": [],
+      "definition": "Пло́ща — фізична величина, що визначає розмір поверхні, одна з основних властивостей геометричних фігур, у математиці розглядається як міра множини точок, які займають поверхню або якусь її частину.",
+      "examples": []
+    },
+    "synset_id": "bn:00005513n"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "argue",
+      "synonyms": [
+        "reason"
+      ],
+      "definition": "Present reasons and arguments",
+      "examples": [
+        "He argued his point.",
+        "He argued that America should stop Lend-Lease convoying because it needed to fortify its own Army with the supplies.",
+        "I reasoned the matter with my friend."
+      ]
+    },
+    "PL": {
+      "lemma": "argumentować",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "аргументува́ти",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00082754v"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "argument",
+      "synonyms": [
+        "statement"
+      ],
+      "definition": "A fact or assertion offered as evidence that something is true",
+      "examples": [
+        "It was a strong argument that his hypothesis was true"
+      ]
+    },
+    "PL": {
+      "lemma": "argument",
+      "synonyms": [],
+      "definition": "Fakt lub stwierdzenie oferowane jako dowód na to, że coś jest prawdziwe.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00005600n"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "arise",
+      "synonyms": [
+        "originate",
+        "rise",
+        "develop",
+        "uprise"
+      ],
+      "definition": "Come into existence ; take on form or shape",
+      "examples": [
+        "A new religious movement originated in that country",
+        "A love that sprang up from friendship",
+        "The idea for the book grew out of a short story",
+        "An interesting phenomenon uprose",
+        "The scheme originated with the governor and council.",
+        "A cloud arose and covered the sun."
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00082757v"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "arm",
+      "synonyms": [
+        "upper arm",
+        "free upper limb"
+      ],
+      "definition": "A human limb ; technically the part of the superior limb between the shoulder and the elbow but commonly used to refer to the whole superior limb",
+      "examples": [
+        "The arm and forearm are parts of the upper limb in the human body."
+      ]
+    },
+    "PL": {
+      "lemma": "ramię",
+      "synonyms": [
+        "ręka"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Рука",
+      "synonyms": [
+        "Плече",
+        "вільна верхня кінцівка"
+      ],
+      "definition": "Рука́ — кожна з двох верхніх кінцівок людини і мавпи, від плечового суглоба до кінчиків пальців.",
+      "examples": []
+    },
+    "synset_id": "bn:00005702n"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "armed",
+      "synonyms": [],
+      "definition": "(used of persons or the military) characterized by having or bearing arms",
+      "examples": [
+        "Armed robbery"
+      ]
+    },
+    "PL": {
+      "lemma": "zbrojny",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00097496a"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "arms",
+      "synonyms": [
+        "weaponry",
+        "implements of war",
+        "weapons system",
+        "munition"
+      ],
+      "definition": "Weapons considered collectively",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "arsenalik",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00005793n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "army",
+      "synonyms": [
+        "regular army",
+        "ground forces"
+      ],
+      "definition": "A permanent organization of the military land forces of a nation or state",
+      "examples": [
+        "The army was sent in to quell the uprising."
+      ]
+    },
+    "PL": {
+      "lemma": "armia",
+      "synonyms": [
+        "wojska lądowe",
+        "wojsko"
+      ],
+      "definition": "Wojska lądowe – rodzaj sił zbrojnych przeznaczony do wykonywania zadań operacyjnych przede wszystkim na obszarach lądowych.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Регулярна армія",
+      "synonyms": [
+        "Сухопутні війська",
+        "Армія",
+        "а́рмія",
+        "ві́йсько"
+      ],
+      "definition": "А́рмія (фр.",
+      "examples": []
+    },
+    "synset_id": "bn:00005803n"
+  },
+  {
+    "pos": "adverb",
+    "EN": {
+      "lemma": "around",
+      "synonyms": [
+        "about"
+      ],
+      "definition": "In the area or vicinity",
+      "examples": [
+        "A few spectators standing about",
+        "Hanging around",
+        "Waited around for the next flight"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00114075r"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "arrange",
+      "synonyms": [
+        "set up"
+      ],
+      "definition": "Put into a proper or systematic order",
+      "examples": [
+        "Arrange the books on the shelves in chronological order"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00082777v"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "arrangement",
+      "synonyms": [
+        "agreement"
+      ],
+      "definition": "The thing arranged or agreed to",
+      "examples": [
+        "They made arrangements to meet in Chicago"
+      ]
+    },
+    "PL": {
+      "lemma": "układ",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00002088n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "arrest",
+      "synonyms": [
+        "apprehension",
+        "catch",
+        "collar",
+        "pinch"
+      ],
+      "definition": "The act of apprehending (especially apprehending a criminal)",
+      "examples": [
+        "The policeman on the beat got credit for the collar"
+      ]
+    },
+    "PL": {
+      "lemma": "areszt",
+      "synonyms": [
+        "zatrzymanie",
+        "aresztowanie"
+      ],
+      "definition": "Areszt – ogólna nazwa rodziny instytucji, a zarazem środków karnych znanych różnym gałęziom prawa, których cechę wspólną stanowi przymusowe odizolowanie poddanej mu osoby od świata zewnętrznego.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Взяття під варту",
+      "synonyms": [
+        "аре́шт",
+        "Арешт",
+        "заде́ржання",
+        "затри́мання"
+      ],
+      "definition": "Арешт — кримінальне покарання, що полягає в триманні засудженого військовослужбовця в умовах ізоляції на гауптвахті і встановлюється на строк від одного до шести місяців.",
+      "examples": []
+    },
+    "synset_id": "bn:00005136n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "arrival",
+      "synonyms": [
+        "reaching"
+      ],
+      "definition": "Accomplishment of an objective",
+      "examples": [
+        "The arrival of the railway made the local tourist industry viable."
+      ]
+    },
+    "PL": {
+      "lemma": "Arrival",
+      "synonyms": [
+        "dotarcie"
+      ],
+      "definition": "Arrival – utwór instrumentalny szwedzkiego zespołu ABBA , pochodzący z albumu pod tym samym tytułem.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00005885n"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "arrive",
+      "synonyms": [
+        "get",
+        "come",
+        "reach"
+      ],
+      "definition": "Reach a destination ; arrive by movement or progress",
+      "examples": [
+        "She arrived home at 7 o'clock",
+        "She didn't get to Chicago until after midnight"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00082788v"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "art",
+      "synonyms": [
+        "fine art"
+      ],
+      "definition": "The products of human creativity ; works of art collectively",
+      "examples": [
+        "An art exhibition",
+        "A fine collection of art",
+        "A collection of fine art"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00005926n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "article",
+      "synonyms": [
+        "news article"
+      ],
+      "definition": "Nonfictional prose forming an independent part of a publication",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "artykuł",
+      "synonyms": [
+        "artykuł prasowy"
+      ],
+      "definition": "Artykuł prasowy – ogólna nazwa drukowanej wypowiedzi w prasie, od notatki informacyjnej na temat polityczny, społeczny, kulturalny, sportowy – po krótki esej.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Стаття",
+      "synonyms": [
+        "новинна стаття",
+        "стаття́"
+      ],
+      "definition": "Стаття — це жанр журналістики , в якому автор ставить завдання проаналізувати суспільні ситуації, процеси, явища, перш за все з точки зору закономірностей, що лежать в їх основі.",
+      "examples": []
+    },
+    "synset_id": "bn:00006121n"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "artificial",
+      "synonyms": [
+        "unreal"
+      ],
+      "definition": "Contrived by art rather than nature",
+      "examples": [
+        "Artificial flowers",
+        "Artificial flavoring",
+        "An artificial diamond",
+        "Artificial fibers",
+        "Artificial sweeteners"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00097548a"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "artist",
+      "synonyms": [
+        "creative person"
+      ],
+      "definition": "A person whose creative work shows sensitivity and imagination",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "artysta",
+      "synonyms": [
+        "artystka",
+        "demiurg",
+        "kunsztmistrz"
+      ],
+      "definition": "Artysta",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Митець",
+      "synonyms": [
+        "худо́жник",
+        "худо́жниця"
+      ],
+      "definition": "Мите́ць — людина, яка займається творчою діяльністю в будь-якому виді мистецтва.",
+      "examples": []
+    },
+    "synset_id": "bn:00006182n"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "artistic",
+      "synonyms": [],
+      "definition": "Relating to or characteristic of art or artists",
+      "examples": [
+        "His artistic background"
+      ]
+    },
+    "PL": {
+      "lemma": "artystyczny",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00097552a"
+  },
+  {
+    "pos": "adverb",
+    "EN": {
+      "lemma": "as",
+      "synonyms": [
+        "equally",
+        "every bit"
+      ],
+      "definition": "To the same degree (often followed by `as')",
+      "examples": [
+        "They were equally beautiful",
+        "Birds were singing and the child sang as sweetly",
+        "Sang as sweetly as a nightingale",
+        "He is every bit as mean as she is"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00114354r"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "ashamed",
+      "synonyms": [],
+      "definition": "Feeling shame or guilt or embarrassment or remorse",
+      "examples": [
+        "Are you ashamed for having lied?",
+        "Felt ashamed of my torn coat"
+      ]
+    },
+    "PL": {
+      "lemma": "zawstydzony",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "присоро́млений",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00097581a"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "ask",
+      "synonyms": [
+        "inquire",
+        "enquire",
+        "query"
+      ],
+      "definition": "Inquire about",
+      "examples": [
+        "I asked about their special today",
+        "He had to ask directions several times"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00082817v"
+  }
+]
