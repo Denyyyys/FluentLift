@@ -1091,41 +1091,6 @@
   {
     "pos": "verb",
     "EN": {
-      "lemma": "admit",
-      "synonyms": [
-        "acknowledge",
-        "concede"
-      ],
-      "definition": "Declare to be true or admit the existence or reality or truth of",
-      "examples": [
-        "He admitted his errors",
-        "She acknowledged that she might have forgotten",
-        "To acknowledge the being of a god."
-      ]
-    },
-    "PL": {
-      "lemma": "przyznać",
-      "synonyms": [
-        "przyznawać"
-      ],
-      "definition": "",
-      "examples": []
-    },
-    "UK": {
-      "lemma": "ви́знати",
-      "synonyms": [
-        "визнава́ти",
-        "призна́ти",
-        "признава́ти"
-      ],
-      "definition": "",
-      "examples": []
-    },
-    "synset_id": "bn:00082267v"
-  },
-  {
-    "pos": "verb",
-    "EN": {
       "lemma": "adopt",
       "synonyms": [
         "follow",
@@ -1349,44 +1314,6 @@
   {
     "pos": "noun",
     "EN": {
-      "lemma": "advertisement",
-      "synonyms": [
-        "ad",
-        "advertizement",
-        "advertising",
-        "advertizing"
-      ],
-      "definition": "A public promotion of some product or service",
-      "examples": [
-        "Companies try to sell their products using advertisements in form of placards, television spots and print publications."
-      ]
-    },
-    "PL": {
-      "lemma": "reklama",
-      "synonyms": [
-        "ogłoszenie",
-        "anons",
-        "inserat"
-      ],
-      "definition": "Reklama (z łac.",
-      "examples": []
-    },
-    "UK": {
-      "lemma": "Реклама",
-      "synonyms": [
-        "ано́нс",
-        "зая́ва",
-        "оголо́шення",
-        "рекла́ма"
-      ],
-      "definition": "Рекла́ма (лат.",
-      "examples": []
-    },
-    "synset_id": "bn:00001227n"
-  },
-  {
-    "pos": "noun",
-    "EN": {
       "lemma": "advice",
       "synonyms": [],
       "definition": "A proposal for an appropriate course of action",
@@ -1556,38 +1483,6 @@
       "examples": []
     },
     "synset_id": "bn:00096625a"
-  },
-  {
-    "pos": "adverb",
-    "EN": {
-      "lemma": "after",
-      "synonyms": [
-        "subsequently",
-        "later",
-        "afterwards",
-        "afterward"
-      ],
-      "definition": "Happening at a time subsequent to a reference time",
-      "examples": [
-        "He's going to the store but he'll be back here later",
-        "He apologized subsequently",
-        "It didn't happen until afterward",
-        "Two hours after that"
-      ]
-    },
-    "PL": {
-      "lemma": "",
-      "synonyms": [],
-      "definition": "",
-      "examples": []
-    },
-    "UK": {
-      "lemma": "",
-      "synonyms": [],
-      "definition": "",
-      "examples": []
-    },
-    "synset_id": "bn:00114165r"
   },
   {
     "pos": "noun",
@@ -8278,5 +8173,2388 @@
       "examples": []
     },
     "synset_id": "bn:00083652v"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "blue",
+      "synonyms": [
+        "bluish",
+        "blueish"
+      ],
+      "definition": "Of the color intermediate between green and violet; having a color similar to that of a clear unclouded sky",
+      "examples": [
+        "October's bright blue weather",
+        "A blue flame",
+        "Blue haze of tobacco smoke",
+        "October's bright blue weather - Helen Hunt Jackson"
+      ]
+    },
+    "PL": {
+      "lemma": "niebieski",
+      "synonyms": [
+        "niebny"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00098606a"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "board",
+      "synonyms": [],
+      "definition": "A committee having supervisory powers",
+      "examples": [
+        "The board has seven members",
+        "We have to wait to hear back from the board."
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00011638n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "boat",
+      "synonyms": [],
+      "definition": "A small vessel for travel on water",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "łódź",
+      "synonyms": [
+        "krypa",
+        "stara krypa",
+        "łódka"
+      ],
+      "definition": "Łódź – mała jednostka pływająca , zwykle odkrytopokładowa, używana na akwenach śródlądowych i morskich.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Човен",
+      "synonyms": [
+        "лодь",
+        "чо́вен"
+      ],
+      "definition": "Чо́вен — мале, зазвичай безпалубне, веслове, вітрильне чи моторне судно, призначене для пересування по річках, озерах та в прибережних морських водах.",
+      "examples": []
+    },
+    "synset_id": "bn:00011674n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "body",
+      "synonyms": [
+        "organic structure",
+        "physical structure"
+      ],
+      "definition": "The entire structure of an organism (an animal, plant, or human being)",
+      "examples": [
+        "He felt as if his whole body were on fire"
+      ]
+    },
+    "PL": {
+      "lemma": "ciało",
+      "synonyms": [
+        "organizm"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "тіло",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00011744n"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "boil",
+      "synonyms": [
+        "cook"
+      ],
+      "definition": "Come to the boiling point and change from a liquid to vapor",
+      "examples": [
+        "Water boils at 100 degrees Celsius"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00083736v"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "bomb",
+      "synonyms": [],
+      "definition": "An explosive device fused to explode under specific conditions",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "bomba",
+      "synonyms": [],
+      "definition": "Bomba – broń w postaci ładunku materiału wybuchowego, zazwyczaj w specjalnej obudowie, wyposażonego w mechanizm detonujący.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Бомба",
+      "synonyms": [],
+      "definition": "Бо́мба",
+      "examples": []
+    },
+    "synset_id": "bn:00011917n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "bond",
+      "synonyms": [
+        "chemical bond"
+      ],
+      "definition": "An electrical force linking atoms",
+      "examples": [
+        "Organic chemistry primarily consists of the study of carbon bonds, in their many variations."
+      ]
+    },
+    "PL": {
+      "lemma": "wiązanie chemiczne",
+      "synonyms": [
+        "wiązanie"
+      ],
+      "definition": "Wiązanie chemiczne – według klasycznej definicji : każde trwałe połączenie dwóch atomów .",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Хімічний зв'язок",
+      "synonyms": [
+        "зв'язо́к",
+        "хімічний зв’язок"
+      ],
+      "definition": "Хімі́чний зв'язо́к — це взаємодія між атомами, яка утримує їх у молекулі чи твердому тілі.",
+      "examples": []
+    },
+    "synset_id": "bn:00011973n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "bone",
+      "synonyms": [
+        "os"
+      ],
+      "definition": "Rigid connective tissue that makes up the skeleton of vertebrates",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "kość",
+      "synonyms": [],
+      "definition": "Kość (łac.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Кістка",
+      "synonyms": [
+        "кість",
+        "кі́стка"
+      ],
+      "definition": "Кістка, кість",
+      "examples": []
+    },
+    "synset_id": "bn:00011999n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "book",
+      "synonyms": [],
+      "definition": "A written work or composition that has been published (printed on pages bound together)",
+      "examples": [
+        "I am reading a good book on economics",
+        "I have three copies of his first book."
+      ]
+    },
+    "PL": {
+      "lemma": "książka",
+      "synonyms": [],
+      "definition": "Książka – dokument piśmienniczy, zapis myśli ludzkiej, raczej obszerny, w postaci publikacji wielostronicowej o określonej liczbie stron, o charakterze trwałym.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Книга",
+      "synonyms": [],
+      "definition": "Кни́га — неперіодичне видання у вигляді зброшурованих аркушів друкованого матеріалу, набір письмових, друкованих, ілюстрованих або порожніх аркушів, виготовлених з паперу , пергаменту або іншого матеріалу, як правило, скріплених з одного боку.",
+      "examples": []
+    },
+    "synset_id": "bn:00012059n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "boot",
+      "synonyms": [],
+      "definition": "Footwear that covers the whole foot and lower leg",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "but z cholewką",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Чоботи",
+      "synonyms": [],
+      "definition": "Чо́боти — взуття, зазвичай з високими халявами.",
+      "examples": []
+    },
+    "synset_id": "bn:00012166n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "border",
+      "synonyms": [
+        "boundary line",
+        "borderline",
+        "delimitation",
+        "mete"
+      ],
+      "definition": "A line that indicates a boundary",
+      "examples": [
+        "The border between Canada and USA is the longest in the world.",
+        "She lives on the borderline between reality and madness."
+      ]
+    },
+    "PL": {
+      "lemma": "delimitacja",
+      "synonyms": [
+        "granica",
+        "granica państwa",
+        "granica państwowa",
+        "bordiura"
+      ],
+      "definition": "Granica państwowa – powierzchnia pionowa przechodząca przez linię graniczną oddzielająca terytorium , podziemie i obszar powietrzny jednego państwa od innych państw lub obszarów niczyich.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Кордон",
+      "synonyms": [
+        "Делімітація кордонів",
+        "грани́ця",
+        "кордо́н"
+      ],
+      "definition": "Деліміта́ція кордо́нів",
+      "examples": []
+    },
+    "synset_id": "bn:00012212n"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "bored",
+      "synonyms": [
+        "world-weary"
+      ],
+      "definition": "Tired of the world",
+      "examples": [
+        "Bored with life",
+        "Strolled through the museum with a bored air"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00098707a"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "boring",
+      "synonyms": [
+        "deadening",
+        "dull",
+        "ho-hum",
+        "irksome"
+      ],
+      "definition": "So lacking in interest as to cause mental weariness",
+      "examples": [
+        "A boring evening with uninteresting people",
+        "The deadening effect of some routine tasks",
+        "A dull play",
+        "His competent but dull performance",
+        "A ho-hum speaker who couldn't capture their attention",
+        "What an irksome task the writing of long letters is",
+        "Tedious days on the train",
+        "The tiresome chirping of a cricket",
+        "Other people's dreams are dreadfully wearisome",
+        "What an irksome task the writing of long letters is - Edmund Burke",
+        "The tiresome chirping of a cricket - Mark Twain"
+      ]
+    },
+    "PL": {
+      "lemma": "nieinteresujący",
+      "synonyms": [
+        "niezajmujący",
+        "nudny"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00098708a"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "borrow",
+      "synonyms": [],
+      "definition": "Get temporarily",
+      "examples": [
+        "May I borrow your lawn mower?"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00083803v"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "boss",
+      "synonyms": [
+        "foreman",
+        "chief",
+        "gaffer",
+        "honcho"
+      ],
+      "definition": "A person who exercises control over workers",
+      "examples": [
+        "If you want to leave early you have to ask the foreman"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00012293n"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "bother",
+      "synonyms": [
+        "trouble oneself",
+        "trouble",
+        "inconvenience oneself"
+      ],
+      "definition": "Take the trouble to do something; concern oneself",
+      "examples": [
+        "Don't bother, please",
+        "He did not trouble to call his mother on her birthday",
+        "I won't trouble to post the letter today; I can do it tomorrow.",
+        "You didn't even bother to close the door."
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00083808v"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "bottle",
+      "synonyms": [],
+      "definition": "A glass or plastic vessel used for storing drinks or other liquids; typically cylindrical without handles and with a narrow neck that can be plugged or capped",
+      "examples": [
+        "Beer is often sold in bottles."
+      ]
+    },
+    "PL": {
+      "lemma": "butelka",
+      "synonyms": [
+        "flaszka"
+      ],
+      "definition": "Butelka – rodzaj naczynia, szklanego lub z tworzywa sztucznego, rzadziej metalowego czy ceramicznego.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Пляшка",
+      "synonyms": [
+        "буте́лька",
+        "пля́шка"
+      ],
+      "definition": "Пля́шка, рідше сулі́йка — невелика ємність для довготривалого зберігання рідин, висока посудина переважно циліндричної форми і з вузьким горлечком, зручним для закупорювання корком.",
+      "examples": []
+    },
+    "synset_id": "bn:00012339n"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "bottom",
+      "synonyms": [],
+      "definition": "Situated at the bottom or lowest position",
+      "examples": [
+        "The bottom drawer",
+        "Those files should go on the bottom shelf."
+      ]
+    },
+    "PL": {
+      "lemma": "dolny",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "до́лішній",
+      "synonyms": [
+        "ни́жній"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00098731a"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "bowl",
+      "synonyms": [],
+      "definition": "A round vessel that is open at the top; used chiefly for holding food or liquids ;",
+      "examples": [
+        "This restaurant offers a number of different bowls."
+      ]
+    },
+    "PL": {
+      "lemma": "miska",
+      "synonyms": [],
+      "definition": "Miska – głębokie, okrągłe naczynie z krawędziami zakończonymi w kierunku pionowym.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Миска",
+      "synonyms": [],
+      "definition": "Ми́ска",
+      "examples": []
+    },
+    "synset_id": "bn:00012493n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "box",
+      "synonyms": [
+        "boxes"
+      ],
+      "definition": "A ( usually rectangular ) container ; may have a lid",
+      "examples": [
+        "He rummaged through a box of spare parts",
+        "Post box  post office box."
+      ]
+    },
+    "PL": {
+      "lemma": "skrzynia",
+      "synonyms": [
+        "pudełko"
+      ],
+      "definition": "Skrzynia - rodzaj opakowania, zazwyczaj drewnianego, stosowanego do transportu towarów, szczególnie na dalekie odległości.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Коробка",
+      "synonyms": [],
+      "definition": "Коро́бка — разова споживча тара з корпусом різноманітної форми, з плоским дном, що закривається знімною кришкою чи кришкою на шарнірі.",
+      "examples": []
+    },
+    "synset_id": "bn:00012524n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "boy",
+      "synonyms": [
+        "male child"
+      ],
+      "definition": "A youthful male person",
+      "examples": [
+        "The baby was a boy",
+        "She made the boy brush his teeth every night",
+        "Most soldiers are only boys in uniform"
+      ]
+    },
+    "PL": {
+      "lemma": "chłopiec",
+      "synonyms": [
+        "chłopaczek",
+        "chłopaczyna",
+        "chłopczyk",
+        "chłopczyna"
+      ],
+      "definition": "Chłopiec – młody człowiek płci męskiej.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "хлопець",
+      "synonyms": [],
+      "definition": "Хло́пець, хло́пчик, хлопчи́на — молода неодружена особа чоловічої стати, дитина чи підліток чоловічої статі.",
+      "examples": []
+    },
+    "synset_id": "bn:00012569n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "boyfriend",
+      "synonyms": [
+        "fellow",
+        "beau",
+        "swain",
+        "young man"
+      ],
+      "definition": "A man who is the lover of a girl or young woman",
+      "examples": [
+        "If I'd known he was her boyfriend I wouldn't have asked",
+        "When the law changed, Pet could finally married his long-time boyfriend Jim"
+      ]
+    },
+    "PL": {
+      "lemma": "chłopak",
+      "synonyms": [
+        "chłopiec"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Хлопець",
+      "synonyms": [],
+      "definition": "Хлопець — друг чоловічої статі або гендеру, постійний супутник, з яким є платонічні, романтичні та/або сексуальні стосунки.",
+      "examples": []
+    },
+    "synset_id": "bn:00009419n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "brain",
+      "synonyms": [
+        "encephalon"
+      ],
+      "definition": "That part of the central nervous system that includes all the higher nervous centers; enclosed within the skull ; continuous with the spinal cord",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "mózg",
+      "synonyms": [
+        "mózgowie",
+        "mózgownica"
+      ],
+      "definition": "Mózg – organ, który służy jako centrum układu nerwowego u wszystkich kręgowców i większości bezkręgowców, tj. u większości zwierząt dwubocznie symetrycznych; znajduje się zwykle w pobliżu narządów zmysłów, takich jak wzrok.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Головний мозок",
+      "synonyms": [],
+      "definition": "Головни́й мо́зок",
+      "examples": []
+    },
+    "synset_id": "bn:00012679n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "branch",
+      "synonyms": [
+        "subdivision",
+        "arm",
+        "bank branch"
+      ],
+      "definition": "A division of some larger or more complex organization",
+      "examples": [
+        "A branch of Congress",
+        "Botany is a branch of biology",
+        "The Germanic branch of Indo-European languages"
+      ]
+    },
+    "PL": {
+      "lemma": "dzielenie",
+      "synonyms": [
+        "rozdział",
+        "władza"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00005706n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "brand",
+      "synonyms": [
+        "trade name",
+        "brand name",
+        "marque",
+        "commercial name"
+      ],
+      "definition": "A name given to a product or service",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "marka",
+      "synonyms": [
+        "nazwa handlowa",
+        "brand",
+        "trademark"
+      ],
+      "definition": "Marka – nazwy , określenia, znaki, symbole, logo oraz projekty graficzne albo kombinacje tych wszystkich elementów, których celem jest identyfikacja towarów , usług lub jednostek oraz ich wyróżnienie na rynku od produktów konkurencji , generujące w ten sposób korzyści ekonomiczne.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Бренд",
+      "synonyms": [
+        "комерційне позначення"
+      ],
+      "definition": "Бренд або марка",
+      "examples": []
+    },
+    "synset_id": "bn:00012758n"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "brave",
+      "synonyms": [
+        "courageous",
+        "bold"
+      ],
+      "definition": "Possessing or displaying courage ; able to face and deal with danger or fear without flinching",
+      "examples": [
+        "Familiarity with danger makes a brave man braver but less daring",
+        "A frank courageous heart...triumphed over pain",
+        "Set a courageous example by leading them safely into and out of enemy-held territory",
+        "A frank courageous heart...triumphed over pain - William Wordsworth",
+        "Familiarity with danger makes a brave man braver but less daring - Herman Melville",
+        "The most courageous person I have ever met."
+      ]
+    },
+    "PL": {
+      "lemma": "odważny",
+      "synonyms": [
+        "dzielny",
+        "chrobry",
+        "mężny",
+        "nieustraszony"
+      ],
+      "definition": "Mający lub okazujący odwagę.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "відва́жний",
+      "synonyms": [
+        "сміли́вий",
+        "хоро́брий"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00098827a"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "bread",
+      "synonyms": [
+        "breadstuff",
+        "staff of life"
+      ],
+      "definition": "Food made from dough of flour or meal and usually raised with yeast or baking powder and then baked",
+      "examples": [
+        "We made sandwiches with the bread we bought from the bakery.",
+        "Any leftover bread can be put into the pudding."
+      ]
+    },
+    "PL": {
+      "lemma": "chleb",
+      "synonyms": [],
+      "definition": "Chleb – pieczywo otrzymywane z wypieku ciasta, będącego jednorodnym połączeniem mąki i wody, poddanego najczęściej, ale nie zawsze, fermentacji alkoholowej, wyrobionego w bochny różnego kształtu i wielkości.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "хліб",
+      "synonyms": [],
+      "definition": "Хліб — харчовий продукт, що випікається з борошна.",
+      "examples": []
+    },
+    "synset_id": "bn:00012873n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "break",
+      "synonyms": [
+        "interruption"
+      ],
+      "definition": "Some abrupt occurrence that interrupts an ongoing activity",
+      "examples": [
+        "There was a break in the action when a player was hurt",
+        "The telephone is an annoying interruption"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00012896n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "breakfast",
+      "synonyms": [],
+      "definition": "The first meal of the day ( usually in the morning)",
+      "examples": [
+        "We serve breakfast all day."
+      ]
+    },
+    "PL": {
+      "lemma": "śniadanie",
+      "synonyms": [
+        "pierwsze śniadanie"
+      ],
+      "definition": "Śniadanie – pierwszy posiłek dnia , najczęściej spożywany w godzinach porannych.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "сніданок",
+      "synonyms": [
+        "завтрак"
+      ],
+      "definition": "Сніда́нок — перше приймання їжі в день, зазвичай в період від світанку до полудня.",
+      "examples": []
+    },
+    "synset_id": "bn:00012930n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "breast",
+      "synonyms": [
+        "chest"
+      ],
+      "definition": "The front of the trunk from the neck to the abdomen",
+      "examples": [
+        "He beat his breast in anger"
+      ]
+    },
+    "PL": {
+      "lemma": "klatka piersiowa",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00012950n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "breath",
+      "synonyms": [],
+      "definition": "The process of taking in and expelling air during breathing",
+      "examples": [
+        "He was fighting to his last breath",
+        "He took a deep breath and dived into the pool",
+        "The child's breath came quickly and unevenly.",
+        "I could hear the breath of the runner behind me."
+      ]
+    },
+    "PL": {
+      "lemma": "oddech",
+      "synonyms": [
+        "dech",
+        "oddychanie",
+        "respiracja",
+        "tchnienie"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "дих",
+      "synonyms": [
+        "диха́ння"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00012965n"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "breathe",
+      "synonyms": [
+        "take a breath",
+        "respire",
+        "suspire",
+        "respirate"
+      ],
+      "definition": "Draw air into, and expel out of, the lungs",
+      "examples": [
+        "The patient is respiring",
+        "I can breathe better when the air is clean"
+      ]
+    },
+    "PL": {
+      "lemma": "oddychać",
+      "synonyms": [
+        "wdychać"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00084018v"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "breathing",
+      "synonyms": [
+        "external respiration",
+        "respiration",
+        "ventilation",
+        "breath"
+      ],
+      "definition": "The bodily process of inhalation and exhalation ; the process of taking in oxygen from inhaled air and releasing carbon dioxide by exhalation",
+      "examples": [
+        "I could feel the runner's breath on my shoulder."
+      ]
+    },
+    "PL": {
+      "lemma": "oddychanie",
+      "synonyms": [
+        "oddychanie zewnętrzne",
+        "klimatyzacja"
+      ],
+      "definition": "Oddychanie",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Дихання",
+      "synonyms": [
+        "Кисневе дихання"
+      ],
+      "definition": "Ди́хання — процес, який забезпечує надходження до організму людини кисню, використання його в окиснювальних процесах і видалення з організму вуглекислого газу.",
+      "examples": []
+    },
+    "synset_id": "bn:00012973n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "bride",
+      "synonyms": [],
+      "definition": "A woman who has recently been married",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00013066n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "bridge",
+      "synonyms": [
+        "span",
+        "list of Roman bridges"
+      ],
+      "definition": "A structure that allows people or vehicles to cross an obstacle such as a river or canal or railway etc.",
+      "examples": [
+        "The rope bridge crosses the river."
+      ]
+    },
+    "PL": {
+      "lemma": "most",
+      "synonyms": [],
+      "definition": "Most – rodzaj przeprawy w postaci budowli inżynierskiej, której konstrukcja pozwala na pokonanie przeszkody wodnej lub lądowej skonstruowana w taki sposób, że pod nią pozostaje wolna przestrzeń.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "міст",
+      "synonyms": [
+        "Перелік давньоримських мостів"
+      ],
+      "definition": "Міст",
+      "examples": []
+    },
+    "synset_id": "bn:00013077n"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "brief",
+      "synonyms": [],
+      "definition": "Of short duration or distance",
+      "examples": [
+        "A brief stay in the country"
+      ]
+    },
+    "PL": {
+      "lemma": "chwilowy",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00098854a"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "bright",
+      "synonyms": [],
+      "definition": "Emitting or reflecting light readily or in large amounts",
+      "examples": [
+        "The sun was bright and hot",
+        "A bright sunlit room"
+      ]
+    },
+    "PL": {
+      "lemma": "jasny",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00098857a"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "brilliant",
+      "synonyms": [
+        "superb"
+      ],
+      "definition": "Of surpassing excellence",
+      "examples": [
+        "A brilliant performance",
+        "A superb actor"
+      ]
+    },
+    "PL": {
+      "lemma": "imponujący",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00098870a"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "bring",
+      "synonyms": [
+        "convey",
+        "take"
+      ],
+      "definition": "Take something or somebody with oneself somewhere",
+      "examples": [
+        "Bring me the box from the other room",
+        "Take these letters to the boss",
+        "This brings me to the main point"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00084058v"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "broad",
+      "synonyms": [
+        "wide"
+      ],
+      "definition": "Having great (or a certain) extent from one side to the other",
+      "examples": [
+        "Wide roads",
+        "A wide necktie",
+        "Wide margins",
+        "Three feet wide",
+        "A river two miles broad",
+        "Broad shoulders",
+        "A broad river",
+        "The wide, lifeless expanse."
+      ]
+    },
+    "PL": {
+      "lemma": "szeroki",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "широкий",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00098887a"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "broadcast",
+      "synonyms": [],
+      "definition": "Message that is transmitted by radio or television",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "emisja",
+      "synonyms": [
+        "nadawanie",
+        "transmisja"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "переда́ча",
+      "synonyms": [
+        "трансля́ція"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00013234n"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "broken",
+      "synonyms": [],
+      "definition": "Physically and forcibly separated into pieces or cracked or split",
+      "examples": [
+        "A broken mirror",
+        "A broken tooth",
+        "A broken leg",
+        "His neck is broken"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00098909a"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "brother",
+      "synonyms": [
+        "blood brother"
+      ],
+      "definition": "A male with the same parents as someone else",
+      "examples": [
+        "My brother still lives with our parents"
+      ]
+    },
+    "PL": {
+      "lemma": "brat",
+      "synonyms": [
+        "braciak"
+      ],
+      "definition": "Brat – nazwa relacji rodzinnej dla krewnego drugiego stopnia w linii bocznej o płci męskiej, należącego do rodzeństwa .",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Брат",
+      "synonyms": [],
+      "definition": "Брат — син у відношенні до інших дітей одних батьків .",
+      "examples": []
+    },
+    "synset_id": "bn:00011357n"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "brown",
+      "synonyms": [
+        "brownish",
+        "chocolate-brown",
+        "dark-brown"
+      ],
+      "definition": "Of a color similar to that of wood or earth",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "brązowy",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00098942a"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "brush",
+      "synonyms": [
+        "brushwood",
+        "coppice",
+        "copse",
+        "thicket"
+      ],
+      "definition": "A dense growth of bushes",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "gęstwina",
+      "synonyms": [
+        "zagajnik",
+        "chaszcze",
+        "gąszcz",
+        "gąszcza"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "гу́ща",
+      "synonyms": [
+        "гу́щава",
+        "гуща́вина",
+        "гуща́к",
+        "за́рості"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00013488n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "bubble",
+      "synonyms": [],
+      "definition": "A hollow globule of gas (e.g., air or carbon dioxide )",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "bąbel",
+      "synonyms": [
+        "pęcherzyk",
+        "bańka",
+        "bąbelek",
+        "banieczka"
+      ],
+      "definition": "kulka jednej substancji w drugiej, zwykle gaz w cieczy",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Бульбашка",
+      "synonyms": [
+        "бу́льбашка",
+        "пузи́р"
+      ],
+      "definition": "Бульбашка — невеликий об'єм газу в рідині або твердому тілі.",
+      "examples": []
+    },
+    "synset_id": "bn:00013536n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "budget",
+      "synonyms": [],
+      "definition": "A sum of money allocated for a particular purpose",
+      "examples": [
+        "The laboratory runs on a budget of a million a year"
+      ]
+    },
+    "PL": {
+      "lemma": "budżet",
+      "synonyms": [
+        "preliminarz"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "бюдже́т",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00013639n"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "build",
+      "synonyms": [
+        "construct",
+        "make",
+        "produce"
+      ],
+      "definition": "Make by combining materials and parts",
+      "examples": [
+        "This little pig made his house out of straw",
+        "Some eccentric constructed an electric brassiere warmer",
+        "A wall constructed of random stones.",
+        "We constructed the radio from spares."
+      ]
+    },
+    "PL": {
+      "lemma": "zbudować",
+      "synonyms": [
+        "budować",
+        "konstruować",
+        "postawić",
+        "skonstruować"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "будува́ти",
+      "synonyms": [
+        "збудува́ти",
+        "зконструюва́ти",
+        "конструюва́ти"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00084198v"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "building",
+      "synonyms": [
+        "edifice",
+        "public building"
+      ],
+      "definition": "A structure that has a roof and walls and stands more or less permanently in one place",
+      "examples": [
+        "There was a three-story building on the corner",
+        "It was an imposing edifice",
+        "My sister lives in that apartment building."
+      ]
+    },
+    "PL": {
+      "lemma": "budynek",
+      "synonyms": [
+        "gmach",
+        "budowla",
+        "budynek publiczny",
+        "dom"
+      ],
+      "definition": "Budynek – rodzaj budowli lub jej część, w zakresie której wydzielono poprzez przegrody budowlane, takie jak ściany zewnętrzne i dach lub stropodach, przestrzeń użytkowaną przez człowieka w rozmaity sposób.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Будівля",
+      "synonyms": [
+        "будинок",
+        "дім",
+        "буди́нок",
+        "спору́да"
+      ],
+      "definition": "Буді́вля — вид споруди, що складається з опорних та обгороджувальних або сполучених конструкцій, які утворюють наземні або підземні приміщення, які призначено для проживання або перебування людей, розміщення устаткування, тварин, рослин , а також предметів.",
+      "examples": []
+    },
+    "synset_id": "bn:00013722n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "bullet",
+      "synonyms": [
+        "slug",
+        "ball"
+      ],
+      "definition": "A projectile that is fired from a gun",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "pocisk",
+      "synonyms": [
+        "kula",
+        "pocisk strzelecki",
+        "kulka"
+      ],
+      "definition": "Pocisk – przedmiot miotany na odległość przeznaczony najczęściej do rażenia określonego celu lub wykonywania innych zadań.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Куля",
+      "synonyms": [
+        "ку́ля"
+      ],
+      "definition": "Ку́ля — головна частина набою, металевий предмет, різний за формою, що вилітає із дула вогнепальної зброї, за рахунок дії порохових газів під час пострілу.",
+      "examples": []
+    },
+    "synset_id": "bn:00013807n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "bunch",
+      "synonyms": [
+        "clump",
+        "cluster",
+        "clustering"
+      ],
+      "definition": "A grouping of a number of similar things",
+      "examples": [
+        "A cluster of admirers",
+        "A bunch of trees",
+        "A bunch of grapes;  a bunch of bananas;  a bunch of keys;  a bunch of yobs on a street corner."
+      ]
+    },
+    "PL": {
+      "lemma": "bukiet",
+      "synonyms": [
+        "grono",
+        "kiść",
+        "pęk"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "буке́т",
+      "synonyms": [
+        "в'я́зка",
+        "гру́па",
+        "жмут",
+        "ки́тиця"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00013873n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "burn",
+      "synonyms": [
+        "burning"
+      ],
+      "definition": "Pain that feels hot as if it were on fire",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "pieczenie",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00014010n"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "bury",
+      "synonyms": [],
+      "definition": "Cover from sight",
+      "examples": [
+        "Afghani women buried under their burkas"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00084297v"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "bus",
+      "synonyms": [
+        "autobus",
+        "coach",
+        "charabanc",
+        "double-decker"
+      ],
+      "definition": "A vehicle carrying many passengers ; used for public transport",
+      "examples": [
+        "He always rode the bus to work"
+      ]
+    },
+    "PL": {
+      "lemma": "autobus",
+      "synonyms": [
+        "autokar",
+        "omnibus",
+        "kareta",
+        "powóz"
+      ],
+      "definition": "Autobus – pojazd samochodowy przeznaczony do przewozu większej liczby pasażerów .",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "автобус",
+      "synonyms": [
+        "Автобус далекого прямування",
+        "авто́бус",
+        "бус",
+        "екіпа́ж"
+      ],
+      "definition": "Автобус — це транспортний засіб з більш ніж дев’ятьма місцями для сидіння, включаючи сидіння водія, який сконструйований і обладнаний для перевезення пасажирів, та їхнього багажу з необхідним комфортом І безпекою, та є більший від мікроавтобусу.",
+      "examples": []
+    },
+    "synset_id": "bn:00007329n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "bush",
+      "synonyms": [
+        "shrub"
+      ],
+      "definition": "A low woody perennial plant usually having several major stems",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "krzew",
+      "synonyms": [
+        "kierzek",
+        "krzaczysko",
+        "krzak"
+      ],
+      "definition": "Krzew – niebędąca pnączem wieloletnia roślina drzewiasta o zdrewniałej łodydze , która od nasady rozgałęzia się na wiele zdrewniałych pędów równorzędnych.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Кущ",
+      "synonyms": [],
+      "definition": "Кущ — життєва форма багаторічних рослин , які мають декілька одерев'янілих скелетних осей.",
+      "examples": []
+    },
+    "synset_id": "bn:00014095n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "business",
+      "synonyms": [
+        "concern",
+        "business concern",
+        "business organization",
+        "business organisation"
+      ],
+      "definition": "A commercial or industrial enterprise and the people who constitute it",
+      "examples": [
+        "He bought his brother's business",
+        "A small mom-and-pop business",
+        "A racially integrated business concern",
+        "He's such a poor cook, I can't believe he's still in business!",
+        "We do business all over the world."
+      ]
+    },
+    "PL": {
+      "lemma": "biznes",
+      "synonyms": [
+        "koncern"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "бізнес",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00014136n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "businessman",
+      "synonyms": [
+        "man of affairs"
+      ],
+      "definition": "A person engaged in commercial or industrial business (especially an owner or executive )",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "przedsiębiorca",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00014175n"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "busy",
+      "synonyms": [],
+      "definition": "Actively or fully engaged or occupied",
+      "examples": [
+        "Busy with her work",
+        "A busy man",
+        "Too busy to eat lunch"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00099057a"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "butter",
+      "synonyms": [],
+      "definition": "An edible emulsion of fat globules made by churning milk or cream ; for cooking and table use",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "masło",
+      "synonyms": [],
+      "definition": "Masło – tłuszcz jadalny w postaci zestalonej, otrzymywany ze śmietany z mleka krowiego .",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Вершкове масло",
+      "synonyms": [
+        "масло",
+        "масло вершкове"
+      ],
+      "definition": "Вершко́ве ма́сло — молочний продукт, який виробляється шляхом збивання свіжого або кислого молока, вершків чи перетворення високожирних вершків.",
+      "examples": []
+    },
+    "synset_id": "bn:00014249n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "button",
+      "synonyms": [],
+      "definition": "A round fastener sewn to shirts and coats etc to fit through buttonholes",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "guzik",
+      "synonyms": [],
+      "definition": "Guzik – element ubioru służący do zapinania np.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Ґудзик",
+      "synonyms": [],
+      "definition": "Ґýдзик — елемент одягу, який використовується для фіксації відлоги, коміра, манжети тощо.",
+      "examples": []
+    },
+    "synset_id": "bn:00014305n"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "buy",
+      "synonyms": [
+        "purchase"
+      ],
+      "definition": "Obtain by purchase ; acquire by means of a financial transaction",
+      "examples": [
+        "The family purchased a new car",
+        "The conglomerate acquired a new company",
+        "She buys for the big department store"
+      ]
+    },
+    "PL": {
+      "lemma": "kupić",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "купити",
+      "synonyms": [
+        "купувати"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00084331v"
+  },
+  {
+    "pos": "adverb",
+    "EN": {
+      "lemma": "by",
+      "synonyms": [
+        "past"
+      ],
+      "definition": "So as to pass a given point",
+      "examples": [
+        "Every hour a train goes past"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00114629r"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "cable",
+      "synonyms": [
+        "cablegram",
+        "overseas telegram"
+      ],
+      "definition": "A telegram sent abroad",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "kablogram",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00014456n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "cafe",
+      "synonyms": [
+        "coffeehouse",
+        "coffee shop",
+        "coffee bar",
+        "café"
+      ],
+      "definition": "A small restaurant where drinks and snacks are sold",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "kawiarnia",
+      "synonyms": [
+        "kafejka",
+        "kafeteria",
+        "kawiarenka"
+      ],
+      "definition": "Kawiarnia – lokal gastronomiczny będący przede wszystkim miejscem spotkań towarzyskich.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "кав'ярня",
+      "synonyms": [
+        "кафе",
+        "кав'я́рня",
+        "кафе́"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00014557n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "cake",
+      "synonyms": [
+        "bar"
+      ],
+      "definition": "A block of solid substance (such as soap or wax )",
+      "examples": [
+        "A bar of chocolate"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00008472n"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "calculate",
+      "synonyms": [
+        "cipher",
+        "cypher",
+        "compute",
+        "work out"
+      ],
+      "definition": "Make a mathematical calculation or computation",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "liczyć",
+      "synonyms": [
+        "rozwiązać"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00084373v"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "call",
+      "synonyms": [
+        "phone call",
+        "telephone call"
+      ],
+      "definition": "A telephone connection",
+      "examples": [
+        "She reported several anonymous calls",
+        "He placed a phone call to London",
+        "He heard the phone ringing but didn't want to take the call"
+      ]
+    },
+    "PL": {
+      "lemma": "rozmowa telefoniczna",
+      "synonyms": [
+        "połączenie telefoniczne"
+      ],
+      "definition": "Konwersacja za pomocą połączenia przez sieć telefoniczną.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Телефонний дзвінок",
+      "synonyms": [],
+      "definition": "Телефонний дзвінок — це з'єднання через телефонну мережу між абонентом, що викликається, і стороною, що телефонує.",
+      "examples": []
+    },
+    "synset_id": "bn:00014791n"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "calm",
+      "synonyms": [
+        "unagitated",
+        "serene",
+        "tranquil"
+      ],
+      "definition": "Not agitated; without losing self-possession",
+      "examples": [
+        "Spoke in a calm voice",
+        "Remained calm throughout the uproar",
+        "He remained serene in the midst of turbulence",
+        "A serene expression on her face",
+        "She became more tranquil",
+        "Tranquil life in the country"
+      ]
+    },
+    "PL": {
+      "lemma": "spokojny",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00099145a"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "camera",
+      "synonyms": [
+        "photographic camera",
+        "still camera"
+      ],
+      "definition": "Equipment for taking photographs ( usually consisting of a lightproof box with a lens at one end and light-sensitive film at the other)",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "aparat fotograficzny",
+      "synonyms": [
+        "Kamera",
+        "aparat"
+      ],
+      "definition": "Aparat fotograficzny – urządzenie służące do wykonywania zdjęć fotograficznych.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Знімальна камера",
+      "synonyms": [
+        "Фотокамера"
+      ],
+      "definition": "Фотока́мера — прилад для фіксації зображень матеріальних об'єктів за допомогою світла на спеціальному носії.",
+      "examples": []
+    },
+    "synset_id": "bn:00015008n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "camp",
+      "synonyms": [
+        "encampment",
+        "cantonment",
+        "bivouac",
+        "army camp"
+      ],
+      "definition": "Temporary living quarters specially built by the army for soldiers",
+      "examples": [
+        "Wherever he went in the camp the men were grumbling"
+      ]
+    },
+    "PL": {
+      "lemma": "obóz",
+      "synonyms": [],
+      "definition": "Miejsce, w którym ustawione są namioty lub inne tymczasowe budowle",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00010805n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "campaign",
+      "synonyms": [
+        "political campaign",
+        "run",
+        "election campaign"
+      ],
+      "definition": "A race between candidates for elective office",
+      "examples": [
+        "I managed his campaign for governor",
+        "He is raising money for a Senate run"
+      ]
+    },
+    "PL": {
+      "lemma": "kampania wyborcza",
+      "synonyms": [
+        "kampania polityczna"
+      ],
+      "definition": "Kampania wyborcza – ogół środków masowego przekazu, jakimi specjaliści od marketingu politycznego promują kandydaturę polityka lub partii politycznej, tak by wyborca zagłosował właśnie na promowaną osobę lub partię .",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Виборча кампанія",
+      "synonyms": [
+        "передвиборча кампанія",
+        "політична кампанія"
+      ],
+      "definition": "Ви́борча кампа́нія, або інколи передвиборча кампанія — складова виборчого процесу , процес комунікації , діалог між політичною партією, кандидатом чи його представниками, з одного боку, та виборцями, які в день виборів мають право голосувати «за» чи «проти» — з другого.",
+      "examples": []
+    },
+    "synset_id": "bn:00015050n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "camping",
+      "synonyms": [
+        "encampment",
+        "bivouacking",
+        "tenting"
+      ],
+      "definition": "The act of encamping and living in tents in a camp",
+      "examples": [
+        "Camping is a favorite summer activity."
+      ]
+    },
+    "PL": {
+      "lemma": "biwak",
+      "synonyms": [
+        "campingowanie",
+        "kempingowanie",
+        "Trekking"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Бівак",
+      "synonyms": [
+        "Пішохідний туризм",
+        "Туристичний похід"
+      ],
+      "definition": "Туристичний похід — соло туриста, з використанням активних форм пересування за визначеним маршрутом, під час проходження якого можливе подолання природних перешкод: перевалів, порогів, печер тощо різних категорій та ступенів складності.",
+      "examples": []
+    },
+    "synset_id": "bn:00010807n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "campus",
+      "synonyms": [],
+      "definition": "A field on which the buildings of a university are situated",
+      "examples": [
+        "The campus is sixty hectares in size."
+      ]
+    },
+    "PL": {
+      "lemma": "kampus",
+      "synonyms": [
+        "campus",
+        "miasteczko akademickie"
+      ],
+      "definition": "Miasteczko akademickie, miasteczko uniwersyteckie, kampus – część miasta, w której znajdują się budynki uniwersytetu lub innej szkoły wyższej oraz/albo domy studenckie.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "кампус",
+      "synonyms": [],
+      "definition": "Ка́мпус",
+      "examples": []
+    },
+    "synset_id": "bn:00015097n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "can",
+      "synonyms": [
+        "tin",
+        "tin can"
+      ],
+      "definition": "Airtight sealed metal container for food or drink or paint etc.",
+      "examples": [
+        "A tin of baked beans.",
+        "Empty tins, cans, and plastic containers are recycled in the blue bins."
+      ]
+    },
+    "PL": {
+      "lemma": "puszka",
+      "synonyms": [
+        "konserwa"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "бляша́нка",
+      "synonyms": [
+        "консе́рва"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00015103n"
+  },
+  {
+    "pos": "verb",
+    "EN": {
+      "lemma": "cancel",
+      "synonyms": [
+        "call off",
+        "scratch",
+        "scrub"
+      ],
+      "definition": "Postpone indefinitely or annul something that was scheduled",
+      "examples": [
+        "Call off the engagement",
+        "Cancel the dinner party",
+        "We had to scrub our vacation plans",
+        "Scratch that meeting--the chair is ill",
+        "He cancelled his order on their website."
+      ]
+    },
+    "PL": {
+      "lemma": "anulować",
+      "synonyms": [
+        "odwołać"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "касува́ти",
+      "synonyms": [
+        "скасо́вувати",
+        "скасува́ти"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00084425v"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "cancer",
+      "synonyms": [
+        "malignant neoplastic disease"
+      ],
+      "definition": "Any malignant growth or tumor caused by abnormal and uncontrolled cell division ; it may spread to other parts of the body through the lymphatic system or the blood stream",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "nowotwór złośliwy",
+      "synonyms": [
+        "guz złośliwy",
+        "rak"
+      ],
+      "definition": "Nowotwór złośliwy",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Злоякісна пухлина",
+      "synonyms": [],
+      "definition": "Злоя́кісна пухли́на — патологічний процес, зумовлений неконтрольованим розмноженням клітин , інвазією та, іноді, метастазуванням.",
+      "examples": []
+    },
+    "synset_id": "bn:00015180n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "candidate",
+      "synonyms": [
+        "campaigner",
+        "nominee"
+      ],
+      "definition": "A politician who is running for public office",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00015056n"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "cap",
+      "synonyms": [
+        "visor cap"
+      ],
+      "definition": "A tight-fitting headdress",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "czapka",
+      "synonyms": [],
+      "definition": "Czapka – nakrycie głowy, wykonane przeważnie z miękkiego materiału, którego głównym zadaniem jest ochrona głowy przed niekorzystnymi warunkami atmosferycznymi: zimnem, gorącem, deszczem, śniegiem, wiatrem, promieniami słonecznymi itp. Na kształt, fason i kolor czapki istotny wpływ ma moda panująca w danym czasie i miejscu.",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "Шапка",
+      "synonyms": [],
+      "definition": "Ша́пка (від лат.",
+      "examples": []
+    },
+    "synset_id": "bn:00015398n"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "capable",
+      "synonyms": [],
+      "definition": "(usually followed by `of') having capacity or ability",
+      "examples": [
+        "Capable of hard work",
+        "Capable of walking on two feet",
+        "Capable of winning",
+        "That fact is not capable of proof.",
+        "He does not need help; he is capable of eating on his own.",
+        "As everyone knew, he was capable of violence when roused.",
+        "She is capable and efficient."
+      ]
+    },
+    "PL": {
+      "lemma": "stać",
+      "synonyms": [
+        "zdolny"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "зда́тний",
+      "synonyms": [
+        "зді́бний",
+        "спромо́жний"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00099215a"
+  },
+  {
+    "pos": "noun",
+    "EN": {
+      "lemma": "capacity",
+      "synonyms": [],
+      "definition": "Capability to perform or produce",
+      "examples": [
+        "Among his gifts is his capacity for true altruism",
+        "Limited runway capacity",
+        "A great capacity for growth"
+      ]
+    },
+    "PL": {
+      "lemma": "zdolność",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "зда́тність",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00015418n"
+  },
+  {
+    "pos": "adjective",
+    "EN": {
+      "lemma": "capital",
+      "synonyms": [],
+      "definition": "First-rate",
+      "examples": [
+        "A capital fellow",
+        "A capital idea"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "synset_id": "bn:00099224a"
   }
 ]
