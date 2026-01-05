@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
+import io.github.cdimascio.dotenv.Dotenv;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -18,11 +19,16 @@ import io.jsonwebtoken.security.Keys;
 
 @Service
 public class JwtService {
-    @Value("${security.jwt.secret}")
+    private Dotenv dotenv = Dotenv.configure().load();
+
     private String secret;
 
     @Value("${security.jwt.expiration}")
     private Long jwtExpiration;
+
+    public JwtService() {
+        this.secret = dotenv.get("JWT_SECRET");
+    }
 
     public String generateToken(Long userId, String userName, String email) { // Use email as username
         Map<String, Object> claims = new HashMap<>();
