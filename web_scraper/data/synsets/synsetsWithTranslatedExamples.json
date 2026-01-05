@@ -1,0 +1,487 @@
+[
+  {
+    "synset_id": "bn:00082118v",
+    "pos": "verb",
+    "EN": {
+      "lemma": "abandon",
+      "synonyms": [],
+      "definition": "Forsake, leave behind",
+      "examples": [
+        "We abandoned the old car in the empty parking lot",
+        "Many baby girls have been abandoned on the streets of Beijing."
+      ]
+    },
+    "PL": {
+      "lemma": "opuszczać",
+      "synonyms": [
+        "opuścić"
+      ],
+      "definition": "Porzucić, zostawić za sobą",
+      "examples": [
+        "Porzuciliśmy stary samochód na pustym parkingu",
+        "Wiele dziewczynek zostało porzuconych na ulicach Pekinu."
+      ]
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    }
+  },
+  {
+    "synset_id": "bn:00000317n",
+    "pos": "noun",
+    "EN": {
+      "lemma": "ability",
+      "synonyms": [],
+      "definition": "The quality of being able to perform; a quality that permits or facilitates achievement or accomplishment",
+      "examples": [
+        "This phone has the ability to have its software upgraded wirelessly.",
+        "This wood has the ability to fight off insects, fungus, and mold for a considerable time."
+      ]
+    },
+    "PL": {
+      "lemma": "zdolność",
+      "synonyms": [],
+      "definition": "Zdolność do działania; cecha, która pozwala lub ułatwia osiągnięcie lub wykonanie zadania.",
+      "examples": [
+        "Ten telefon ma możliwość bezprzewodowej aktualizacji oprogramowania.",
+        "Drewno to ma zdolność do zwalczania owadów, grzybów i pleśni przez długi czas."
+      ]
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    }
+  },
+  {
+    "synset_id": "bn:00096151a",
+    "pos": "adjective",
+    "EN": {
+      "lemma": "able",
+      "synonyms": [],
+      "definition": "(usually followed by `to') having the necessary means or skill or know-how or authority to do something",
+      "examples": [
+        "Able to swim",
+        "She was able to program her computer",
+        "We were at last able to buy a car",
+        "Able to get a grant for the project"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    }
+  },
+  {
+    "synset_id": "bn:00114073r",
+    "pos": "adverb",
+    "EN": {
+      "lemma": "about",
+      "synonyms": [
+        "approximately",
+        "close to",
+        "just about",
+        "some"
+      ],
+      "definition": "(of quantities) imprecise but fairly close to correct",
+      "examples": [
+        "Lasted approximately an hour",
+        "In just about a minute",
+        "He's about 30 years old",
+        "I've had about all I can stand",
+        "We meet about once a month",
+        "Some forty people came",
+        "Weighs around a hundred pounds",
+        "Roughly $3,000",
+        "Holds 3 gallons, more or less",
+        "20 or so people were at the party",
+        "In every box of matches there are approximately 40 matchsticks.",
+        "Per 100 g of chocolate there is approximately 11.6 g of saturated fat.",
+        "...approximately 60 beats per minute."
+      ]
+    },
+    "PL": {
+      "lemma": "około",
+      "synonyms": [
+        "jako tako",
+        "mniej więcej",
+        "z grubsza"
+      ],
+      "definition": "Około, w przybliżeniu",
+      "examples": [
+        "Trwało to około godziny",
+        "Za około minutę",
+        "Ma około 30 lat",
+        "Mam już wszystko, co mogę znieść",
+        "Spotykamy się mniej więcej raz w miesiącu",
+        "Przybyło około czterdziestu osób",
+        "Waży około stu funtów",
+        "Około $3,000",
+        "Mieści mniej więcej 3 galony",
+        "Na imprezie było około 20 osób",
+        "W każdym pudełku zapałek znajduje się około 40 zapałek.",
+        "Na 100 g czekolady przypada około 11,6 g tłuszczów nasyconych.",
+        "...około 60 uderzeń na minutę."
+      ]
+    },
+    "UK": {
+      "lemma": "зо",
+      "synonyms": [
+        "ма́йже",
+        "прибли́зно"
+      ],
+      "definition": "(кількості) неточний, але досить близький до правильного",
+      "examples": [
+        "Тривала приблизно годину",
+        "Приблизно за хвилину",
+        "Йому близько 30 років",
+        "Я вже майже все витримав.",
+        "Ми зустрічаємося приблизно раз на місяць",
+        "Прийшло близько сорока людей",
+        "Важить близько ста фунтів",
+        "Приблизно $3,000",
+        "Вміщує 3 галони, більш-менш",
+        "На вечірці було близько 20 осіб",
+        "У кожній коробці сірників приблизно 40 сірників.",
+        "На 100 г шоколаду припадає приблизно 11,6 г насичених жирів.",
+        "...приблизно 60 ударів на хвилину."
+      ]
+    }
+  },
+  {
+    "synset_id": "bn:00114080r",
+    "pos": "adverb",
+    "EN": {
+      "lemma": "above",
+      "synonyms": [
+        "supra"
+      ],
+      "definition": "At an earlier place",
+      "examples": [
+        "See above"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    }
+  },
+  {
+    "synset_id": "bn:00114086r",
+    "pos": "adverb",
+    "EN": {
+      "lemma": "abroad",
+      "synonyms": [],
+      "definition": "To or in a foreign country",
+      "examples": [
+        "They had never travelled abroad"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    }
+  },
+  {
+    "synset_id": "bn:00096195a",
+    "pos": "adjective",
+    "EN": {
+      "lemma": "absolute",
+      "synonyms": [],
+      "definition": "Perfect or complete or pure",
+      "examples": [
+        "Absolute loyalty",
+        "Absolute silence",
+        "Absolute truth",
+        "Absolute alcohol",
+        "The doctrine that absolute knowledge of things is possible, an absolute principle.",
+        "Absolute rights and duties are such as pertain to man in a state of nature as contradistinguished from relative rights and duties, or such as pertain to him in his social relations."
+      ]
+    },
+    "PL": {
+      "lemma": "absolutny",
+      "synonyms": [],
+      "definition": "Doskonały lub kompletny lub czysty",
+      "examples": [
+        "Absolutna lojalność",
+        "Absolutna cisza",
+        "Prawda absolutna",
+        "Alkohol absolutny",
+        "Doktryna głosząca, że absolutna wiedza o rzeczach jest możliwa, absolutna zasada.",
+        "Absolutne prawa i obowiązki to takie, które odnoszą się do człowieka w stanie natury, w odróżnieniu od względnych praw i obowiązków lub takich, które odnoszą się do niego w jego relacjach społecznych."
+      ]
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    }
+  },
+  {
+    "synset_id": "bn:00114091r",
+    "pos": "adverb",
+    "EN": {
+      "lemma": "absolutely",
+      "synonyms": [
+        "perfectly",
+        "utterly",
+        "dead"
+      ],
+      "definition": "Completely and without qualification ; used informally as intensifiers",
+      "examples": [
+        "An absolutely magnificent painting",
+        "A perfectly idiotic idea",
+        "You're perfectly right",
+        "Utterly miserable",
+        "You can be dead sure of my innocence",
+        "Was dead tired",
+        "Dead right"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    }
+  },
+  {
+    "synset_id": "bn:00096228a",
+    "pos": "adjective",
+    "EN": {
+      "lemma": "academic",
+      "synonyms": [],
+      "definition": "Associated with academia or an academy",
+      "examples": [
+        "The academic curriculum",
+        "Academic gowns"
+      ]
+    },
+    "PL": {
+      "lemma": "akademicki",
+      "synonyms": [],
+      "definition": "Związany ze środowiskiem akademickim lub akademią",
+      "examples": [
+        "Akademicki program nauczania",
+        "Togi akademickie"
+      ]
+    },
+    "UK": {
+      "lemma": "академі́чний",
+      "synonyms": [],
+      "definition": "Пов'язані з науковими колами або академією",
+      "examples": [
+        "Навчальна програма",
+        "Академічні мантії"
+      ]
+    }
+  },
+  {
+    "synset_id": "bn:00082197v",
+    "pos": "verb",
+    "EN": {
+      "lemma": "accept",
+      "synonyms": [
+        "consent"
+      ],
+      "definition": "Consider or hold as true",
+      "examples": [
+        "I cannot accept the dogma of this church",
+        "Accept an argument"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    }
+  },
+  {
+    "synset_id": "bn:00096246a",
+    "pos": "adjective",
+    "EN": {
+      "lemma": "acceptable",
+      "synonyms": [],
+      "definition": "Worthy of acceptance or satisfactory",
+      "examples": [
+        "Performances varied from acceptable to excellent",
+        "Acceptable levels of radiation",
+        "We need to find an acceptable present for Jeff."
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    }
+  },
+  {
+    "synset_id": "bn:00082208v",
+    "pos": "verb",
+    "EN": {
+      "lemma": "access",
+      "synonyms": [],
+      "definition": "Obtain or retrieve from a storage device ; as of information on a computer",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    }
+  },
+  {
+    "synset_id": "bn:00000690n",
+    "pos": "noun",
+    "EN": {
+      "lemma": "accident",
+      "synonyms": [],
+      "definition": "An unfortunate mishap; especially one causing damage or injury",
+      "examples": [
+        "There was a huge accident on I5 involving 15 automobiles.",
+        "My insurance went up after the second accident in three months."
+      ]
+    },
+    "PL": {
+      "lemma": "awaria",
+      "synonyms": [
+        "wypadek",
+        "incydent"
+      ],
+      "definition": "Awaria − stan niesprawności obiektu uniemożliwiający jego funkcjonowanie, występujący nagle i powodujący jego niewłaściwe działanie lub całkowite unieruchomienie.",
+      "examples": [
+        "Na autostradzie I5 doszło do poważnego wypadku z udziałem 15 samochodów.",
+        "Moje ubezpieczenie wzrosło po drugim wypadku w ciągu trzech miesięcy."
+      ]
+    },
+    "UK": {
+      "lemma": "аварія",
+      "synonyms": [
+        "ава́рія",
+        "доро́жньо-тра́нспортна приго́да",
+        "ДТП",
+        "зі́ткнення"
+      ],
+      "definition": "Аварія",
+      "examples": [
+        "На трасі I5 сталася величезна аварія за участю 15 автомобілів.",
+        "Моя страховка зросла після другої аварії за три місяці."
+      ]
+    }
+  },
+  {
+    "synset_id": "bn:00000706n",
+    "pos": "noun",
+    "EN": {
+      "lemma": "accommodation",
+      "synonyms": [
+        "adjustment",
+        "fitting"
+      ],
+      "definition": "Making or becoming suitable; adjusting to circumstances",
+      "examples": []
+    },
+    "PL": {
+      "lemma": "dostosowywanie",
+      "synonyms": [
+        "przystosowywanie"
+      ],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    }
+  },
+  {
+    "synset_id": "bn:00082221v",
+    "pos": "verb",
+    "EN": {
+      "lemma": "accompany",
+      "synonyms": [
+        "attach to",
+        "come with",
+        "go with"
+      ],
+      "definition": "Be present or associated with an event or entity",
+      "examples": [
+        "French fries come with the hamburger",
+        "Heart attacks are accompanied by distruction of heart tissue",
+        "Fish usually goes with white wine",
+        "This kind of vein accompanies certain arteries",
+        "Heart attacks are accompanied by destruction of heart tissue"
+      ]
+    },
+    "PL": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    },
+    "UK": {
+      "lemma": "",
+      "synonyms": [],
+      "definition": "",
+      "examples": []
+    }
+  }
+]
