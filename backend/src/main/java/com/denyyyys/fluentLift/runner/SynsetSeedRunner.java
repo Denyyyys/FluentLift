@@ -15,10 +15,10 @@ import com.denyyyys.fluentLift.model.postgres.mapper.SynsetMapper;
 import com.denyyyys.fluentLift.repo.neo4j.SynsetRepository;
 import com.denyyyys.fluentLift.service.SynsetService;
 
-@Profile("seedNeo4j")
+@Profile("seedSynsetsNeo4j")
 @Configuration
-public class SynsetImportRunner {
-    private static final Logger log = LoggerFactory.getLogger(SynsetImportRunner.class);
+public class SynsetSeedRunner {
+    private static final Logger log = LoggerFactory.getLogger(SynsetSeedRunner.class);
 
     @Bean
     CommandLineRunner importSynsets(SynsetService synsetService, SynsetRepository repository) {
@@ -26,7 +26,7 @@ public class SynsetImportRunner {
             log.info("Running Neo4j synset seeding...");
 
             List<JsonSynset> jsonSynsets = synsetService.loadSynsets(
-                    "/home/denys/langApp/web_scraper/data/synsets/synsets.json",
+                    "/home/denys/langApp/web_scraper/data/synsets/synsetsWithTranslatedExamples.json",
                     500,
                     0);
 
