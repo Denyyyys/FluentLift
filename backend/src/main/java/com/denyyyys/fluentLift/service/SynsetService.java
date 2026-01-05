@@ -1,6 +1,7 @@
 package com.denyyyys.fluentLift.service;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
@@ -20,6 +21,8 @@ public class SynsetService {
     private final SynsetRepository synsetRepository;
     private final ObjectMapper objectMapper;
 
+    private final DeepLTranslateService deepLTranslateService;
+
     public Optional<Synset> findByLemma(String lemma) {
         return synsetRepository.findFirstByLanguagesLemma(lemma);
     }
@@ -35,6 +38,64 @@ public class SynsetService {
         int toIndex = Math.min(fromIndex + n, allSynsets.size());
 
         return allSynsets.subList(fromIndex, toIndex);
+    }
+
+    public void saveSynsetsToJsonFile(List<JsonSynset> synsets, String outputPath) throws IOException {
+        objectMapper
+                .writerWithDefaultPrettyPrinter()
+                .writeValue(new File(outputPath), synsets);
+    }
+
+    public void translateSynsetEnToPlAndUk(JsonSynset synset) throws Exception {
+        List<String> enExamples = Optional.ofNullable(synset.getEN())
+                .map(JsonSynset.JsonLanguageField::getExamples)
+                .orElse(List.of());
+
+        if (enExamples.isEmpty()) {
+            return;
+        }
+
+        String enDefinition = synset.getEN().getDefinition();
+
+        if (!synset.getPL().getLemma().isEmpty()) {
+            String plDefinition = synset.getPL().getDefinition();
+
+            if (plDefinition.isBlank() || plDefinition == null) {
+                synset.getPL().setDefinition(deepLTranslateService.translateEnToPl(enDefinition));
+            }
+
+            List<String> plExamples = enExamples.stream()
+                    .map(example -> {
+                        try {
+                            return deepLTranslateService.translateEnToPl(example);
+                        } catch (Exception e) {
+                            throw new RuntimeException("DeepL translation from EN to PL failed", e);
+                        }
+                    })
+                    .toList();
+
+            synset.getPL().setExamples(plExamples);
+        }
+
+        if (!synset.getUK().getLemma().isEmpty()) {
+            String ukDefinition = synset.getUK().getDefinition();
+
+            if (ukDefinition.isBlank() || ukDefinition == null) {
+                synset.getUK().setDefinition(deepLTranslateService.translateEnToUk(enDefinition));
+            }
+
+            List<String> ukExamples = enExamples.stream()
+                    .map(example -> {
+                        try {
+                            return deepLTranslateService.translateEnToUk(example);
+                        } catch (Exception e) {
+                            throw new RuntimeException("DeepL translation from EN to UK failed", e);
+                        }
+                    })
+                    .toList();
+
+            synset.getUK().setExamples(ukExamples);
+        }
     }
 
 }
