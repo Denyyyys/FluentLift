@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Profile;
 
 import com.denyyyys.fluentLift.model.neo4j.dto.JsonSynset;
 import com.denyyyys.fluentLift.model.neo4j.entity.Synset;
-import com.denyyyys.fluentLift.model.postgres.mapper.SynsetMapper;
+import com.denyyyys.fluentLift.model.neo4j.mapper.SynsetMapper;
 import com.denyyyys.fluentLift.repo.neo4j.SynsetRepository;
 import com.denyyyys.fluentLift.service.SynsetService;
 
