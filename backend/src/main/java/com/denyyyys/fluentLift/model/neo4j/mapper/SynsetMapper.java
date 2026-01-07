@@ -1,4 +1,4 @@
-package com.denyyyys.fluentLift.model.postgres.mapper;
+package com.denyyyys.fluentLift.model.neo4j.mapper;
 
 import java.util.ArrayList;
 import java.util.List;
