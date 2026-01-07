@@ -3,15 +3,19 @@
         "lemma": "opuszczać",
         "aspect": "imperfective",
         "present_tense": {
-            "1sg": "opuszczam",
-            "2sg": "opuszczasz",
-            "3sg": "opuszcza",
-            "1pl": "opuszczamy",
-            "2pl": "opuszczacie",
-            "3pl": "opuszczają"
+            "singular": {
+                "1sg": "opuszczam",
+                "2sg": "opuszczasz",
+                "3sg": "opuszcza"
+            },
+            "plural": {
+                "1pl": "opuszczamy",
+                "2pl": "opuszczacie",
+                "3pl": "opuszczają"
+            }
         },
         "past_tense": {
-            "singluar": {
+            "singular": {
                 "masculine": {
                     "1sg": "opuszczałem",
                     "2sg": "opuszczałeś",
@@ -42,7 +46,7 @@
             }
         },
         "future_tense": {
-            "singluar": {
+            "singular": {
                 "masculine": {
                     "1sg": [
                         "będę opuszczał",
@@ -118,7 +122,7 @@
             }
         },
         "conditional": {
-            "singluar": {
+            "singular": {
                 "masculine": {
                     "1sg": "opuszczałbym",
                     "2sg": "opuszczałbyś",
@@ -149,9 +153,13 @@
             }
         },
         "imperative": {
-            "2sg": "opuszczaj",
-            "1pl": "opuszczajmy",
-            "2pl": "opuszczajcie"
+            "singular": {
+                "2sg": "opuszczaj"
+            },
+            "plural": {
+                "1pl": "opuszczajmy",
+                "2pl": "opuszczajcie"
+            }
         },
         "active_adjectival_participle": "opuszczający",
         "passive_adjectival_participle": "opuszczany",
@@ -163,15 +171,19 @@
         "lemma": "opuścić",
         "aspect": "perfective",
         "future_tense": {
-            "1sg": "opuszczę",
-            "2sg": "opuścisz",
-            "3sg": "opuści",
-            "1pl": "opuścimy",
-            "2pl": "opuścicie",
-            "3pl": "opuszczą"
+            "singular": {
+                "1sg": "opuszczę",
+                "2sg": "opuścisz",
+                "3sg": "opuści"
+            },
+            "plural": {
+                "1pl": "opuścimy",
+                "2pl": "opuścicie",
+                "3pl": "opuszczą"
+            }
         },
         "past_tense": {
-            "singluar": {
+            "singular": {
                 "masculine": {
                     "1sg": "opuściłem",
                     "2sg": "opuściłeś",
@@ -202,7 +214,7 @@
             }
         },
         "conditional": {
-            "singluar": {
+            "singular": {
                 "masculine": {
                     "1sg": "opuściłbym",
                     "2sg": "opuściłbyś",
@@ -233,13 +245,18 @@
             }
         },
         "imperative": {
-            "2sg": "opuść",
-            "1pl": "opuśćmy",
-            "2pl": "opuśćcie"
+            "singular": {
+                "2sg": "opuść"
+            },
+
+            "plural": {
+                "1pl": "opuśćmy",
+                "2pl": "opuśćcie"
+            }
         },
         "anterior adverbial participle": "opuściwszy",
         "passive_adjectival_participle": "opuszczony",
-        "gerund": "opszczanie",
+        "gerund": "opuszczanie",
         "aspect_pair": "opuszczać"
     }
 ]
