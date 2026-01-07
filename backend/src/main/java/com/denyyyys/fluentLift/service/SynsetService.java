@@ -7,7 +7,9 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
+import com.denyyyys.fluentLift.exceptions.ResourceNotFound;
 import com.denyyyys.fluentLift.model.neo4j.dto.JsonSynset;
+import com.denyyyys.fluentLift.model.neo4j.dto.polish.JsonPolishVerbConjugation;
 import com.denyyyys.fluentLift.model.neo4j.entity.Synset;
 import com.denyyyys.fluentLift.repo.neo4j.SynsetRepository;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -98,4 +100,21 @@ public class SynsetService {
         }
     }
 
+    public List<JsonPolishVerbConjugation> getListOfPolishVerbsFromFile(String filePath) throws Exception {
+        List<JsonPolishVerbConjugation> allpolishVerbs = objectMapper.readValue(
+                new File(filePath),
+                new TypeReference<List<JsonPolishVerbConjugation>>() {
+                });
+
+        return allpolishVerbs;
+    }
+
+    public Synset findSynsetByWord(String word) {
+        Synset synset = synsetRepository.findSynsetByAnyWordForm(word)
+                .orElseThrow(() -> new ResourceNotFound("Synset not found"));
+
+        synset = synsetRepository.findSynsetBySynsetId(synset.getSynsetId())
+                .orElseThrow(() -> new ResourceNotFound("Synset not found"));
+        return synset;
+    }
 }

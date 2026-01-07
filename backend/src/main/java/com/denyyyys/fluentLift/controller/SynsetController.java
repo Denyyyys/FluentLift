@@ -23,4 +23,9 @@ public class SynsetController {
     public ResponseEntity<Optional<Synset>> findByLemma(@RequestParam String lemma) {
         return ResponseEntity.ok(synsetService.findByLemma(lemma));
     }
+
+    @GetMapping("/searchByAny")
+    public ResponseEntity<Synset> findSynsetByWord(@RequestParam String word) {
+        return ResponseEntity.ok(synsetService.findSynsetByWord(word));
+    }
 }
