@@ -33,7 +33,7 @@ export function Navbar() {
                     </Link>
                 </div>
                 <div className="navbar-right">
-                    {isLoggedIn &&
+                    {isLoggedIn ?
                         <>
                             <Link to="/questions" className="nav-link"><FaCircleQuestion />{textByLanguage[language]["navbar"]["q&aText"]}</Link>
                             <div className="dropdown nav-link">
@@ -66,6 +66,20 @@ export function Navbar() {
                                 </Dropdown.Menu>
                             </Dropdown>
                             <Link to="/profile" className="nav-link"><FaUser /> {isLoggedIn ? `${textByLanguage[language]["navbar"]["helloText"]}, ${userName}` : 'Log in'} </Link>
+                        </>
+                        :
+                        <>
+                            <Dropdown className="nav-link">
+                                <Dropdown.Toggle variant="link" className="lang-dropdown-toggle" id="dropdown-basic">
+                                    {mapLanguageToIcon(language)}
+                                </Dropdown.Toggle>
+
+                                <Dropdown.Menu>
+                                    <Dropdown.Item onClick={() => setLanguage("English")}><span className="fi fi-gb" /> {textByLanguage[language]["navbar"]["englishText"]}</Dropdown.Item>
+                                    <Dropdown.Item onClick={() => setLanguage("Ukrainian")}><span className="fi fi-ua" /> {textByLanguage[language]["navbar"]["ukrainianText"]}</Dropdown.Item>
+                                    <Dropdown.Item onClick={() => setLanguage("Polish")}><span className="fi fi-pl" /> {textByLanguage[language]["navbar"]["polishText"]}</Dropdown.Item>
+                                </Dropdown.Menu>
+                            </Dropdown>
                         </>
                     }
                 </div>
