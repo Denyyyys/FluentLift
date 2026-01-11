@@ -1,5 +1,4 @@
-import React from 'react'
-import type { CardCreateDto, CardOwnerResponseDto } from '../../types/card'
+import type { CardOwnerResponseDto } from '../../types/card'
 import { FaTrashAlt } from "react-icons/fa";
 
 type UpdateCardFormProps = {

@@ -1,4 +1,3 @@
-
 export class ErrorBase<T extends string> extends Error {
     name: T;
     message: string;

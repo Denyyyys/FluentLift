@@ -1,7 +1,7 @@
 import { useNavigate, } from "react-router-dom"
 import type { UserEnrollmentResponse } from "../../types/course";
 import { useAuth } from "../../context/AuthContext";
-import { countNumberOfLessons, useCourse } from "../../utils/utils";
+import { useCourse } from "../../utils/utils";
 import axios from "axios";
 import { BACKEND_BASE_URL } from "../../constants";
 import { toast } from 'react-toastify';

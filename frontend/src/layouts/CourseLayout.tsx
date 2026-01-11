@@ -11,7 +11,6 @@ import UnreachableState from "../components/common/UnreachableState";
 
 function CourseLayout() {
     const { courseId } = useParams<{ courseId: string }>();
-    // const [course, setCourse] = useState<CourseResponse | null>(null);
     const [uiCourse, setUiCourse] = useState<UiCourse | null>(null);
     const [loadingCourse, setLoadingCourse] = useState(true);
     const [error, setError] = useState<string | null>(null);

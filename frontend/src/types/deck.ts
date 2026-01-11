@@ -1,7 +1,6 @@
 import type { CardOwnerResponseDto, CardVisitorResponseDto, CardCreateDto } from "./card";
 import type { AppUserResponseDto } from "./user";
 
-
 export interface DeckOwnerResponseDto {
     id: number;
     name: string;

@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 
-import { FaSearch } from "react-icons/fa";
 import { Form, Button } from "react-bootstrap";
 import type { QuestionsPageResponseDto } from "../../types/questionsAndAnswers";
 import axios from "axios";
@@ -57,10 +56,6 @@ function QuestionsPage() {
         loadQuestions();
     }, [debouncedQuery, sortBy, page, onlySolved]);
 
-    // const handleSearch = () => {
-    //     setPage(1);
-    //     loadQuestions();
-    // };
     useEffect(() => {
         const timeout = setTimeout(() => {
             setDebouncedQuery(query);
@@ -81,9 +76,6 @@ function QuestionsPage() {
                             value={query}
                             onChange={e => setQuery(e.target.value)}
                         />
-                        {/* <Button variant="primary" onClick={handleSearch}>
-                            <FaSearch />
-                        </Button> */}
                     </div>
                 </div>
 

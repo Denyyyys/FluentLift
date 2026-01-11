@@ -2,7 +2,6 @@ import { useNavigate } from "react-router-dom";
 import type { DeckVisitorResponseDto } from "../../types/deck";
 import { FaCopy } from "react-icons/fa";
 
-
 interface DeckVisitorCardListItemProps {
     deck: DeckVisitorResponseDto;
     copyDeck: (deckId: number) => void;

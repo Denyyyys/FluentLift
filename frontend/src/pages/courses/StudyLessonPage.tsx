@@ -1,7 +1,7 @@
-import { Link, useNavigate, useParams } from "react-router-dom"
-import { BlockType, type ClozeBlockUserAnswer, type ClozeBlockUserAnswerRequestDto, type CourseAnswers, type Lesson, type LessonAnswers, type LessonResponse, type UiClozeBlock, type UiClozeBlockAnswer, type UiLesson, type UiMultipleChoiceBlock, type UiMultipleChoiceOption, type UiUnit, type UnitAnswers, type UserAnswersRequestDto } from "../../types/course";
-import { useEffect, useMemo, useRef, useState, type JSX, type ReactElement } from "react";
-import axios, { HttpStatusCode } from "axios";
+import { useNavigate, useParams } from "react-router-dom"
+import { type ClozeBlockUserAnswerRequestDto, type UiLesson, type UiUnit, type UserAnswersRequestDto } from "../../types/course";
+import { useEffect, useMemo, useState } from "react";
+import axios from "axios";
 import { BACKEND_BASE_URL } from "../../constants";
 import { useAuth } from "../../context/AuthContext";
 import { getNextLesson, getPreviousLesson, getSortedBlocksForUiLesson, useCourse } from "../../utils/utils";
@@ -32,7 +32,7 @@ function StudyLessonPage() {
     const [localUiLesson, setLocalUiLesson] = useState<UiLesson | null>(null);
     const [uiUnit, setUiUnit] = useState<UiUnit | null>(null);
     const [loadingLesson, setLoadingLesson] = useState(true);
-    const [savingAnswers, setSavingAnswers] = useState(false);
+    // const [savingAnswers, setSavingAnswers] = useState(false);
 
     const [selectedText, setSelectedText] = useState<string | null>(null);
     const [selectedTextPosition, setSelectedTextPosition] = useState<{ x: number; y: number } | null>(null);
@@ -185,7 +185,7 @@ function StudyLessonPage() {
         }
     }
 
-    const handleLessonContainerMouseUp = async (e: React.MouseEvent<HTMLDivElement>) => {
+    const handleLessonContainerMouseUp = async (_: React.MouseEvent<HTMLDivElement>) => {
         try {
 
             const selection = window.getSelection();

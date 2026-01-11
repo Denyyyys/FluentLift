@@ -65,7 +65,7 @@ function AllDecksPage() {
 
     const copyDeck = async (deckId: number) => {
         try {
-            const response = await axios.post<DeckOwnerResponseDto>(`${BACKEND_BASE_URL}/decks/${deckId}/copy`, undefined, {
+            await axios.post<DeckOwnerResponseDto>(`${BACKEND_BASE_URL}/decks/${deckId}/copy`, undefined, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
