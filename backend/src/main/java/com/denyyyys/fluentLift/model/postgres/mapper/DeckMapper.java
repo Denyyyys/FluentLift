@@ -1,12 +1,7 @@
 package com.denyyyys.fluentLift.model.postgres.mapper;
 
-import java.util.List;
-
 import com.denyyyys.fluentLift.model.postgres.dto.DeckCreateDto;
 import com.denyyyys.fluentLift.model.postgres.dto.DeckUpdateDto;
-import com.denyyyys.fluentLift.model.postgres.dto.response.CardOwnerResponseDto;
-import com.denyyyys.fluentLift.model.postgres.dto.response.CardVisitorResponseDto;
-import com.denyyyys.fluentLift.model.postgres.dto.response.DeckCreatorDto;
 import com.denyyyys.fluentLift.model.postgres.dto.response.DeckOwnerResponseDto;
 import com.denyyyys.fluentLift.model.postgres.dto.response.DeckVisitorResponseDto;
 import com.denyyyys.fluentLift.model.postgres.entity.AppUser;
@@ -34,34 +29,31 @@ public class DeckMapper {
         entity.setTargetLanguage(dto.getTargetLanguage());
     }
 
-    public static DeckOwnerResponseDto toDeckOwnerResponseDto(Deck deckEntity, List<CardOwnerResponseDto> cardsDto,
-            DeckCreatorDto creatorDto) {
+    public static DeckOwnerResponseDto toDeckOwnerResponseDto(Deck deckEntity) {
         DeckOwnerResponseDto dto = new DeckOwnerResponseDto();
 
         dto.setId(deckEntity.getId());
         dto.setName(deckEntity.getName());
-        dto.setCreator(creatorDto);
+        dto.setCreator(AppUserMapper.toDeckCreatorDto(deckEntity.getCreator()));
         dto.setArchived(deckEntity.isArchived());
         dto.setTargetLanguage(deckEntity.getTargetLanguage());
         dto.setBaseLanguage(deckEntity.getBaseLanguage());
-        dto.setCards(cardsDto);
+        dto.setCards(deckEntity.getCards().stream().map(CardMapper::toCardOwnerResponseDto).toList());
         dto.setPublic(deckEntity.isPublic());
 
         return dto;
     }
 
-    public static DeckVisitorResponseDto toDeckVisitorResponseDto(Deck deckEntity,
-            List<CardVisitorResponseDto> cardsDto,
-            DeckCreatorDto creatorDto) {
+    public static DeckVisitorResponseDto toDeckVisitorResponseDto(Deck deckEntity) {
         DeckVisitorResponseDto dto = new DeckVisitorResponseDto();
 
         dto.setId(deckEntity.getId());
         dto.setName(deckEntity.getName());
-        dto.setCreator(creatorDto);
+        dto.setCreator(AppUserMapper.toDeckCreatorDto(deckEntity.getCreator()));
         dto.setArchived(deckEntity.isArchived());
         dto.setTargetLanguage(deckEntity.getTargetLanguage());
         dto.setBaseLanguage(deckEntity.getBaseLanguage());
-        dto.setCards(cardsDto);
+        dto.setCards(deckEntity.getCards().stream().map(CardMapper::toCardVisitorResponseDto).toList());
         dto.setPublic(deckEntity.isPublic());
 
         return dto;

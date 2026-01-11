@@ -6,24 +6,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.denyyyys.fluentLift.config.Constants;
 import com.denyyyys.fluentLift.exceptions.DuplicateResourceException;
 import com.denyyyys.fluentLift.exceptions.ResourceNotFound;
 import com.denyyyys.fluentLift.model.postgres.dto.CardCreateDto;
 import com.denyyyys.fluentLift.model.postgres.dto.CardUpdateDto;
 import com.denyyyys.fluentLift.model.postgres.dto.DeckCreateDto;
-import com.denyyyys.fluentLift.model.postgres.dto.response.CardOwnerResponseDto;
-import com.denyyyys.fluentLift.model.postgres.dto.response.CardVisitorResponseDto;
-import com.denyyyys.fluentLift.model.postgres.dto.response.DeckCreatorDto;
+import com.denyyyys.fluentLift.model.postgres.dto.response.DeckOwnerPageResponseDto;
 import com.denyyyys.fluentLift.model.postgres.dto.response.DeckOwnerResponseDto;
+import com.denyyyys.fluentLift.model.postgres.dto.response.DeckVisitorPageResponseDto;
 import com.denyyyys.fluentLift.model.postgres.dto.response.DeckVisitorResponseDto;
 import com.denyyyys.fluentLift.model.postgres.entity.AppUser;
 import com.denyyyys.fluentLift.model.postgres.entity.Card;
 import com.denyyyys.fluentLift.model.postgres.entity.Deck;
-import com.denyyyys.fluentLift.model.postgres.mapper.AppUserMapper;
 import com.denyyyys.fluentLift.model.postgres.mapper.CardMapper;
 import com.denyyyys.fluentLift.model.postgres.mapper.DeckMapper;
 import com.denyyyys.fluentLift.repo.postgres.AppUserRepository;
@@ -39,7 +42,7 @@ public class DeckService {
     private final CardRepository cardRepository;
     private final AppUserRepository appUserRepository;
 
-    @Transactional
+    @Transactional(transactionManager = "transactionManager")
     public Deck createDeck(DeckCreateDto dto, String creatorEmail) {
         AppUser creator = appUserRepository.findByEmail(creatorEmail)
                 .orElseThrow(() -> new ResourceNotFound("Creator not found"));
@@ -71,7 +74,7 @@ public class DeckService {
         return deck;
     }
 
-    @Transactional(readOnly = true)
+    @Transactional(readOnly = true, transactionManager = "transactionManager")
     public Deck getReadableDeck(Long deckId, String userEmail) {
         Deck deck = deckRepository.findById(deckId)
                 .orElseThrow(() -> new ResourceNotFound("Deck with provided id was not found"));
@@ -96,32 +99,70 @@ public class DeckService {
         return deck;
     }
 
-    @Transactional(readOnly = true)
-    public List<DeckOwnerResponseDto> getDecksDtoOwnedBy(String ownerEmail) {
-        List<Deck> decks = deckRepository.findAllByCreatorEmail(ownerEmail);
-        List<DeckOwnerResponseDto> decksDto = decks.stream().map(deck -> {
-            List<CardOwnerResponseDto> cardsDto = deck.getCards().stream()
-                    .map(card -> CardMapper.toCardOwnerResponseDto(card))
-                    .toList();
-            DeckCreatorDto creatorDto = AppUserMapper.toDeckCreatorDto(deck.getCreator());
-            return DeckMapper.toDeckOwnerResponseDto(deck, cardsDto, creatorDto);
-        }).toList();
-        return decksDto;
+    @Transactional(readOnly = true, transactionManager = "transactionManager")
+    public DeckOwnerPageResponseDto getDecksDtoOwnedBy(String ownerEmail, int page, int size) {
+        appUserRepository.findByEmail(ownerEmail)
+                .orElseThrow(() -> new ResourceNotFound("User not found"));
+
+        Pageable pageable = PageRequest.of(page - 1, size);
+
+        Page<Deck> deckPage = deckRepository.findAllByCreatorEmail(
+                ownerEmail,
+                pageable);
+
+        List<DeckOwnerResponseDto> decksDto = deckPage.getContent()
+                .stream()
+                .map(DeckMapper::toDeckOwnerResponseDto)
+                .toList();
+        DeckOwnerPageResponseDto response = new DeckOwnerPageResponseDto();
+        response.setDecks(decksDto);
+        response.setPage(deckPage.getNumber() + 1);
+        response.setSize(deckPage.getSize());
+        response.setTotalElements(deckPage.getTotalElements());
+        response.setTotalPages(deckPage.getTotalPages());
+
+        return response;
     }
 
-    @Transactional(readOnly = true)
-    public List<DeckVisitorResponseDto> getDecksDtoVisibleToPublic(String ownerEmail) {
-        List<Deck> decks = deckRepository.findAllByCreatorEmail(ownerEmail);
+    @Transactional(readOnly = true, transactionManager = "transactionManager")
+    public DeckVisitorPageResponseDto getDecksDtoVisibleToPublic(String baseLanguage,
+            String targetLanguage, String nameLike, String sortBy, int page, int size, String userEmail) {
 
-        List<DeckVisitorResponseDto> decksDto = decks.stream().map(deck -> {
-            List<CardVisitorResponseDto> cardsDto = deck.getCards().stream()
-                    .map(card -> CardMapper.toCardVisitorResponseDto(card))
-                    .toList();
-            DeckCreatorDto creatorDto = AppUserMapper.toDeckCreatorDto(deck.getCreator());
-            return DeckMapper.toDeckVisitorResponseDto(deck, cardsDto, creatorDto);
-        }).toList();
+        appUserRepository.findByEmail(userEmail)
+                .orElseThrow(() -> new ResourceNotFound("User not found"));
 
-        return decksDto.stream().filter((deck) -> deck.isPublic()).toList();
+        String sortField = switch (sortBy.toLowerCase()) {
+            case "createdat" -> Constants.DEFAULT_SORT_DECKS_BY;
+            case "name" -> Constants.SORT_DECKS_BY_NAME;
+            default -> Constants.DEFAULT_SORT_QUESTIONS_BY;
+        };
+
+        size = Math.min(size, Constants.MAX_PAGE_SIZE);
+        page = Math.max(page, 1);
+
+        if (nameLike == null) {
+            nameLike = "";
+        }
+
+        Pageable pageable = PageRequest.of(page - 1, size, Sort.by(sortField).ascending());
+
+        Page<Deck> deckPage = deckRepository.searchPublicDecks(
+                baseLanguage, targetLanguage, nameLike,
+                pageable);
+
+        List<DeckVisitorResponseDto> decksDto = deckPage.getContent()
+                .stream()
+                .map(DeckMapper::toDeckVisitorResponseDto)
+                .toList();
+
+        DeckVisitorPageResponseDto response = new DeckVisitorPageResponseDto();
+        response.setDecks(decksDto);
+        response.setPage(deckPage.getNumber() + 1);
+        response.setSize(deckPage.getSize());
+        response.setTotalElements(deckPage.getTotalElements());
+        response.setTotalPages(deckPage.getTotalPages());
+
+        return response;
     }
 
     // @Transactional
@@ -145,7 +186,7 @@ public class DeckService {
     // }
     // }
 
-    @Transactional
+    @Transactional(transactionManager = "transactionManager")
     public Deck updateDeck(Deck deck, Long deckId, String userEmail) {
         AppUser user = appUserRepository.findByEmail(userEmail)
                 .orElseThrow(() -> new ResourceNotFound("User not found"));
@@ -166,7 +207,7 @@ public class DeckService {
         }
     }
 
-    @Transactional
+    @Transactional(transactionManager = "transactionManager")
     public void deleteDeck(Long deckId, String userEmail) {
         Deck deck = this.getWritableDeck(deckId, userEmail);
         deckRepository.deleteById(deck.getId());
@@ -174,7 +215,7 @@ public class DeckService {
     }
 
     // Card related
-    @Transactional
+    @Transactional(transactionManager = "transactionManager")
     public Card addCardToDeck(Long deckId, CardCreateDto cardDto, String userEmail) {
         Deck deck = this.getReadableDeck(deckId, userEmail);
         if (deck.getCreator().getEmail().equals(userEmail)) {
@@ -186,7 +227,7 @@ public class DeckService {
         throw new AccessDeniedException("You do not have permission to add card to this deck");
     }
 
-    @Transactional
+    @Transactional(transactionManager = "transactionManager")
     public Card updateCard(Long cardId, CardUpdateDto cardDto, String userEmail) {
         Card card = this.findCardById(cardId);
 
@@ -202,7 +243,7 @@ public class DeckService {
         throw new AccessDeniedException("You do not have permission to update card for this deck");
     }
 
-    @Transactional
+    @Transactional(transactionManager = "transactionManager")
     public void deleteCard(Long cardId, String userEmail) {
         Card card = this.findCardById(cardId);
         if (card.getDeck().getCreator().getEmail().equals(userEmail)) {
@@ -216,7 +257,7 @@ public class DeckService {
         throw new AccessDeniedException("You do not have permission to delete card to this deck");
     }
 
-    @Transactional
+    @Transactional(transactionManager = "transactionManager")
     public Card updateCardProgress(Long cardId, boolean knewIt, String userEmail) {
         Card card = this.findCardById(cardId);
         if (!card.getDeck().getCreator().getEmail().equals(userEmail)) {
@@ -242,6 +283,49 @@ public class DeckService {
 
     public Card findCardById(Long cardId) {
         return cardRepository.findById(cardId).orElseThrow(() -> new ResourceNotFound("Card not found"));
+    }
+
+    public DeckOwnerResponseDto copyDeck(Long deckId, String userEmail) {
+        AppUser user = appUserRepository.findByEmail(userEmail)
+                .orElseThrow(() -> new ResourceNotFound("User not found"));
+
+        Deck sourceDeck = deckRepository.findById(deckId)
+                .orElseThrow(() -> new ResourceNotFound("Deck with provided id was not found"));
+
+        boolean isOwner = sourceDeck.getCreator().getEmail().equals(userEmail);
+        boolean isPublicAndActive = sourceDeck.isPublic() && !sourceDeck.isArchived();
+
+        if (!isOwner && !isPublicAndActive) {
+            throw new AccessDeniedException(
+                    "Cannot copy deck with id: " + sourceDeck.getId());
+        }
+
+        Deck copyDeck = new Deck();
+        if (isOwner) {
+            copyDeck.setName(sourceDeck.getName() + " copy");
+        } else {
+            copyDeck.setName(sourceDeck.getName());
+        }
+        copyDeck.setBaseLanguage(sourceDeck.getBaseLanguage());
+        copyDeck.setTargetLanguage(sourceDeck.getTargetLanguage());
+        copyDeck.setCreator(user);
+
+        if (sourceDeck.getCards() != null) {
+            List<Card> copiedCards = new ArrayList<>();
+            for (Card c : sourceDeck.getCards()) {
+                Card newCard = new Card();
+                newCard.setFrontText(c.getFrontText());
+                newCard.setBackText(c.getBackText());
+                newCard.setDeck(copyDeck);
+
+                copiedCards.add(newCard);
+            }
+            copyDeck.setCards(copiedCards);
+        }
+
+        copyDeck = deckRepository.save(copyDeck);
+
+        return DeckMapper.toDeckOwnerResponseDto(copyDeck);
     }
 
 }

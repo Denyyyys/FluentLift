@@ -1,7 +1,5 @@
 package com.denyyyys.fluentLift.controller;
 
-import java.util.List;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -16,9 +14,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.denyyyys.fluentLift.config.Constants;
 import com.denyyyys.fluentLift.model.postgres.dto.CardCreateDto;
 import com.denyyyys.fluentLift.model.postgres.dto.CardUpdateDto;
 import com.denyyyys.fluentLift.model.postgres.dto.DeckCreateDto;
+import com.denyyyys.fluentLift.model.postgres.dto.response.DeckOwnerPageResponseDto;
+import com.denyyyys.fluentLift.model.postgres.dto.response.DeckOwnerResponseDto;
+import com.denyyyys.fluentLift.model.postgres.dto.response.DeckVisitorPageResponseDto;
 import com.denyyyys.fluentLift.model.postgres.entity.Card;
 import com.denyyyys.fluentLift.model.postgres.entity.Deck;
 import com.denyyyys.fluentLift.service.DeckService;
@@ -31,16 +33,29 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class DeckController {
     private final DeckService deckService;
-    // private
 
     @GetMapping
-    public ResponseEntity<List<?>> getDecks(@AuthenticationPrincipal UserDetails user,
-            @RequestParam(required = false) String creatorEmail) {
-        if (creatorEmail == null || creatorEmail.isEmpty() || user.getUsername().equals(creatorEmail)) {
-            return ResponseEntity.ok().body(deckService.getDecksDtoOwnedBy(user.getUsername()));
-        }
+    public ResponseEntity<DeckVisitorPageResponseDto> getDecks(
+            @AuthenticationPrincipal UserDetails user,
+            @RequestParam(required = false) String baseLanguage,
+            @RequestParam(required = false) String targetLanguage,
+            @RequestParam(defaultValue = "", name = "name") String nameLike,
+            @RequestParam(defaultValue = Constants.DEFAULT_SORT_DECKS_BY) String sortBy,
+            @RequestParam(defaultValue = "1") int page,
+            @RequestParam(defaultValue = "" + Constants.DEFAULT_PAGE_SIZE) int size) {
 
-        return ResponseEntity.ok().body(deckService.getDecksDtoVisibleToPublic(creatorEmail));
+        return ResponseEntity.ok()
+                .body(deckService.getDecksDtoVisibleToPublic(baseLanguage, targetLanguage, nameLike, sortBy, page,
+                        size,
+                        user.getUsername()));
+    }
+
+    @GetMapping("/me")
+    public ResponseEntity<DeckOwnerPageResponseDto> getMyDecks(@AuthenticationPrincipal UserDetails user,
+            @RequestParam(defaultValue = "1") int page,
+            @RequestParam(defaultValue = "" + Constants.DEFAULT_PAGE_SIZE) int size) {
+        return ResponseEntity.ok()
+                .body(deckService.getDecksDtoOwnedBy(user.getUsername(), page, size));
     }
 
     @GetMapping("/{deckId}")
@@ -56,16 +71,6 @@ public class DeckController {
 
         return ResponseEntity.status(HttpStatus.CREATED).body(newDeck);
     }
-
-    // @PutMapping("/{deckId}")
-    // public ResponseEntity<Deck> updateDeck(@AuthenticationPrincipal UserDetails
-    // user, @PathVariable Long deckId,
-    // @Valid @RequestBody DeckUpdateDto deckDto) {
-
-    // Deck updatedDeck = deckService.updateDeck(deckDto, deckId,
-    // user.getUsername());
-    // return ResponseEntity.ok().body(updatedDeck);
-    // }
 
     @PutMapping("/{deckId}")
     public ResponseEntity<Deck> updateDeck(@AuthenticationPrincipal UserDetails user, @PathVariable Long deckId,
@@ -101,6 +106,12 @@ public class DeckController {
     public ResponseEntity<Void> deleteCard(@AuthenticationPrincipal UserDetails user, @PathVariable Long cardId) {
         deckService.deleteCard(cardId, user.getUsername());
         return ResponseEntity.noContent().build();
+    }
+
+    @PostMapping("/{deckId}/copy")
+    public ResponseEntity<DeckOwnerResponseDto> copyDeck(@AuthenticationPrincipal UserDetails user,
+            @PathVariable Long deckId) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(deckService.copyDeck(deckId, user.getUsername()));
     }
 
 }
