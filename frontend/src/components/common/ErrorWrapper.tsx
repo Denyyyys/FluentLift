@@ -1,13 +1,16 @@
+import { textByLanguage } from "../../assets/translations"
+import { useLanguage } from "../../hooks/useLanguage"
 
 type ErrorWrapperProps = {
     content?: string
 }
 
 function ErrorWrapper({ content }: ErrorWrapperProps) {
+    const { language } = useLanguage()
     return (
         <div className="mt-2">
-            <h1>Woah, it seems like there is some kind of error.</h1>
-            <h2>{content ? content : "Oops something went wrong. Please see console logs."}</h2>
+            <h1>{textByLanguage[language]["errorMessages"]["someKindOfErrorOccuredText"]}</h1>
+            <h2>{content ? content : textByLanguage[language]["errorMessages"]["somethingWentWrongText"]}</h2>
         </div>
     )
 }

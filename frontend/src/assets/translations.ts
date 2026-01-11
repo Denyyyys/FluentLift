@@ -1,11 +1,18 @@
 export const textByLanguage = {
     "English": {
+        "errorMessages": {
+            "pageDoesNotExistMessageText": "Oops, it seems like page which you want to find does not exist.",
+            "somethingWentWrongText": "Oops something went wrong. Please see console logs.",
+            "someKindOfErrorOccuredText": "Woah, it seems like there is some kind of error."
+        },
         "authenticatoin": {
+            "forgotPasswordText": "Forgot Password?",
             "nameText": "Name",
             "emailAddressText": "Email address",
             "passwordText": "Password",
             "signUpText": "Sign up",
             "logInText": "Log in",
+            "logOutText": "Log out",
             "createNewAccountText": "Create new account",
             "logInToExistingAccountText": "Log in to continue",
             "alreadyHaveAccountQuestionText": "Already have an account?",
@@ -113,12 +120,19 @@ export const textByLanguage = {
         }
     },
     "Polish": {
+        "errorMessages": {
+            "pageDoesNotExistMessageText": "Ups, wygląda na to, że strona, której szukasz, nie istnieje.",
+            "somethingWentWrongText": "Ups, coś poszło nie tak. Sprawdź konsolę.",
+            "someKindOfErrorOccuredText": "Ups, wygląda na to, że wystąpił jakiś błąd."
+        },
         "authenticatoin": {
+            "forgotPasswordText": "Zapomniałeś hasła?",
             "nameText": "Imię",
             "emailAddressText": "Adres e-mail",
             "passwordText": "Hasło",
             "signUpText": "Zarejestruj się",
             "logInText": "Zaloguj się",
+            "logOutText": "Wyloguj się",
             "createNewAccountText": "Utwórz nowe konto",
             "logInToExistingAccountText": "Zaloguj się, aby kontynuować",
             "alreadyHaveAccountQuestionText": "Masz już konto?",
@@ -226,12 +240,19 @@ export const textByLanguage = {
         }
     },
     "Ukrainian": {
+        "errorMessages": {
+            "pageDoesNotExistMessageText": "Ой, здається, сторінка, яку ви шукаєте, не існує.",
+            "somethingWentWrongText": "Ой, щось пішло не так. Перевірте консоль.",
+            "someKindOfErrorOccuredText": "Ой, здається, сталася якась помилка."
+        },
         "authenticatoin": {
+            "forgotPasswordText": "Забули пароль?",
             "nameText": "Ім'я",
             "emailAddressText": "Електронна пошта",
             "passwordText": "Пароль",
             "signUpText": "Зареєструватися",
             "logInText": "Увійти",
+            "logOutText": "Вилогуватися",
             "createNewAccountText": "Створити новий акаунт",
             "logInToExistingAccountText": "Увійдіть, щоб продовжити",
             "alreadyHaveAccountQuestionText": "Вже маєте акаунт?",
