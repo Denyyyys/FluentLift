@@ -54,6 +54,7 @@ export function Navbar() {
                                     <Link to="/decks/" className="dropdown-item"> {textByLanguage[language]["navbar"]["browseText"]}</Link>
                                 </ul>
                             </div>
+                            <Link to="/profile" className="nav-link"><FaUser /> {isLoggedIn ? `${textByLanguage[language]["navbar"]["helloText"]}, ${userName}` : 'Log in'} </Link>
                             <Dropdown className="nav-link">
                                 <Dropdown.Toggle variant="link" className="lang-dropdown-toggle" id="dropdown-basic">
                                     {mapLanguageToIcon(language)}
@@ -65,7 +66,6 @@ export function Navbar() {
                                     <Dropdown.Item onClick={() => setLanguage("Polish")}><span className="fi fi-pl" /> {textByLanguage[language]["navbar"]["polishText"]}</Dropdown.Item>
                                 </Dropdown.Menu>
                             </Dropdown>
-                            <Link to="/profile" className="nav-link"><FaUser /> {isLoggedIn ? `${textByLanguage[language]["navbar"]["helloText"]}, ${userName}` : 'Log in'} </Link>
                         </>
                         :
                         <>

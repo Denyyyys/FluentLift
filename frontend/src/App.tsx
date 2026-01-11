@@ -11,16 +11,15 @@ import CreateCoursePage from "./pages/courses/CreateCoursePage"
 import AllCoursesPage from "./pages/courses/AllCoursesPage"
 import CourseOverview from "./routes/CourseOverview"
 import { ToastContainer } from 'react-toastify';
-// import StudyLessonPage from "./pages/courses/StudyLessonPage"
 import CourseLayout from "./layouts/CourseLayout"
 import RouteNotFound from "./pages/common/RouteNotFound"
 import StudyLessonPage from "./pages/courses/StudyLessonPage"
-import { NotFoundError, NotFoundName } from "./errors"
 import CreateDeckPage from "./pages/decks/CreateDeckPage"
 import EditDeckPage from "./pages/decks/EditDeckPage"
 import AllQuestionsPage from "./pages/questionsAndAnswers/AllQuestionsPage"
 import { SingleQuestionPage } from "./pages/questionsAndAnswers/SingleQuestionPage"
 import AllDecksPage from "./pages/decks/AllDecksPage"
+import IndexPage from "./pages/IndexPage"
 
 function App() {
   return <BrowserRouter>
@@ -29,6 +28,7 @@ function App() {
     <div className="app-container">
 
       <Routes>
+        <Route index element={<IndexPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route
