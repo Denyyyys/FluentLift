@@ -1,6 +1,7 @@
 import { useOutletContext } from "react-router-dom";
 import type { CardOwnerResponseDto } from "../types/card";
 import { type CourseResponse, type LessonResponse, type MultipleChoiceBlockResponse, type TextBlockResponse, BlockType, type UiLesson, type UiClozeBlock, type UiMultipleChoiceBlock, type LessonAnswers, type ClozeBlockUserAnswer, type UiCourse } from "../types/course";
+import type { ALL_LANGUAGES_TYPE, AVAILABLE_LANGUAGES_TYPE } from "../constants";
 
 export function sortByNextReviewDate(cards: CardOwnerResponseDto[]) {
     return [...cards].sort(
@@ -83,6 +84,45 @@ export function getPreviousLesson(course: UiCourse, currLessonNumber: number): U
 
 export function getNextLesson(course: UiCourse, currLessonNumber: number): UiLesson | undefined {
     return getAdjacentLesson(course, currLessonNumber, 1);
+}
+
+export function getLanguageCode(languageName: String) {
+    switch (languageName) {
+        case "English":
+            return "EN"
+        case "Polish":
+            return "PL"
+        default:
+            return ""
+    }
+}
+
+export function translateLanguageName(targetLanguage: AVAILABLE_LANGUAGES_TYPE, languageToTranslate: ALL_LANGUAGES_TYPE) {
+    const languagesNames = {
+        "English": {
+            "English": "English",
+            "Polish": "Polish",
+            "Ukrainian": "Ukrainian",
+            "German": "German",
+            "Spanish": "Spanish"
+        },
+        "Polish": {
+            "English": "Angielski",
+            "Polish": "Polski",
+            "Ukrainian": "Ukraiński",
+            "German": "Niemiecki",
+            "Spanish": "Hiszpański"
+        },
+        "Ukrainian": {
+            "English": "Англійська",
+            "Polish": "Польська",
+            "Ukrainian": "Українська",
+            "German": "Німецька",
+            "Spanish": "Іспанська"
+        }
+    }
+
+    return languagesNames[targetLanguage][languageToTranslate];
 }
 
 // export function convertUiLessonToLessonAnswers(uiLesson: UiLesson) {

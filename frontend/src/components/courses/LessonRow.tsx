@@ -2,6 +2,8 @@ import { useNavigate } from "react-router-dom";
 import type { UiLesson } from "../../types/course";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import { useCourse } from "../../utils/utils";
+import { useLanguage } from "../../hooks/useLanguage";
+import { textByLanguage } from "../../assets/translations";
 
 interface RequireLessonRowProps {
     uiLesson: UiLesson;
@@ -9,6 +11,8 @@ interface RequireLessonRowProps {
 
 function LessonRow({ uiLesson }: RequireLessonRowProps) {
     let navigate = useNavigate();
+    const { language } = useLanguage();
+
     const { uiCourse } = useCourse();
     return (
         <div
@@ -16,7 +20,7 @@ function LessonRow({ uiLesson }: RequireLessonRowProps) {
             onClick={() => navigate(`/courses/${uiCourse.id}/lessons/${uiLesson.id}`)}
         >
             <h5>
-                Lesson {uiLesson.lessonNumber} {uiLesson.title && ` - ${uiLesson.title}`}
+                {textByLanguage[language]["singleEnrolledCourse"]["lessonText"]} {uiLesson.lessonNumber} {uiLesson.title && ` - ${uiLesson.title}`}
             </h5>
             {uiLesson.progressInfo.progress === 100 && <IoIosCheckmarkCircle size={24} />}
         </div>

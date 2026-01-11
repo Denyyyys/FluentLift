@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import type { CourseResponse } from '../../types/course'
 import axios from 'axios';
 import { BACKEND_BASE_URL } from '../../constants';
@@ -6,8 +6,12 @@ import { useAuth } from '../../context/AuthContext';
 import LoadingSpinner from '../../components/common/LoadingSpinner';
 import UnreachableState from '../../components/common/UnreachableState';
 import CourseCard from '../../components/courses/CourseCard';
+import { useLanguage } from '../../hooks/useLanguage';
+import { textByLanguage } from '../../assets/translations';
 
 function AllCoursesPage() {
+    const { language } = useLanguage();
+
     const [courses, setCourses] = useState<null | CourseResponse[]>(null);
     const { token } = useAuth();
     const [loadingCourse, setLoadingCourse] = useState(true);
@@ -55,7 +59,7 @@ function AllCoursesPage() {
 
     return (
         <>
-            <h3 className='mb-3 pb-1 fw-semibold header-with-line-bottom'>All Courses</h3>
+            <h3 className='mb-3 pb-1 fw-semibold header-with-line-bottom'>{textByLanguage[language]["allCourses"]["titleText"]}</h3>
             <div className='courses-container container'>
                 <div className="row ">
                     {courses.map(course => <CourseCard key={course.id} course={course} />)}

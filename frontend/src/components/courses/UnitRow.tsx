@@ -3,6 +3,8 @@ import type { UiUnit } from "../../types/course"
 import { IoMdArrowDropright } from "react-icons/io";
 import { IoMdArrowDropdown } from "react-icons/io";
 import LessonRow from "./LessonRow";
+import { textByLanguage } from "../../assets/translations";
+import { useLanguage } from "../../hooks/useLanguage";
 
 interface RequireUnitRowProps {
     uiUnit: UiUnit;
@@ -10,6 +12,8 @@ interface RequireUnitRowProps {
 
 function UnitRow({ uiUnit }: RequireUnitRowProps) {
     const [isOpened, setIsOpened] = useState(false);
+    const { language } = useLanguage();
+
     return (
         <div className="unit-row-container rounded mb-2 p-2">
             <div className="mb-2 d-flex justify-content-between align-items-center">
@@ -39,7 +43,7 @@ function UnitRow({ uiUnit }: RequireUnitRowProps) {
                     <div className="unit-row-body">
                         <h4>{uiUnit.overview}</h4>
                     </div>
-                    <h3 className="mt-3 mb-1">Lessons</h3>
+                    <h3 className="mt-3 mb-1">{textByLanguage[language]["singleEnrolledCourse"]["lessonsText"]}</h3>
                     <div className="stripped-container">
                         {uiUnit.lessons.map(uiLesson => {
                             return <LessonRow key={uiLesson.id} uiLesson={uiLesson} />

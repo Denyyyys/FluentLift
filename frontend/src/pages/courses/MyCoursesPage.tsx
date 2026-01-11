@@ -5,6 +5,7 @@ import type { CourseResponse } from '../../types/course';
 import axios from 'axios';
 import { BACKEND_BASE_URL } from '../../constants';
 import LoadingSpinner from '../../components/common/LoadingSpinner';
+import CourseCard from '../../components/courses/CourseCard';
 
 function MyCoursesPage() {
     const navigate = useNavigate();
@@ -46,35 +47,33 @@ function MyCoursesPage() {
     return (
         <div className='profile-courses-container'>
             <div className='created-courses-container'>
-                <h3 className='mb-3'>
-                    Created Courses
-                </h3>
-                {loadingCourses ? <LoadingSpinner /> : <ul>
-                    {createdByMeCourses.map(course => {
-                        return <li>
-                            <Link to={`/courses/${course.id}`}> {course.title}</Link>
-                        </li>
+                <h3 className='mb-3 pb-1 fw-semibold header-with-line-bottom'>Created Courses</h3>
+                <div className='courses-container container'>
+                    {loadingCourses ? <LoadingSpinner /> : <div className="row ">
+                        {createdByMeCourses.map(course => {
+                            return <CourseCard key={course.id} course={course} />
+                        })}
+                    </div>}
+                </div>
+                <div className="d-flex justify-content-center m-2">
+                    <button className='btn btn-lg btn-success btn-block' onClick={() => { navigate('/profile/courses/new') }}> Create New Course</button>
+                </div>
 
-                    })}
-                </ul>}
-
-                <button className='btn btn-success' onClick={() => { navigate('/profile/courses/new') }}> Create New Course</button>
             </div>
 
             <div className='enroled-courses-container'>
-                <h3>
-                    Enrolled Courses
-                </h3>
-                {loadingCourses ? <LoadingSpinner /> : <ul>
-                    {enrolledCourses.map(course => {
-                        return <li>
-                            <Link to={`/courses/${course.id}`}> {course.title}</Link>
-                        </li>
+                <h3 className='mb-3 pb-1 fw-semibold header-with-line-bottom'>Enrolled Courses</h3>
+                <div className='courses-container container'>
 
-                    })}
-                </ul>}
+                    {loadingCourses ? <LoadingSpinner /> : <div className="row ">
+                        {enrolledCourses.map(course => {
+                            return <CourseCard key={course.id} course={course} />
+                        })}
+                    </div>}
+                </div>
+
             </div>
-        </div>
+        </div >
     )
 }
 

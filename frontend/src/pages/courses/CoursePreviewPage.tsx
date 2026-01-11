@@ -5,6 +5,9 @@ import { countNumberOfLessons, useCourse } from "../../utils/utils";
 import axios from "axios";
 import { BACKEND_BASE_URL } from "../../constants";
 import { toast } from 'react-toastify';
+import { Badge, Button, Card, Col, Container, Row } from "react-bootstrap";
+import { useLanguage } from "../../hooks/useLanguage";
+import { textByLanguage } from "../../assets/translations";
 
 interface RequireCoursePreviewProps {
     onEnroll: () => void;
@@ -12,7 +15,7 @@ interface RequireCoursePreviewProps {
 
 function CoursePreviewPage({ onEnroll }: RequireCoursePreviewProps) {
     let navigate = useNavigate();
-
+    const { language } = useLanguage();
     const { userId, token } = useAuth();
 
     const { uiCourse } = useCourse();
@@ -37,22 +40,69 @@ function CoursePreviewPage({ onEnroll }: RequireCoursePreviewProps) {
         }
     }
     return (
-        <div>
-            <h2 className="mt-2">{uiCourse.title}</h2>
-            <h4 className="mt-2">{uiCourse.description}</h4>
-            <h4 className="mt-4">Course Base Language: {uiCourse.baseLanguage}</h4>
-            <h4 className="mt-4">Course Target Language: {uiCourse.targetLanguage}</h4>
-            <h4 className="mt-4">Course Prerequisite Level: {uiCourse.prerequisiteLevel}</h4>
-            <h4 className="mt-4">Course Outcome Level: {uiCourse.outcomeLevel}</h4>
-            <h4 className="mt-4">Total Number Of Lessons: {countNumberOfLessons(uiCourse)}</h4>
+        <Container className="py-5">
+            <Row className="mb-4">
+                <Col>
+                    <h1 className="fw-bold">{uiCourse.title}</h1>
+                </Col>
+            </Row>
 
-            {userId === uiCourse.creator.id ?
-                <button className="btn btn-warning" onClick={() => navigate(`/courses/${uiCourse.id}/edit`)}>Edit Course</button> : <button className="btn btn-success" onClick={async () => {
-                    await enroll();
-                }}>Enroll</button>
-            }
+            <Row className="g-4">
+                <Col md={8}>
+                    <Card className="shadow h-100">
+                        <Card.Body>
+                            <Card.Title className="mb-3">{textByLanguage[language]["singleCourse"]["courseInformationText"]}</Card.Title>
 
-        </div>
+                            <p>
+                                {uiCourse.description}
+                            </p>
+
+                            <h6 className="fw-bold"> {textByLanguage[language]["singleCourse"]["courseGoalsText"]}</h6>
+                            <ul className="mb-0" >
+                                {uiCourse.goals.map(goal => <li>{goal}</li>)}
+                            </ul>
+                        </Card.Body>
+                    </Card>
+                </Col>
+
+                <Col md={4}>
+                    <Card className="shadow">
+                        <Card.Body>
+                            <Card.Title className="mb-3">{textByLanguage[language]["singleCourse"]["detailsText"]}</Card.Title>
+
+                            <div className="mb-2">
+                                <strong>{textByLanguage[language]["allCourses"]["baseLanguageText"]}: </strong>
+                                <Badge bg="secondary">{uiCourse.baseLanguage}</Badge>
+                            </div>
+
+                            <div className="mb-2">
+                                <strong>{textByLanguage[language]["allCourses"]["targetLanguageText"]}: </strong>
+                                <Badge bg="primary">{uiCourse.targetLanguage}</Badge>
+                            </div>
+
+                            <div className="mb-2">
+                                <strong>{textByLanguage[language]["allCourses"]["prerequisiteLevelText"]}: </strong>
+                                <Badge bg="warning" text="dark">{uiCourse.prerequisiteLevel}</Badge>
+                            </div>
+
+                            <div className="mb-3">
+                                <strong>{textByLanguage[language]["allCourses"]["outcomeLevelText"]}: </strong>
+                                <Badge bg="success">{uiCourse.outcomeLevel}</Badge>
+                            </div>
+
+                            {/* <Button variant="primary" className="w-100">
+                                {textByLanguage[language]["allCourses"]["goToCourseActionText"]}
+                            </Button> */}
+                            {userId === uiCourse.creator.id ?
+                                <Button variant="warning" onClick={() => navigate(`/courses/${uiCourse.id}/edit`)}>{textByLanguage[language]["singleCourse"]["editCourseText"]}</Button> : <Button variant="success" onClick={async () => {
+                                    await enroll();
+                                }}>{textByLanguage[language]["singleCourse"]["enrollToCourseText"]}</Button>
+                            }
+                        </Card.Body>
+                    </Card>
+                </Col>
+            </Row>
+        </Container >
     )
 }
 

@@ -1,8 +1,5 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-// import { QuestionWithAnswersDto } from "../types/question";
-// import { QuestionDetails } from "../components/QuestionDetails";
-// import { AnswerItem } from "../components/AnswerItem";
 import { Button } from "react-bootstrap";
 import type { AnswerCreateRequestDto, QuestionWithAnswersDto } from "../../types/questionsAndAnswers";
 import { QuestionDetails } from "../../components/questionsAndAnswers/QuestionDetails";
@@ -16,7 +13,6 @@ import LoadingSpinner from "../../components/common/LoadingSpinner";
 import { AnswerForm } from "../../components/questionsAndAnswers/AnswerForm";
 import { toast } from "react-toastify";
 import { FaArrowLeftLong } from "react-icons/fa6";
-import { FaRegEye } from "react-icons/fa";
 import { useLanguage } from "../../hooks/useLanguage";
 import { textByLanguage } from "../../assets/translations";
 

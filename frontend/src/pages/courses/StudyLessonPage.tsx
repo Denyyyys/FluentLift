@@ -1,6 +1,6 @@
 import { Link, useNavigate, useParams } from "react-router-dom"
 import { BlockType, type ClozeBlockUserAnswer, type ClozeBlockUserAnswerRequestDto, type CourseAnswers, type Lesson, type LessonAnswers, type LessonResponse, type UiClozeBlock, type UiClozeBlockAnswer, type UiLesson, type UiMultipleChoiceBlock, type UiMultipleChoiceOption, type UiUnit, type UnitAnswers, type UserAnswersRequestDto } from "../../types/course";
-import { useEffect, useMemo, useState, type JSX, type ReactElement } from "react";
+import { useEffect, useMemo, useRef, useState, type JSX, type ReactElement } from "react";
 import axios, { HttpStatusCode } from "axios";
 import { BACKEND_BASE_URL } from "../../constants";
 import { useAuth } from "../../context/AuthContext";
@@ -15,10 +15,16 @@ import { toast } from "react-toastify";
 import ErrorWrapper from "../../components/common/ErrorWrapper";
 import LoadingSpinner from "../../components/common/LoadingSpinner";
 import UnreachableState from "../../components/common/UnreachableState";
+import type { Synset } from "../../types/synset";
+import SynsetTooltip from "../../components/courses/SynsetTooltip";
+import { textByLanguage } from "../../assets/translations";
+import { useLanguage } from "../../hooks/useLanguage";
 
 function StudyLessonPage() {
     const { courseId, lessonId } = useParams();
     const { uiCourse, updateLesson } = useCourse();
+    const { language } = useLanguage();
+
     if (!lessonId || !courseId) {
         return <div>How did you get there?</div>
     }
@@ -27,6 +33,10 @@ function StudyLessonPage() {
     const [uiUnit, setUiUnit] = useState<UiUnit | null>(null);
     const [loadingLesson, setLoadingLesson] = useState(true);
     const [savingAnswers, setSavingAnswers] = useState(false);
+
+    const [selectedText, setSelectedText] = useState<string | null>(null);
+    const [selectedTextPosition, setSelectedTextPosition] = useState<{ x: number; y: number } | null>(null);
+    const [synsetSelectedText, setSynsetSelectedText] = useState<Synset | null>(null);
 
     const [error, setError] = useState<unknown | null>(null);
     const [showCorrect, setShowCorrect] = useState<boolean>(false);
@@ -175,6 +185,41 @@ function StudyLessonPage() {
         }
     }
 
+    const handleLessonContainerMouseUp = async (e: React.MouseEvent<HTMLDivElement>) => {
+        try {
+
+            const selection = window.getSelection();
+            if (selection && selection.toString().trim() !== "") {
+                const text = selection.toString();
+                setSelectedText(text);
+
+                const synset = await axios.get<Synset>(`${BACKEND_BASE_URL}/synsets/searchByAny?word=${text}`, {
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                });
+
+                setSynsetSelectedText(synset.data);
+                console.log(synset.data);
+
+                const range = selection.getRangeAt(0);
+                const rect = range.getBoundingClientRect();
+
+                // set position a bit below selection
+                setSelectedTextPosition({
+                    x: rect.left + window.scrollX,
+                    y: rect.bottom + window.scrollY + 5, // 5px below
+                });
+            } else {
+                setSelectedText(null);
+                setSelectedTextPosition(null);
+            }
+        } catch (e) {
+            console.error("error while fetching synset");
+            console.error(e);
+        }
+    }
+
     useEffect(() => {
         setLoadingLesson(true);
         try {
@@ -216,13 +261,31 @@ function StudyLessonPage() {
         <>
             <h1 className="mt-4">{uiCourse.title}</h1>
             <div className="d-flex justify-content-between mt-1 mb-1">
-                <h3 >Unit {uiUnit.unitNumber}, Lesson {localUiLesson.lessonNumber}</h3>
+                <h3 >{textByLanguage[language]["singleEnrolledCourse"]["unitText"]} {uiUnit.unitNumber}, {textByLanguage[language]["singleEnrolledCourse"]["lessonText"]} {localUiLesson.lessonNumber}</h3>
                 <button className="btn btn-shaddow min-w-120px btn-primary" onClick={async () => {
                     await saveAnswers()
                     navigate(`/courses/${courseId}`);
-                }}>List Of Content</button>
+                }}>{textByLanguage[language]["singleEnrolledCourse"]["listOfContentText"]}</button>
             </div>
-            <div className="lesson-study-content-container p-3">
+            <div className="lesson-study-content-container p-3" onMouseUp={async (e) => await handleLessonContainerMouseUp(e)}>
+                {selectedText && selectedTextPosition && (
+                    // <div
+                    //     style={{
+                    //         position: "absolute",
+                    //         top: selectedTextPosition.y,
+                    //         left: selectedTextPosition.x,
+                    //         backgroundColor: "var(--clr-primary-300)",
+                    //         border: "1px solid black",
+                    //         padding: "5px 10px",
+                    //         borderRadius: "4px",
+                    //         boxShadow: "0 2px 8px rgba(0,0,0,0.2)",
+                    //         zIndex: 1000,
+                    //     }}
+                    // >
+                    //     {selectedText}
+                    // </div>
+                    <SynsetTooltip selectedText={selectedText} synset={synsetSelectedText} sourceLang={uiCourse.baseLanguage} targetLang={uiCourse.targetLanguage} selectedTextPosition={selectedTextPosition} />
+                )}
                 {blocks.map((block, index) => (
                     <LessonBlockSwitch
                         key={index}
@@ -241,21 +304,21 @@ function StudyLessonPage() {
                         }}
                     >
                         <FaArrowLeft />
-                        <span> Previous </span>
+                        <span> {textByLanguage[language]["pagination"]["previousText"]} </span>
                     </button>
                     <button
                         className="btn btn-shaddow min-w-120px btn-primary"
                         onClick={() => setIsChecked(prev => !prev)}
                     >
-                        {isChecked ? "Edit" : "Check"}
+                        {isChecked ? textByLanguage[language]["singleEnrolledCourse"]["editText"] : textByLanguage[language]["singleEnrolledCourse"]["checkButtonText"]}
                     </button>
                     <button
                         className="btn btn-shaddow min-w-120px btn-primary d-flex align-items-center justify-content-between gap-1"
                         onClick={() => setShowCorrect(prev => !prev)}>
                         {
                             showCorrect
-                                ? <><LuEyeClosed /> <span>Hide answers</span>  </>
-                                : <><LuEye /> <span>Show answers</span></>
+                                ? <><LuEyeClosed /> <span>{textByLanguage[language]["singleEnrolledCourse"]["hideAnswersButtonText"]}</span>  </>
+                                : <><LuEye /> <span>{textByLanguage[language]["singleEnrolledCourse"]["showAnswersButtonText"]}</span></>
                         }
                     </button>
                     <button
@@ -263,7 +326,7 @@ function StudyLessonPage() {
                         disabled={nextLesson === undefined}
                         onClick={async () => await saveAnswersAndGoToLesson(localUiLesson.lessonNumber + 1)}
                     >
-                        <span>Next</span>
+                        <span>{textByLanguage[language]["pagination"]["nextText"]}</span>
                         <FaArrowRight />
                     </button>
                 </div>
