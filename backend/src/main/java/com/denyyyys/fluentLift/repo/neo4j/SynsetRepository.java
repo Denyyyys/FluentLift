@@ -34,10 +34,24 @@ public interface SynsetRepository extends Neo4jRepository<Synset, String> {
                 $word IN [
                     v.pres_sg_1, v.pres_sg_2, v.pres_sg_3,
                     v.pres_pl_1, v.pres_pl_2, v.pres_pl_3,
-                    v.fut_sg_1, v.fut_sg_2, v.fut_sg_3,
-                    v.fut_pl_1, v.fut_pl_2, v.fut_pl_3,
+                    v.fut_sg_m_1, v.fut_sg_m_2, v.fut_sg_m_3,
+                    v.fut_sg_f_1, v.fut_sg_f_2, v.fut_sg_f_3,
+                    v.fut_sg_n_1, v.fut_sg_n_2, v.fut_sg_n_3,
+                    v.fut_pl_mp_1, v.fut_pl_mp_2, v.fut_pl_mp_3,
+                    v.fut_pl_nmp_1, v.fut_pl_nmp_2, v.fut_pl_nmp_3,
                     v.past_sg_m_1, v.past_sg_m_2, v.past_sg_m_3,
-                    v.imp_sg_2, v.imp_pl_1, v.imp_pl_2
+                    v.past_sg_f_1, v.past_sg_f_2, v.past_sg_f_3,
+                    v.past_sg_n_1, v.past_sg_n_2, v.past_sg_n_3,
+                    v.past_pl_mp_1, v.past_pl_mp_2, v.past_pl_mp_3,
+                    v.past_pl_nmp_1, v.past_pl_nmp_2, v.past_pl_nmp_3,
+                    v.cond_sg_m_1, v.cond_sg_m_2, v.cond_sg_m_3,
+                    v.cond_sg_f_1, v.cond_sg_f_2, v.cond_sg_f_3,
+                    v.cond_sg_n_1, v.cond_sg_n_2, v.cond_sg_n_3,
+                    v.cond_pl_mp_1, v.cond_pl_mp_3, v.cond_pl_mp_3,
+                    v.cond_pl_nmp_1, v.cond_pl_nmp_3, v.cond_pl_nmp_3,
+                    v.imp_sg_2, v.imp_pl_1, v.imp_pl_2,
+                    v.activeAdjectivalParticiple, v.passiveAdjectivalParticiple,
+                    v.contemporaryAdverbialParticiple, v.gerund
                 ]
             )
             MATCH (v)-[:CONJUGATION_OF]->(l:LanguageData)

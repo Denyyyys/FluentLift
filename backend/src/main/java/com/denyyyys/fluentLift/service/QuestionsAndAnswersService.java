@@ -137,7 +137,7 @@ public class QuestionsAndAnswersService {
         answerRepository.save(answer);
     }
 
-    @Transactional
+    @Transactional(transactionManager = "transactionManager")
     public void acceptAnswer(Long questionId, Long answerId, String userEmail) {
         AppUser user = appUserRepository.findByEmail(userEmail)
                 .orElseThrow(() -> new ResourceNotFound("User not found"));
@@ -165,7 +165,7 @@ public class QuestionsAndAnswersService {
         question.setSolved(true);
     }
 
-    @Transactional
+    @Transactional(transactionManager = "transactionManager")
     public void addView(Long questionId, String userEmail) {
         appUserRepository.findByEmail(userEmail)
                 .orElseThrow(() -> new ResourceNotFound("User not found"));

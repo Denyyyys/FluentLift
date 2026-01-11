@@ -46,7 +46,7 @@ public class CourseService {
         private final MultipleChoiceOptionRepository multipleChoiceOptionRepository;
         private final AppUserRepository appUserRepository;
 
-        @Transactional
+        @Transactional(transactionManager = "transactionManager")
         public Course createCourse(CourseCreateDto dto, String creatorEmail) {
                 Course course = CourseMapper.toEntity(dto);
                 AppUser creator = appUserRepository.findByEmail(creatorEmail)
@@ -179,7 +179,7 @@ public class CourseService {
                 return response;
         }
 
-        @Transactional
+        @Transactional(transactionManager = "transactionManager")
         public String saveUserAnswers(String userEmail, UserAnswersRequestDto userAnswers, Long lessonId) {
                 AppUser user = appUserRepository.findByEmail(userEmail)
                                 .orElseThrow(() -> new ResourceNotFound("User not found"));
