@@ -5,11 +5,14 @@ import { useState } from "react";
 import { toast } from "react-toastify";
 import axios from "axios";
 import { BACKEND_BASE_URL } from "../../constants";
+import { useLanguage } from "../../hooks/useLanguage";
+import { textByLanguage } from "../../assets/translations";
 
 function SignupPage() {
     const { login, isLoggedIn } = useAuth();
     const navigate = useNavigate();
     const location = useLocation();
+    const { language } = useLanguage();
     const from = location.state?.from?.pathname || "/";
     const [signUpInfo, setSignUpInfo] = useState({ email: "", password: "", name: "" } satisfies SignUpInfo);
 
@@ -19,7 +22,7 @@ function SignupPage() {
     }
 
     return (
-        <form className="mt-4 authentication-form p-5 rounded" onSubmit={async (e) => {
+        <form className="mt-4 authentication-form p-5 rounded shadow" onSubmit={async (e) => {
             e.preventDefault();
             if (!signUpInfo.email || !signUpInfo.password || !signUpInfo.name) {
                 toast.error("Please fill all fields")
@@ -41,21 +44,21 @@ function SignupPage() {
             }
         }}
         >
-            <h2 className="mb-3 text-center">Create New Account</h2>
+            <h2 className="mb-3 text-center">{textByLanguage[language]["authenticatoin"]["createNewAccountText"]}</h2>
             <div className="mb-3">
-                <label htmlFor="inputName" className="form-label"><h4>Name</h4></label>
+                <label htmlFor="inputName" className="form-label"><h4>{textByLanguage[language]["authenticatoin"]["nameText"]}</h4></label>
                 <input type="text" className="form-control" id="inputName" value={signUpInfo.name} onChange={e => setSignUpInfo(prev => ({ ...prev, name: e.target.value }))} />
             </div>
             <div className="mb-3">
-                <label htmlFor="inputEmail" className="form-label"><h4>Email address</h4></label>
+                <label htmlFor="inputEmail" className="form-label"><h4>{textByLanguage[language]["authenticatoin"]["emailAddressText"]}</h4></label>
                 <input type="email" className="form-control" id="inputEmail" value={signUpInfo.email} onChange={e => setSignUpInfo(prev => ({ ...prev, email: e.target.value }))} />
             </div>
             <div className="mb-3">
-                <label htmlFor="inputPassword" className="form-label"><h4>Password</h4></label>
+                <label htmlFor="inputPassword" className="form-label"><h4>{textByLanguage[language]["authenticatoin"]["passwordText"]}</h4></label>
                 <input type="password" className="form-control" id="inputPassword" value={signUpInfo.password} onChange={e => setSignUpInfo(prev => ({ ...prev, password: e.target.value }))} />
             </div>
-            <button type="submit" className="btn btn-primary container-fluid mb-3">Submit</button>
-            <h5 className="text-center">Already have an account? <Link to="/login">Log In</Link>  </h5>
+            <button type="submit" className="btn btn-primary container-fluid mb-3">{textByLanguage[language]["authenticatoin"]["signUpText"]}</button>
+            <h5 className="text-center">{textByLanguage[language]["authenticatoin"]["alreadyHaveAccountQuestionText"]} <Link to="/login">{textByLanguage[language]["authenticatoin"]["logInText"]}</Link>  </h5>
         </form>
     )
 }

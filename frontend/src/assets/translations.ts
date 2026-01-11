@@ -1,5 +1,16 @@
 export const textByLanguage = {
     "English": {
+        "authenticatoin": {
+            "nameText": "Name",
+            "emailAddressText": "Email address",
+            "passwordText": "Password",
+            "signUpText": "Sign up",
+            "logInText": "Log in",
+            "createNewAccountText": "Create new account",
+            "logInToExistingAccountText": "Log in to continue",
+            "alreadyHaveAccountQuestionText": "Already have an account?",
+            "dontHaveAccountQuestionText": "Don't have an account?"
+        },
         "pagination": {
             "previousText": "Previous",
             "nextText": "Next"
@@ -102,6 +113,17 @@ export const textByLanguage = {
         }
     },
     "Polish": {
+        "authenticatoin": {
+            "nameText": "Imię",
+            "emailAddressText": "Adres e-mail",
+            "passwordText": "Hasło",
+            "signUpText": "Zarejestruj się",
+            "logInText": "Zaloguj się",
+            "createNewAccountText": "Utwórz nowe konto",
+            "logInToExistingAccountText": "Zaloguj się, aby kontynuować",
+            "alreadyHaveAccountQuestionText": "Masz już konto?",
+            "dontHaveAccountQuestionText": "Nie masz konta?"
+        },
         "pagination": {
             "previousText": "Poprzednia",
             "nextText": "Następna"
@@ -204,6 +226,17 @@ export const textByLanguage = {
         }
     },
     "Ukrainian": {
+        "authenticatoin": {
+            "nameText": "Ім'я",
+            "emailAddressText": "Електронна пошта",
+            "passwordText": "Пароль",
+            "signUpText": "Зареєструватися",
+            "logInText": "Увійти",
+            "createNewAccountText": "Створити новий акаунт",
+            "logInToExistingAccountText": "Увійдіть, щоб продовжити",
+            "alreadyHaveAccountQuestionText": "Вже маєте акаунт?",
+            "dontHaveAccountQuestionText": "Не маєте акаунту?"
+        },
         "pagination": {
             "previousText": "Попередня",
             "nextText": "Наступна"

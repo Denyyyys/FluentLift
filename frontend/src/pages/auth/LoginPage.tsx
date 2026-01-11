@@ -5,11 +5,15 @@ import axios from "axios";
 import { BACKEND_BASE_URL } from "../../constants";
 import type { LoginInfo } from "../../types/user";
 import { toast } from "react-toastify";
+import { useLanguage } from "../../hooks/useLanguage";
+import { textByLanguage } from "../../assets/translations";
 
 function LoginPage() {
     const { login, isLoggedIn } = useAuth();
     const navigate = useNavigate();
     const location = useLocation();
+    const { language } = useLanguage();
+
     const from = location.state?.from?.pathname || "/";
 
     const [loginInfo, setLoginInfo] = useState({ email: "", password: "" } satisfies LoginInfo);
@@ -18,7 +22,7 @@ function LoginPage() {
         navigate(from)
     }
     return (
-        <form className="mt-4 authentication-form p-5 rounded" onSubmit={async (e) => {
+        <form className="mt-4 authentication-form p-5 rounded shadow" onSubmit={async (e) => {
             e.preventDefault();
             if (!loginInfo.email || !loginInfo.password) {
                 toast.error("Email and Password cannot be empty")
@@ -39,18 +43,18 @@ function LoginPage() {
                 }
             }
         }}>
-            <h2 className="mb-3 text-center">Log In to Continue</h2>
+            <h2 className="mb-3 text-center">{textByLanguage[language]["authenticatoin"]["logInToExistingAccountText"]}</h2>
 
             <div className="mb-3">
-                <label htmlFor="inputEmail" className="form-label"><h4>Email address</h4></label>
+                <label htmlFor="inputEmail" className="form-label"><h4>{textByLanguage[language]["authenticatoin"]["emailAddressText"]}</h4></label>
                 <input type="email" className="form-control" value={loginInfo.email} onChange={(e) => setLoginInfo(prev => ({ ...prev, email: e.target.value }))} id="inputEmail" />
             </div>
             <div className="mb-3">
-                <label htmlFor="inputPassword" className="form-label"><h4>Password</h4></label>
+                <label htmlFor="inputPassword" className="form-label"><h4>{textByLanguage[language]["authenticatoin"]["passwordText"]}</h4></label>
                 <input type="password" className="form-control" id="inputPassword" value={loginInfo.password} onChange={(e) => setLoginInfo(prev => ({ ...prev, password: e.target.value }))} />
             </div>
-            <button type="submit" className="btn btn-primary container-fluid">Submit</button>
-            <h5 className="text-center">Don't have an account? <Link to="/signup">Sign Up</Link>  </h5>
+            <button type="submit" className="btn btn-primary container-fluid">{textByLanguage[language]["authenticatoin"]["logInText"]}</button>
+            <h5 className="text-center">{textByLanguage[language]["authenticatoin"]["dontHaveAccountQuestionText"]} <Link to="/signup">{textByLanguage[language]["authenticatoin"]["signUpText"]}</Link>  </h5>
 
         </form>
     )
