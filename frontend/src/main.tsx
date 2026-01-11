@@ -6,11 +6,11 @@ import { AuthProvider } from './context/AuthContext.tsx'
 import { LanguageProvider } from './context/LanguageContext.tsx'
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <LanguageProvider>
-      <AuthProvider>
-        <App />
-      </AuthProvider>
-    </LanguageProvider>
-  </StrictMode>,
+  // <StrictMode>
+  <LanguageProvider>
+    <AuthProvider>
+      <App />
+    </AuthProvider>
+  </LanguageProvider>
+  // </StrictMode>,
 )

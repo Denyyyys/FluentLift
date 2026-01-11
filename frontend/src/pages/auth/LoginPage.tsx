@@ -1,6 +1,6 @@
 import { Link, useLocation, useNavigate } from "react-router-dom"
 import { useAuth } from "../../context/AuthContext"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { BACKEND_BASE_URL } from "../../constants";
 import type { LoginInfo } from "../../types/user";
@@ -9,18 +9,26 @@ import { useLanguage } from "../../hooks/useLanguage";
 import { textByLanguage } from "../../assets/translations";
 
 function LoginPage() {
-    const { login, isLoggedIn } = useAuth();
+    const { token, login, isLoggedIn } = useAuth();
     const navigate = useNavigate();
-    const location = useLocation();
     const { language } = useLanguage();
 
-    const from = location.state?.from?.pathname || "/";
 
     const [loginInfo, setLoginInfo] = useState({ email: "", password: "" } satisfies LoginInfo);
-    if (isLoggedIn) {
-        toast.success("Successfully logged in!")
-        navigate(from)
-    }
+
+
+    useEffect(() => {
+        if (token !== null) {
+            navigate("/")
+            return
+        }
+
+        if (isLoggedIn) {
+            toast.success("Successfully logged in!")
+            navigate("/")
+        }
+    }, [token, isLoggedIn])
+
     return (
         <form className="mt-4 authentication-form p-5 rounded shadow" onSubmit={async (e) => {
             e.preventDefault();

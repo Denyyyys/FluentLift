@@ -12,7 +12,7 @@ export default function ProfilePage() {
 
     const handleLogout = () => {
         localStorage.removeItem("jwtToken");
-        navigate("/sign-up");
+        navigate("/signup");
     };
 
     return (

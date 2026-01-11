@@ -1,7 +1,7 @@
 import { Link, useLocation, useNavigate } from "react-router-dom"
 import { useAuth } from "../../context/AuthContext";
 import type { SignUpInfo } from "../../types/user";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import axios from "axios";
 import { BACKEND_BASE_URL } from "../../constants";
@@ -9,17 +9,19 @@ import { useLanguage } from "../../hooks/useLanguage";
 import { textByLanguage } from "../../assets/translations";
 
 function SignupPage() {
-    const { login, isLoggedIn } = useAuth();
+    const { token, login, isLoggedIn } = useAuth();
     const navigate = useNavigate();
-    const location = useLocation();
     const { language } = useLanguage();
-    const from = location.state?.from?.pathname || "/";
     const [signUpInfo, setSignUpInfo] = useState({ email: "", password: "", name: "" } satisfies SignUpInfo);
 
-    if (isLoggedIn) {
-        toast.success("Successfully logged in!")
-        navigate(from)
-    }
+    useEffect(() => {
+        if (token !== null) {
+            navigate("/");
+        } else if (isLoggedIn) {
+            toast.success("Successfully logged in!");
+            navigate("/");
+        }
+    }, [token, isLoggedIn, navigate]);
 
     return (
         <form className="mt-4 authentication-form p-5 rounded shadow" onSubmit={async (e) => {
