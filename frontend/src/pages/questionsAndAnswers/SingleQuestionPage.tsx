@@ -15,8 +15,14 @@ import ErrorWrapper from "../../components/common/ErrorWrapper";
 import LoadingSpinner from "../../components/common/LoadingSpinner";
 import { AnswerForm } from "../../components/questionsAndAnswers/AnswerForm";
 import { toast } from "react-toastify";
+import { FaArrowLeftLong } from "react-icons/fa6";
+import { FaRegEye } from "react-icons/fa";
+import { useLanguage } from "../../hooks/useLanguage";
+import { textByLanguage } from "../../assets/translations";
+
 
 export const SingleQuestionPage = () => {
+    const { language } = useLanguage();
     const { questionId } = useParams();
     const navigate = useNavigate();
 
@@ -138,21 +144,21 @@ export const SingleQuestionPage = () => {
                 className="mb-3"
                 onClick={() => navigate("/questions")}
             >
-                ← Back to all questions
+                <FaArrowLeftLong /> {textByLanguage[language]["singleQuestion"]["backToAllQuestionsText"]}
             </Button>
 
             <QuestionDetails question={question} />
             <hr />
 
-            <h5>Your Answer</h5>
+            <h5>{textByLanguage[language]["singleQuestion"]["yourAnswerText"]}</h5>
 
             <AnswerForm
-                placeholder="Write your answer..."
+                placeholder={textByLanguage[language]["singleQuestion"]["writeYourAnswerText"]}
                 parentAnswerId={null}
                 questionId={questionId}
                 onSubmit={submitAnswer}
             />
-            <h4 className="mt-4 mb-3">Answers</h4>
+            <h4 className="mt-4 mb-3">{textByLanguage[language]["singleQuestion"]["answersTitleText"]}</h4>
             {question.solved && (
                 <Button
                     size="sm"
@@ -160,12 +166,14 @@ export const SingleQuestionPage = () => {
                     className="mb-3 ms-3"
                     onClick={scrollToAccepted}
                 >
-                    Jump to accepted answer
+                    {textByLanguage[language]["singleQuestion"]["jumpToAcceptedAnswerButtonText"]}
                 </Button>
             )}
 
             {question.answers.length === 0 ? (
-                <p className="text-muted">No answers yet. Be the first to answer!</p>
+                <p className="text-muted">
+                    {textByLanguage[language]["singleQuestion"]["noAnswersYetText"]}
+                </p>
             ) : (
                 question.answers.map(answer => (
                     <AnswerItem

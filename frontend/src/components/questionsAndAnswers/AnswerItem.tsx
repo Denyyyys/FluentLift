@@ -1,6 +1,10 @@
 import { Badge, Button } from "react-bootstrap";
 import type { AnswerThreadDto } from "../../types/questionsAndAnswers";
 import { AnswerForm } from "./AnswerForm";
+import { FaArrowUp, FaArrowDown } from "react-icons/fa6";
+import { useLanguage } from "../../hooks/useLanguage";
+import { textByLanguage } from "../../assets/translations";
+import { IoMdCheckmark } from "react-icons/io";
 
 interface Props {
     answer: AnswerThreadDto;
@@ -30,9 +34,7 @@ export const AnswerItem = ({
     acceptAnswer
 }: Props) => {
     const showReplyForm = replyingToId === answer.id;
-
-
-
+    const { language } = useLanguage();
     return (
         <div
             id={answer.accepted ? "accepted-answer" : undefined}
@@ -52,21 +54,21 @@ export const AnswerItem = ({
                     <p className="mb-2">{answer.content}</p>
 
                     <div className="d-flex align-items-center gap-2 flex-wrap">
-                        <Button size="sm" variant="outline-success">⬆</Button>
+                        <Button size="sm" variant="outline-success"><FaArrowUp /> </Button>
                         <small>{answer.upvotes}</small>
 
-                        <Button size="sm" variant="outline-danger">⬇</Button>
+                        <Button size="sm" variant="outline-danger"><FaArrowDown /></Button>
                         <small>{answer.downvotes}</small>
 
                         {answer.author.id === questionAuthorId && (
                             <Badge bg="info" className="ms-2">
-                                Author
+                                {textByLanguage[language]["singleQuestion"]["authorText"]}
                             </Badge>
                         )}
 
                         {answer.accepted && (
                             <Badge bg="success" className="ms-2">
-                                ✓ Accepted
+                                <IoMdCheckmark /> {textByLanguage[language]["singleQuestion"]["acceptedText"]}
                             </Badge>
                         )}
 
@@ -83,13 +85,13 @@ export const AnswerItem = ({
                                 setReplyingToId(showReplyForm ? null : answer.id)
                             }
                         >
-                            Reply
+
                         </Button>
                     </div>
 
                     {showReplyForm && (
                         <AnswerForm
-                            placeholder={`Reply to ${answer.author.name}...`}
+                            placeholder={`${textByLanguage[language]["singleQuestion"]["replyToText"]} ${answer.author.name}...`}
                             onSubmit={submitAnswer}
                             onCancel={() => setReplyingToId(null)}
                             parentAnswerId={answer.id}
@@ -99,7 +101,7 @@ export const AnswerItem = ({
                     )}
 
                     <small className="text-muted">
-                        Answered by {answer.author.name} ·{" "}
+                        {textByLanguage[language]["singleQuestion"]["answeredByText"]} {answer.author.name} ·{" "}
                         {new Date(answer.createdAt).toLocaleDateString()}
                     </small>
                 </div>

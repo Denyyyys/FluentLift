@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
+import { useLanguage } from "../../hooks/useLanguage";
+import { textByLanguage } from "../../assets/translations";
 
 interface Props {
     placeholder?: string;
@@ -17,6 +19,7 @@ export const AnswerForm = ({
     onCancel
 }: Props) => {
     const [content, setContent] = useState("");
+    const { language } = useLanguage();
 
     const handleSubmit = () => {
         if (!content.trim()) return;
@@ -36,12 +39,12 @@ export const AnswerForm = ({
 
             <div className="d-flex gap-2 mt-2">
                 <Button size="sm" onClick={handleSubmit}>
-                    Submit
+                    {textByLanguage[language]["singleQuestion"]["submitText"]}
                 </Button>
 
                 {onCancel && (
                     <Button size="sm" variant="outline-secondary" onClick={onCancel}>
-                        Cancel
+                        {textByLanguage[language]["singleQuestion"]["cancelText"]}
                     </Button>
                 )}
             </div>

@@ -9,8 +9,11 @@ import { useAuth } from "../../context/AuthContext";
 import LoadingSpinner from "../../components/common/LoadingSpinner";
 import { QuestionCard } from "../../components/questionsAndAnswers/QuestionCard";
 import ErrorWrapper from "../../components/common/ErrorWrapper";
+import { useLanguage } from "../../hooks/useLanguage";
+import { textByLanguage } from "../../assets/translations";
 
 function QuestionsPage() {
+    const { language } = useLanguage();
     const [query, setQuery] = useState("");
     const [debouncedQuery, setDebouncedQuery] = useState("");
     const [sortBy, setSortBy] = useState("createdAt");
@@ -74,7 +77,7 @@ function QuestionsPage() {
                     <div className="input-group">
                         <input
                             className="form-control"
-                            placeholder="Search by title or content..."
+                            placeholder={textByLanguage[language]["allQuestions"]["searchByTitleOrContentText"]}
                             value={query}
                             onChange={e => setQuery(e.target.value)}
                         />
@@ -87,7 +90,7 @@ function QuestionsPage() {
                 <div className="col-md-2 d-flex align-items-center">
                     <Form.Check
                         type="checkbox"
-                        label="Solved only"
+                        label={textByLanguage[language]["allQuestions"]["solvedOnlyCheckboxText"]}
                         checked={onlySolved}
                         onChange={e => {
                             setOnlySolved(e.target.checked);
@@ -104,9 +107,9 @@ function QuestionsPage() {
                             setPage(1);
                         }}
                     >
-                        <option value="createdAt">Newest</option>
-                        <option value="upvotes">Most upvotes</option>
-                        <option value="downvotes">Most downvotes</option>
+                        <option value="createdAt">{textByLanguage[language]["allQuestions"]["sortByNewestText"]}</option>
+                        <option value="upvotes">{textByLanguage[language]["allQuestions"]["sortByMostUpvotesText"]}</option>
+                        <option value="downvotes">{textByLanguage[language]["allQuestions"]["sortByMostDownvotesText"]}</option>
                     </Form.Select>
                 </div>
             </div>
@@ -115,7 +118,9 @@ function QuestionsPage() {
                 <LoadingSpinner />
             ) : (
                 error ? <ErrorWrapper content="There was a problem while fetching qeustions" /> :
-                    questionsPage?.questions.map(q => <QuestionCard key={q.id} question={q} />)
+                    <div className="stripped-container">
+                        {questionsPage?.questions.map(q => <QuestionCard key={q.id} question={q} />)}
+                    </div>
             )}
 
             <div className="d-flex justify-content-between mt-4">
@@ -124,7 +129,7 @@ function QuestionsPage() {
                     disabled={isFirstPage}
                     onClick={() => setPage(p => p - 1)}
                 >
-                    Previous
+                    {textByLanguage[language]["pagination"]["previousText"]}
                 </Button>
 
                 <Button
@@ -132,7 +137,7 @@ function QuestionsPage() {
                     disabled={isLastPage}
                     onClick={() => setPage(p => p + 1)}
                 >
-                    Next
+                    {textByLanguage[language]["pagination"]["nextText"]}
                 </Button>
             </div>
         </div>
