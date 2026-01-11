@@ -10,7 +10,6 @@ export interface DeckOwnerResponseDto {
     targetLanguage: string;
     baseLanguage: string;
     public: boolean;
-
     cards: CardOwnerResponseDto[];
 }
 
@@ -23,8 +22,23 @@ export interface DeckVisitorResponseDto {
     targetLanguage: string;
     baseLanguage: string;
     public: boolean;
-
     cards: CardVisitorResponseDto[];
+}
+
+export interface DeckVisitorPageResponseDto {
+    decks: DeckVisitorResponseDto[];
+    page: number;
+    size: number;
+    totalElements: number;
+    totalPages: number;
+}
+
+export interface DeckOwnerPageResponseDto {
+    decks: DeckOwnerResponseDto[];
+    page: number;
+    size: number;
+    totalElements: number;
+    totalPages: number;
 }
 
 export interface DeckCreateDto {

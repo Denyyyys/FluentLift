@@ -11,7 +11,7 @@ type UpdateCardFormProps = {
 function UpdateCardForm({ newCard, updateCard, deleteCard }: UpdateCardFormProps) {
 
     return (
-        <div className='mb-3 p-3'>
+        <div className='mb-3 p-3 rounded'>
             <p >
                 <FaTrashAlt color='red' size={20} className="clickable" onClick={() => deleteCard(newCard.tempId)} />
             </p>

@@ -20,14 +20,12 @@ import CreateDeckPage from "./pages/decks/CreateDeckPage"
 import EditDeckPage from "./pages/decks/EditDeckPage"
 import AllQuestionsPage from "./pages/questionsAndAnswers/AllQuestionsPage"
 import { SingleQuestionPage } from "./pages/questionsAndAnswers/SingleQuestionPage"
-// import StudyLessonPage from "./pages/courses/StudyLessonPage"
+import AllDecksPage from "./pages/decks/AllDecksPage"
 
 function App() {
   return <BrowserRouter>
     <ToastContainer position="top-center" />
-    {/* <RequireAuth> */}
     <Navbar />
-    {/* </RequireAuth> */}
     <div className="app-container">
 
       <Routes>
@@ -41,6 +39,17 @@ function App() {
             </RequireAuth>
           }
         />
+
+        <Route
+          path="/decks/"
+          element={
+            <RequireAuth>
+              <AllDecksPage />
+            </RequireAuth>
+          }
+        />
+
+
         <Route
           path="/profile/decks/"
           element={
