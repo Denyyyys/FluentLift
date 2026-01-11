@@ -24,11 +24,21 @@ public class SynsetSeedRunner {
     CommandLineRunner importSynsets(SynsetService synsetService, SynsetRepository repository) {
         return args -> {
             log.info("Running Neo4j synset seeding...");
+            // String synsetsFilePath =
+            // "/home/denys/langApp/web_scraper/data/synsets/synsetsWithTranslatedExamples.json";
+            String synsetsFilePath = "./synsetsWithTranslatedExamples.json";
 
             List<JsonSynset> jsonSynsets = synsetService.loadSynsets(
-                    "/home/denys/langApp/web_scraper/data/synsets/synsetsWithTranslatedExamples.json",
+                    synsetsFilePath,
                     500,
                     0);
+
+            Synset synset = synsetService.findSynsetByWord(jsonSynsets.getFirst().getEN().getLemma());
+
+            if (synset != null) {
+                log.info("Synset found in repo. Skip seeding");
+                return;
+            }
 
             List<Synset> synsets = jsonSynsets.stream().map(SynsetMapper::toEntity).toList();
             repository.saveAll(synsets);

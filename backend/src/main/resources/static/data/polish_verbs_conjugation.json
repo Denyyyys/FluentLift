@@ -1,0 +1,262 @@
+[
+    {
+        "lemma": "opuszczać",
+        "aspect": "imperfective",
+        "present_tense": {
+            "singular": {
+                "1sg": "opuszczam",
+                "2sg": "opuszczasz",
+                "3sg": "opuszcza"
+            },
+            "plural": {
+                "1pl": "opuszczamy",
+                "2pl": "opuszczacie",
+                "3pl": "opuszczają"
+            }
+        },
+        "past_tense": {
+            "singular": {
+                "masculine": {
+                    "1sg": "opuszczałem",
+                    "2sg": "opuszczałeś",
+                    "3sg": "opuszczał"
+                },
+                "feminine": {
+                    "1sg": "opuszczałam",
+                    "2sg": "opuszczałaś",
+                    "3sg": "opuszczała"
+                },
+                "neuter": {
+                    "1sg": "opuszczałom",
+                    "2sg": "opuszczałoś",
+                    "3sg": "opuszczało"
+                }
+            },
+            "plural": {
+                "masculine_personal": {
+                    "1pl": "opuszczaliśmy",
+                    "2pl": "opuszczaliście",
+                    "3pl": "opuszczali"
+                },
+                "non_masculine_personal": {
+                    "1pl": "opuszczałyśmy",
+                    "2pl": "opuszczałyście",
+                    "3pl": "opuszczały"
+                }
+            }
+        },
+        "future_tense": {
+            "singular": {
+                "masculine": {
+                    "1sg": [
+                        "będę opuszczał",
+                        "będę opuszczać"
+                    ],
+                    "2sg": [
+                        "będziesz opuszczał",
+                        "będziesz opuszczać"
+                    ],
+                    "3sg": [
+                        "będzie opuszczał",
+                        "będzie opuszczać"
+                    ]
+                },
+                "feminine": {
+                    "1sg": [
+                        "będę opuszczała",
+                        "będę opuszczać"
+                    ],
+                    "2sg": [
+                        "będziesz opuszczała",
+                        "będziesz opuszczać"
+                    ],
+                    "3sg": [
+                        "będzie opuszczała",
+                        "będzie opuszczać"
+                    ]
+                },
+                "neuter": {
+                    "1sg": [
+                        "będę opuszczało",
+                        "będę opuszczać"
+                    ],
+                    "2sg": [
+                        "będziesz opuszczało",
+                        "będziesz opuszczać"
+                    ],
+                    "3sg": [
+                        "będzie opuszczało",
+                        "będzie opuszczać"
+                    ]
+                }
+            },
+            "plural": {
+                "masculine_personal": {
+                    "1pl": [
+                        "będziemy opuszczali",
+                        "będziemy opuszczać"
+                    ],
+                    "2pl": [
+                        "będziecie opuszczali",
+                        "będziecie opuszczać"
+                    ],
+                    "3pl": [
+                        "będą opuszczali",
+                        "będą opuszczać"
+                    ]
+                },
+                "non_masculine_personal": {
+                    "1pl": [
+                        "będziemy opuszczały",
+                        "będziemy opuszczać"
+                    ],
+                    "2pl": [
+                        "będziecie opuszczały",
+                        "będziecie opuszczać"
+                    ],
+                    "3pl": [
+                        "będą opuszczały",
+                        "będą opuszczać"
+                    ]
+                }
+            }
+        },
+        "conditional": {
+            "singular": {
+                "masculine": {
+                    "1sg": "opuszczałbym",
+                    "2sg": "opuszczałbyś",
+                    "3sg": "opuszczałby"
+                },
+                "feminine": {
+                    "1sg": "opuszczałabym",
+                    "2sg": "opuszczałabyś",
+                    "3sg": "opuszczałaby"
+                },
+                "neuter": {
+                    "1sg": "opuszczałobym",
+                    "2sg": "opuszczałobyś",
+                    "3sg": "opuszczałoby"
+                }
+            },
+            "plural": {
+                "masculine_personal": {
+                    "1pl": "opuszczalibyśmy",
+                    "2pl": "opuszczalibyście",
+                    "3pl": "opuszczaliby"
+                },
+                "non_masculine_personal": {
+                    "1pl": "opuszczałybyśmy",
+                    "2pl": "opuszczałybyście",
+                    "3pl": "opuszczałyby"
+                }
+            }
+        },
+        "imperative": {
+            "singular": {
+                "2sg": "opuszczaj"
+            },
+            "plural": {
+                "1pl": "opuszczajmy",
+                "2pl": "opuszczajcie"
+            }
+        },
+        "active_adjectival_participle": "opuszczający",
+        "passive_adjectival_participle": "opuszczany",
+        "contemporary_adverbial_participle": "opuszczając",
+        "gerund": "opszczanie",
+        "aspect_pair": "opuścić"
+    },
+    {
+        "lemma": "opuścić",
+        "aspect": "perfective",
+        "future_tense": {
+            "singular": {
+                "1sg": "opuszczę",
+                "2sg": "opuścisz",
+                "3sg": "opuści"
+            },
+            "plural": {
+                "1pl": "opuścimy",
+                "2pl": "opuścicie",
+                "3pl": "opuszczą"
+            }
+        },
+        "past_tense": {
+            "singular": {
+                "masculine": {
+                    "1sg": "opuściłem",
+                    "2sg": "opuściłeś",
+                    "3sg": "opuścił"
+                },
+                "feminine": {
+                    "1sg": "opuściłam",
+                    "2sg": "opuściłaś",
+                    "3sg": "opuściła"
+                },
+                "neuter": {
+                    "1sg": "opuściłom",
+                    "2sg": "opuściłoś",
+                    "3sg": "opuściło"
+                }
+            },
+            "plural": {
+                "masculine_personal": {
+                    "1pl": "opuściliśmy",
+                    "2pl": "opuściliście",
+                    "3pl": "opuścili"
+                },
+                "non_masculine_personal": {
+                    "1pl": "opuściłyśmy",
+                    "2pl": "opuściłyście",
+                    "3pl": "opuściły"
+                }
+            }
+        },
+        "conditional": {
+            "singular": {
+                "masculine": {
+                    "1sg": "opuściłbym",
+                    "2sg": "opuściłbyś",
+                    "3sg": "opuściłby"
+                },
+                "feminine": {
+                    "1sg": "opuściłabym",
+                    "2sg": "opuściłabyś",
+                    "3sg": "opuściłaby"
+                },
+                "neuter": {
+                    "1sg": "opuściłobym",
+                    "2sg": "opuściłobyś",
+                    "3sg": "opuściłoby"
+                }
+            },
+            "plural": {
+                "masculine_personal": {
+                    "1pl": "opuścilibyśmy",
+                    "2pl": "opuścilibyście",
+                    "3pl": "opuściliby"
+                },
+                "non_masculine_personal": {
+                    "1pl": "opuściłybyśmy",
+                    "2pl": "opuściłybyście",
+                    "3pl": "opuściłyby"
+                }
+            }
+        },
+        "imperative": {
+            "singular": {
+                "2sg": "opuść"
+            },
+
+            "plural": {
+                "1pl": "opuśćmy",
+                "2pl": "opuśćcie"
+            }
+        },
+        "anterior adverbial participle": "opuściwszy",
+        "passive_adjectival_participle": "opuszczony",
+        "gerund": "opuszczanie",
+        "aspect_pair": "opuszczać"
+    }
+]

@@ -12,6 +12,7 @@ import org.springframework.context.annotation.Profile;
 import com.denyyyys.fluentLift.model.neo4j.dto.polish.JsonPolishImperfectiveVerb;
 import com.denyyyys.fluentLift.model.neo4j.dto.polish.JsonPolishPerfectiveVerb;
 import com.denyyyys.fluentLift.model.neo4j.dto.polish.JsonPolishVerbConjugation;
+import com.denyyyys.fluentLift.model.neo4j.entity.Synset;
 import com.denyyyys.fluentLift.model.neo4j.entity.polish.PolishImperfectiveVerbNode;
 import com.denyyyys.fluentLift.model.neo4j.entity.polish.PolishPerfectiveVerbNode;
 import com.denyyyys.fluentLift.model.neo4j.mapper.PolishVerbMapper;
@@ -32,7 +33,9 @@ public class PolishVerbConjugationSeedRunner implements CommandLineRunner {
     private final PolishPerfectiveVerbRepository perfectiveVerbRepository;
     private final PolishImperfectiveVerbRepository imperfectiveVerbRepository;
 
-    private String conjugationFilePath = "/home/denys/langApp/web_scraper/data/polish/polish_verbs_conjugation.json";
+    // private String conjugationFilePath =
+    // "/home/denys/langApp/web_scraper/data/polish/polish_verbs_conjugation.json";
+    private String conjugationFilePath = "./polish_verbs_conjugation.json";
 
     @Override
     public void run(String... args) throws Exception {
@@ -52,6 +55,18 @@ public class PolishVerbConjugationSeedRunner implements CommandLineRunner {
                 throw new IllegalStateException("Unknown verb type: " + verb.getClass().getSimpleName());
             }
 
+        }
+
+        try {
+            Synset synsetFromPerfective = synsetService.findSynsetByWord("opuszczając");
+            if (synsetFromPerfective != null) {
+                log.info("Found Polish forms for words from file in Neo4j db. Skip saving these data to the db");
+                return;
+            }
+        } catch (Exception e) {
+            log.error("Error during Neo4j polish verbs conjugation seeding: ");
+            log.error(e.getMessage());
+            log.error(e.getStackTrace().toString());
         }
 
         perfectiveVerbRepository.saveAll(perfectiveVerbNodes);
