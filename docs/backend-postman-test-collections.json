@@ -1,0 +1,1148 @@
+{
+	"info": {
+		"_postman_id": "81ddd404-e4da-48df-92ec-26f4f01d40cf",
+		"name": "FluentLift",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24626458"
+	},
+	"item": [
+		{
+			"name": "Decks",
+			"item": [
+				{
+					"name": "create decks with card",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Jwt}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"User 2 - ENG -> UKR deck 4\",\n    \"targetLanguage\": \"English\",\n    \"learningLanguage\": \"Ukrainian\",\n    \"cards\": [\n        {\n            \"frontText\": \"Sky\",\n            \"backText\": \"Небо\"\n        },\n        {\n            \"frontText\": \"Rain\",\n            \"backText\": \"Дощ\"\n        },\n        {\n            \"frontText\": \"Snow\",\n            \"backText\": \"Сніг\"\n        },\n        {\n            \"frontText\": \"Wind\",\n            \"backText\": \"Вітер\"\n        },\n        {\n            \"frontText\": \"Star\",\n            \"backText\": \"Зірка\"\n        },\n        {\n            \"frontText\": \"City\",\n            \"backText\": \"Місто\"\n        },\n        {\n            \"frontText\": \"Village\",\n            \"backText\": \"Село\"\n        },\n        {\n            \"frontText\": \"Road\",\n            \"backText\": \"Дорога\"\n        },\n        {\n            \"frontText\": \"Bridge\",\n            \"backText\": \"Міст\"\n        },\n        {\n            \"frontText\": \"Forest\",\n            \"backText\": \"Ліс\"\n        },\n        {\n            \"frontText\": \"Bird\",\n            \"backText\": \"Птах\"\n        },\n        {\n            \"frontText\": \"Fish\",\n            \"backText\": \"Риба\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/v1/decks",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"decks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "copy deck",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Jwt}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/v1/decks/:deckId/copy",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"decks",
+								":deckId",
+								"copy"
+							],
+							"variable": [
+								{
+									"key": "deckId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all decks",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Jwt}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/api/v1/decks?sortBy=name",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"decks"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "targetLanguage",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "baseLanguage",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "sortBy",
+									"value": "name"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get my decks",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Jwt}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/api/v1/decks/me",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"decks",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get single deck",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Jwt}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/api/v1/decks/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"decks",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update card progress",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6InRlc3RfbmFtZV8zIiwidXNlcklkIjoyLCJzdWIiOiJ0ZXN0X2VtYWlsXzNAbWFpbC5jb20iLCJpYXQiOjE3NTUxOTAyMjcsImV4cCI6MTc1NTI3NjYyN30.bRskkoLrcJWthYhc9YZc1JrKxzh8kuJmHhToVAS7r4k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"knewIt\": \"true\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/v1/cards/:card/progress",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"cards",
+								":card",
+								"progress"
+							],
+							"variable": [
+								{
+									"key": "card",
+									"value": "29"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete deck",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6InRlc3RfbmFtZV8zIiwidXNlcklkIjoyLCJzdWIiOiJ0ZXN0X2VtYWlsXzNAbWFpbC5jb20iLCJpYXQiOjE3NTQ5MjM1ODYsImV4cCI6MTc1NTAwOTk4Nn0.aHoVr-nyqO2Ynl64lrzvqoCMvHN3FdbLsxun8xJvW10",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/api/v1/decks/4",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"decks",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Courses",
+			"item": [
+				{
+					"name": "create course",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Jwt}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"course1 title\",\n    \"description\": \"course1 description\",\n    \"goals\": [\n        \"goal1\",\n        \"goal2\"\n    ],\n    \"prerequisiteLevel\": \"None\",\n    \"outcomeLevel\": \"A1\",\n    \"baseLanguage\": \"English\",\n    \"targetLanguage\": \"Spanish\",\n    \"units\": [\n        {\n            \"unitNumber\": 1,\n            \"title\": \"course1 unit1 title\",\n            \"overview\": \"course1 unit1 overview\",\n            \"lessons\": [\n                {\n                    \"title\": \"course1 unit1 lesson1 title\",\n                    \"lessonNumber\": 1,\n                    \"blocks\": [\n                        {\n                            \"blockNumber\": 1,\n                            \"type\": \"text\",\n                            \"text\": \"course1 unit1 lesson1 block1 text\",\n                            \"textBlockType\": \"bigHeading\"\n                        },\n                        {\n                            \"blockNumber\": 2,\n                            \"type\": \"text\",\n                            \"text\": \"course1 unit1 lesson1 block2 text\",\n                            \"textBlockType\": \"smallHeading\"\n                        },\n                        {\n                            \"blockNumber\": 3,\n                            \"type\": \"text\",\n                            \"text\": \"course1 unit1 lesson1 block3 text\",\n                            \"textBlockType\": \"paragraph\"\n                        },\n                        {\n                            \"blockNumber\": 4,\n                            \"type\": \"cloze\",\n                            \"question\": \"course1 unit1 lesson1 block4 question\",\n                            \"template\": \"course1 unit1 lesson1 block4 template {{country}} is {{city}}\",\n                            \"answers\": [\n                                {\n                                    \"key\": \"country\",\n                                    \"expected\": \"France\",\n                                    \"caseSensitive\": false\n                                },\n                                {\n                                    \"key\": \"city\",\n                                    \"expected\": \"Paris\",\n                                    \"caseSensitive\": true\n                                }\n                            ]\n                        },\n                        {\n                            \"blockNumber\": 5,\n                            \"type\": \"multipleChoice\",\n                            \"question\": \"course1 unit1 lesson1 block5 question\",\n                            \"choices\": [\n                                {\n                                    \"text\": \"course1 unit1 lesson1 block5 text1 - correct\",\n                                    \"isCorrect\": true\n                                },\n                                {\n                                    \"text\": \"course1 unit1 lesson1 block5 text2 - incorrect\",\n                                    \"isCorrect\": false\n                                },\n                                {\n                                    \"text\": \"course1 unit1 lesson1 block5 text3 - incorrect\",\n                                    \"isCorrect\": false\n                                }\n                            ]\n                        },\n                        {\n                            \"blockNumber\": 6,\n                            \"type\": \"cloze\",\n                            \"question\": \"course1 unit1 lesson1 block6 question\",\n                            \"template\": \"course1 unit1 lesson1 block6 template {{someText}} is {{moreText}}\",\n                            \"answers\": [\n                                {\n                                    \"key\": \"someText\",\n                                    \"expected\": \"smthgn\",\n                                    \"caseSensitive\": false\n                                },\n                                {\n                                    \"key\": \"moreText\",\n                                    \"expected\": \"smthgn else\",\n                                    \"caseSensitive\": true\n                                }\n                            ]\n                        },\n                        {\n                            \"blockNumber\": 7,\n                            \"type\": \"text\",\n                            \"text\": \"course1 unit1 lesson1 block7 text\",\n                            \"textBlockType\": \"paragraph\"\n                        }\n                    ]\n                },\n                {\n                    \"lessonNumber\": 2,\n                    \"blocks\": [\n                        {\n                            \"blockNumber\": 1,\n                            \"type\": \"text\",\n                            \"text\": \"course1 unit1 lesson2 block2 text\",\n                            \"textBlockType\": \"paragraph\"\n                        },\n                        {\n                            \"blockNumber\": 2,\n                            \"type\": \"cloze\",\n                            \"question\": \"course1 unit1 lesson2 block6 question\",\n                            \"template\": \"course1 unit1 lesson2 block6 template {{someText2}} is {{moreText2}}\",\n                            \"answers\": [\n                                {\n                                    \"key\": \"someText2\",\n                                    \"expected\": \"smthgn\",\n                                    \"caseSensitive\": false\n                                },\n                                {\n                                    \"key\": \"moreText2\",\n                                    \"expected\": \"smthgn else\",\n                                    \"caseSensitive\": true\n                                }\n                            ]\n                        }\n                    ]\n                }\n            ]\n        },\n        {\n            \"unitNumber\": 2,\n            \"title\": \"course1 unit1 title\",\n            \"overview\": \"course1 unit1 overview\",\n            \"lessons\": [\n                {\n                    \"title\": \"course1 unit1 lesson1 title\",\n                    \"lessonNumber\": 1,\n                    \"blocks\": [\n                        {\n                            \"blockNumber\": 1,\n                            \"type\": \"multipleChoice\",\n                            \"question\": \"course1 unit2 lesson1 block1 question\",\n                            \"choices\": [\n                                {\n                                    \"text\": \"course1 unit2 lesson1 block1 text1 - correct\",\n                                    \"isCorrect\": true\n                                },\n                                {\n                                    \"text\": \"course1 unit2 lesson1 block1 text2 - incorrect\",\n                                    \"isCorrect\": false\n                                },\n                                {\n                                    \"text\": \"course1 unit2 lesson1 block1 text3 - incorrect\",\n                                    \"isCorrect\": false\n                                }\n                            ]\n                        },\n                        {\n                            \"blockNumber\": 2,\n                            \"type\": \"text\",\n                            \"text\": \"course1 unit2 lesson1 block2 text\",\n                            \"textBlockType\": \"paragraph\"\n                        }\n                    ]\n                }\n            ]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/v1/courses",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "enroll to course",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Jwt}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/v1/courses/:courseId/users",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"courses",
+								":courseId",
+								"users"
+							],
+							"variable": [
+								{
+									"key": "courseId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all courses",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Jwt}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/api/v1/courses",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get course",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Jwt}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/api/v1/courses/:courseId",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"courses",
+								":courseId"
+							],
+							"variable": [
+								{
+									"key": "courseId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get course enrollment",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Jwt}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/api/v1/courses/:courseId/enrollment",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"courses",
+								":courseId",
+								"enrollment"
+							],
+							"variable": [
+								{
+									"key": "courseId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get course answers for user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Jwt}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/api/v1/courses/:courseId/user-answers",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"courses",
+								":courseId",
+								"user-answers"
+							],
+							"variable": [
+								{
+									"key": "courseId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get created by me courses",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Jwt}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/api/v1/courses/me/created",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"courses",
+								"me",
+								"created"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get enrolled courses",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Jwt}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/api/v1/courses/me/enrolled",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"courses",
+								"me",
+								"enrolled"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Etc",
+			"item": [
+				{
+					"name": "Welcome",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/v1/auth/welcome",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"welcome"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "addUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"test_name_2\",\n    \"email\": \"test_email_2@mail.com\",\n    \"password\": \"test_password_2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/v1/auth/addNewUser",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"addNewUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "generateToken",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"test_email_1@mail.com\",\n    \"password\": \"test_password_1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/v1/auth/generateToken",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"generateToken"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Q&A",
+			"item": [
+				{
+					"name": "Create question",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Jwt}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"5. Which form of the adjective 'this' is correct in the feminine accusative case — 'tą' or 'tę'?\",\n    \"content\": \"I've heard from Polish speakers that they usually use 'tą', but sometimes I've also seen 'tę', which confused me a bit. I'm trying to understand which one is actually correct in standard Polish.\",\n    \"targetLanguage\": \"Polish\",\n    \"baseLanguage\": \"English\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/v1/qa/questions",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"qa",
+								"questions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create answer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Jwt}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"content\": \"In standard Polish the correct form in the accusative singular feminine is tę for example tę książkę or tę kawę. In everyday spoken Polish many people say tą and it is common in informal conversation but it is not considered standard in careful or formal Polish. In short tę is the proper grammatical form while tą is an informal spoken variant.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/v1/qa/questions/:questionId/answers",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"qa",
+								"questions",
+								":questionId",
+								"answers"
+							],
+							"variable": [
+								{
+									"key": "questionId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All questions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Jwt}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/v1/qa/questions?query=what",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"qa",
+								"questions"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "5",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "3",
+									"disabled": true
+								},
+								{
+									"key": "sortBy",
+									"value": "downvotes",
+									"disabled": true
+								},
+								{
+									"key": "tags",
+									"value": "accusative",
+									"disabled": true
+								},
+								{
+									"key": "tags",
+									"value": "polish",
+									"disabled": true
+								},
+								{
+									"key": "tags",
+									"value": "dfgdftags",
+									"disabled": true
+								},
+								{
+									"key": "tags",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "tags",
+									"value": "stuff",
+									"disabled": true
+								},
+								{
+									"key": "size",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "isSolved",
+									"value": "false",
+									"disabled": true
+								},
+								{
+									"key": "query",
+									"value": "what"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get question",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Jwt}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/v1/qa/questions/:questionId",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"qa",
+								"questions",
+								":questionId"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "5",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "3",
+									"disabled": true
+								},
+								{
+									"key": "isSolved",
+									"value": "false",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "questionId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Question Vote",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"vote\": \"up\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/v1/qa/questions/:questionId/vote",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"qa",
+								"questions",
+								":questionId",
+								"vote"
+							],
+							"variable": [
+								{
+									"key": "questionId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accept Answer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/v1/qa/questions/:questionId/answers/:answerId/accept",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"qa",
+								"questions",
+								":questionId",
+								"answers",
+								":answerId",
+								"accept"
+							],
+							"variable": [
+								{
+									"key": "questionId",
+									"value": "1"
+								},
+								{
+									"key": "answerId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Answer Vote",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"vote\": \"doWn\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/v1/qa/answers/:answerId/vote",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"qa",
+								"answers",
+								":answerId",
+								"vote"
+							],
+							"variable": [
+								{
+									"key": "answerId",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add View",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/v1/qa/questions/:questionId/addView",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"qa",
+								"questions",
+								":questionId",
+								"addView"
+							],
+							"variable": [
+								{
+									"key": "questionId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Synsets",
+			"item": [
+				{
+					"name": "Find synset by lemma",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/v1/synsets/search?lemma=achievement",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"synsets",
+								"search"
+							],
+							"query": [
+								{
+									"key": "lemma",
+									"value": "achievement"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find synset by word",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/v1/synsets/searchByAny?word=opuszczając",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"synsets",
+								"searchByAny"
+							],
+							"query": [
+								{
+									"key": "word",
+									"value": "opuszczając"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "localhost:8080"
+		},
+		{
+			"key": "Jwt",
+			"value": "JWT",
+			"type": "string"
+		}
+	]
+}
