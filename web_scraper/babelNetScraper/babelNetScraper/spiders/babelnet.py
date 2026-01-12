@@ -48,9 +48,9 @@ class BabelnetSpider(scrapy.Spider):
     languages = ["EN", "PL", "UK"]
 
     def start_requests(self):
-        oxford3000_file_path = "/home/denys/langApp/web_scraper/data/oxford300/words_english_all_filtered.csv"
-        number_of_words = 20
-        toSkip = 180
+        oxford3000_file_path = "./words_english_all_filtered.csv"
+        number_of_words = 1
+        toSkip = 329
         words = get_words_with_pos(oxford3000_file_path, toSkip, number_of_words)
         # words = [('accompany', 'verb'), ('accident', 'noun')]
         # words = [('affair', 'noun')]
