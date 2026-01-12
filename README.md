@@ -33,9 +33,13 @@ docker compose -f docker-compose.yml up --build
 Building of frontend and backend will begin as well as setting up PostgreSQL and Neo4j databases. Additionally, if it is first run, then data for synsets and conjugation of two Polish verbs (opuszczać, opuścić) will be seeded in Neo4j database.
 
 ### 3. Test if everyhing works
-If you want to check if backend actually runs, you can import `docs/backend-postman-test-collections.json` into your Postman. And make some requests to backend.
 
+#### Backend
+If you want to check if backend actually runs, you can import `docs/backend-postman-test-collections.json` into your Postman. And make some requests to backend. Almost every request requires JWT, so you can start by creating new user from `User` folder in that collection and making POST request called `generateToken` there. After that, copy response to the `{{Jwt}}` variable to make it accessible in every request in this collection.
+
+#### Frontend
 If you want to check frontend, you can go to the `http://localhost:5173/` in web browser and you should see sign up screen:
+
 <img width="368" height="237" alt="image" src="https://github.com/user-attachments/assets/72d0d89f-8721-4f4c-af5e-1510d00c79a4" />
 
 
@@ -46,7 +50,7 @@ In order to use web scraping scripts to get data from BabelNet, you need to have
 pip install -r ./web_scraper/requirements.txt
 ```
 
-Spider located in `babelnet.py` reads data from file with most popular English words, then try to find synsets which includes that word. Update `number_of_words` and `toSkip` variables in order to change range of words which will be used to scrape data. BabelNet has limit of approximately 200 requests per day, so don't try to run script with all words from file `words_english_all_filered.csv`.
+Spider located in `web_scraper/babelNetScraper/babelNetScraper/spiders/babelnet.py` reads data from file with most popular English words, then try to find synsets which includes that word. Update `number_of_words` and `toSkip` variables in order to change range of words which will be used to scrape data. BabelNet has limit of approximately 200 requests per day, so don't try to run script with all words from file `web_scraper/babelNetScraper/babelNetScraper/spiders/words_english_all_filered.csv`.
 
 After that you can start crawler using:
 ```sh
@@ -54,6 +58,8 @@ cd web_scraper/babelNetScraper
 
 scrapy crawl babelnet
 ```
+
+Results will be appended in file `web_scraper/data/synsets/synsets.json`.
 
 ## Projects
 ### 1. Mobile Application 
