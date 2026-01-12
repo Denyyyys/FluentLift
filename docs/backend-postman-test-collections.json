@@ -1137,7 +1137,7 @@
 	"variable": [
 		{
 			"key": "baseURL",
-			"value": "localhost:8080"
+			"value": "localhost:8888"
 		},
 		{
 			"key": "Jwt",
