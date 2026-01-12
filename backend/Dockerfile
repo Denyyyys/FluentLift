@@ -15,4 +15,4 @@ COPY --from=build /app/data/polish_verbs_conjugation.json polish_verbs_conjugati
 
 COPY --from=build /app/target/fluentLift-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "app.jar", "--spring.profiles.active=seedSynsetsNeo4j,seedPolishVerbConjugationNeo4j"]
+ENTRYPOINT ["java", "-jar", "app.jar", "--spring.profiles.active=seedNeo4j"]
