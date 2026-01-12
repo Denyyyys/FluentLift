@@ -1,4 +1,4 @@
-export const BACKEND_BASE_URL = "http://localhost:8080/api/v1"
+export const BACKEND_BASE_URL = "http://localhost:8888/api/v1"
 
 export type AVAILABLE_LANGUAGES_TYPE = "English" | "Polish" | "Ukrainian"
 
