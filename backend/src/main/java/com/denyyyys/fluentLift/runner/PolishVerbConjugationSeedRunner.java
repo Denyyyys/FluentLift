@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
+import org.springframework.core.annotation.Order;
 
 import com.denyyyys.fluentLift.model.neo4j.dto.polish.JsonPolishImperfectiveVerb;
 import com.denyyyys.fluentLift.model.neo4j.dto.polish.JsonPolishPerfectiveVerb;
@@ -25,6 +26,7 @@ import lombok.RequiredArgsConstructor;
 @Profile("seedPolishVerbConjugationNeo4j")
 @Configuration
 @RequiredArgsConstructor
+@Order(2)
 public class PolishVerbConjugationSeedRunner implements CommandLineRunner {
     private static final Logger log = LoggerFactory.getLogger(PolishVerbConjugationSeedRunner.class);
 

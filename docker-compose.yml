@@ -18,7 +18,7 @@ services:
   backend:
     build: ./backend
     ports:
-      - "8080:8080"
+      - "8888:8080"
     depends_on:
       neo4j:
         condition: service_healthy
@@ -36,6 +36,7 @@ services:
 
       - SECURITY_JWT_SECRET=${SECURITY_JWT_SECRET}
       - SECURITY_JWT_EXPIRATION=${SECURITY_JWT_EXPIRATION}
+      - DEEPL_API_KEY=${DEEPL_API_KEY}
 
   postgres:
     image: postgres:17.5

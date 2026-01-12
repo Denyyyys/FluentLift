@@ -1,11 +1,11 @@
 package com.denyyyys.fluentLift.service;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.deepl.api.DeepLClient;
 import com.deepl.api.TextResult;
 
-import io.github.cdimascio.dotenv.Dotenv;
 import lombok.RequiredArgsConstructor;
 
 @Service
@@ -13,7 +13,9 @@ import lombok.RequiredArgsConstructor;
 public class DeepLTranslateService {
 
     private DeepLClient deepLClient;
-    private Dotenv dotenv = Dotenv.configure().load();
+
+    @Value("${DEEPL_API_KEY}")
+    private String deeplApiKey;
 
     public String translateEnToPl(String text) throws Exception {
         return this.translate("en", "pl", text);
@@ -29,9 +31,7 @@ public class DeepLTranslateService {
             return text;
         }
 
-        String deepLAPIkey = dotenv.get("DEEPL_API_KEY");
-
-        deepLClient = new DeepLClient(deepLAPIkey);
+        deepLClient = new DeepLClient(deeplApiKey);
 
         TextResult result = deepLClient.translateText(text, sourceLang, targetLang);
         return result.getText();

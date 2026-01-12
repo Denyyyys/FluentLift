@@ -8,6 +8,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
+import org.springframework.core.annotation.Order;
 
 import com.denyyyys.fluentLift.model.neo4j.dto.JsonSynset;
 import com.denyyyys.fluentLift.model.neo4j.entity.Synset;
@@ -17,6 +18,7 @@ import com.denyyyys.fluentLift.service.SynsetService;
 
 @Profile("seedSynsetsNeo4j")
 @Configuration
+@Order(1)
 public class SynsetSeedRunner {
     private static final Logger log = LoggerFactory.getLogger(SynsetSeedRunner.class);
 
@@ -33,11 +35,16 @@ public class SynsetSeedRunner {
                     500,
                     0);
 
-            Synset synset = synsetService.findSynsetByWord(jsonSynsets.getFirst().getEN().getLemma());
-
-            if (synset != null) {
-                log.info("Synset found in repo. Skip seeding");
-                return;
+            try {
+                Synset synset = synsetService.findSynsetByWord(jsonSynsets.getFirst().getEN().getLemma());
+                if (synset != null) {
+                    log.info("Synset found in repo. Skip seeding");
+                    return;
+                }
+            } catch (Exception e) {
+                log.error("Error during Neo4j synset seeding: ");
+                log.error(e.getMessage());
+                log.error(e.getStackTrace().toString());
             }
 
             List<Synset> synsets = jsonSynsets.stream().map(SynsetMapper::toEntity).toList();
