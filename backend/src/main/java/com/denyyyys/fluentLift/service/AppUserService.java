@@ -8,8 +8,10 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import com.denyyyys.fluentLift.exceptions.ResourceNotFound;
 import com.denyyyys.fluentLift.exceptions.UserAlreadyExistsException;
 import com.denyyyys.fluentLift.model.postgres.dto.request.UserRegistrationRequestDto;
+import com.denyyyys.fluentLift.model.postgres.dto.response.AppUserResponseDto;
 import com.denyyyys.fluentLift.model.postgres.entity.AppUser;
 import com.denyyyys.fluentLift.model.postgres.mapper.AppUserMapper;
 import com.denyyyys.fluentLift.repo.postgres.AppUserRepository;
@@ -45,4 +47,10 @@ public class AppUserService implements UserDetailsService {
         return repository.save(user);
     }
 
+    public AppUserResponseDto getUserInfo(String userEmail) {
+        AppUser user = repository.findByEmail(userEmail)
+                .orElseThrow(() -> new ResourceNotFound("Creator not found"));
+
+        return AppUserMapper.toDto(user);
+    }
 }

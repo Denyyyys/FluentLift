@@ -4,6 +4,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,10 +15,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.denyyyys.fluentLift.model.common.dto.request.AuthRequestDto;
 import com.denyyyys.fluentLift.model.postgres.dto.request.UserRegistrationRequestDto;
+import com.denyyyys.fluentLift.model.postgres.dto.response.AppUserResponseDto;
 import com.denyyyys.fluentLift.model.postgres.entity.AppUser;
 import com.denyyyys.fluentLift.repo.postgres.AppUserRepository;
 import com.denyyyys.fluentLift.service.AppUserService;
 import com.denyyyys.fluentLift.service.JwtService;
+import org.springframework.security.access.AccessDeniedException;
 
 import lombok.RequiredArgsConstructor;
 
@@ -60,5 +64,14 @@ public class UserController {
         } else {
             throw new UsernameNotFoundException("Invalid user request!");
         }
+    }
+
+    @GetMapping("/userInfo")
+    public ResponseEntity<AppUserResponseDto> getUserInfo(@AuthenticationPrincipal UserDetails user) {
+        if (user == null) {
+            throw new AccessDeniedException("User must be authenticated!");
+        }
+
+        return ResponseEntity.ok(appUserService.getUserInfo(user.getUsername()));
     }
 }
