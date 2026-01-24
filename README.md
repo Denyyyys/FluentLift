@@ -60,34 +60,3 @@ scrapy crawl babelnet
 ```
 
 Results will be appended in file `web_scraper/data/synsets/synsets.json`.
-
-## Projects
-### 1. Mobile Application 
-> [!CAUTION]
-> Currently is under construction
-
-- Provides a user-friendly interface for learning languages on the go.
-
-- Features interactive lessons, quizzes, and progress tracking.
-- Available for Android platform.
-
-### 2. Front-End Application
-> [!CAUTION]
-> Currently is under construction
-
-- A web-based interface where users can access all features of the language learning platform.
-- Allows users to browse courses, take lessons, and participate in discussions.
-- Built with modern web technologies for a seamless user experience.
-
-### 3. Back-End Application
-> [!WARNING]
-> Not all functionality is implemented.
-
-- Powers the platform with APIs and database management.
-- Handles user authentication, course creation, and discussion forums.
-- Ensures data security and smooth integration between the mobile and front-end applications.
-
-## Features
-- Language Learning: Access a wide range of courses to learn new languages effectively.
-- Course Creation: Users can create their own courses and share them with the community.
-- Discussion Forum: Engage with other learners by discussing topics and asking questions in the Q&A section.
