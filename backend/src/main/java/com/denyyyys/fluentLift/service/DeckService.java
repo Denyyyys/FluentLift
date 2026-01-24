@@ -258,10 +258,19 @@ public class DeckService {
     }
 
     @Transactional(transactionManager = "transactionManager")
-    public Card updateCardProgress(Long cardId, boolean knewIt, String userEmail) {
+    public Card updateCardProgress(
+        Long cardId, boolean knewIt, String userEmail) {
         Card card = this.findCardById(cardId);
-        if (!card.getDeck().getCreator().getEmail().equals(userEmail)) {
-            throw new AccessDeniedException("You do not have permission to update card for this deck");
+        boolean isOwner = card.getDeck()
+                .getCreator()
+                .getEmail()
+                .equals(userEmail);
+
+        if (!isOwner) {
+            throw new AccessDeniedException("""
+                    You do not have permission
+                    to update card for this deck
+                    """);
         }
 
         if (card.getFirstReviewDate() == null) {
@@ -276,7 +285,8 @@ public class DeckService {
             card.setIntervalDays(1);
         }
 
-        card.setNextReviewDate(Instant.now().plus(card.getIntervalDays(), ChronoUnit.DAYS));
+        card.setNextReviewDate(
+            Instant.now().plus(card.getIntervalDays(), ChronoUnit.DAYS));
 
         return cardRepository.save(card);
     }
