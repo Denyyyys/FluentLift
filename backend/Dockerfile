@@ -1,4 +1,4 @@
-FROM maven:3.9.12-eclipse-temurin-25-alpine AS build
+FROM maven:3.9.12-eclipse-temurin-21-alpine AS build
 WORKDIR /app
 COPY pom.xml .
 COPY src ./src
@@ -7,7 +7,7 @@ COPY src/main/resources/static/data/synsetsWithTranslatedExamples.json ./data/sy
 RUN mvn clean package
 
 # -------- Run stage --------
-FROM openjdk:27-ea-oraclelinux8
+FROM eclipse-temurin:21-jre-alpine
 
 WORKDIR /app
 COPY --from=build /app/data/synsetsWithTranslatedExamples.json synsetsWithTranslatedExamples.json
