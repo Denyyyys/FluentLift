@@ -26,8 +26,10 @@ This runs the **main FluentLift platform** (backend + frontend + databases).
 - Docker (with Docker Compose)
 
 ### Environment Configuration
-
-Create a `.env` file in the project root based on the provided example:
+> [!IMPORTANT]
+> Docker Compose relies on environment variables defined in the `.env` file.
+> 
+> Without it, required configuration values (such as database credentials and secrets) will be missing, and the containers will fail to start.
 
 ```sh
 cp .env.dev .env
@@ -47,15 +49,21 @@ The **DEEPL_API_KEY** value is a placeholder and must be replaced if you plan to
 From the project root, run:
 
 ```sh
-docker compose --build
+docker compose up
 ```
 
 On first run, the system will:
 
-- Build frontend and backend images
+- Pull prebuilt backend and frontend images from Docker Hub
 - Start PostgreSQL and Neo4j
 - Seed Neo4j with initial linguistic data
 
+> [!NOTE]
+> The backend and frontend services use prebuilt images from Docker Hub.
+>
+> If you want to modify the source code and rebuild locally, update `docker-compose.yml` to use `build:` instead of `image:`.
+> 
+> Dockerfiles for both services are provided in their respective directories.
 ### Verifying the Setup
 
 #### Backend
