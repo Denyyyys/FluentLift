@@ -16,7 +16,7 @@ services:
       retries: 10
 
   backend:
-    build: ./backend
+    image: denyyyys/fluentlift-backend:1.0
     ports:
       - "8888:8080"
     depends_on:
@@ -55,7 +55,7 @@ services:
       retries: 5
 
   frontend:
-    build: ./frontend
+    image: denyyyys/fluentlift-frontend:1.0
     ports:
       - "5173:80"
 
